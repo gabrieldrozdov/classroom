@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GD with GD | Classroom</title>
+	<meta name="author" content="Gabriel Drozdov">
+	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
+	<meta name="description" content="Open-source archive for all of Gabriel Drozdov’s courses and teaching materials.">
+	<meta property="og:url" content="https://classroom.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="GD with GD | Classroom">
+	<meta property="og:description" content="Open-source archive for all of Gabriel Drozdov’s courses and teaching materials.">
+	<meta property="og:image" content="/assets/meta/opengraph.png">
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="zoom-normal">
+	<header class="header">
+		<h1 class="header-path">
+			<a href="https://gdwithgd.com" target="_blank">GD with GD</a>
+			<div>&gt;</div>
+			<a href="/">Classroom</a>
+		</h1>
+		<div class="header-zoom">
+			<button data-zoom="75" onclick="setZoom(75)"><div></div></button>
+			<button data-zoom="100" onclick="setZoom(100)" data-active="1"><div></div></button>
+			<button data-zoom="125" onclick="setZoom(125)"><div></div></button>
+		</div>
+	</header>
+
+	<div class="container">
+		<nav class="section" id="courses">
+			<h2 class="section-title"><span class="symbol">&#xe80c;</span>Courses</h2>
+
+			<div class="links">
+				<h3 class="link-category"><span class="symbol">&#xe935;</span>2024</h3>
+				<!-- <a href="?course=type-and-code-v1" class="link" data-course="type-and-code-v1" data-path="Type + Code [v1]">
+					<h4 class="link-title">Type + Code</h4>
+					<p class="link-desc">
+						Creative coding elective focusing on type design, digital fonts, and unique reading experiences.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Fall 2024</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v1</div>
+				</a> -->
+				<!-- <a href="?course=in-motion-v1" class="link" data-course="in-motion-v1" data-path="In Motion [v1]">
+					<h4 class="link-title">In Motion: Design for Video and Animation</h4>
+					<p class="link-desc">
+						Motion design elective exploring a wide range of skills and use cases for animation.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Fall 2024</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v1</div>
+				</a> -->
+				<a href="?course=variable-fonts-workshop-v2" class="link" data-course="variable-fonts-workshop-v2" data-path="Variable Fonts Workshop [v2]">
+					<h4 class="link-title">Variable Fonts Workshop</h4>
+					<p class="link-desc">
+						Updated 4-week primer on type design through the lens of experimental variable fonts.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Spring 2024</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v2</div>
+				</a>
+				<a href="?course=web-sites-and-stories-v1" class="link" data-course="web-sites-and-stories-v1" data-path="Web Sites & Stories [v1]">
+					<h4 class="link-title">Web Sites & Stories</h4>
+					<p class="link-desc">
+						Introduction to web design and programming with an emphasis on narrative and storytelling.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Winter 2024</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v1</div>
+				</a>
+
+				<h3 class="link-category"><span class="symbol">&#xe935;</span>2023</h3>
+				<a href="?course=web-programming-workshop-v2" class="link" data-course="web-programming-workshop-v2" data-path="Web Programming Workshop [v2]">
+					<h4 class="link-title">Web Programming Workshop</h4>
+					<p class="link-desc">
+						Updated 4-week primer on using HTML and CSS to create uniquely digital experiences.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Fall 2023</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v2</div>
+				</a>
+				<a href="?course=variable-fonts-workshop-v1" class="link" data-course="variable-fonts-workshop-v1" data-path="Variable Fonts Workshop [v1]">
+					<h4 class="link-title">Variable Fonts Workshop</h4>
+					<p class="link-desc">
+						4-week primer on type design through the lens of experimental variable fonts.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Spring 2023</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v1</div>
+				</a>
+				<a href="?course=digital-form-v1" class="link" data-course="digital-form-v1" data-path="Digital Form [v1]">
+					<h4 class="link-title">Digital Form: Light, Motion, Interaction</h4>
+					<p class="link-desc">
+						Introduction to graphic, motion, and web design from a digital-first perspective.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Winter 2023</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v1</div>
+				</a>
+
+				<h3 class="link-category"><span class="symbol">&#xe935;</span>2022</h3>
+				<a href="?course=web-programming-workshop-v1" class="link" data-course="web-programming-workshop-v1" data-path="Web Programming Workshop [v1]">
+					<h4 class="link-title">Web Programming Workshop</h4>
+					<p class="link-desc">
+						4-week primer on the basics of HTML, CSS, and a tiny bit of JavaScript.
+					</p>
+					<div class="link-tags">
+						<div class="link-tag">RISD</div>
+						<div class="link-tag">Fall 2022</div>
+						<div class="link-tag">In-person</div>
+					</div>
+					<div class="link-sticker">v1</div>
+				</a>
+			</div>
+		</nav>
+
+		<section class="section" id="resources" data-active="0">
+			<h2 class="section-title"><span class="symbol">&#xe2c8;</span>Resources</h2>
+
+			<div class="links">
+			</div>
+
+			<div class="empty">Select a course</div>
+		</section>
+
+		<main class="section" id="preview" data-active="0">
+			<h2 class="section-title"><span class="symbol">&#xe8f4;</span> Preview</h2>
+
+			<div class="preview">
+				<div class="preview-embed">
+				</div>
+				<a class="preview-url" href="https://classroom.gdwithgd.com/" target="_blank"><span>https://classroom.gdwithgd.com/</span><div class="symbol">&#xe157;</div></a>
+			</div>
+
+			<div class="empty">Select a resource</div>
+		</main>
+	</div>
+
+	<div class="mobile-controls">
+		<button onclick="scrollToSection('courses')" class="mobile-controls-btn" style="--primary: var(--yellow);"><span class="symbol">&#xe80c;</span> Courses</button>
+		<button onclick="scrollToSection('resources')" class="mobile-controls-btn" style="--primary: var(--red);"><span class="symbol">&#xe2c8;</span> Resources</button>
+		<button onclick="scrollToSection('preview')" class="mobile-controls-btn" style="--primary: var(--blue);"><span class="symbol">&#xe8f4;</span> Preview</button>
+	</div>
+
+	<script src="course-data.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
