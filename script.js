@@ -62,7 +62,7 @@ readURL();
 function setHeaderPath(course, resource) {
 	let path = `
 		<a href="https://gdwithgd.com" target="_blank">GD with GD</a>
-		<div>&gt;</div>
+		<div>&rarr;</div>
 		<a href="/">Classroom</a>
 	`;
 
@@ -71,13 +71,13 @@ function setHeaderPath(course, resource) {
 		// this is really obtuse data storage but ah well
 		const coursePath = document.querySelector(`#courses .link[data-course="${course}"]`).dataset.path;
 		path += `
-			<div>&gt;</div>
+			<div>&rarr;</div>
 			<a href="?course=${course}">${coursePath}</a>
 		`;
 		if (resource != undefined) {
 			const resourcePath = document.querySelector(`#resources .link[data-resource="${resource}"]`).dataset.path;
 			path += `
-				<div>&gt;</div>
+				<div>&rarr;</div>
 				<a href="?course=${course}&resource=${resource}">${resourcePath}</a>
 			`;
 		}

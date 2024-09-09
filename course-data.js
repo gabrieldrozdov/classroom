@@ -2,16 +2,193 @@
 const courseData = {
 	"type-and-code-v1": [
 		{
-			"name": "Syllabus",
-			"slug": "syllabus",
-			"url": "#"
+			"name": "<span class='symbol'>&#xe88a;</span> Course Materials",
+			"contents": [
+				{
+					"name": "Syllabus",
+					"slug": "syllabus",
+					"url": "https://docs.google.com/document/d/1kM6s5JglXMB76nviLuHKUmPFgDh7KRTgoGCra5Cf9s0/edit?usp=sharing"
+				},
+				{
+					"name": "Schedule",
+					"slug": "schedule",
+					"url": "https://docs.google.com/document/d/1bClrpZ5RNCbWRgRTgI05quoLZMBwr0dRXv-_m67T1Ok/edit?usp=sharing"
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xe63e;</span> Class Websites",
+			"contents": [
+				{
+					"name": "Baby Steps",
+					"slug": "baby-steps",
+					"url": "https://babysteps.gdwithgd.com/"
+				},
+				{
+					"name": "The Designer’s Guide to Web Programming",
+					"slug": "designers-guide-to-web-programming",
+					"url": "https://webprogramming.gdwithgd.com/"
+				},
+				{
+					"name": "DEMOLAND",
+					"slug": "demoland",
+					"url": "https://demoland.gdwithgd.com/"
+				},
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xea03;</span> Projects",
+			"contents": [
+				{
+					"name": "Research & Analysis",
+					"slug": "research-and-analysis",
+					"url": "https://docs.google.com/document/d/1hetibTSSXBQ-WSrRGlTpi3vfj53fZaz5oNfpMbrlcIA/edit?usp=sharing"
+				},
+				{
+					"name": "Project 1: Time Traveler",
+					"slug": "project-1",
+					"url": "https://docs.google.com/document/d/1Z1zB6-depHecJCH28yXkHEfghw1ro7hByIywCHFT6eA/edit?usp=sharing"
+				},
+				{
+					"name": "Project 2: Live Type",
+					"slug": "project-2",
+					"url": "https://docs.google.com/document/d/1XYuZM2gOtHBYx-2J_BDS4LpfcNWogTNTdBuNXhH-jus/edit?usp=sharing"
+				},
+				{
+					"name": "Project 3: Internet Explorer",
+					"slug": "project-3",
+					"url": "https://docs.google.com/document/d/1xeDzwHjt7H9-gzgNCtm1ven7pMJNuZwiJ9sg96VCqe8/edit?usp=sharing"
+				}
+			]
 		}
 	],
 	"in-motion-v1": [
 		{
-			"name": "Syllabus",
-			"slug": "syllabus",
-			"url": "#"
+			"name": "<span class='symbol'>&#xe88a;</span> Course Materials",
+			"contents": [
+				{
+					"name": "Class Website",
+					"slug": "class-website",
+					"url": "https://inmotion.gdwithgd.com/"
+				},
+				{
+					"name": "Syllabus",
+					"slug": "syllabus",
+					"url": "https://docs.google.com/document/d/1qoMG3ypgF9MX4jbqxbJ0vI4GRgDpLgbzaexCVfPLixU/edit?usp=sharing"
+				},
+				{
+					"name": "Schedule",
+					"slug": "schedule",
+					"url": "https://docs.google.com/document/d/1ZUKq3XnTjU05z68O1ksl9DvaNALc-dhIfZY2-0lajbI/edit?usp=sharing"
+				},
+				{
+					"name": "Personal Canon",
+					"slug": "personal-canon",
+					"url": "https://docs.google.com/spreadsheets/d/1Z6nAvxW7IV9gv5SbzhkLJdm43eB7xL9jiIh6KrMsOZk/edit?usp=sharing"
+				},
+				{
+					"name": "How to Export and Compress Video Files",
+					"slug": "how-to-export-and-compress-video-files",
+					"url": "https://docs.google.com/document/d/1e56z4wtLjVPHlDoI3310ayjYuj2yJss59xr0FWudwUQ/edit?usp=sharing"
+				}
+			]
+		},
+	],
+	"this-is-for-you": [
+		{
+			"name": "<span class='symbol'>&#xea19;</span> Overview",
+			"contents": [
+				{
+					"name": "Homepage",
+					"slug": "homepage",
+					"url": "https://thisisforyou.gabrieldrozdov.com/"
+				},
+				{
+					"name": "Book Generator",
+					"slug": "book-generator",
+					"url": "https://thisisforyou.gabrieldrozdov.com/print/"
+				},
+				{
+					"name": "Foreword",
+					"slug": "foreword",
+					"url": "https://thisisforyou.gabrieldrozdov.com/hello/"
+				},
+				{
+					"name": "Afterword",
+					"slug": "afterword",
+					"url": "https://thisisforyou.gabrieldrozdov.com/goodbye/"
+				},
+				{
+					"name": "Index",
+					"slug": "index",
+					"url": "https://thisisforyou.gabrieldrozdov.com/index/"
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xe0f0;</span> Part One: Learning",
+			"contents": [
+				{
+					"name": "Chapter 1: Learning how to design",
+					"slug": "chapter-1",
+					"url": "https://thisisforyou.gabrieldrozdov.com/learning/design/"
+				},
+				{
+					"name": "Chapter 2: Learning how to design using code",
+					"slug": "chapter-2",
+					"url": "https://thisisforyou.gabrieldrozdov.com/learning/code/"
+				},
+				{
+					"name": "Chapter 3: Learning how to teach design and code",
+					"slug": "chapter-3",
+					"url": "https://thisisforyou.gabrieldrozdov.com/learning/teaching/"
+				},
+				{
+					"name": "Chapter 4: Learning how to run a studio",
+					"slug": "chapter-4",
+					"url": "https://thisisforyou.gabrieldrozdov.com/learning/studio/"
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xf604;</span> Part Two: Making",
+			"contents": [
+				{
+					"name": "Chapter 5: Everything I made before design school",
+					"slug": "chapter-5",
+					"url": "https://thisisforyou.gabrieldrozdov.com/making/before/"
+				},
+				{
+					"name": "Chapter 6: Everything I made during design school",
+					"slug": "chapter-6",
+					"url": "https://thisisforyou.gabrieldrozdov.com/making/during/"
+				},
+				{
+					"name": "Chapter 7: Everything I made after design school",
+					"slug": "chapter-7",
+					"url": "https://thisisforyou.gabrieldrozdov.com/making/after/"
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xe0bf;</span> Part Three: Sharing",
+			"contents": [
+				{
+					"name": "Chapter 8: Talking with my teachers",
+					"slug": "chapter-8",
+					"url": "https://thisisforyou.gabrieldrozdov.com/sharing/teachers/"
+				},
+				{
+					"name": "Chapter 9: Talking with my peers",
+					"slug": "chapter-9",
+					"url": "https://thisisforyou.gabrieldrozdov.com/sharing/peers/"
+				},
+				{
+					"name": "Chapter 10: Talking with my students",
+					"slug": "chapter-10",
+					"url": "https://thisisforyou.gabrieldrozdov.com/sharing/students/"
+				}
+			]
 		}
 	],
 	"variable-fonts-workshop-v2": [
@@ -119,6 +296,11 @@ const courseData = {
 					"name": "Syllabus",
 					"slug": "syllabus",
 					"url": "https://docs.google.com/document/d/1i34q-M4Wnae1QlO-UXo58X3MNYW3UkDX_E20Kml1PDE/edit?usp=sharing"
+				},
+				{
+					"name": "Small Sites; Big Stories",
+					"slug": "small-sites-big-stories",
+					"url": "https://smallsites.gdwithgd.com/"
 				}
 			]
 		},

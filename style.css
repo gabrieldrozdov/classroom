@@ -110,21 +110,20 @@ body {
 .header-path > *:nth-child(even) {
 	pointer-events: none;
 }
-.header-path > *:nth-child(1),
-.header-path > *:nth-child(2) {
+.header-path > *:nth-child(1) {
 	--primary: var(--pink);
 }
-.header-path > *:nth-child(3),
-.header-path > *:nth-child(4) {
+.header-path > *:nth-child(2),
+.header-path > *:nth-child(3) {
 	--primary: var(--green);
 }
-.header-path > *:nth-child(5),
-.header-path > *:nth-child(6) {
-	--primary: var(--yellow);
+.header-path > *:nth-child(4),
+.header-path > *:nth-child(5) {
+	--primary: var(--blue);
 }
-.header-path > *:nth-child(7),
-.header-path > *:nth-child(8) {
-	--primary: var(--red);
+.header-path > *:nth-child(6),
+.header-path > *:nth-child(7) {
+	--primary: var(--yellow);
 }
 .header-path > *:hover {
 	background-color: var(--primary);
@@ -133,9 +132,6 @@ body {
 .header-path > *:active {
 	opacity: .5;
 }
-/* .header-path > a:nth-last-child(1) {
-	--primary: var(--white);
-} */
 .header-colors {
 	display: flex;
 	flex-shrink: 0;
@@ -199,7 +195,7 @@ body {
 	flex-shrink: 0;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--black);
+	background-color: var(--red);
 	padding: 5px;
 	gap: 2px;
 	border-radius: 10px;
@@ -208,7 +204,7 @@ body {
 	border: unset;
 	width: 20px;
 	height: 20px;
-	background-color: var(--black);
+	background-color: var(--black3);
 	cursor: pointer;
 	border-radius: 5px;
 	display: flex;
@@ -216,7 +212,11 @@ body {
 	justify-content: center;
 }
 .header-zoom button[data-active="1"] {
-	border: 1px solid var(--white);
+	border: 1px solid var(--black);
+	background-color: var(--red);
+}
+.header-zoom button[data-active="1"] div {
+	background-color: var(--black3);
 }
 .header-zoom button:hover {
 	border: 1px solid var(--white);
@@ -227,7 +227,7 @@ body {
 .header-zoom button div {
 	width: 50%;
 	height: 50%;
-	background-color: var(--white);
+	background-color: var(--red);
 	border-radius: 50%;
 }
 .header-zoom button[data-zoom="75"] div {
@@ -237,6 +237,11 @@ body {
 .header-zoom button[data-zoom="125"] div {
 	width: 75%;
 	height: 75%;
+}
+@media only screen and (max-width: 500px) {
+	.header-zoom {
+		display: none;
+	}
 }
 
 /* Structure */
@@ -294,13 +299,13 @@ body {
 	opacity: .5;
 }
 #courses {
-	--primary: var(--yellow);
+	--primary: var(--blue);
 }
 #resources {
-	--primary: var(--red);
+	--primary: var(--yellow);
 }
 #preview {
-	--primary: var(--blue);
+	--primary: var(--purple);
 }
 .empty {
 	position: absolute;
