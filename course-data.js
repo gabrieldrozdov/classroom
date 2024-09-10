@@ -92,9 +92,14 @@ const courseData = {
 					"url": "https://docs.google.com/spreadsheets/d/1Z6nAvxW7IV9gv5SbzhkLJdm43eB7xL9jiIh6KrMsOZk/edit?usp=sharing"
 				},
 				{
+					"name": "Making GIFs in Photoshop",
+					"slug": "making-gifs-in-photoshop",
+					"url": "https://docs.google.com/document/d/1e56z4wtLjVPHlDoI3310ayjYuj2yJss59xr0FWudwUQ/edit?usp=sharing"
+				},
+				{
 					"name": "How to Export and Compress Video Files",
 					"slug": "how-to-export-and-compress-video-files",
-					"url": "https://docs.google.com/document/d/1e56z4wtLjVPHlDoI3310ayjYuj2yJss59xr0FWudwUQ/edit?usp=sharing"
+					"url": "https://docs.google.com/document/d/1gaGqou6e3E3RL2Evy3ADfUHbc-Eb20oAmAbZcpf4i3w/edit?usp=sharing"
 				}
 			]
 		},
