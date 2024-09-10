@@ -13,6 +13,11 @@ const courseData = {
 					"name": "Schedule",
 					"slug": "schedule",
 					"url": "https://docs.google.com/document/d/1bClrpZ5RNCbWRgRTgI05quoLZMBwr0dRXv-_m67T1Ok/edit?usp=sharing"
+				},
+				{
+					"name": "Coding Cheatsheet",
+					"slug": "coding-cheatsheet",
+					"url": "https://docs.google.com/document/d/1gcFIB5Ooeub0jEh2HqyCH0KwUyMpUoGhBVft_dYdSwI/edit?usp=sharing"
 				}
 			]
 		},
