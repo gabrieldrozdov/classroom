@@ -39,6 +39,11 @@ const courseData = {
 					"slug": "demoland",
 					"url": "https://demoland.gdwithgd.com/"
 				},
+				{
+					"name": "test-project-1.html",
+					"slug": "test-project-1",
+					"url": "https://testproject1.gdwithgd.com/"
+				}
 			]
 		},
 		{
@@ -55,6 +60,11 @@ const courseData = {
 					"url": "https://docs.google.com/document/d/1Z1zB6-depHecJCH28yXkHEfghw1ro7hByIywCHFT6eA/edit?usp=sharing"
 				},
 				{
+					"name": "Project 1: Submissions",
+					"slug": "project-1-submissions",
+					"url": "https://docs.google.com/spreadsheets/d/1IDq815wHFeXgXY-xlYLKfuSHttTZPzxqZXvPTIyVoe8/edit?usp=sharing"
+				},
+				{
 					"name": "Project 2: Live Type",
 					"slug": "project-2",
 					"url": "https://docs.google.com/document/d/1XYuZM2gOtHBYx-2J_BDS4LpfcNWogTNTdBuNXhH-jus/edit?usp=sharing"
@@ -63,6 +73,56 @@ const courseData = {
 					"name": "Project 3: Internet Explorer",
 					"slug": "project-3",
 					"url": "https://docs.google.com/document/d/1xeDzwHjt7H9-gzgNCtm1ven7pMJNuZwiJ9sg96VCqe8/edit?usp=sharing"
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 2]",
+			"contents": [
+				{
+					"name": "Introduction to the World Wide Web",
+					"slug": "introduction-to-the-world-wide-web",
+					"url": "https://www.w3.org/People/Raggett/book4/ch01.html"
+				},
+				{
+					"name": "A History of HTML",
+					"slug": "a-history-of-html",
+					"url": "https://www.w3.org/People/Raggett/book4/ch02.html"
+				},
+				{
+					"name": "Cascading HTML style sheets -- a proposal",
+					"slug": "cascading-html-style-sheets-a-proposal",
+					"url": "https://www.w3.org/People/howcome/p/cascade.html"
+				},
+				{
+					"name": "20 Years of CSS",
+					"slug": "20-years-of-css",
+					"url": "https://www.w3.org/Style/CSS20/"
+				},
+				{
+					"name": "A brief history of CSS until 2016",
+					"slug": "a-brief-history-of-css-until-2016",
+					"url": "https://www.w3.org/Style/CSS20/history.html"
+				},
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 3]",
+			"contents": [
+				{
+					"name": "Brief History of Webfonts",
+					"slug": "brief-history-of-webfonts",
+					"url": "https://www.typotheque.com/articles/brief-history-of-webfonts"
+				},
+				{
+					"name": "Professional Web Typography",
+					"slug": "professional-web-typography",
+					"url": "https://web.archive.org/web/20231219200952/https://prowebtype.com/"
+				},
+				{
+					"name": ".otf, .ttf",
+					"slug": "otf-ttf",
+					"url": "https://otf-ttf.noreplica.com/"
 				}
 			]
 		}
