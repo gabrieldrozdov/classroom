@@ -160,6 +160,11 @@ const courseData = {
 					"name": "How to Export and Compress Video Files",
 					"slug": "how-to-export-and-compress-video-files",
 					"url": "https://docs.google.com/document/d/1gaGqou6e3E3RL2Evy3ADfUHbc-Eb20oAmAbZcpf4i3w/edit?usp=sharing"
+				},
+				{
+					"name": "After Effects Shortcuts",
+					"slug": "after-effects-shortcuts",
+					"url": "https://docs.google.com/document/d/1mfpLDXKdpVot24GR9rY4O382sJoFY9eFBDLkyCMz1NA/edit?usp=sharing"
 				}
 			]
 		},
