@@ -110,6 +110,21 @@ const courseData = {
 			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 3]",
 			"contents": [
 				{
+					"name": "Web Design in 4 Minutes",
+					"slug": "web-design-in-4-minutes",
+					"url": "https://jgthms.com/web-design-in-4-minutes/"
+				},
+				{
+					"name": "A Handmade Web",
+					"slug": "a-handmade-web",
+					"url": "https://luckysoap.com/statements/handmadeweb.html"
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 4]",
+			"contents": [
+				{
 					"name": "Brief History of Webfonts",
 					"slug": "brief-history-of-webfonts",
 					"url": "https://www.typotheque.com/articles/brief-history-of-webfonts"
