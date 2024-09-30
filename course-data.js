@@ -77,67 +77,149 @@ const courseData = {
 			]
 		},
 		{
-			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 2]",
+			"name": "<span class='symbol'>&#xe6b1;</span> Type Design Tutorials",
 			"contents": [
 				{
-					"name": "Introduction to the World Wide Web",
-					"slug": "introduction-to-the-world-wide-web",
-					"url": "https://www.w3.org/People/Raggett/book4/ch01.html"
+					"name": "Glyphs Basics",
+					"slug": "glyphs-basics",
+					"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing"
 				},
 				{
-					"name": "A History of HTML",
-					"slug": "a-history-of-html",
-					"url": "https://www.w3.org/People/Raggett/book4/ch02.html"
+					"name": "Setting Up Variable Axes",
+					"slug": "setting-up-variable-axes",
+					"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing"
 				},
 				{
-					"name": "Cascading HTML style sheets -- a proposal",
-					"slug": "cascading-html-style-sheets-a-proposal",
-					"url": "https://www.w3.org/People/howcome/p/cascade.html"
+					"name": "Pixel Fonts",
+					"slug": "pixel-fonts",
+					"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing"
 				},
 				{
-					"name": "20 Years of CSS",
-					"slug": "20-years-of-css",
-					"url": "https://www.w3.org/Style/CSS20/"
-				},
-				{
-					"name": "A brief history of CSS until 2016",
-					"slug": "a-brief-history-of-css-until-2016",
-					"url": "https://www.w3.org/Style/CSS20/history.html"
-				},
-			]
-		},
-		{
-			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 3]",
-			"contents": [
-				{
-					"name": "Web Design in 4 Minutes",
-					"slug": "web-design-in-4-minutes",
-					"url": "https://jgthms.com/web-design-in-4-minutes/"
-				},
-				{
-					"name": "A Handmade Web",
-					"slug": "a-handmade-web",
-					"url": "https://luckysoap.com/statements/handmadeweb.html"
+					"name": "Drawing in Glyphs",
+					"slug": "drawing-in-glyphs",
+					"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing"
 				}
 			]
 		},
 		{
-			"name": "<span class='symbol'>&#xea19;</span> Readings [Due Week 4]",
+			"name": "<span class='symbol'>&#xea19;</span> Readings",
 			"contents": [
 				{
-					"name": "Brief History of Webfonts",
-					"slug": "brief-history-of-webfonts",
-					"url": "https://www.typotheque.com/articles/brief-history-of-webfonts"
+					"name": "Introduction to the World Wide Web",
+					"slug": "introduction-to-the-world-wide-web",
+					"desc": "By Dave Raggett",
+					"url": "https://www.w3.org/People/Raggett/book4/ch01.html",
+					"tags": [
+						"Week 2"
+					]
 				},
 				{
-					"name": "Professional Web Typography",
-					"slug": "professional-web-typography",
-					"url": "https://web.archive.org/web/20231219200952/https://prowebtype.com/"
+					"name": "A History of HTML",
+					"slug": "a-history-of-html",
+					"desc": "By Dave Raggett",
+					"url": "https://www.w3.org/People/Raggett/book4/ch02.html",
+					"tags": [
+						"Week 2"
+					]
 				},
 				{
-					"name": ".otf, .ttf",
-					"slug": "otf-ttf",
-					"url": "https://otf-ttf.noreplica.com/"
+					"name": "Cascading HTML style sheets -- a proposal",
+					"slug": "cascading-html-style-sheets-a-proposal",
+					"desc": "By Håkon W Lie",
+					"url": "https://www.w3.org/People/howcome/p/cascade.html",
+					"tags": [
+						"Week 2"
+					]
+				},
+				{
+					"name": "20 Years of CSS",
+					"slug": "20-years-of-css",
+					"desc": "By Bert Bos",
+					"url": "https://www.w3.org/Style/CSS20/",
+					"tags": [
+						"Week 2"
+					]
+				},
+				{
+					"name": "A brief history of CSS until 2016",
+					"slug": "a-brief-history-of-css-until-2016",
+					"desc": "By Bert Bos",
+					"url": "https://www.w3.org/Style/CSS20/history.html",
+					"tags": [
+						"Week 2"
+					]
+				},
+				{
+					"name": "Web Design in 4 Minutes",
+					"slug": "web-design-in-4-minutes",
+					"desc": "By Jeremy Thomas",
+					"url": "https://jgthms.com/web-design-in-4-minutes/",
+					"tags": [
+						"Week 3"
+					]
+				},
+				{
+					"name": "A Handmade Web",
+					"slug": "a-handmade-web",
+					"desc": "By J. R. Carpenter",
+					"url": "https://luckysoap.com/statements/handmadeweb.html",
+					"tags": [
+						"Week 3"
+					]
+				},
+				{
+					"name": "We Are Family! I’ve Got All My Variations With Me",
+					"slug": "we-are-family",
+					"desc": "By David Jonathan Ross",
+					"url": "https://www.youtube.com/watch?v=wWa8TLrKMeI",
+					"tags": [
+						"Week 5"
+					]
+				},
+				{
+					"name": "Typeface as Programme",
+					"slug": "typeface-as-programme",
+					"desc": "By Jürg Lehni",
+					"url": "https://www.typotheque.com/articles/typeface-as-programme",
+					"tags": [
+						"Week 6"
+					]
+				},
+				{
+					"name": "Letter & Spirit",
+					"slug": "letter-and-spirit",
+					"desc": "By Dexter Sinister",
+					"url": "https://www.servinglibrary.org/journal/3/letter-and-spirit",
+					"tags": [
+						"Week 7"
+					]
+				},
+				{
+					"name": "How Google perfected the web",
+					"slug": "how-google-perfected-the-web",
+					"desc": "By Mia Sato",
+					"url": "https://www.theverge.com/c/23998379/google-search-seo-algorithm-webpage-optimization",
+					"tags": [
+						"Week 9"
+					]
+				},
+				{
+					"name": "My website is a shifting house next to a river of knowledge. What could yours be?",
+					"slug": "my-website-is-a-shifting-house",
+					"desc": "By Laurel Schwulst",
+					"url": "https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/",
+					"tags": [
+						"Week 10"
+					]
+				},
+				{
+					"name": "Net Art Anthology",
+					"slug": "net-art-anthology",
+					"desc": "By Rhizome",
+					"url": "https://anthology.rhizome.org/",
+					"tags": [
+						"Week 12"
+					]
 				}
 			]
 		}
@@ -162,10 +244,15 @@ const courseData = {
 					"url": "https://docs.google.com/document/d/1ZUKq3XnTjU05z68O1ksl9DvaNALc-dhIfZY2-0lajbI/edit?usp=sharing"
 				},
 				{
-					"name": "Personal Canon",
-					"slug": "personal-canon",
+					"name": "New Canon",
+					"slug": "new-canon",
 					"url": "https://docs.google.com/spreadsheets/d/1Z6nAvxW7IV9gv5SbzhkLJdm43eB7xL9jiIh6KrMsOZk/edit?usp=sharing"
-				},
+				}
+			]
+		},
+		{
+			"name": "<span class='symbol'>&#xe6b1;</span> Tutorials and Guides",
+			"contents": [
 				{
 					"name": "Making GIFs in Photoshop",
 					"slug": "making-gifs-in-photoshop",
@@ -177,12 +264,32 @@ const courseData = {
 					"url": "https://docs.google.com/document/d/1gaGqou6e3E3RL2Evy3ADfUHbc-Eb20oAmAbZcpf4i3w/edit?usp=sharing"
 				},
 				{
+					"name": "Importing Files from Illustrator and Photoshop",
+					"slug": "importing-files-from-illustrator-and-photoshop",
+					"url": "https://docs.google.com/document/d/1Q7NilIvsiM9qNzwyUmXJNS8nGwEfrwrAzyCOOZEPI1g/edit?usp=sharing"
+				},
+				{
+					"name": "Sound and Video",
+					"slug": "sound-and-video",
+					"url": "https://docs.google.com/document/d/1kYxMOu6TuRjcMeCM8Dzff6WsTk2axKvVJELONbe39gE/edit?usp=sharing"
+				},
+				{
+					"name": "Introduction to After Effects",
+					"slug": "introduction-to-after-effects",
+					"url": "https://drive.google.com/file/d/18ue_bBJaBkR08W42Jgjn7f3gjZwKVMCE/view?usp=sharing"
+				},
+				{
+					"name": "After Effects Cheat Sheet",
+					"slug": "after-effects-cheat-sheet",
+					"url": "https://drive.google.com/file/d/18JP4Fluu4dgAwfOCWJAv4twSkpHFv0K5/view?usp=sharing"
+				},
+				{
 					"name": "After Effects Shortcuts",
 					"slug": "after-effects-shortcuts",
 					"url": "https://docs.google.com/document/d/1mfpLDXKdpVot24GR9rY4O382sJoFY9eFBDLkyCMz1NA/edit?usp=sharing"
 				}
 			]
-		},
+		}
 	],
 	"this-is-for-you": [
 		{

@@ -189,7 +189,7 @@ body {
 .header-fonts button:active {
 	opacity: .5;
 }
-.header-zoom {
+/* .header-zoom {
 	height: 30px;
 	display: flex;
 	flex-shrink: 0;
@@ -242,7 +242,7 @@ body {
 	.header-zoom {
 		display: none;
 	}
-}
+} */
 
 /* Structure */
 .container {
@@ -495,7 +495,7 @@ body {
 }
 .preview-url {
 	height: 25px;
-	background-color: var(--primary);
+	background-color: var(--red);
 	display: flex;
 	align-items: center;
 	justify-content: center;
