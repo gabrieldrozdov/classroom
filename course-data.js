@@ -82,22 +82,26 @@ const courseData = {
 				{
 					"name": "Glyphs Basics",
 					"slug": "glyphs-basics",
-					"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing"
+					"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing",
+					"newtab": true
 				},
 				{
 					"name": "Setting Up Variable Axes",
 					"slug": "setting-up-variable-axes",
-					"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing"
+					"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing",
+					"newtab": true
 				},
 				{
 					"name": "Pixel Fonts",
 					"slug": "pixel-fonts",
-					"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing"
+					"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing",
+					"newtab": true
 				},
 				{
 					"name": "Drawing in Glyphs",
 					"slug": "drawing-in-glyphs",
-					"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing"
+					"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing",
+					"newtab": true
 				}
 			]
 		},
@@ -111,7 +115,8 @@ const courseData = {
 					"url": "https://www.w3.org/People/Raggett/book4/ch01.html",
 					"tags": [
 						"Week 2"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "A History of HTML",
@@ -120,7 +125,8 @@ const courseData = {
 					"url": "https://www.w3.org/People/Raggett/book4/ch02.html",
 					"tags": [
 						"Week 2"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "Cascading HTML style sheets -- a proposal",
@@ -129,7 +135,8 @@ const courseData = {
 					"url": "https://www.w3.org/People/howcome/p/cascade.html",
 					"tags": [
 						"Week 2"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "20 Years of CSS",
@@ -138,7 +145,8 @@ const courseData = {
 					"url": "https://www.w3.org/Style/CSS20/",
 					"tags": [
 						"Week 2"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "A brief history of CSS until 2016",
@@ -147,7 +155,8 @@ const courseData = {
 					"url": "https://www.w3.org/Style/CSS20/history.html",
 					"tags": [
 						"Week 2"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "Web Design in 4 Minutes",
@@ -174,7 +183,8 @@ const courseData = {
 					"url": "https://www.youtube.com/watch?v=wWa8TLrKMeI",
 					"tags": [
 						"Week 5"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "Typeface as Programme",
@@ -183,7 +193,8 @@ const courseData = {
 					"url": "https://www.typotheque.com/articles/typeface-as-programme",
 					"tags": [
 						"Week 6"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "Letter & Spirit",
@@ -201,7 +212,8 @@ const courseData = {
 					"url": "https://www.theverge.com/c/23998379/google-search-seo-algorithm-webpage-optimization",
 					"tags": [
 						"Week 9"
-					]
+					],
+					"newtab": true
 				},
 				{
 					"name": "My website is a shifting house next to a river of knowledge. What could yours be?",
@@ -247,6 +259,11 @@ const courseData = {
 					"name": "New Canon",
 					"slug": "new-canon",
 					"url": "https://docs.google.com/spreadsheets/d/1Z6nAvxW7IV9gv5SbzhkLJdm43eB7xL9jiIh6KrMsOZk/edit?usp=sharing"
+				},
+				{
+					"name": "Unit 2",
+					"slug": "unit-2",
+					"url": "https://docs.google.com/document/d/1VjZcSVTuzG7HhayFORlN1kTa_Ei6PMQzXKWm3OLigbk/edit?usp=sharing"
 				}
 			]
 		},
