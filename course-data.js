@@ -264,6 +264,11 @@ const courseData = {
 					"name": "Unit 2",
 					"slug": "unit-2",
 					"url": "https://docs.google.com/document/d/1VjZcSVTuzG7HhayFORlN1kTa_Ei6PMQzXKWm3OLigbk/edit?usp=sharing"
+				},
+				{
+					"name": "Week 6",
+					"slug": "week-6",
+					"url": "https://docs.google.com/presentation/d/14q6C4Fg_CYSodvmzImBDBmhG4kJrMnoy4o0IQdCy-Cg/edit?usp=sharing"
 				}
 			]
 		},
