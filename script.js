@@ -1,29 +1,3 @@
-// Zoom controls
-function setZoom(level) {
-	document.body.style.zoom = level+"%";
-
-	// Set appropriate zoom class to fix media queries
-	const body = document.querySelector('body');
-	if (level == 75) {
-		body.classList.add('zoom-out');
-		body.classList.remove('zoom-normal');
-		body.classList.remove('zoom-in');
-	} else if (level == 125) {
-		body.classList.add('zoom-in');
-		body.classList.remove('zoom-normal');
-		body.classList.remove('zoom-out');
-	} else {
-		body.classList.remove('zoom-out');
-		body.classList.add('zoom-normal');
-		body.classList.remove('zoom-in');
-	}
-
-	// Display correct zoom toggle in header
-	document.querySelectorAll(`.header-zoom button`).forEach((btn) => {btn.dataset.active = 0});
-	const activeZoomToggle = document.querySelector(`.header-zoom button[data-zoom="${level}"]`);
-	activeZoomToggle.dataset.active = 1;
-} 
-
 // Set a URL to avoid page refresh
 function setURL(course, resource) {
 	const newURL = new URL(location);
@@ -38,6 +12,11 @@ function setURL(course, resource) {
 }
 for (let courseLink of document.querySelectorAll('#courses .link')) {
 	courseLink.addEventListener('click', (e) => {
+
+		// Scroll resources section to top
+		const resourcesLinks = resources.querySelector('#resources .links');
+		resourcesLinks.scrollTop = 0;
+
 		e.preventDefault();
 		setURL(courseLink.dataset.course, undefined);
 		scrollToSection('resources');
@@ -54,12 +33,12 @@ function readURL() {
 	highlightLinks(course, resource);
 	unloadEmbed();
 	reloadEmbed(resource);
-	setHeaderPath(course, resource);
+	setNavPath(course, resource);
 }
 readURL();
 
-// Set data path in header
-function setHeaderPath(course, resource) {
+// Set data path in nav
+function setNavPath(course, resource) {
 	let path = `
 		<a href="https://gdwithgd.com" target="_blank">GD with GD</a>
 		<div>&rarr;</div>
@@ -84,8 +63,8 @@ function setHeaderPath(course, resource) {
 	}
 
 	// Add to DOM
-	const headerPath = document.querySelector(".header-path");
-	headerPath.innerHTML = path;
+	const navPath = document.querySelector(".nav-path");
+	navPath.innerHTML = path;
 }
 
 // Generate resources section
@@ -105,9 +84,10 @@ function generateResources(course) {
 	let courseLinks = courseData[course];
 	let temp = "";
 	for (let courseLink of courseLinks) {
+		temp += "<div class='links-subsection'>";
 		// Detect if links are a part of a group or not
 		if (courseLink["contents"] != undefined) {
-			temp += `<h3 class="link-category">${courseLink['name']}</h3>`;
+			temp += `<h3 class="links-subsection-heading">${courseLink['name']}</h3>`;
 			for (let sublink of courseLink["contents"]) {
 				// Generate tags if needed
 				let tags = "";
@@ -127,7 +107,7 @@ function generateResources(course) {
 	
 				// Put it all together
 				temp += `
-					<a href="?course=${course}&resource=${sublink['slug']}" class="link" data-resource="${sublink['slug']}" data-url="${sublink['url']}" data-path="${sublink['name']}">
+					<a href="?course=${course}&resource=${sublink['slug']}" class="link" data-resource="${sublink['slug']}" data-url="${sublink['url']}" data-path="${sublink['name']}" data-newtab="${sublink['newtab']}">
 						<h4 class="link-title">${sublink['name']}</h4>
 						${desc}
 						${tags}
@@ -155,6 +135,7 @@ function generateResources(course) {
 				</a>
 			`;
 		}
+		temp += "</div>";
 	}
 
 	// Add links to DOM
@@ -168,7 +149,11 @@ function generateResources(course) {
 		resourceLink.addEventListener('click', (e) => {
 			e.preventDefault();
 			setURL(course, resourceLink.dataset.resource);
-			loadEmbed(resourceLink.dataset.url);
+			if (resourceLink.dataset.newtab == "true") {
+				loadEmbedNewTab(resourceLink.dataset.url);
+			} else {
+				loadEmbed(resourceLink.dataset.url);
+			}
 			scrollToSection('preview');
 		})
 	}
@@ -188,26 +173,42 @@ function loadEmbed(dataURL) {
 	previewURL.href = dataURL;
 	previewURL.innerHTML = `<span>${dataURL}</span><div class="symbol">&#xe89e;</div>`;
 }
+function loadEmbedNewTab(dataURL) {
+	const preview = document.querySelector('#preview');
+	preview.dataset.active = 1;
+
+	// Indicate resource must be opened in new tab
+	preview.dataset.newtab = 1;
+	const previewEmbed = preview.querySelector('.preview-embed');
+	previewEmbed.innerHTML = ``;
+
+	// Set display URL and link
+	const previewURL = preview.querySelector('.preview-url');
+	previewURL.href = dataURL;
+	previewURL.innerHTML = `<span>${dataURL}</span><div class="symbol">&#xe89e;</div>`;
+}
 function unloadEmbed() {
 	const preview = document.querySelector('#preview');
 	preview.dataset.active = 0;
+	preview.dataset.newtab = 0;
 
 	// Remove iframe src
 	const previewEmbed = preview.querySelector('.preview-embed');
 	previewEmbed.innerHTML = "";
-
-	// Set to default URL
-	const previewURL = preview.querySelector('.preview-url');
-	previewURL.href = "https://classroom.gdwithgd.com";
-	previewURL.innerHTML = `<span>https://classroom.gdwithgd.com</span>`;
 }
 function reloadEmbed(resource) {
-	const activeResource = document.querySelector('#resources .link[data-active="1"');
+	const activeResource = document.querySelector('#resources .link[data-active="1"]');
 	if (resource != undefined) {
 		setTimeout(() => {
 			scrollToSection('preview');
 		}, 100)
-		loadEmbed(activeResource.dataset.url);
+
+		// Handle if embed needs to be opened in new tab
+		if (activeResource.dataset.newtab == "true") {
+			loadEmbedNewTab(activeResource.dataset.url);
+		} else {
+			loadEmbed(activeResource.dataset.url);
+		}
 	}
 }
 
@@ -231,15 +232,13 @@ function highlightLinks(course, resource) {
 // Scroll to section for mobile device navigation
 function scrollToSection(section) {
 	const elmnt = document.querySelector(`#${section}`);
-	elmnt.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+	elmnt.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
 
+// Open in new tab
 function openInNewTab(url) {
 	window.open(url, '_blank').focus();
 }
 
 // Handle when user navigates back/forward URL change
 window.addEventListener("popstate", (event) => {readURL();});
-
-// TODO
-// opengraph image
