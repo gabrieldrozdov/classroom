@@ -21,6 +21,12 @@ const courseData = {
 					"slug": "coding-cheatsheet",
 					"url": "https://docs.google.com/document/d/1gcFIB5Ooeub0jEh2HqyCH0KwUyMpUoGhBVft_dYdSwI/edit?usp=sharing",
 					"newtab": false
+				},
+				{
+					"name": "Week 7",
+					"slug": "week-7",
+					"url": "https://embed.figma.com/slides/Y0FqwguHErsd7SebPBOTQ7/TYPE%2BCODE---Week-7?node-id=1-6675&embed-host=share",
+					"newtab": false
 				}
 			]
 		},
@@ -280,7 +286,12 @@ const courseData = {
 					"slug": "new-canon",
 					"url": "https://docs.google.com/spreadsheets/d/1Z6nAvxW7IV9gv5SbzhkLJdm43eB7xL9jiIh6KrMsOZk/edit?usp=sharing",
 					"newtab": false
-				},
+				}
+			]
+		},
+		{
+			"name": "Lectures",
+			"contents": [
 				{
 					"name": "Unit 2",
 					"slug": "unit-2",
@@ -291,6 +302,12 @@ const courseData = {
 					"name": "Week 6",
 					"slug": "week-6",
 					"url": "https://docs.google.com/presentation/d/14q6C4Fg_CYSodvmzImBDBmhG4kJrMnoy4o0IQdCy-Cg/edit?usp=sharing",
+					"newtab": false
+				},
+				{
+					"name": "Week 7",
+					"slug": "week-7",
+					"url": "https://embed.figma.com/slides/xKPdakq2mC4kKHD2yRLGCQ/IN-MOTION---Week-7?node-id=2-675&embed-host=share",
 					"newtab": false
 				}
 			]
