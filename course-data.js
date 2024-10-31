@@ -342,19 +342,19 @@ const courseData = {
 					"name": "Unit 2",
 					"slug": "unit-2",
 					"url": "https://docs.google.com/document/d/1VjZcSVTuzG7HhayFORlN1kTa_Ei6PMQzXKWm3OLigbk/edit?usp=sharing",
-					"newtab": true
+					"newtab": false
 				},
 				{
 					"name": "Week 6",
 					"slug": "week-6",
 					"url": "https://docs.google.com/presentation/d/14q6C4Fg_CYSodvmzImBDBmhG4kJrMnoy4o0IQdCy-Cg/edit?usp=sharing",
-					"newtab": true
+					"newtab": false
 				},
 				{
 					"name": "Week 7",
 					"slug": "week-7",
 					"url": "https://embed.figma.com/slides/xKPdakq2mC4kKHD2yRLGCQ/IN-MOTION---Week-7?node-id=2-675&embed-host=share",
-					"newtab": true
+					"newtab": false
 				}
 			]
 		},
