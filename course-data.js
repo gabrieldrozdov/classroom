@@ -7,25 +7,48 @@ const courseData = {
 				{
 					"name": "Syllabus",
 					"slug": "syllabus",
-					"url": "https://docs.google.com/document/d/1kM6s5JglXMB76nviLuHKUmPFgDh7KRTgoGCra5Cf9s0/edit?usp=sharing",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?usp=sharing",
 					"newtab": false
 				},
 				{
 					"name": "Schedule",
 					"slug": "schedule",
-					"url": "https://docs.google.com/document/d/1bClrpZ5RNCbWRgRTgI05quoLZMBwr0dRXv-_m67T1Ok/edit?usp=sharing",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.uwu9i2pbz132",
 					"newtab": false
 				},
 				{
-					"name": "Coding Cheatsheet",
-					"slug": "coding-cheatsheet",
-					"url": "https://docs.google.com/document/d/1gcFIB5Ooeub0jEh2HqyCH0KwUyMpUoGhBVft_dYdSwI/edit?usp=sharing",
+					"name": "Resources",
+					"slug": "resources",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.tumfv79f53pr",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"contents": [
+				{
+					"name": "Research & Analysis",
+					"slug": "research-and-analysis",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.g1ln27r7vbjd",
 					"newtab": false
 				},
 				{
-					"name": "Week 7",
-					"slug": "week-7",
-					"url": "https://embed.figma.com/slides/Y0FqwguHErsd7SebPBOTQ7/TYPE%2BCODE---Week-7?node-id=1-6675&embed-host=share",
+					"name": "Project 1: Time Traveler",
+					"slug": "project-1",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.qyjwo2qodni",
+					"newtab": false
+				},
+				{
+					"name": "Project 2: Live Type",
+					"slug": "project-2",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.93s6zdjxh731",
+					"newtab": false
+				},
+				{
+					"name": "Project 3: Internet Explorer",
+					"slug": "project-3",
+					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.6upzmi3qezwt",
 					"newtab": false
 				}
 			]
@@ -55,41 +78,6 @@ const courseData = {
 					"name": "test-project-1.html",
 					"slug": "test-project-1",
 					"url": "https://testproject1.gdwithgd.com/",
-					"newtab": false
-				}
-			]
-		},
-		{
-			"name": "Projects",
-			"contents": [
-				{
-					"name": "Research & Analysis",
-					"slug": "research-and-analysis",
-					"url": "https://docs.google.com/document/d/1hetibTSSXBQ-WSrRGlTpi3vfj53fZaz5oNfpMbrlcIA/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "Project 1: Time Traveler",
-					"slug": "project-1",
-					"url": "https://docs.google.com/document/d/1Z1zB6-depHecJCH28yXkHEfghw1ro7hByIywCHFT6eA/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "Project 1: Submissions",
-					"slug": "project-1-submissions",
-					"url": "https://docs.google.com/spreadsheets/d/1IDq815wHFeXgXY-xlYLKfuSHttTZPzxqZXvPTIyVoe8/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "Project 2: Live Type",
-					"slug": "project-2",
-					"url": "https://docs.google.com/document/d/1XYuZM2gOtHBYx-2J_BDS4LpfcNWogTNTdBuNXhH-jus/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "Project 3: Internet Explorer",
-					"slug": "project-3",
-					"url": "https://docs.google.com/document/d/1xeDzwHjt7H9-gzgNCtm1ven7pMJNuZwiJ9sg96VCqe8/edit?usp=sharing",
 					"newtab": false
 				}
 			]
@@ -264,27 +252,85 @@ const courseData = {
 			"name": "Course Materials",
 			"contents": [
 				{
-					"name": "Class Website",
-					"slug": "class-website",
-					"url": "https://inmotion.gdwithgd.com/",
-					"newtab": false
-				},
-				{
 					"name": "Syllabus",
 					"slug": "syllabus",
-					"url": "https://docs.google.com/document/d/1qoMG3ypgF9MX4jbqxbJ0vI4GRgDpLgbzaexCVfPLixU/edit?usp=sharing",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?usp=sharing",
 					"newtab": false
 				},
 				{
 					"name": "Schedule",
 					"slug": "schedule",
-					"url": "https://docs.google.com/document/d/1ZUKq3XnTjU05z68O1ksl9DvaNALc-dhIfZY2-0lajbI/edit?usp=sharing",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.7ubr7cuas863",
 					"newtab": false
 				},
 				{
+					"name": "Resources",
+					"slug": "resources",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.mskmi0lq4jc8",
+					"newtab": false
+				},
+				{
+					"name": "New Canon Are.na Channel",
+					"slug": "new-canon-arena-channel",
+					"url": "https://www.are.na/gabriel-drozdov/in-motion-f24-new-canon",
+					"newtab": false
+				},
+			]
+		},
+		{
+			"name": "Projects",
+			"contents": [
+				{
 					"name": "New Canon",
 					"slug": "new-canon",
-					"url": "https://docs.google.com/spreadsheets/d/1Z6nAvxW7IV9gv5SbzhkLJdm43eB7xL9jiIh6KrMsOZk/edit?usp=sharing",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.987huextsgif",
+					"newtab": false
+				},
+				{
+					"name": "Motion Studies",
+					"slug": "motion-studies",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.yxsuvki1tvwu",
+					"newtab": false
+				},
+				{
+					"name": "Exquisite Corpse",
+					"slug": "exquisite-corpse",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.z4ng7jz82thu",
+					"newtab": false
+				},
+				{
+					"name": "Final Project: Sequence",
+					"slug": "final-project-sequence",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.m2dacsvocbhk",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "Tutorials",
+			"contents": [
+				{
+					"name": "Making GIFs in Photoshop",
+					"slug": "making-gifs-in-photoshop",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.gyvpgx4tgtp4",
+					"newtab": false
+				},
+				{
+					"name": "Exporting and Compressing Files",
+					"slug": "exporting-and-compressing-files",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.tjwf15qv0k5",
+					"newtab": false
+				},
+				{
+					"name": "Importing Files from Illustrator and Photoshop",
+					"slug": "importing-files-from-illustrator-and-photoshop",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.l18at4pf57al",
+					"newtab": false
+				},
+				{
+					"name": "Working with Audio",
+					"slug": "working-with-audio",
+					"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.8bfkfwd4z3t5",
 					"newtab": false
 				}
 			]
@@ -296,48 +342,30 @@ const courseData = {
 					"name": "Unit 2",
 					"slug": "unit-2",
 					"url": "https://docs.google.com/document/d/1VjZcSVTuzG7HhayFORlN1kTa_Ei6PMQzXKWm3OLigbk/edit?usp=sharing",
-					"newtab": false
+					"newtab": true
 				},
 				{
 					"name": "Week 6",
 					"slug": "week-6",
 					"url": "https://docs.google.com/presentation/d/14q6C4Fg_CYSodvmzImBDBmhG4kJrMnoy4o0IQdCy-Cg/edit?usp=sharing",
-					"newtab": false
+					"newtab": true
 				},
 				{
 					"name": "Week 7",
 					"slug": "week-7",
 					"url": "https://embed.figma.com/slides/xKPdakq2mC4kKHD2yRLGCQ/IN-MOTION---Week-7?node-id=2-675&embed-host=share",
-					"newtab": false
+					"newtab": true
 				}
 			]
 		},
 		{
-			"name": "Tutorials and Guides",
+			"name": "Other Resources",
 			"contents": [
 				{
-					"name": "Making GIFs in Photoshop",
-					"slug": "making-gifs-in-photoshop",
-					"url": "https://docs.google.com/document/d/1e56z4wtLjVPHlDoI3310ayjYuj2yJss59xr0FWudwUQ/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "How to Export and Compress Video Files",
-					"slug": "how-to-export-and-compress-video-files",
-					"url": "https://docs.google.com/document/d/1gaGqou6e3E3RL2Evy3ADfUHbc-Eb20oAmAbZcpf4i3w/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "Importing Files from Illustrator and Photoshop",
-					"slug": "importing-files-from-illustrator-and-photoshop",
-					"url": "https://docs.google.com/document/d/1Q7NilIvsiM9qNzwyUmXJNS8nGwEfrwrAzyCOOZEPI1g/edit?usp=sharing",
-					"newtab": false
-				},
-				{
-					"name": "Sound and Video",
-					"slug": "sound-and-video",
-					"url": "https://docs.google.com/document/d/1kYxMOu6TuRjcMeCM8Dzff6WsTk2axKvVJELONbe39gE/edit?usp=sharing",
-					"newtab": false
+					"name": "After Effects Shortcuts",
+					"slug": "after-effects-shortcuts",
+					"url": "https://docs.google.com/document/d/1mfpLDXKdpVot24GR9rY4O382sJoFY9eFBDLkyCMz1NA/edit?usp=sharing",
+					"newtab": true
 				},
 				{
 					"name": "Introduction to After Effects",
@@ -350,12 +378,6 @@ const courseData = {
 					"slug": "after-effects-cheat-sheet",
 					"url": "https://drive.google.com/file/d/18JP4Fluu4dgAwfOCWJAv4twSkpHFv0K5/view?usp=sharing",
 					"newtab": true
-				},
-				{
-					"name": "After Effects Shortcuts",
-					"slug": "after-effects-shortcuts",
-					"url": "https://docs.google.com/document/d/1mfpLDXKdpVot24GR9rY4O382sJoFY9eFBDLkyCMz1NA/edit?usp=sharing",
-					"newtab": false
 				}
 			]
 		}
