@@ -46,7 +46,7 @@ const courseData = {
 					"newtab": false
 				},
 				{
-					"name": "Project 3: Internet Explorer",
+					"name": "Project 3: Not a Book",
 					"slug": "project-3",
 					"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.6upzmi3qezwt",
 					"newtab": false
