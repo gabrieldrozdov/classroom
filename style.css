@@ -115,22 +115,16 @@ body {
 	flex-shrink: 0;
 	color: var(--black3);
 	text-decoration: none;
-	height: 19px;
 	display: flex;
 	align-items: center;
-	padding: calc(5px + .2em) 5px 5px 5px;
-	display: flex;
-	align-items: stretch;
 	justify-self: stretch;
-	gap: 5px;
-	white-space: nowrap;
 	font-size: 10px;
 	font-weight: 800;
 	font-variation-settings: "wght" 800, "SRFF" 0;
 	letter-spacing: .05em;
 	line-height: 1em;
 	height: 100%;
-	padding: 6px 15px;
+	padding: .2em 15px 0 15px;
 	text-transform: uppercase;
 	--primary: var(--white);
 	background-color: var(--primary);
@@ -255,7 +249,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: .4em 10px .3em 10px;
+	padding: .6em 10px .4em 10px;
 	color: var(--black3);
 	background-color: var(--white);
 	margin-top: 10px;
@@ -618,6 +612,9 @@ body {
 @media only screen and (max-width: 700px) {
 	.nav {
 		border-bottom: unset;
+	}
+	.nav-path > * {
+		height: 20px;
 	}
 	.container {
 		grid-template-columns: repeat(3, 100vw);
