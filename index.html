@@ -16,14 +16,30 @@
 </head>
 <body>
 	<nav class="nav">
-		<h1 class="nav-path">
+		<div class="nav-path">
 			<a href="https://gdwithgd.com" target="_blank">GD with GD</a>
 			<div>&rarr;</div>
 			<a href="/">Classroom</a>
-		</h1>
+		</div>
+		<div onclick="toggleIntro();" class="nav-intro">About</div>
 	</nav>
+
+	<div class="intro" data-active="1">
+		<div class="intro-title">Welcome</div>
+		<div class="intro-content">
+			<h1 class="intro-content-heading">
+				Welcome to the <strong>GD&nbsp;with&nbsp;GD Classroom!</strong>
+			</h1>
+			<p>
+				This website is an open-source archive of all <a href="https://gabrieldrozdov.com/" target="_blank">my</a> teaching materials, including syllabi, project descriptions, class websites, and more. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD with GD</a>. To use this site, start by selecting a course, and then click through the resources for that course.
+			</p>
+			<button class="intro-button" onclick="hideIntro();">
+				Click to hide this message
+			</button>
+		</div>
+	</div>
 	
-	<div class="container">
+	<div class="container" onclick="hideIntro();">
 		<div class="section" id="courses">
 			<h2 class="section-heading">Courses</h2>
 

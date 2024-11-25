@@ -4,8 +4,10 @@
 	font-weight: 100 700;
 }
 @font-face {
-	font-family: 'Limkin';
-	src: url('/assets/fonts/limkin.ttf') format('truetype');
+	font-family: "Limkin";
+	src: url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.ttf") format(truetype),
+		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff") format(woff),
+		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff2") format(woff2);
 	font-weight: 100 900;
 }
 :root {
@@ -68,7 +70,6 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 5px;
-	padding: 0 5px 0 0;
 	overflow-x: scroll;
 	z-index: 9;
 	background-color: var(--white);
@@ -110,6 +111,39 @@ body {
 .nav-path > *:active {
 	opacity: .5;
 }
+.nav-intro {
+	flex-shrink: 0;
+	color: var(--black3);
+	text-decoration: none;
+	height: 19px;
+	display: flex;
+	align-items: center;
+	padding: calc(5px + .2em) 5px 5px 5px;
+	display: flex;
+	align-items: stretch;
+	justify-self: stretch;
+	gap: 5px;
+	white-space: nowrap;
+	font-size: 10px;
+	font-weight: 800;
+	font-variation-settings: "wght" 800, "SRFF" 0;
+	letter-spacing: .05em;
+	line-height: 1em;
+	height: 100%;
+	padding: 6px 15px;
+	text-transform: uppercase;
+	--primary: var(--white);
+	background-color: var(--primary);
+	border-left: 1px solid var(--black3);
+	cursor: pointer;
+}
+.nav-intro:hover {
+	background-color: var(--black3);
+	color: var(--white);
+}
+.nav-intro:active {
+	opacity: .5;
+}
 
 /* Structure */
 .container {
@@ -123,6 +157,120 @@ body {
 	grid-template-columns: 240px 240px minmax(480px, 1fr);
 	gap: 20px;
 	padding: 20px;
+}
+
+/* Intro */
+.intro {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9;
+	border: 1px solid var(--black3);
+	box-shadow: 5px 5px var(--black3);
+	--primary: var(--white);
+	background-color: var(--primary);
+	max-width: calc(100vw - 40px);
+	width: 400px;
+	animation: intro-in .35s forwards cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes intro-in {
+	from {
+		transform: translate(-50%, -50%) scale(0);
+	}
+	to {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+.intro[data-active="0"] {
+	animation: intro-out .25s forwards cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+@keyframes intro-out {
+	from {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	to {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+.intro-title {
+	font-size: 10px;
+	font-weight: 800;
+	font-variation-settings: "wght" 800, "SRFF" 0;
+	letter-spacing: .05em;
+	line-height: 1em;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	padding: .1em 20px 0 20px;
+	color: var(--white);
+	background-color: var(--black3);
+	height: 20px;
+}
+.intro-content {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.intro-content-heading {
+	font-size: 24px;
+	padding-top: .2em;
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	font-variation-settings: "wght" 500, "SRFF" 0;
+	text-wrap: balance;
+	line-height: 1.1em;
+	position: relative;
+}
+.intro-content-heading strong {
+	font-variation-settings: "wght" 600, "SRFF" 0;
+}
+.intro-content p {
+	font-size: 14px;
+	line-height: 1.3em;
+	letter-spacing: -.01em;
+	font-weight: 500;
+	text-wrap: pretty;
+	font-variation-settings: "wght" 500, "SRFF" 0;
+}
+.intro-content p a {
+	text-decoration: .5px underline;
+	text-underline-offset: .2em;
+	color: var(--black);
+}
+.intro-content p a:hover {
+	text-decoration: none;
+}
+.intro-content p a:active {
+	opacity: .5;
+}
+.intro-button {
+	font-size: 10px;
+	font-weight: 800;
+	font-variation-settings: "wght" 800, "SRFF" 0;
+	letter-spacing: .05em;
+	line-height: 1em;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .4em 10px .3em 10px;
+	color: var(--black3);
+	background-color: var(--white);
+	margin-top: 10px;
+	font-family: inherit;
+	text-align: center;
+	border: 1px solid var(--black3);
+	box-shadow: 5px 5px 0 var(--black3);
+	cursor: pointer;
+}
+.intro-button:hover {
+	background-color: var(--black3);
+	color: var(--white);
+}
+.intro-button:active {
+	opacity: .5;
 }
 
 /* Section */

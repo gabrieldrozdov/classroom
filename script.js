@@ -242,3 +242,27 @@ function openInNewTab(url) {
 
 // Handle when user navigates back/forward URL change
 window.addEventListener("popstate", (event) => {readURL();});
+
+// Intro message
+let colors = ['pink', 'green', 'blue', 'yellow', 'purple', 'red'];
+function setIntroColor() {
+	const intro = document.querySelector('.intro');
+	const navIntro = document.querySelector('.nav-intro');
+	const color = colors[Math.floor(Math.random()*colors.length)];
+	intro.style.setProperty('--primary', `var(--${color})`);
+	navIntro.style.setProperty('--primary', `var(--${color})`);
+}
+setIntroColor();
+
+function hideIntro() {
+	const intro = document.querySelector('.intro');
+	intro.dataset.active = 0;
+}
+function toggleIntro() {
+	const intro = document.querySelector('.intro');
+	if (parseInt(intro.dataset.active) == 1) {
+		intro.dataset.active = 0;
+	} else {
+		intro.dataset.active = 1;
+	}
+}
