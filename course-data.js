@@ -272,7 +272,7 @@ const courseData = {
 				{
 					"name": "New Canon Are.na Channel",
 					"slug": "new-canon-arena-channel",
-					"url": "https://www.are.na/gabriel-drozdov/in-motion-f24-new-canon",
+					"url": "https://www.are.na/gabriel-drozdov/in-motion-f24-00-new-canon",
 					"newtab": false
 				},
 			]
