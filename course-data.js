@@ -187,6 +187,12 @@ const courseData = {
 					"slug": "resources",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.nahqo1ydy1dg",
 					"newtab": false
+				},
+				{
+					"name": "✉️&nbsp; Project Submission Form",
+					"slug": "project-submission-form",
+					"url": "https://docs.google.com/forms/d/e/1FAIpQLSfUB3rTN8CF_4lO-b4r7O4W_HNnGQSj6aLRaSYBPOk7Vj6G5Q/viewform?usp=dialog",
+					"newtab": true
 				}
 			]
 		},
