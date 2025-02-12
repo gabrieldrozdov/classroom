@@ -111,7 +111,7 @@ function generateResources(course) {
 						<h4 class="link-title">${sublink['name']}</h4>
 						${desc}
 						${tags}
-						<div class="link-newtab symbol" onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${sublink['url']}')">&#xe89e;</div>
+						<div class="link-newtab" onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${sublink['url']}')">↗</div>
 					</a>
 				`;
 			}
@@ -131,7 +131,7 @@ function generateResources(course) {
 				<a href="?course=${course}&resource=${courseLink['slug']}" class="link" data-resource="${courseLink['slug']}" data-url="${courseLink['url']}" data-path="${courseLink['name']}">
 					<h3 class="link-title">${courseLink['name']}</h3>
 					${tags}
-					<div class="link-newtab symbol" onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${courseLink['url']}')">&#xe89e;</div>
+					<div class="link-newtab" onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${courseLink['url']}')">↗</div>
 				</a>
 			`;
 		}
@@ -171,7 +171,7 @@ function loadEmbed(dataURL) {
 	// Set display URL and link
 	const previewURL = preview.querySelector('.preview-url');
 	previewURL.href = dataURL;
-	previewURL.innerHTML = `<span>${dataURL}</span><div class="symbol">&#xe89e;</div>`;
+	previewURL.innerHTML = `<span>${dataURL}</span><div class="preview-url-arrow">↗</div>`;
 }
 function loadEmbedNewTab(dataURL) {
 	const preview = document.querySelector('#preview');
@@ -185,7 +185,7 @@ function loadEmbedNewTab(dataURL) {
 	// Set display URL and link
 	const previewURL = preview.querySelector('.preview-url');
 	previewURL.href = dataURL;
-	previewURL.innerHTML = `<span>${dataURL}</span><div class="symbol">&#xe89e;</div>`;
+	previewURL.innerHTML = `<span>${dataURL}</span><div class="preview-url-arrow">↗</div>`;
 }
 function unloadEmbed() {
 	const preview = document.querySelector('#preview');
@@ -252,7 +252,7 @@ function setIntroColor() {
 	intro.style.setProperty('--primary', `var(--${color})`);
 	navIntro.style.setProperty('--primary', `var(--${color})`);
 }
-setIntroColor();
+// setIntroColor();
 
 function hideIntro() {
 	const intro = document.querySelector('.intro');

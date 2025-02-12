@@ -1,5 +1,348 @@
 // Resources for each course
 const courseData = {
+	"design-for-interaction-v1": [
+		{
+			"name": "🎓&nbsp; Course Materials",
+			"contents": [
+				{
+					"name": "🍎&nbsp; Syllabus",
+					"slug": "syllabus",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.0",
+					"newtab": false
+				},
+				{
+					"name": "🗓️&nbsp; Schedule",
+					"slug": "schedule",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.6x0a5d5zi6im",
+					"newtab": false
+				},
+				{
+					"name": "🖇️&nbsp; Resources",
+					"slug": "resources",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.nahqo1ydy1dg",
+					"newtab": false
+				},
+				{
+					"name": "✉️&nbsp; Project Submission Form",
+					"slug": "project-submission-form",
+					"url": "https://docs.google.com/forms/d/e/1FAIpQLSd_9cJzdXjGPUFST90HXyeYOWxSic62W3k4pmniB3fqYizgSQ/viewform?usp=dialog",
+					"newtab": true
+				}
+			]
+		},
+		{
+			"name": "⏳&nbsp; Activities",
+			"contents": [
+				{
+					"name": "⏳&nbsp; Activities Overview",
+					"slug": "activities",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.bt31fyq58o2g",
+					"newtab": false
+				},
+				{
+					"name": "🌳&nbsp; Dialog Trees",
+					"slug": "dialog-trees",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.cgph6hoch86k",
+					"newtab": false
+				},
+				{
+					"name": "🕹️&nbsp; Arcade",
+					"slug": "arcade",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.uvcx28q3cj3o",
+					"newtab": false
+				},
+				{
+					"name": "➿&nbsp; Conditional Design",
+					"slug": "conditional-design",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.cgph6hoch86k",
+					"newtab": false
+				},
+				{
+					"name": "🏠&nbsp; Sketch Models",
+					"slug": "sketch-models",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.yqeio2tbjam2",
+					"newtab": false
+				},
+				{
+					"name": "🚦&nbsp; Stop/Go",
+					"slug": "stop-go",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.4uhehid3hrw6",
+					"newtab": false
+				},
+				{
+					"name": "📺&nbsp; Heads-Up Display (HUD)",
+					"slug": "heads-up-display-hud",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.l2alxdyu6g55",
+					"newtab": false
+				},
+				{
+					"name": "🃏&nbsp; Play and Playfulness",
+					"slug": "play-and-playfulness",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.b24tywg5gldy",
+					"newtab": false
+				},
+				{
+					"name": "👯&nbsp; Personas",
+					"slug": "personas",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.jb5ttsbzrdm",
+					"newtab": false
+				},
+				{
+					"name": "☑️&nbsp; Surveys",
+					"slug": "surveys",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.yp3p09h0p7y1",
+					"newtab": false
+				},
+				{
+					"name": "💭&nbsp; Workshops",
+					"slug": "workshops",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.z5ws3p57rxi1",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "📐&nbsp; Technicals",
+			"contents": [
+				{
+					"name": "📐&nbsp; Technicals Overview",
+					"slug": "technicals",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.1j5pc7vndt0p",
+					"newtab": false
+				},
+				{
+					"name": "👆&nbsp; Call-to-Action",
+					"slug": "call-to-action",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.hu4jciatzn2t",
+					"newtab": false
+				},
+				{
+					"name": "👁️&nbsp; Look & Feel",
+					"slug": "look-and-feel",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.8molqn5d04sq",
+					"newtab": false
+				},
+				{
+					"name": "🖥️&nbsp; Information Architecture",
+					"slug": "information-architecture",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.hl208emwwyqo",
+					"newtab": false
+				},
+				{
+					"name": "⌚️&nbsp; Telling the Time",
+					"slug": "telling-the-time",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.24wi759gi5dg",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "🛠️&nbsp; Projects",
+			"contents": [
+				{
+					"name": "🛠️&nbsp; Projects Overview",
+					"slug": "projects",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.1bbf17dwofun",
+					"newtab": false
+				},
+				{
+					"name": "🏁&nbsp; Designing for Play",
+					"slug": "designing-for-play",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.lgz6vx3o12se",
+					"newtab": false
+				},
+				{
+					"name": "🌝&nbsp; It’s Your Niche",
+					"slug": "its-your-niche",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.4g8ukzegud5c",
+					"newtab": false
+				},
+				{
+					"name": "💾&nbsp; Component Catalog",
+					"slug": "component-catalog",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.pfcoq7zhv7xs",
+					"newtab": false
+				}
+			]
+		}
+	],
+	"introduction-to-computation-v1": [
+		{
+			"name": "🎓&nbsp; Course Materials",
+			"contents": [
+				{
+					"name": "🍎&nbsp; Syllabus",
+					"slug": "syllabus",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.0",
+					"newtab": false
+				},
+				{
+					"name": "🗓️&nbsp; Schedule",
+					"slug": "schedule",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.6x0a5d5zi6im",
+					"newtab": false
+				},
+				{
+					"name": "🖇️&nbsp; Resources",
+					"slug": "resources",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.nahqo1ydy1dg",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "🎓&nbsp; Lessons",
+			"contents": [
+				{
+					"name": "🎓&nbsp; Lessons Overview",
+					"slug": "lessons",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.bt31fyq58o2g",
+					"newtab": false
+				},
+				{
+					"name": "💭&nbsp; What is code?",
+					"slug": "what-is-code",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.nnt40280846i",
+					"newtab": false
+				},
+				{
+					"name": "🧸&nbsp; The basics",
+					"slug": "the-basics",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.k1b61u4frbb",
+					"newtab": false
+				},
+				{
+					"name": "➿&nbsp; On a loop",
+					"slug": "on-a-loop",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.5nly2kypa9am",
+					"newtab": false
+				},
+				{
+					"name": "💿&nbsp; Constructing data",
+					"slug": "constructing-data",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.2ld6fkxrky6v",
+					"newtab": false
+				},
+				{
+					"name": "🖍&nbsp; Structure and style",
+					"slug": "structure-and-style",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hq5637d75vo3",
+					"newtab": false
+				},
+				{
+					"name": "📏&nbsp; Advanced layout",
+					"slug": "advanced-layout",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.8sccou9wqelj",
+					"newtab": false
+				},
+				{
+					"name": "👆&nbsp; Interaction and modification",
+					"slug": "interaction-and-modification",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.czkg5ldjngjk",
+					"newtab": false
+				},
+				{
+					"name": "🚀&nbsp; Beyond the basics",
+					"slug": "beyond-the-basics",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.dtcs6wk0t971",
+					"newtab": false
+				},
+				{
+					"name": "📈&nbsp; Coding as a career",
+					"slug": "coding-as-a-career",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.l6yw00pfaqeg",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "⏳&nbsp; Activities",
+			"contents": [
+				{
+					"name": "⏳&nbsp; Activities Overview",
+					"slug": "activities",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.avthqqfm1oro",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "📐&nbsp; Technicals",
+			"contents": [
+				{
+					"name": "📐&nbsp; Technicals Overview",
+					"slug": "technicals",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.1j5pc7vndt0p",
+					"newtab": false
+				},
+				{
+					"name": "💭&nbsp; Technical A",
+					"slug": "technical-a",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.9y8z4v8wvp2r",
+					"newtab": false
+				},
+				{
+					"name": "🧸&nbsp; Technical B",
+					"slug": "technical-b",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hu4jciatzn2t",
+					"newtab": false
+				},
+				{
+					"name": "➿&nbsp; Technical C",
+					"slug": "technical-c",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.ydrm7jm3xtoc",
+					"newtab": false
+				},
+				{
+					"name": "🖍️&nbsp; Technical D",
+					"slug": "technical-d",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.a8slxef9tt3c",
+					"newtab": false
+				},
+				{
+					"name": "📏&nbsp; Technical E",
+					"slug": "technical-e",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.fm1zurqcfp5p",
+					"newtab": false
+				},
+				{
+					"name": "🚀&nbsp; Technical F",
+					"slug": "technical-f",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.2q81g9oy5co8",
+					"newtab": false
+				}
+			]
+		},
+		{
+			"name": "🛠️&nbsp; Projects",
+			"contents": [
+				{
+					"name": "🛠️&nbsp; Projects Overview",
+					"slug": "projects",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.1bbf17dwofun",
+					"newtab": false
+				},
+				{
+					"name": "🏁&nbsp; Input/Output",
+					"slug": "input-output",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.lgz6vx3o12se",
+					"newtab": false
+				},
+				{
+					"name": "🌐&nbsp; Network",
+					"slug": "network",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.4g8ukzegud5c",
+					"newtab": false
+				},
+				{
+					"name": "💾&nbsp; Normal/Abnormal",
+					"slug": "normal-abnormal",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.f89z3fhqm8uw",
+					"newtab": false
+				}
+			]
+		}
+	],
 	"type-and-code-v1": [
 		{
 			"name": "Course Materials",
