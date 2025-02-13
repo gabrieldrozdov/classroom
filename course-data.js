@@ -42,7 +42,7 @@ const courseData = {
 				{
 					"name": "🌳&nbsp; Dialog Trees",
 					"slug": "dialog-trees",
-					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.cgph6hoch86k",
+					"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.nnt40280846i",
 					"newtab": false
 				},
 				{
