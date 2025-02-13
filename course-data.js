@@ -31,6 +31,17 @@ const courseData = {
 			]
 		},
 		{
+			"name": "🎓&nbsp; Lessons",
+			"contents": [
+				{
+					"name": "🗓️&nbsp; Week 1",
+					"slug": "week-1",
+					"url": "https://docs.google.com/presentation/d/1hxa-67fCQHQ5lJk0XJkDNN-u7zNl40wqTmqs4g0Yf3A/edit?usp=sharing",
+					"newtab": false
+				},
+			]
+		},
+		{
 			"name": "⏳&nbsp; Activities",
 			"contents": [
 				{
