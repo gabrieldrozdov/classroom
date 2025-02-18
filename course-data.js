@@ -300,37 +300,37 @@ const courseData = {
 					"newtab": false
 				},
 				{
-					"name": "💭&nbsp; Technical 0",
+					"name": "0️⃣&nbsp; Technical 0",
 					"slug": "technical-0",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.9y8z4v8wvp2r",
 					"newtab": false
 				},
 				{
-					"name": "🧸&nbsp; Technical 1",
+					"name": "1️⃣&nbsp; Technical 1",
 					"slug": "technical-1",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hu4jciatzn2t",
 					"newtab": false
 				},
 				{
-					"name": "➿&nbsp; Technical 2",
+					"name": "2️⃣&nbsp; Technical 2",
 					"slug": "technical-2",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.ydrm7jm3xtoc",
 					"newtab": false
 				},
 				{
-					"name": "🖍️&nbsp; Technical 3",
+					"name": "3️⃣&nbsp; Technical 3",
 					"slug": "technical-3",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.a8slxef9tt3c",
 					"newtab": false
 				},
 				{
-					"name": "📏&nbsp; Technical 4",
+					"name": "4️⃣&nbsp; Technical 4",
 					"slug": "technical-4",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.fm1zurqcfp5p",
 					"newtab": false
 				},
 				{
-					"name": "🚀&nbsp; Technical 5",
+					"name": "5️⃣&nbsp; Technical 5",
 					"slug": "technical-5",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.2q81g9oy5co8",
 					"newtab": false
