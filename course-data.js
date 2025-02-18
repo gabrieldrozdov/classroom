@@ -200,6 +200,13 @@ const courseData = {
 					"newtab": false
 				},
 				{
+					"name": "📖&nbsp; DEMOLAND",
+					"desc": "I recommend opening this in a new tab!",
+					"slug": "demoland",
+					"url": "https://demoland.gdwithgd.com/#introduction-to-computation",
+					"newtab": false
+				},
+				{
 					"name": "✉️&nbsp; Project Submission Form",
 					"slug": "project-submission-form",
 					"url": "https://docs.google.com/forms/d/e/1FAIpQLSfUB3rTN8CF_4lO-b4r7O4W_HNnGQSj6aLRaSYBPOk7Vj6G5Q/viewform?usp=dialog",
@@ -214,12 +221,6 @@ const courseData = {
 					"name": "🎓&nbsp; Lessons Overview",
 					"slug": "lessons",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.bt31fyq58o2g",
-					"newtab": false
-				},
-				{
-					"name": "💭&nbsp; What is code?",
-					"slug": "what-is-code",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.nnt40280846i",
 					"newtab": false
 				},
 				{
@@ -280,6 +281,12 @@ const courseData = {
 					"slug": "activities",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.avthqqfm1oro",
 					"newtab": false
+				},
+				{
+					"name": "✍️&nbsp; Instructing a sketch",
+					"slug": "instructing-a-sketch",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.cgph6hoch86k",
+					"newtab": false
 				}
 			]
 		},
@@ -293,38 +300,38 @@ const courseData = {
 					"newtab": false
 				},
 				{
-					"name": "💭&nbsp; Technical A",
-					"slug": "technical-a",
+					"name": "💭&nbsp; Technical 0",
+					"slug": "technical-0",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.9y8z4v8wvp2r",
 					"newtab": false
 				},
 				{
-					"name": "🧸&nbsp; Technical B",
-					"slug": "technical-b",
+					"name": "🧸&nbsp; Technical 1",
+					"slug": "technical-1",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hu4jciatzn2t",
 					"newtab": false
 				},
 				{
-					"name": "➿&nbsp; Technical C",
-					"slug": "technical-c",
+					"name": "➿&nbsp; Technical 2",
+					"slug": "technical-2",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.ydrm7jm3xtoc",
 					"newtab": false
 				},
 				{
-					"name": "🖍️&nbsp; Technical D",
-					"slug": "technical-d",
+					"name": "🖍️&nbsp; Technical 3",
+					"slug": "technical-3",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.a8slxef9tt3c",
 					"newtab": false
 				},
 				{
-					"name": "📏&nbsp; Technical E",
-					"slug": "technical-e",
+					"name": "📏&nbsp; Technical 4",
+					"slug": "technical-4",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.fm1zurqcfp5p",
 					"newtab": false
 				},
 				{
-					"name": "🚀&nbsp; Technical F",
-					"slug": "technical-f",
+					"name": "🚀&nbsp; Technical 5",
+					"slug": "technical-5",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.2q81g9oy5co8",
 					"newtab": false
 				}
