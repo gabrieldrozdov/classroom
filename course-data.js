@@ -39,6 +39,12 @@ const courseData = {
 					"url": "https://docs.google.com/presentation/d/1hxa-67fCQHQ5lJk0XJkDNN-u7zNl40wqTmqs4g0Yf3A/edit?usp=sharing",
 					"newtab": false
 				},
+				{
+					"name": "🗓️&nbsp; Week 2",
+					"slug": "week-2",
+					"url": "https://docs.google.com/presentation/d/1-r1Ajbz_et_RJuxLo6eS0lt4oIFmDaoqVLSznw3hg5c/edit?usp=sharing",
+					"newtab": false
+				}
 			]
 		},
 		{
