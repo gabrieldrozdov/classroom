@@ -221,12 +221,29 @@ const courseData = {
 			]
 		},
 		{
+			"name": "📽️&nbsp; Lectures",
+			"contents": [
+				{
+					"name": "🗓️&nbsp; Week 2",
+					"slug": "week-2",
+					"url": "https://docs.google.com/presentation/d/1DbfYk7416eaKjcIN0IrTgS5Drn6kYvmJID0RU3z_euc/edit?usp=sharing",
+					"newtab": false
+				}
+			]
+		},
+		{
 			"name": "🎓&nbsp; Lessons",
 			"contents": [
 				{
 					"name": "🎓&nbsp; Lessons Overview",
 					"slug": "lessons",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.bt31fyq58o2g",
+					"newtab": false
+				},
+				{
+					"name": "💭&nbsp; What is code?",
+					"slug": "what-is-code",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.vvowcr4p5zzf",
 					"newtab": false
 				},
 				{
