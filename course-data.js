@@ -31,7 +31,7 @@ const courseData = {
 			]
 		},
 		{
-			"name": "🎓&nbsp; Lessons",
+			"name": "🎥&nbsp; Lectures",
 			"contents": [
 				{
 					"name": "🗓️&nbsp; Week 1",
@@ -43,6 +43,12 @@ const courseData = {
 					"name": "🗓️&nbsp; Week 2",
 					"slug": "week-2",
 					"url": "https://docs.google.com/presentation/d/1-r1Ajbz_et_RJuxLo6eS0lt4oIFmDaoqVLSznw3hg5c/edit?usp=sharing",
+					"newtab": false
+				},
+				{
+					"name": "🗓️&nbsp; Week 3",
+					"slug": "week-3",
+					"url": "https://docs.google.com/presentation/d/1D2W8KmlTUbHYFFIhQBIHwzpBQWXW0_prwIc_jc15ZlY/edit?usp=sharing",
 					"newtab": false
 				}
 			]
