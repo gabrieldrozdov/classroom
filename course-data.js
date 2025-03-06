@@ -50,6 +50,12 @@ const courseData = {
 					"slug": "week-3",
 					"url": "https://docs.google.com/presentation/d/1D2W8KmlTUbHYFFIhQBIHwzpBQWXW0_prwIc_jc15ZlY/edit?usp=sharing",
 					"newtab": false
+				},
+				{
+					"name": "🗓️&nbsp; Week 4",
+					"slug": "week-4",
+					"url": "https://docs.google.com/presentation/d/12Pt6DC0I30jkMp3Ioxvi_9JTEhFh-f1_NYGu9wkK-S4/edit?usp=sharing",
+					"newtab": false
 				}
 			]
 		},
