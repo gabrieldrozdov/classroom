@@ -351,24 +351,6 @@ const courseData = {
 					"slug": "technical-2",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.ydrm7jm3xtoc",
 					"newtab": false
-				},
-				{
-					"name": "3️⃣&nbsp; Technical 3",
-					"slug": "technical-3",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.a8slxef9tt3c",
-					"newtab": false
-				},
-				{
-					"name": "4️⃣&nbsp; Technical 4",
-					"slug": "technical-4",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.fm1zurqcfp5p",
-					"newtab": false
-				},
-				{
-					"name": "5️⃣&nbsp; Technical 5",
-					"slug": "technical-5",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.2q81g9oy5co8",
-					"newtab": false
 				}
 			]
 		},
@@ -388,15 +370,15 @@ const courseData = {
 					"newtab": false
 				},
 				{
-					"name": "🌐&nbsp; Network",
-					"slug": "network",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.4g8ukzegud5c",
+					"name": "🎭&nbsp; Time Traveler",
+					"slug": "time-traveler",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.82zmncb8akl6",
 					"newtab": false
 				},
 				{
-					"name": "💾&nbsp; Normal/Abnormal",
-					"slug": "normal-abnormal",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.f89z3fhqm8uw",
+					"name": "🎭&nbsp; (Web)site-specific Performance",
+					"slug": "website-specific-performance",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.4g8ukzegud5c",
 					"newtab": false
 				}
 			]
