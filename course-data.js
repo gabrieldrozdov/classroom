@@ -370,7 +370,7 @@ const courseData = {
 					"newtab": false
 				},
 				{
-					"name": "🎭&nbsp; Time Traveler",
+					"name": "⏰&nbsp; Time Traveler",
 					"slug": "time-traveler",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.82zmncb8akl6",
 					"newtab": false
