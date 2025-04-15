@@ -269,42 +269,6 @@ const courseData = {
 					"slug": "on-a-loop",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.5nly2kypa9am",
 					"newtab": false
-				},
-				{
-					"name": "💿&nbsp; Constructing data",
-					"slug": "constructing-data",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.2ld6fkxrky6v",
-					"newtab": false
-				},
-				{
-					"name": "🖍&nbsp; Structure and style",
-					"slug": "structure-and-style",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hq5637d75vo3",
-					"newtab": false
-				},
-				{
-					"name": "📏&nbsp; Advanced layout",
-					"slug": "advanced-layout",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.8sccou9wqelj",
-					"newtab": false
-				},
-				{
-					"name": "👆&nbsp; Interaction and modification",
-					"slug": "interaction-and-modification",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.czkg5ldjngjk",
-					"newtab": false
-				},
-				{
-					"name": "🚀&nbsp; Beyond the basics",
-					"slug": "beyond-the-basics",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.dtcs6wk0t971",
-					"newtab": false
-				},
-				{
-					"name": "📈&nbsp; Coding as a career",
-					"slug": "coding-as-a-career",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.l6yw00pfaqeg",
-					"newtab": false
 				}
 			]
 		},
@@ -373,6 +337,12 @@ const courseData = {
 					"name": "⏰&nbsp; Time Traveler",
 					"slug": "time-traveler",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.82zmncb8akl6",
+					"newtab": false
+				},
+				{
+					"name": "⌛️&nbsp; Time Capsule",
+					"slug": "time-capsule",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.e5ryrqaaw6yw",
 					"newtab": false
 				},
 				{
