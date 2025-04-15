@@ -286,6 +286,18 @@ const courseData = {
 					"slug": "instructing-a-sketch",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.cgph6hoch86k",
 					"newtab": false
+				},
+				{
+					"name": "⌛️&nbsp; Time capsule",
+					"slug": "time-capsule",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.e5ryrqaaw6yw",
+					"newtab": false
+				},
+				{
+					"name": "🔮&nbsp; The future",
+					"slug": "the-future",
+					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.dihpt0px85p1",
+					"newtab": false
 				}
 			]
 		},
@@ -337,12 +349,6 @@ const courseData = {
 					"name": "⏰&nbsp; Time Traveler",
 					"slug": "time-traveler",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.82zmncb8akl6",
-					"newtab": false
-				},
-				{
-					"name": "⌛️&nbsp; Time Capsule",
-					"slug": "time-capsule",
-					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.e5ryrqaaw6yw",
 					"newtab": false
 				},
 				{
