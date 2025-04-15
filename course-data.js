@@ -288,7 +288,7 @@ const courseData = {
 					"newtab": false
 				},
 				{
-					"name": "⌛️&nbsp; Time capsule",
+					"name": "📦&nbsp; Time capsule",
 					"slug": "time-capsule",
 					"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.e5ryrqaaw6yw",
 					"newtab": false
