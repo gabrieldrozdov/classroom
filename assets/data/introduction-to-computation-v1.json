@@ -1,0 +1,165 @@
+[
+	{
+		"name": "🎓 Course Materials",
+		"contents": [
+			{
+				"name": "🍎 Syllabus",
+				"slug": "syllabus",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.0",
+				"newtab": false
+			},
+			{
+				"name": "🗓️ Schedule",
+				"slug": "schedule",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.6x0a5d5zi6im",
+				"newtab": false
+			},
+			{
+				"name": "🖇️ Resources",
+				"slug": "resources",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.nahqo1ydy1dg",
+				"newtab": false
+			},
+			{
+				"name": "📖 DEMOLAND",
+				"desc": "I recommend opening this in a new tab!",
+				"slug": "demoland",
+				"url": "https://demoland.gdwithgd.com/#introduction-to-computation",
+				"newtab": false
+			},
+			{
+				"name": "✉️ Project Submission Form",
+				"slug": "project-submission-form",
+				"url": "https://docs.google.com/forms/d/e/1FAIpQLSfUB3rTN8CF_4lO-b4r7O4W_HNnGQSj6aLRaSYBPOk7Vj6G5Q/viewform?usp=dialog",
+				"newtab": true
+			}
+		]
+	},
+	{
+		"name": "📽️ Lectures",
+		"contents": [
+			{
+				"name": "🗓️ Week 2",
+				"slug": "week-2",
+				"url": "https://docs.google.com/presentation/d/1DbfYk7416eaKjcIN0IrTgS5Drn6kYvmJID0RU3z_euc/edit?usp=sharing",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "🎓 Lessons",
+		"contents": [
+			{
+				"name": "🎓 Lessons Overview",
+				"slug": "lessons",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.bt31fyq58o2g",
+				"newtab": false
+			},
+			{
+				"name": "💭 What is code?",
+				"slug": "what-is-code",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.vvowcr4p5zzf",
+				"newtab": false
+			},
+			{
+				"name": "🧸 The basics",
+				"slug": "the-basics",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.k1b61u4frbb",
+				"newtab": false
+			},
+			{
+				"name": "➿ On a loop",
+				"slug": "on-a-loop",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.5nly2kypa9am",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "⏳ Activities",
+		"contents": [
+			{
+				"name": "⏳ Activities Overview",
+				"slug": "activities",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.avthqqfm1oro",
+				"newtab": false
+			},
+			{
+				"name": "✍️ Instructing a sketch",
+				"slug": "instructing-a-sketch",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.cgph6hoch86k",
+				"newtab": false
+			},
+			{
+				"name": "📦 Time capsule",
+				"slug": "time-capsule",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.e5ryrqaaw6yw",
+				"newtab": false
+			},
+			{
+				"name": "🔮 The future",
+				"slug": "the-future",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.dihpt0px85p1",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "📐 Technicals",
+		"contents": [
+			{
+				"name": "📐 Technicals Overview",
+				"slug": "technicals",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.1j5pc7vndt0p",
+				"newtab": false
+			},
+			{
+				"name": "0️⃣ Technical 0",
+				"slug": "technical-0",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.9y8z4v8wvp2r",
+				"newtab": false
+			},
+			{
+				"name": "1️⃣ Technical 1",
+				"slug": "technical-1",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hu4jciatzn2t",
+				"newtab": false
+			},
+			{
+				"name": "2️⃣ Technical 2",
+				"slug": "technical-2",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.ydrm7jm3xtoc",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "🛠️ Projects",
+		"contents": [
+			{
+				"name": "🛠️ Projects Overview",
+				"slug": "projects",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.1bbf17dwofun",
+				"newtab": false
+			},
+			{
+				"name": "🏁 Input/Output",
+				"slug": "input-output",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.lgz6vx3o12se",
+				"newtab": false
+			},
+			{
+				"name": "⏰ Time Traveler",
+				"slug": "time-traveler",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.82zmncb8akl6",
+				"newtab": false
+			},
+			{
+				"name": "🎭 (Web)site-specific Performance",
+				"slug": "website-specific-performance",
+				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.4g8ukzegud5c",
+				"newtab": false
+			}
+		]
+	}
+]

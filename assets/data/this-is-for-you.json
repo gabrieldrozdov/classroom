@@ -1,0 +1,112 @@
+[
+	{
+		"name": "Overview",
+		"contents": [
+			{
+				"name": "Homepage",
+				"slug": "homepage",
+				"url": "https://thisisforyou.gabrieldrozdov.com/",
+				"newtab": false
+			},
+			{
+				"name": "Book Generator",
+				"slug": "book-generator",
+				"url": "https://thisisforyou.gabrieldrozdov.com/print/",
+				"newtab": false
+			},
+			{
+				"name": "Foreword",
+				"slug": "foreword",
+				"url": "https://thisisforyou.gabrieldrozdov.com/hello/",
+				"newtab": false
+			},
+			{
+				"name": "Afterword",
+				"slug": "afterword",
+				"url": "https://thisisforyou.gabrieldrozdov.com/goodbye/",
+				"newtab": false
+			},
+			{
+				"name": "Index",
+				"slug": "index",
+				"url": "https://thisisforyou.gabrieldrozdov.com/index/",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Part One: Learning",
+		"contents": [
+			{
+				"name": "Chapter 1: Learning how to design",
+				"slug": "chapter-1",
+				"url": "https://thisisforyou.gabrieldrozdov.com/learning/design/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 2: Learning how to design using code",
+				"slug": "chapter-2",
+				"url": "https://thisisforyou.gabrieldrozdov.com/learning/code/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 3: Learning how to teach design and code",
+				"slug": "chapter-3",
+				"url": "https://thisisforyou.gabrieldrozdov.com/learning/teaching/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 4: Learning how to run a studio",
+				"slug": "chapter-4",
+				"url": "https://thisisforyou.gabrieldrozdov.com/learning/studio/",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Part Two: Making",
+		"contents": [
+			{
+				"name": "Chapter 5: Everything I made before design school",
+				"slug": "chapter-5",
+				"url": "https://thisisforyou.gabrieldrozdov.com/making/before/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 6: Everything I made during design school",
+				"slug": "chapter-6",
+				"url": "https://thisisforyou.gabrieldrozdov.com/making/during/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 7: Everything I made after design school",
+				"slug": "chapter-7",
+				"url": "https://thisisforyou.gabrieldrozdov.com/making/after/",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Part Three: Sharing",
+		"contents": [
+			{
+				"name": "Chapter 8: Talking with my teachers",
+				"slug": "chapter-8",
+				"url": "https://thisisforyou.gabrieldrozdov.com/sharing/teachers/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 9: Talking with my peers",
+				"slug": "chapter-9",
+				"url": "https://thisisforyou.gabrieldrozdov.com/sharing/peers/",
+				"newtab": false
+			},
+			{
+				"name": "Chapter 10: Talking with my students",
+				"slug": "chapter-10",
+				"url": "https://thisisforyou.gabrieldrozdov.com/sharing/students/",
+				"newtab": false
+			}
+		]
+	}
+]

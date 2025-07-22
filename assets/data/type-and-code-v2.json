@@ -1,0 +1,247 @@
+[
+	{
+		"name": "Course Materials",
+		"contents": [
+			{
+				"name": "Syllabus",
+				"slug": "syllabus",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Schedule",
+				"slug": "schedule",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.uwu9i2pbz132",
+				"newtab": false
+			},
+			{
+				"name": "Resources",
+				"slug": "resources",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.tumfv79f53pr",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "Research & Analysis",
+				"slug": "research-and-analysis",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.g1ln27r7vbjd",
+				"newtab": false
+			},
+			{
+				"name": "Project 1: Time Traveler",
+				"slug": "project-1",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.qyjwo2qodni",
+				"newtab": false
+			},
+			{
+				"name": "Project 2: Live Type",
+				"slug": "project-2",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.93s6zdjxh731",
+				"newtab": false
+			},
+			{
+				"name": "Project 3: Not a Book",
+				"slug": "project-3",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.6upzmi3qezwt",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Class Websites",
+		"contents": [
+			{
+				"name": "Baby Steps",
+				"slug": "baby-steps",
+				"url": "https://babysteps.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "The Designer’s Guide to Web Programming",
+				"slug": "designers-guide-to-web-programming",
+				"url": "https://webprogramming.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "DEMOLAND",
+				"slug": "demoland",
+				"url": "https://demoland.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "test-project-1.html",
+				"slug": "test-project-1",
+				"url": "https://testproject1.gdwithgd.com/",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Type Design Tutorials",
+		"contents": [
+			{
+				"name": "Glyphs Basics",
+				"slug": "glyphs-basics",
+				"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Setting Up Variable Axes",
+				"slug": "setting-up-variable-axes",
+				"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Pixel Fonts",
+				"slug": "pixel-fonts",
+				"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Drawing in Glyphs",
+				"slug": "drawing-in-glyphs",
+				"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing",
+				"newtab": true
+			}
+		]
+	},
+	{
+		"name": "Readings",
+		"contents": [
+			{
+				"name": "Introduction to the World Wide Web",
+				"slug": "introduction-to-the-world-wide-web",
+				"desc": "By Dave Raggett",
+				"url": "https://www.w3.org/People/Raggett/book4/ch01.html",
+				"tags": [
+					"Week 2"
+				],
+				"newtab": true
+			},
+			{
+				"name": "A History of HTML",
+				"slug": "a-history-of-html",
+				"desc": "By Dave Raggett",
+				"url": "https://www.w3.org/People/Raggett/book4/ch02.html",
+				"tags": [
+					"Week 2"
+				],
+				"newtab": true
+			},
+			{
+				"name": "Cascading HTML style sheets -- a proposal",
+				"slug": "cascading-html-style-sheets-a-proposal",
+				"desc": "By Håkon W Lie",
+				"url": "https://www.w3.org/People/howcome/p/cascade.html",
+				"tags": [
+					"Week 2"
+				],
+				"newtab": true
+			},
+			{
+				"name": "20 Years of CSS",
+				"slug": "20-years-of-css",
+				"desc": "By Bert Bos",
+				"url": "https://www.w3.org/Style/CSS20/",
+				"tags": [
+					"Week 2"
+				],
+				"newtab": true
+			},
+			{
+				"name": "A brief history of CSS until 2016",
+				"slug": "a-brief-history-of-css-until-2016",
+				"desc": "By Bert Bos",
+				"url": "https://www.w3.org/Style/CSS20/history.html",
+				"tags": [
+					"Week 2"
+				],
+				"newtab": true
+			},
+			{
+				"name": "Web Design in 4 Minutes",
+				"slug": "web-design-in-4-minutes",
+				"desc": "By Jeremy Thomas",
+				"url": "https://jgthms.com/web-design-in-4-minutes/",
+				"tags": [
+					"Week 3"
+				],
+				"newtab": false
+			},
+			{
+				"name": "A Handmade Web",
+				"slug": "a-handmade-web",
+				"desc": "By J. R. Carpenter",
+				"url": "https://luckysoap.com/statements/handmadeweb.html",
+				"tags": [
+					"Week 3"
+				],
+				"newtab": false
+			},
+			{
+				"name": "We Are Family! I’ve Got All My Variations With Me",
+				"slug": "we-are-family",
+				"desc": "By David Jonathan Ross",
+				"url": "https://www.youtube.com/watch?v=wWa8TLrKMeI",
+				"tags": [
+					"Week 5"
+				],
+				"newtab": true
+			},
+			{
+				"name": "Typeface as Programme",
+				"slug": "typeface-as-programme",
+				"desc": "By Jürg Lehni",
+				"url": "https://www.typotheque.com/articles/typeface-as-programme",
+				"tags": [
+					"Week 6"
+				],
+				"newtab": true
+			},
+			{
+				"name": "Letter & Spirit",
+				"slug": "letter-and-spirit",
+				"desc": "By Dexter Sinister",
+				"url": "https://www.servinglibrary.org/journal/3/letter-and-spirit",
+				"tags": [
+					"Week 7"
+				],
+				"newtab": false
+			},
+			{
+				"name": "How Google perfected the web",
+				"slug": "how-google-perfected-the-web",
+				"desc": "By Mia Sato",
+				"url": "https://www.theverge.com/c/23998379/google-search-seo-algorithm-webpage-optimization",
+				"tags": [
+					"Week 9"
+				],
+				"newtab": true
+			},
+			{
+				"name": "My website is a shifting house next to a river of knowledge. What could yours be?",
+				"slug": "my-website-is-a-shifting-house",
+				"desc": "By Laurel Schwulst",
+				"url": "https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/",
+				"tags": [
+					"Week 10"
+				],
+				"newtab": false
+			},
+			{
+				"name": "Net Art Anthology",
+				"slug": "net-art-anthology",
+				"desc": "By Rhizome",
+				"url": "https://anthology.rhizome.org/",
+				"tags": [
+					"Week 12"
+				],
+				"newtab": false
+			}
+		]
+	}
+]

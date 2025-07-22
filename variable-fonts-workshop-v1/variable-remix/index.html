@@ -1,0 +1,445 @@
+
+						<!DOCTYPE html>
+						<html lang="en">
+						<head>
+							<meta charset="UTF-8">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<title>🔡 Variable Fonts Workshop, v1 | Variable Remix</title>
+							
+	<meta name="author" content="Gabriel Drozdov / GD with GD">
+	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
+	<meta name="description" content="Open-source archive for all of Gabriel Drozdov’s courses and teaching materials!">
+	<meta property="og:url" content="https://classroom.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="Classroom, by GD with GD">
+	<meta property="og:description" content="Open-source archive for all of Gabriel Drozdov’s courses and teaching materials!">
+	<meta property="og:image" content="/assets/meta/opengraph.jpg">
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
+
+							<link rel="stylesheet" href="/style.css">
+						</head>
+						<body>
+			
+							<div class="container" data-nav="1">
+			
+								<nav class="nav">
+									<button class="nav-link" onclick="toggleMenu('gdwithgd');" style="--primary: var(--pink);" id="nav-gdwithgd">
+										<div class="nav-link-category">GD with GD</div>
+										<div class="nav-link-selection">
+											<span>🍎&nbsp;&nbsp;Classroom</span>
+											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
+										</div>
+									</button>
+			
+									<button class="nav-link" onclick="toggleMenu('course');" style="--primary: var(--green);" id="nav-course">
+										<div class="nav-link-category">Course</div>
+										<div class="nav-link-selection">
+											<span>🔡&nbsp;&nbsp;Variable Fonts Workshop <span class="nav-link-selection-version">v1</span></span>
+											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
+										</div>
+									</button>
+			
+									<button class="nav-link" onclick="toggleMenu('resource');" style="--primary: var(--blue);" id="nav-resource">
+										<div class="nav-link-category">Resource</div>
+										<div class="nav-link-selection">
+											<span>Variable Remix</span>
+											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
+										</div>
+									</button>
+			
+									<a class="nav-link nav-link-url" href="https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/edit?usp=sharing" target="_blank">
+										<div class="nav-link-category">Current URL</div>
+										<div class="nav-link-selection">
+											<span class="nav-link-url-text">https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/edit?usp=sharing</span>
+											<span class="nav-link-url-arrow">↗</span>
+										</div>
+									</a>
+			
+									<button class="nav-link nav-link-refresh" onclick="refreshPreview();" style="--primary: var(--yellow);" data-newtab="false">
+										<svg viewBox="0 0 77.88 72.46"><path d="M37.94,72.46v-11.05l1.09.1c.06,0,.21,0,.23,0,14.26,0,25.86-11.6,25.86-25.86,0-5.84-1.95-11.42-5.53-15.97v10.6h-12V0h30.29v11.99h-10.44c5.58,6.64,8.63,14.96,8.63,23.66,0,20.3-16.51,36.81-36.81,36.81h-1.32ZM0,72.46v-11.99h10.44c-5.58-6.64-8.63-14.96-8.63-23.66C1.81,16.51,18.32,0,38.62,0h1.32v11.05l-1.09-.1c-.06,0-.11,0-.17,0h-.06c-14.26,0-25.86,11.6-25.86,25.86,0,5.84,1.95,11.42,5.53,15.97v-10.6h12v30.28H0Z"/></svg>
+										<span class="nav-link-label">Refresh</span>
+									</button>
+			
+									<div class="nav-link nav-link-zoom" style="--primary: var(--purple);" data-newtab="false">
+										<input class="nav-link-zoom-range" type="range" min="0" max="100" value="100" oninput="setZoom(this.value)">
+										<div class="nav-link-label">Zoom Level</div>
+									</div>
+			
+									<button class="nav-toggle" onclick="toggleNav(); closeMenus();" data-newtab="false">
+										<svg viewBox="0 0 24 24"><path d="M0,11.93l3.7,3.72,5.29-5.26v13.61h6v-13.61l5.32,5.3,3.7-3.72L11.98,0,0,11.93Z"/></svg>
+										<span>Hide<br>Menu</span>
+									</button>
+								</nav>
+			
+								<button class="nav-show" onclick="toggleNav();" data-newtab="false">
+									<svg viewBox="0 0 24 24"><path d="M24,12.07l-3.7-3.72-5.29,5.26V0h-6v13.61l-5.32-5.3-3.7,3.72,12.02,11.96,11.98-11.93Z"/></svg>
+									<span>Show Menu</span>
+									<svg viewBox="0 0 24 24"><path d="M24,12.07l-3.7-3.72-5.29,5.26V0h-6v13.61l-5.32-5.3-3.7,3.72,12.02,11.96,11.98-11.93Z"/></svg>
+								</button>
+			
+								<main class="preview">
+									
+							<div class="preview-iframe-container">
+								<iframe src="https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/edit?usp=sharing" class="preview-iframe"></iframe>
+							</div>
+						
+								</main>
+			
+								<!-- Nav menus -->
+								<div class="nav-menu" id="menu-gdwithgd" data-active="0" style="--primary: var(--pink);">
+									
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">🏡&nbsp;&nbsp;Learning Hubs</h2>
+				<div class="nav-menu-links">
+					
+				<a href="https://gdwithgd.com/" target="_blank" style="--primary: var(--pink);">
+					<h3>🏠&nbsp;&nbsp;GD with GD</h3>
+					<p>The hub for all GD with GD projects!</p>
+				</a>
+			
+				<a href="/" target="_blank" style="--primary: var(--green);">
+					<h3>🍎&nbsp;&nbsp;Classroom</h3>
+					<p>You are here: an open-source archive of syllabi, project descriptions, lectures, and more!</p>
+				</a>
+			
+				<a href="https://demoland.gdwithgd.com/" target="_blank" style="--primary: var(--blue);">
+					<h3>💻&nbsp;&nbsp;DEMOLAND</h3>
+					<p>In-browser code editor with a library of tutorials!</p>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">🦮&nbsp;&nbsp;Guides and Tutorials</h2>
+				<div class="nav-menu-links">
+					
+				<a href="https://babysteps.gdwithgd.com/" target="_blank" style="--primary: var(--yellow);">
+					<h3>👶&nbsp;&nbsp;Baby Steps</h3>
+					<p>Everything you need to know for when you start coding!</p>
+				</a>
+			
+				<a href="https://pathfinder.gdwithgd.com/" target="_blank" style="--primary: var(--purple);">
+					<h3>📁&nbsp;&nbsp;Pathfinder</h3>
+					<p>An explanation of how folder structure works on websites!</p>
+				</a>
+			
+				<a href="https://cheatsheet.gdwithgd.com/" target="_blank" style="--primary: var(--red);">
+					<h3>📝&nbsp;&nbsp;Cheatsheet</h3>
+					<p>Quick-reference guide for HTML, CSS, and JavaScript!</p>
+				</a>
+			
+				<a href="https://webprogramming.gdwithgd.com/" target="_blank" style="--primary: var(--pink);">
+					<h3>🎨&nbsp;&nbsp;The Designer’s Guide to Web Programming</h3>
+					<p>Are you scared of code but want to create websites? Then this is the guide for you!</p>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">💡&nbsp;&nbsp;Inspiration</h2>
+				<div class="nav-menu-links">
+					
+				<a href="https://spotlight.gdwithgd.com/" target="_blank" style="--primary: var(--green);">
+					<h3>🔦&nbsp;&nbsp;Student Spotlight</h3>
+					<p>Web-based student projects from GD with GD courses!</p>
+				</a>
+			
+				<a href="https://variablefonts.gdwithgd.com/" target="_blank" style="--primary: var(--blue);">
+					<h3>🔠&nbsp;&nbsp;Variable Fonts Workshop</h3>
+					<p>Toys for playing with an testing variable fonts, as well as a showcase of student fonts!</p>
+				</a>
+			
+				<a href="https://smallsites.gdwithgd.com/" target="_blank" style="--primary: var(--yellow);">
+					<h3>🌐&nbsp;&nbsp;Small Sites; Big Stories</h3>
+					<p>Interactive narratives collected in a catalog of microsites written using as little code as possible!</p>
+				</a>
+			
+				<a href="https://testproject1.gdwithgd.com/" target="_blank" style="--primary: var(--purple);">
+					<h3>🏁&nbsp;&nbsp;test-project-1.html</h3>
+					<p>Creative coding projects for any skill level!</p>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">🕹️&nbsp;&nbsp;Toys and Tools</h2>
+				<div class="nav-menu-links">
+					
+				<a href="https://variablefonts.gdwithgd.com/" target="_blank" style="--primary: var(--red);">
+					<h3>🔠&nbsp;&nbsp;Variable Fonts Workshop</h3>
+					<p>Toys for playing with an testing variable fonts, as well as a showcase of student fonts!</p>
+				</a>
+			
+				<a href="https://gdwithgd.com/generator/" target="_blank" style="--primary: var(--pink);">
+					<h3>🤖&nbsp;&nbsp;Generator</h3>
+					<p>Our custom tool for generating GD with GD graphics!</p>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">💾&nbsp;&nbsp;Archived Projects</h2>
+				<div class="nav-menu-links">
+					
+				<a href="https://vfw23.gdwithgd.com/" target="_blank" style="--primary: var(--green);">
+					<h3>💾&nbsp;&nbsp;Variable Fonts Workshop 2023</h3>
+					<p>The first draft of the variable fonts workshop type-testing instrument!</p>
+				</a>
+			
+				<a href="https://wpw23.gdwithgd.com/" target="_blank" style="--primary: var(--blue);">
+					<h3>💾&nbsp;&nbsp;Web Programming Workshop 2023</h3>
+					<p>The second iteration of my workshop on making websites!</p>
+				</a>
+			
+				<a href="https://wpw22.gdwithgd.com/" target="_blank" style="--primary: var(--yellow);">
+					<h3>💾&nbsp;&nbsp;Web Programming Workshop 2022</h3>
+					<p>The first iteration of my workshop on making websites!</p>
+				</a>
+			
+				</div>
+			</section>
+		
+								</div>
+			
+								<div class="nav-menu" id="menu-course" data-active="0" style="--primary: var(--green);">
+									
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">2025</h2>
+				<div class="nav-menu-links">
+					
+				<a href="/type-and-code-v2/" style="--primary: var(--pink);">
+					<h3>🔠&nbsp;&nbsp; Type + Code <span>v2</span></h3>
+					<p>Creative coding elective focusing on type design, digitalfonts, and unique reading experiences.</p>
+					<ul><li>RISD</li><li>Fall 2025</li><li>GRAPH 3123</li></ul>
+				</a>
+			
+				<a href="/in-motion-v2/" style="--primary: var(--green);">
+					<h3>🎬&nbsp;&nbsp;In Motion: Design for Video and Animation <span>v2</span></h3>
+					<p>Motion design elective exploring a wide range of skills and use cases for animation.</p>
+					<ul><li>RISD</li><li>Fall 2025</li><li>GRAPH 2216</li></ul>
+				</a>
+			
+				<a href="/design-for-interaction-v1/" style="--primary: var(--blue);">
+					<h3>👆&nbsp;&nbsp;Design for Interaction <span>v1</span></h3>
+					<p>Primer on UI/UX for the perspectives of ludology and performance studies.</p>
+					<ul><li>RISD</li><li>Spring 2025</li><li>GRAPH 3327</li></ul>
+				</a>
+			
+				<a href="/introduction-to-computation-v1/" style="--primary: var(--yellow);">
+					<h3>🤖&nbsp;&nbsp;Introduction to Computation <span>v1</span></h3>
+					<p>Introduction to computer science for designers and artists.</p>
+					<ul><li>RISD</li><li>Spring 2025</li><li>CTC 1000</li></ul>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">2024</h2>
+				<div class="nav-menu-links">
+					
+				<a href="/type-and-code-v1/" style="--primary: var(--purple);">
+					<h3>🔠&nbsp;&nbsp;Type + Code <span>v1</span></h3>
+					<p>Creative coding elective focusing on type design, digitalfonts, and unique reading experiences.</p>
+					<ul><li>RISD</li><li>Fall 2024</li><li>GRAPH 3123</li></ul>
+				</a>
+			
+				<a href="/in-motion-v1/" style="--primary: var(--red);">
+					<h3>🎬&nbsp;&nbsp;In Motion: Design for Video and Animation <span>v1</span></h3>
+					<p>Motion design elective exploring a wide range of skills and use cases for animation.</p>
+					<ul><li>RISD</li><li>Fall 2024</li><li>GRAPH 2216</li></ul>
+				</a>
+			
+				<a href="/variable-fonts-workshop-v2/" style="--primary: var(--pink);">
+					<h3>🔡&nbsp;&nbsp;Variable Fonts Workshop <span>v2</span></h3>
+					<p>Updated 4-week primer on type design through the lens of experimental variable fonts.</p>
+					<ul><li>RISD</li><li>Spring 2024</li><li>GRAPH 3163</li></ul>
+				</a>
+			
+				<a href="/web-sites-and-stories-v1/" style="--primary: var(--green);">
+					<h3>🌐&nbsp;&nbsp;Web Sites & Stories <span>v1</span></h3>
+					<p>Introduction to web design and programming with an emphasis on narrative and storytelling.</p>
+					<ul><li>RISD</li><li>Winter 2024</li><li>GRAPH 3271</li></ul>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">2023</h2>
+				<div class="nav-menu-links">
+					
+				<a href="/web-programming-workshop-v2/" style="--primary: var(--blue);">
+					<h3>💻&nbsp;&nbsp;Web Programming Workshop <span>v2</span></h3>
+					<p>Updated 4-week primer on using HTML and CSS to create uniquely digital experiences.</p>
+					<ul><li>RISD</li><li>Fall 2023</li><li>GRAPH 3188</li></ul>
+				</a>
+			
+				<a href="/variable-fonts-workshop-v1/" style="--primary: var(--yellow);">
+					<h3>🔡&nbsp;&nbsp;Variable Fonts Workshop <span>v1</span></h3>
+					<p>4-week primer on type design through the lens of experimental variable fonts.</p>
+					<ul><li>RISD</li><li>Spring 2023</li><li>GRAPH 3163</li></ul>
+				</a>
+			
+				<a href="/digital-form-v1/" style="--primary: var(--purple);">
+					<h3>📺&nbsp;&nbsp;Digital Form: Light, Motion, Interaction <span>v1</span></h3>
+					<p>Introduction to graphic, motion, and web design from a digital-first perspective.</p>
+					<ul><li>RISD</li><li>Winter 2023</li><li>GRAPH 1566</li></ul>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="nav-menu-section">
+				<h2 class="nav-menu-section-heading">2022</h2>
+				<div class="nav-menu-links">
+					
+				<a href="/web-programming-workshop-v1/" style="--primary: var(--red);">
+					<h3>💻&nbsp;&nbsp;Web Programming Workshop <span>v1</span></h3>
+					<p>4-week primer on the basics of HTML, CSS, and a tiny bit of JavaScript.</p>
+					<ul><li>RISD</li><li>Fall 2022</li><li>GRAPH 3188</li></ul>
+				</a>
+			
+				</div>
+			</section>
+		
+		<a href="/" class="nav-menu-viewall"><span>🔍&nbsp;&nbsp;View all courses</span> <span>↗</span></a>
+	
+								</div>
+			
+								<div class="nav-menu" id="menu-resource" data-active="0" style="--primary: var(--blue);">
+									
+					<section class="nav-menu-section">
+						<h2 class="nav-menu-section-heading">Course Materials</h2>
+						<div class="nav-menu-links">
+							
+						<a href="/variable-fonts-workshop-v1/class-website" style="--primary: var(--pink);">
+							<h3>Class Website</h3>
+							<p>Type testing tool and student work showcase.</p>
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://vfw23.gdwithgd.com/')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/syllabus" style="--primary: var(--green);">
+							<h3>Syllabus</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1p75xhOY0SbjzDh8brEKP_vmFXiKNmN67LGd-JO_cpp8/edit?usp=sharing')">↗</button>
+						</a>
+					
+						</div>
+					</section>
+				
+					<section class="nav-menu-section">
+						<h2 class="nav-menu-section-heading">Tutorials</h2>
+						<div class="nav-menu-links">
+							
+						<a href="/variable-fonts-workshop-v1/glyphs-basics" style="--primary: var(--blue);">
+							<h3>Glyphs Basics</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1ajxzdSoY1w6--iULtBD2axUTWG1Js0sv/view?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/setting-up-variable-axes" style="--primary: var(--yellow);">
+							<h3>Setting Up Variable Axes</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1b-YD5SXhS0RQgqjhf55wTbwnVkFogpg9/view?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/pixel-fonts" style="--primary: var(--purple);">
+							<h3>Pixel Fonts</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1asVGqYFGyifMhNRaYuxexs1oswrUdEeC/view?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/drawing-in-glyphs" style="--primary: var(--red);">
+							<h3>Drawing in Glyphs</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1aEdIKpT4cnEgIP0fu4A82g36ITKi9b69/view?usp=sharing')">↗</button>
+						</a>
+					
+						</div>
+					</section>
+				
+					<section class="nav-menu-section">
+						<h2 class="nav-menu-section-heading">Projects</h2>
+						<div class="nav-menu-links">
+							
+						<a href="/variable-fonts-workshop-v1/bitmapped" style="--primary: var(--pink);">
+							<h3>Bitmapped</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/185VU47-h2uXb1nOeJCzhtKTupKbbAbpO7KsiY6yMm-A/edit?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/open-sourced" style="--primary: var(--green);">
+							<h3>Open Sourced</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1HEzKqZl5Y1c1fYZkwm41MPxa7Mwelr29XmACfJndFQs/edit?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/digitized" style="--primary: var(--blue);">
+							<h3>Digitized</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1mG2pcCnjngu02iN40aYTmqNUB0zAg7kHoPNjzan3DZo/edit?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/one-big-move" style="--primary: var(--yellow);">
+							<h3>One Big Move</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1Ay1lChSu1binI5GyiH-5cB4pzqgaJ5Ymb20jU5H2BkY/edit?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/variable-remix" style="--primary: var(--purple);">
+							<h3>Variable Remix</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/edit?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/variable-gamut" style="--primary: var(--red);">
+							<h3>Variable Gamut</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1DrOvt4y3Iwsb2GPXfkIOpVITfcs1TlyJYJ_jtbuFxuk/edit?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/type-design-as-performance" style="--primary: var(--pink);">
+							<h3>Type Design as Performance</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1nEQ4itdAGRA-qwmWRxj4MRP5OCZ4mAo8XLVr2gmIm6I/edit?usp=sharing')">↗</button>
+						</a>
+					
+						</div>
+					</section>
+				
+					<section class="nav-menu-section">
+						<h2 class="nav-menu-section-heading">Lectures</h2>
+						<div class="nav-menu-links">
+							
+						<a href="/variable-fonts-workshop-v1/week-1" style="--primary: var(--green);">
+							<h3>Week 1</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1aFRIc8zmYwsQSWWYPbKmZqOdeuXnlOPM/view?usp=sharing')">↗</button>
+						</a>
+					
+						<a href="/variable-fonts-workshop-v1/week-2" style="--primary: var(--blue);">
+							<h3>Week 2</h3>
+							
+							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1aZXyvkGSmgrpvylVks6CE9u-TV-kmaA-/view?usp=sharing')">↗</button>
+						</a>
+					
+						</div>
+					</section>
+				
+				<a href="/variable-fonts-workshop-v1/" class="nav-menu-viewall"><span>🔍&nbsp;&nbsp;View all resources</span> <span>↗</span></a>
+			
+								</div>
+			
+								<div class="nav-overlay" data-active="0" onclick="closeMenus();"></div>
+			
+							</div>
+							
+							<script src="/script.js"></script>
+						</body>
+						</html>
+					

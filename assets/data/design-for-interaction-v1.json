@@ -1,0 +1,201 @@
+[
+	{
+		"name": "🎓 Course Materials",
+		"contents": [
+			{
+				"name": "🍎 Syllabus",
+				"slug": "syllabus",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.0",
+				"newtab": false
+			},
+			{
+				"name": "🗓️ Schedule",
+				"slug": "schedule",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.6x0a5d5zi6im",
+				"newtab": false
+			},
+			{
+				"name": "🖇️ Resources",
+				"slug": "resources",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.nahqo1ydy1dg",
+				"newtab": false
+			},
+			{
+				"name": "✉️ Project Submission Form",
+				"slug": "project-submission-form",
+				"url": "https://docs.google.com/forms/d/e/1FAIpQLSd_9cJzdXjGPUFST90HXyeYOWxSic62W3k4pmniB3fqYizgSQ/viewform?usp=dialog",
+				"newtab": true
+			}
+		]
+	},
+	{
+		"name": "🎥 Lectures",
+		"contents": [
+			{
+				"name": "🗓️ Week 1",
+				"slug": "week-1",
+				"url": "https://docs.google.com/presentation/d/1hxa-67fCQHQ5lJk0XJkDNN-u7zNl40wqTmqs4g0Yf3A/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "🗓️ Week 2",
+				"slug": "week-2",
+				"url": "https://docs.google.com/presentation/d/1-r1Ajbz_et_RJuxLo6eS0lt4oIFmDaoqVLSznw3hg5c/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "🗓️ Week 3",
+				"slug": "week-3",
+				"url": "https://docs.google.com/presentation/d/1D2W8KmlTUbHYFFIhQBIHwzpBQWXW0_prwIc_jc15ZlY/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "🗓️ Week 4",
+				"slug": "week-4",
+				"url": "https://docs.google.com/presentation/d/12Pt6DC0I30jkMp3Ioxvi_9JTEhFh-f1_NYGu9wkK-S4/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "🗓️ Week 10",
+				"slug": "week-10",
+				"url": "https://docs.google.com/presentation/d/1yF9U0UPIzU7Vyau_c7yJTso8P0AV9NHvDRvcPBgjGaI/edit?usp=sharing",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "⏳ Activities",
+		"contents": [
+			{
+				"name": "⏳ Activities Overview",
+				"slug": "activities",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.bt31fyq58o2g",
+				"newtab": false
+			},
+			{
+				"name": "🌳 Dialog Trees",
+				"slug": "dialog-trees",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.nnt40280846i",
+				"newtab": false
+			},
+			{
+				"name": "🕹️ Arcade",
+				"slug": "arcade",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.uvcx28q3cj3o",
+				"newtab": false
+			},
+			{
+				"name": "➿ Conditional Design",
+				"slug": "conditional-design",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.cgph6hoch86k",
+				"newtab": false
+			},
+			{
+				"name": "🏠 Sketch Models",
+				"slug": "sketch-models",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.yqeio2tbjam2",
+				"newtab": false
+			},
+			{
+				"name": "🚦 Stop/Go",
+				"slug": "stop-go",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.4uhehid3hrw6",
+				"newtab": false
+			},
+			{
+				"name": "📺 Heads-Up Display (HUD)",
+				"slug": "heads-up-display-hud",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.l2alxdyu6g55",
+				"newtab": false
+			},
+			{
+				"name": "🃏 Play and Playfulness",
+				"slug": "play-and-playfulness",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.b24tywg5gldy",
+				"newtab": false
+			},
+			{
+				"name": "👯 Personas",
+				"slug": "personas",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.jb5ttsbzrdm",
+				"newtab": false
+			},
+			{
+				"name": "☑️ Surveys",
+				"slug": "surveys",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.yp3p09h0p7y1",
+				"newtab": false
+			},
+			{
+				"name": "💭 Workshops",
+				"slug": "workshops",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.z5ws3p57rxi1",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "📐 Technicals",
+		"contents": [
+			{
+				"name": "📐 Technicals Overview",
+				"slug": "technicals",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.1j5pc7vndt0p",
+				"newtab": false
+			},
+			{
+				"name": "👆 Call-to-Action",
+				"slug": "call-to-action",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.hu4jciatzn2t",
+				"newtab": false
+			},
+			{
+				"name": "👁️ Look & Feel",
+				"slug": "look-and-feel",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.8molqn5d04sq",
+				"newtab": false
+			},
+			{
+				"name": "🖥️ Information Architecture",
+				"slug": "information-architecture",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.hl208emwwyqo",
+				"newtab": false
+			},
+			{
+				"name": "⌚️ Telling the Time",
+				"slug": "telling-the-time",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.24wi759gi5dg",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "🛠️ Projects",
+		"contents": [
+			{
+				"name": "🛠️ Projects Overview",
+				"slug": "projects",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.1bbf17dwofun",
+				"newtab": false
+			},
+			{
+				"name": "🏁 Designing for Play",
+				"slug": "designing-for-play",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.lgz6vx3o12se",
+				"newtab": false
+			},
+			{
+				"name": "🌝 It’s Your Niche",
+				"slug": "its-your-niche",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.4g8ukzegud5c",
+				"newtab": false
+			},
+			{
+				"name": "💾 Component Catalog",
+				"slug": "component-catalog",
+				"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/edit?tab=t.pfcoq7zhv7xs",
+				"newtab": false
+			}
+		]
+	}
+]

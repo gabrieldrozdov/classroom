@@ -1,0 +1,166 @@
+[
+	{
+		"name": "2025",
+		"contents": [
+			{
+				"slug": "type-and-code-v2",
+				"emoji": "🔠",
+				"name": " Type + Code",
+				"version": "v2",
+				"desc": "Creative coding elective focusing on type design, digitalfonts, and unique reading experiences.",
+				"tags": [
+					"RISD",
+					"Fall 2025",
+					"GRAPH 3123"
+				]
+			},
+			{
+				"slug": "in-motion-v2",
+				"emoji": "🎬",
+				"name": "In Motion: Design for Video and Animation",
+				"version": "v2",
+				"desc": "Motion design elective exploring a wide range of skills and use cases for animation.",
+				"tags": [
+					"RISD",
+					"Fall 2025",
+					"GRAPH 2216"
+				]
+			},
+			{
+				"slug": "design-for-interaction-v1",
+				"emoji": "👆",
+				"name": "Design for Interaction",
+				"version": "v1",
+				"desc": "Primer on UI/UX for the perspectives of ludology and performance studies.",
+				"tags": [
+					"RISD",
+					"Spring 2025",
+					"GRAPH 3327"
+				]
+			},
+			{
+				"slug": "introduction-to-computation-v1",
+				"emoji": "🤖",
+				"name": "Introduction to Computation",
+				"version": "v1",
+				"desc": "Introduction to computer science for designers and artists.",
+				"tags": [
+					"RISD",
+					"Spring 2025",
+					"CTC 1000"
+				]
+			}
+		]
+	},
+	{
+		"name": "2024",
+		"contents": [
+			{
+				"slug": "type-and-code-v1",
+				"emoji": "🔠",
+				"name": "Type + Code",
+				"version": "v1",
+				"desc": "Creative coding elective focusing on type design, digitalfonts, and unique reading experiences.",
+				"tags": [
+					"RISD",
+					"Fall 2024",
+					"GRAPH 3123"
+				]
+			},
+			{
+				"slug": "in-motion-v1",
+				"emoji": "🎬",
+				"name": "In Motion: Design for Video and Animation",
+				"version": "v1",
+				"desc": "Motion design elective exploring a wide range of skills and use cases for animation.",
+				"tags": [
+					"RISD",
+					"Fall 2024",
+					"GRAPH 2216"
+				]
+			},
+			{
+				"slug": "variable-fonts-workshop-v2",
+				"emoji": "🔡",
+				"name": "Variable Fonts Workshop",
+				"version": "v2",
+				"desc": "Updated 4-week primer on type design through the lens of experimental variable fonts.",
+				"tags": [
+					"RISD",
+					"Spring 2024",
+					"GRAPH 3163"
+				]
+			},
+			{
+				"slug": "web-sites-and-stories-v1",
+				"emoji": "🌐",
+				"name": "Web Sites & Stories",
+				"version": "v1",
+				"desc": "Introduction to web design and programming with an emphasis on narrative and storytelling.",
+				"tags": [
+					"RISD",
+					"Winter 2024",
+					"GRAPH 3271"
+				]
+			}
+		]
+	},
+	{
+		"name": "2023",
+		"contents": [
+			{
+				"slug": "web-programming-workshop-v2",
+				"emoji": "💻",
+				"name": "Web Programming Workshop",
+				"version": "v2",
+				"desc": "Updated 4-week primer on using HTML and CSS to create uniquely digital experiences.",
+				"tags": [
+					"RISD",
+					"Fall 2023",
+					"GRAPH 3188"
+				]
+			},
+			{
+				"slug": "variable-fonts-workshop-v1",
+				"emoji": "🔡",
+				"name": "Variable Fonts Workshop",
+				"version": "v1",
+				"desc": "4-week primer on type design through the lens of experimental variable fonts.",
+				"tags": [
+					"RISD",
+					"Spring 2023",
+					"GRAPH 3163"
+				]
+			},
+			{
+				"slug": "digital-form-v1",
+				"emoji": "📺",
+				"name": "Digital Form: Light, Motion, Interaction",
+				"version": "v1",
+				"desc": "Introduction to graphic, motion, and web design from a digital-first perspective.",
+				"tags": [
+					"RISD",
+					"Winter 2023",
+					"GRAPH 1566"
+				]
+			}
+		]
+	},
+	{
+		"name": "2022",
+		"contents": [
+			{
+				"slug": "web-programming-workshop-v1",
+				"emoji": "💻",
+				"name": "Web Programming Workshop",
+				"version": "v1",
+				"desc": "4-week primer on the basics of HTML, CSS, and a tiny bit of JavaScript.",
+				"tags": [
+					"RISD",
+					"Fall 2022",
+					"GRAPH 3188"
+				]
+			}
+		]
+	}
+]

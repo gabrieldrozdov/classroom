@@ -1,0 +1,112 @@
+[
+	{
+		"name": "Course Materials",
+		"contents": [
+			{
+				"name": "Class Website",
+				"slug": "class-website",
+				"url": "https://variablefonts.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "Syllabus",
+				"slug": "syllabus",
+				"url": "https://docs.google.com/document/d/1wL56yoGGAFSuBwQng9lTGgCxjBmKPurAOR5htraaFGE/edit?usp=sharing",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Tutorials",
+		"contents": [
+			{
+				"name": "Glyphs Basics",
+				"slug": "glyphs-basics",
+				"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Setting Up Variable Axes",
+				"slug": "setting-up-variable-axes",
+				"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Pixel Fonts",
+				"slug": "pixel-fonts",
+				"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Drawing in Glyphs",
+				"slug": "drawing-in-glyphs",
+				"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing",
+				"newtab": true
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "Exercise A: Open Sourced",
+				"slug": "exercise-a",
+				"url": "https://docs.google.com/document/d/1tsAUGygYGynmEBKhJCOHOpVv_g9Kc6YayK-KUj8jFKk/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Exercise B: Pixel Self-portrait",
+				"slug": "exercise-b",
+				"url": "https://docs.google.com/document/d/1Sup2TVxQhmIosgMjiv2c5QQFTbkjKdvNkGKr-GsQDk0/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Exercise C: Variable Meditation",
+				"slug": "exercise-c",
+				"url": "https://docs.google.com/document/d/1r53pprvVMkmLCD6PBuBoJvNn1YQsLX9bCMbgi-_eZL8/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Exercise D: One Big Move",
+				"slug": "exercise-d",
+				"url": "https://docs.google.com/document/d/1F1IOwzClfM_JJoekRkJdU3tqYInG0biSDhu6xun3JJ0/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Exercise E: Variable Gamut",
+				"slug": "exercise-e",
+				"url": "https://docs.google.com/document/d/15Wpphtb3ee39iz4Op0D--Eev0AIxLpgyIGVqPRfWc0Y/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Project 1: Dot Dot Dot",
+				"slug": "project-1",
+				"url": "https://docs.google.com/document/d/1PU3GPpBEHl5aB53Q29t3ynihNKRSqNkysL1P2Iigkgk/edit?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Project 2: Type Design as Performance",
+				"slug": "project-2",
+				"url": "https://docs.google.com/document/d/12tmWnYQ3K5PPTKqEy4r3ssroq0lGlWULfvjHM_Yw-uk/edit?usp=sharing",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Lectures",
+		"contents": [
+			{
+				"name": "Week 1",
+				"slug": "week-1",
+				"url": "https://drive.google.com/file/d/1CETJKVAMYT6uwtcy_keIXNK2rv6BLyRf/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Week 2",
+				"slug": "week-2",
+				"url": "https://drive.google.com/file/d/103mRfldnuYerGx3siUelD_Y9T5AgjY6N/view?usp=sharing",
+				"newtab": true
+			}
+		]
+	}
+]

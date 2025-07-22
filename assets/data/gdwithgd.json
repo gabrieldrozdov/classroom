@@ -1,0 +1,128 @@
+[
+	{
+		"name": "Learning Hubs",
+		"emoji": "🏡",
+		"contents": [
+			{
+				"url": "https://gdwithgd.com/",
+				"emoji": "🏠",
+				"name": "GD with GD",
+				"desc": "The hub for all GD with GD projects!"
+			},
+			{
+				"url": "https://classroom.gdwithgd.com/",
+				"emoji": "🍎",
+				"name": "Classroom",
+				"desc": "You are here: an open-source archive of syllabi, project descriptions, lectures, and more!"
+			},
+			{
+				"url": "https://demoland.gdwithgd.com/",
+				"emoji": "💻",
+				"name": "DEMOLAND",
+				"desc": "In-browser code editor with a library of tutorials!"
+			}
+		]
+	},
+	{
+		"name": "Guides and Tutorials",
+		"emoji": "🦮",
+		"contents": [
+			{
+				"url": "https://babysteps.gdwithgd.com/",
+				"emoji": "👶",
+				"name": "Baby Steps",
+				"desc": "Everything you need to know for when you start coding!"
+			},
+			{
+				"url": "https://pathfinder.gdwithgd.com/",
+				"emoji": "📁",
+				"name": "Pathfinder",
+				"desc": "An explanation of how folder structure works on websites!"
+			},
+			{
+				"url": "https://cheatsheet.gdwithgd.com/",
+				"emoji": "📝",
+				"name": "Cheatsheet",
+				"desc": "Quick-reference guide for HTML, CSS, and JavaScript!"
+			},
+			{
+				"url": "https://webprogramming.gdwithgd.com/",
+				"emoji": "🎨",
+				"name": "The Designer’s Guide to Web Programming",
+				"desc": "Are you scared of code but want to create websites? Then this is the guide for you!"
+			}
+		]
+	},
+	{
+		"name": "Inspiration",
+		"emoji": "💡",
+		"contents": [
+			{
+				"url": "https://spotlight.gdwithgd.com/",
+				"emoji": "🔦",
+				"name": "Student Spotlight",
+				"desc": "Web-based student projects from GD with GD courses!"
+			},
+			{
+				"url": "https://variablefonts.gdwithgd.com/",
+				"emoji": "🔠",
+				"name": "Variable Fonts Workshop",
+				"desc": "Toys for playing with an testing variable fonts, as well as a showcase of student fonts!"
+			},
+			{
+				"url": "https://smallsites.gdwithgd.com/",
+				"emoji": "🌐",
+				"name": "Small Sites; Big Stories",
+				"desc": "Interactive narratives collected in a catalog of microsites written using as little code as possible!"
+			},
+			{
+				"url": "https://testproject1.gdwithgd.com/",
+				"emoji": "🏁",
+				"name": "test-project-1.html",
+				"desc": "Creative coding projects for any skill level!"
+			}
+		]
+	},
+	{
+		"name": "Toys and Tools",
+		"emoji": "🕹️",
+		"contents": [
+			{
+				"url": "https://variablefonts.gdwithgd.com/",
+				"emoji": "🔠",
+				"name": "Variable Fonts Workshop",
+				"desc": "Toys for playing with an testing variable fonts, as well as a showcase of student fonts!"
+			},
+			{
+				"url": "https://gdwithgd.com/generator/",
+				"emoji": "🤖",
+				"name": "Generator",
+				"desc": "Our custom tool for generating GD with GD graphics!"
+			}
+		]
+	},
+	{
+		"name": "Archived Projects",
+		"emoji": "💾",
+		"contents": [
+			{
+				"url": "https://vfw23.gdwithgd.com/",
+				"emoji": "💾",
+				"name": "Variable Fonts Workshop 2023",
+				"desc": "The first draft of the variable fonts workshop type-testing instrument!"
+			},
+			{
+				"url": "https://wpw23.gdwithgd.com/",
+				"emoji": "💾",
+				"name": "Web Programming Workshop 2023",
+				"desc": "The second iteration of my workshop on making websites!"
+			},
+			{
+				"url": "https://wpw22.gdwithgd.com/",
+				"emoji": "💾",
+				"name": "Web Programming Workshop 2022",
+				"desc": "The first iteration of my workshop on making websites!"
+			}
+		]
+	}
+]
