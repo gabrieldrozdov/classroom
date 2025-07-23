@@ -237,7 +237,7 @@ function generatePages() {
 					${meta}
 					<link rel="stylesheet" href="/style.css">
 				</head>
-				<body style="background-color: var(--off-black);">
+				<body>
 
 					<a href="/" class="overview-return">🍎&nbsp;&nbsp;View all courses</a>
 
@@ -426,7 +426,7 @@ function generatePages() {
 			${meta}
 			<link rel="stylesheet" href="/style.css">
 		</head>
-		<body style="background-color: var(--off-black);">
+		<body>
 
 			<main class="overview-container">
 				<header class="overview-header">
