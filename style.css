@@ -418,7 +418,7 @@ body {
 	background-color: var(--off-black);
 	color: var(--primary);
 	width: unset;
-	padding: .2em 12px 0 16px;
+	padding: .2em 10px 0 16px;
 }
 .overview-menu-links > a > button::before {
 	content: "Direct link";
@@ -431,6 +431,10 @@ body {
 	letter-spacing: 0.1em;
 	display: none;
 	padding-bottom: .1em;
+}
+.overview-menu-links > a:active > button {
+	background-color: rgba(255,255,255,.1);
+	color: var(--primary);
 }
 .overview-menu-links > a > button:hover::before {
 	display: block;
