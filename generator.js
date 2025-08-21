@@ -81,14 +81,10 @@ function generatePages() {
 			`;
 
 			homeSectionLinks += `
-				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]});" data-active="0">
+				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]});">
 					<h3>${course['emoji']}&nbsp;&nbsp;${course['name']} <span>${course['version']}</span></h3>
 					<p>${course['desc']}</p>
 					${tags}
-					<div class="handle handle-1"></div>
-					<div class="handle handle-2"></div>
-					<div class="handle handle-3"></div>
-					<div class="handle handle-4"></div>
 				</a>
 			`;
 
@@ -119,7 +115,7 @@ function generatePages() {
 		`;
 	}
 	menuCourses += `
-		<a href="/" class="nav-menu-viewall"><span>🔍&nbsp;&nbsp;View all courses</span> <span>↗</span></a>
+		<a href="/" class="nav-menu-viewall"><span>🍎&nbsp;&nbsp;View all courses</span> <span>↗</span></a>
 	`;
 
 	// Generate pages for each resource
@@ -169,13 +165,10 @@ function generatePages() {
 					`;
 
 					courseSectionLinks += `
-						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});" data-active="0">
+						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
 							<h3>${resourceName}</h3>
 							${desc}
 							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
-							<div class="handle handle-1"></div>
-							<div class="handle handle-2"></div>
-							<div class="handle handle-4"></div>
 						</a>
 					`;
 
@@ -214,7 +207,7 @@ function generatePages() {
 				`;
 			}
 			menuResources += `
-				<a href="/${course['slug']}/" class="nav-menu-viewall"><span>🔍&nbsp;&nbsp;View all resources</span> <span>↗</span></a>
+				<a href="/${course['slug']}/" class="nav-menu-viewall"><span>${course['emoji']}&nbsp;&nbsp;View all resources</span> <span>↗</span></a>
 			`;
 			
 			// Build tags
@@ -238,15 +231,13 @@ function generatePages() {
 					<link rel="stylesheet" href="/style.css">
 				</head>
 				<body>
-
-					<a href="/" class="overview-return">🍎&nbsp;&nbsp;View all courses</a>
-
-					<main class="overview-container overview-container-course">
+					<main class="overview-container">
 						<header class="overview-header">
 							<div class="overview-header-content">
 								<h1 class="overview-header-title">
-									<span class="overview-header-title-emoji">${course['emoji']}</span>
-									<span class="overview-header-title-big">${course['name']} ${course['version']}</span>
+									<span class="overview-header-title-emoji"><span class="overview-header-title-emoji-main">${course['emoji']}</span></span>
+									<span class="overview-header-title-big">${course['name']}</span>
+									<span class="overview-header-version">${course['version']}</span>
 								</h1>
 							</div>
 						</header>
@@ -257,14 +248,11 @@ function generatePages() {
 									${course['desc']}
 								</p>
 								${tags}
-								<div class="handle handle-1"></div>
-								<div class="handle handle-2"></div>
-								<div class="handle handle-3"></div>
-								<div class="handle handle-4"></div>
 							</div>
 							<nav class="overview-nav">
 								${courseResources}
 							</nav>
+							<a href="/" class="overview-return">🍎&nbsp;&nbsp;View all courses</a>
 						</div>
 					</main>
 					
@@ -432,7 +420,7 @@ function generatePages() {
 				<header class="overview-header">
 					<div class="overview-header-content">
 						<h1 class="overview-header-title">
-							<span class="overview-header-title-emoji">🍎</span>
+							<span class="overview-header-title-emoji"><span class="overview-header-title-emoji-main">🍎</span></span>
 							<span class="overview-header-title-big">GD with GD Classroom!</span>
 						</h1>
 					</div>
@@ -441,18 +429,11 @@ function generatePages() {
 				<div class="overview-nav-container">
 					<div class="overview-desc">
 						<p>
-							Welcome to class! I’m your teacher, <a href="https://gabrieldrozdov.com/" target="_blank">Gabriel</a>. I made this website because I wanted a hub for my course materials. Even if you’re not taking one of my courses, you can still follow along on your own!
+							<strong>Welcome to class!</strong> I’m <a href="https://gdwithgd.com/" target="_blank">Gabriel</a>, and I teach design and code at <a href="https://www.risd.edu/" target="_blank">RISD</a>. This site is a collection of everything I make for my courses. That includes syllabi, schedules, lists of resources, lectures, tutorials, project descriptions, and more. You can tell how many times I taught a course based on its version number.
 						</p>
 						<p>
-							Select a course below to see its syllabus, schedule, project descriptions, and more!
+							If you’re one of my students, use this site to find everything you need for the semester. If you’re not one of my students, you can still follow along on your own! And if you’re a teacher creating your own course, feel free to borrow whatever you need.
 						</p>
-						<p>
-							Check out <a href="https://gdwithgd.com/" target="_blank">GD with GD</a> for all my other educational projects!
-						</p>
-						<div class="handle handle-1"></div>
-						<div class="handle handle-2"></div>
-						<div class="handle handle-3"></div>
-						<div class="handle handle-4"></div>
 					</div>
 					<nav class="overview-nav">
 						${homeCourses}
@@ -472,7 +453,3 @@ function generatePages() {
 	});
 }
 generatePages();
-
-// TODO:
-// create classroom courses page
-// handle emojis better

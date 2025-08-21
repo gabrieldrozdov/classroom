@@ -2,125 +2,59 @@
 function initTitle() {
 	let colors = ['pink', 'green', 'blue', 'yellow', 'purple', 'red'];
 	let colorIndex = 0;
+	let letterIndex = 0;
 	let title = document.querySelector('.overview-header-title-big');
 	let temp = "";
 	let words = title.innerText.split(" ");
 	for (let word of words) {
-		temp += `<span style="--primary: var(--${colors[colorIndex]}); animation-delay: ${-colorIndex/3}s"><span>${word}</span></span>`;
-		colorIndex++;
-		if (colorIndex >= colors.length) {
-			colorIndex = 0;
+		temp += `<span>`;
+		for (let letter of word) {
+			temp += `<span style="--primary: var(--${colors[colorIndex]}); animation-delay: ${-letterIndex/12}s">${letter}</span>`;
+			colorIndex++;
+			letterIndex++;
+			if (colorIndex >= colors.length) {
+				colorIndex = 0;
+			}
 		}
+		temp += `</span>`;
+		temp += `<span><span>&nbsp;</span></span>`;
 	}
 	title.innerHTML = temp;
 }
 initTitle();
 
+
 // Emoji animation
+let emoji = document.querySelector('.overview-header-title-emoji').innerText;
 function emojiLoop() {
 
 	// Initalize elmnt
-	let emoji = document.querySelector('.overview-header-title-emoji').innerText;
-	let elmnt = document.createElement('div');
-	elmnt.classList.add('overview-emoji');
+	let elmnt = document.createElement('span');
+	elmnt.classList.add('overview-header-title-emoji-anim');
 	elmnt.innerText = emoji;
-	elmnt.style.fontSize = Math.random()*5+2+"vw";
-	elmnt.style.opacity = 0;
-	elmnt.style.filter = `blur(${Math.random()*4}px)`;
-
-	// Origin
-	let diceRoll = Math.random();
-	let origin = [0, 0];
-	// if (diceRoll < .25) { // from top
-	// 	origin = [Math.random()*50-25, -25];
-	// } else if (diceRoll < .5) { // from right
-	// 	origin = [25, Math.random()*50-25];
-	// } else if (diceRoll < .75) { // from bottom
-	// 	origin = [Math.random()*50-25, 25];
-	// } else { // from left
-	// 	origin = [-25, Math.random()*50-25];
-	// }
-	elmnt.style.transform = `translate(calc(${origin[0]}vmin - 50%), calc(${origin[1]}vmin - 50%)) rotate(0deg)`;
-
-	// Duration
-	let duration = Math.random()*5+3;
-	elmnt.style.transition = `transform ${duration}s linear, opacity 1s`;
 
 	// Add to DOM
-	let header = document.querySelector('.overview-header');
-	header.appendChild(elmnt);
-
-	// Destination
-	diceRoll = Math.random();
-	let destination;
-	if (diceRoll < .25) { // to top
-		destination = [Math.random()*100-50, -50];
-	} else if (diceRoll < .5) { // to right
-		destination = [50, Math.random()*100-50];
-	} else if (diceRoll < .75) { // to bottom
-		destination = [Math.random()*100-50, 50];
-	} else { // to left
-		destination = [-50, Math.random()*100-50];
-	}
+	let container = document.querySelector('.overview-header-title-emoji');
+	container.appendChild(elmnt);
 
 	// Animate
 	setTimeout(() => {
-		elmnt.style.transform = `translate(calc(${destination[0]}vmin - 50%), calc(${destination[1]}vmin - 50%)) rotate(${Math.random()*2000-1000}deg)`;
-		elmnt.style.opacity = 1;
+		let dirX = Math.random() < .5 ? -1 : 1;
+		let dirY = Math.random() < .5 ? -1 : 1;
+		let dest = [dirX*(Math.random()*500), dirY*(Math.random()*500)];
+		while (dest[0]*dest[0] + dest[1]*dest[1] < 125000) {
+			dest = [dirX*(Math.random()*500), dirY*(Math.random()*500)];
+		}
+		elmnt.style.transform = `translate(${dest[0]}%, ${dest[1]}%) rotate(${Math.random()*1000-500}deg)`;
+		elmnt.style.opacity = 0;
+		elmnt.style.filter = `blur(20px)`;
 	}, 50)
 
 	// Remove
 	setTimeout(() => {
-		elmnt.style.opacity = 0;
-		setTimeout(() => {
-			elmnt.remove();
-		}, 1000)
-	}, duration*1000-1000)
+		elmnt.remove();
+	}, 5500)
 }
 
 // Initiate emojis
-setInterval(emojiLoop, 100);
-emojiLoop();
-for (let i=0; i<20; i++) {
-	emojiLoop();
-}
-
-// Reduce lag when resizing screen
-window.addEventListener('resize', () => {
-	for (let emoji of document.querySelectorAll('.overview-emoji')) {
-		emoji.style.display = 'none';
-	}
-})
-
-// Remove elements when switching tab
-document.addEventListener("visibilitychange", () => {
-	for (let emoji of document.querySelectorAll('.overview-emoji')) {
-		emoji.style.display = 'none';
-	}
-});
-
-// Link observer
-for (let section of document.querySelectorAll('.section')) {
-	section.dataset.active = 0;
-}
-
-
-// Link styling
-function initLinks() {
-	let dir = -1;
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				dir *= -1;
-				let elmnt = entry.target;
-				elmnt.dataset.active = 1;
-				elmnt.style.transform = `rotate(${Math.random()*2*dir}deg) translate(${Math.random()*5*dir}%, 0)`;
-				observer.unobserve(entry.target);
-			}
-		});
-	});
-	for (let link of document.querySelectorAll('.overview-menu-links > a')) {
-		observer.observe(link);
-	}
-}
-initLinks();
+setInterval(emojiLoop, 250);

@@ -7,7 +7,7 @@
 				"emoji": "🔠",
 				"name": " Type + Code",
 				"version": "v2",
-				"desc": "Creative coding elective focusing on type design, digitalfonts, and unique reading experiences.",
+				"desc": "Creative coding elective focusing on the connection between font technologies and websites.",
 				"tags": [
 					"RISD",
 					"Fall 2025",
@@ -17,9 +17,9 @@
 			{
 				"slug": "in-motion-v2",
 				"emoji": "🎬",
-				"name": "In Motion: Design for Video and Animation",
+				"name": "In Motion",
 				"version": "v2",
-				"desc": "Motion design elective exploring a wide range of skills and use cases for animation.",
+				"desc": "Introduction to motion design from the perspective of musical composition, featuring topics ranging from hand drawn animation, to vector-based loops, to kinetic typography, to interaction design.",
 				"tags": [
 					"RISD",
 					"Fall 2025",
@@ -60,7 +60,7 @@
 				"emoji": "🔠",
 				"name": "Type + Code",
 				"version": "v1",
-				"desc": "Creative coding elective focusing on type design, digitalfonts, and unique reading experiences.",
+				"desc": "Creative coding elective focusing on type design, digital fonts, and unique reading experiences.",
 				"tags": [
 					"RISD",
 					"Fall 2024",
@@ -70,7 +70,7 @@
 			{
 				"slug": "in-motion-v1",
 				"emoji": "🎬",
-				"name": "In Motion: Design for Video and Animation",
+				"name": "In Motion",
 				"version": "v1",
 				"desc": "Motion design elective exploring a wide range of skills and use cases for animation.",
 				"tags": [
@@ -135,7 +135,7 @@
 			{
 				"slug": "digital-form-v1",
 				"emoji": "📺",
-				"name": "Digital Form: Light, Motion, Interaction",
+				"name": "Digital Form",
 				"version": "v1",
 				"desc": "Introduction to graphic, motion, and web design from a digital-first perspective.",
 				"tags": [

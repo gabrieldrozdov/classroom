@@ -5,25 +5,19 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?usp=sharing",
+				"url": "https://embed.figma.com/slides/ltNd6tklZsR9uLfOVDflQI/F25---In-Motion---Syllabus?embed-host=share",
 				"newtab": false
 			},
 			{
 				"name": "Schedule",
 				"slug": "schedule",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.7ubr7cuas863",
+				"url": "https://embed.figma.com/slides/ltNd6tklZsR9uLfOVDflQI/F25---In-Motion---Syllabus?node-id=18-10673&embed-host=share",
 				"newtab": false
 			},
 			{
 				"name": "Resources",
 				"slug": "resources",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.mskmi0lq4jc8",
-				"newtab": false
-			},
-			{
-				"name": "New Canon Are.na Channel",
-				"slug": "new-canon-arena-channel",
-				"url": "https://www.are.na/gabriel-drozdov/in-motion-f24-00-new-canon",
+				"url": "https://embed.figma.com/slides/ltNd6tklZsR9uLfOVDflQI/F25---In-Motion---Syllabus?node-id=18-7325&embed-host=share",
 				"newtab": false
 			}
 		]
@@ -32,103 +26,63 @@
 		"name": "Projects",
 		"contents": [
 			{
-				"name": "New Canon",
-				"slug": "new-canon",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.987huextsgif",
+				"name": "P1: Rehearsal",
+				"slug": "p1-rehearsal",
+				"url": "https://embed.figma.com/slides/duw1i1bHBifQzgQ4qAHWCE/F25---In-Motion---P1-Rehearsal?embed-host=share",
 				"newtab": false
 			},
 			{
-				"name": "Motion Studies",
-				"slug": "motion-studies",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.yxsuvki1tvwu",
+				"name": "P2: Act I",
+				"slug": "p2-act-i",
+				"url": "https://embed.figma.com/slides/gXFBO58htDugQ9k8GxlyPs/F25---In-Motion---P2-Act-I?embed-host=share",
 				"newtab": false
 			},
 			{
-				"name": "Exquisite Corpse",
-				"slug": "exquisite-corpse",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.z4ng7jz82thu",
+				"name": "P3: Intermission",
+				"slug": "p3-intermission",
+				"url": "https://embed.figma.com/slides/5Anlw0KvMen4OjbGY7wyer/F25---In-Motion---P3-Intermission?embed-host=share",
 				"newtab": false
 			},
 			{
-				"name": "Final Project: Sequence",
-				"slug": "final-project-sequence",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.m2dacsvocbhk",
+				"name": "P4: Act II",
+				"slug": "p4-act-ii",
+				"url": "https://embed.figma.com/slides/LdBjYEkQAbROBGylkDO7l6/F25---In-Motion---P4-Act-II?embed-host=share",
+				"newtab": false
+			},
+			{
+				"name": "P5: Encore",
+				"slug": "p5-encore",
+				"url": "https://embed.figma.com/slides/r7ge4iHd1leCe5OXnKw7v3/F25---In-Motion---P5-Encore?embed-host=share",
+				"newtab": false
+			},
+			{
+				"name": "PS: Dramaturgy",
+				"slug": "ps-dramaturgy",
+				"url": "https://embed.figma.com/slides/Mn9gWmcvfgWnBQZakSJ0ZG/F25---In-Motion---PS-Dramaturgy?embed-host=share",
 				"newtab": false
 			}
 		]
 	},
 	{
-		"name": "Tutorials",
+		"name": "Exercises",
 		"contents": [
 			{
-				"name": "Making GIFs in Photoshop",
-				"slug": "making-gifs-in-photoshop",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.gyvpgx4tgtp4",
+				"name": "E1: Feeling Rhythm",
+				"slug": "e1-feeling-rhythm",
+				"url": "https://embed.figma.com/slides/cXadymA9zE33J9RLVL7lGC/F25---In-Motion---E1-Feeling-Rhythm?embed-host=share",
 				"newtab": false
 			},
 			{
-				"name": "Exporting and Compressing Files",
-				"slug": "exporting-and-compressing-files",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.tjwf15qv0k5",
+				"name": "E2: Conveying Motion",
+				"slug": "e2-conveying-motion",
+				"url": "https://embed.figma.com/slides/6kDK2ZK2Q3h3inGL2FeEfY/F25---In-Motion---E2-Conveying-Motion?embed-host=share",
 				"newtab": false
 			},
 			{
-				"name": "Importing Files from Illustrator and Photoshop",
-				"slug": "importing-files-from-illustrator-and-photoshop",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.l18at4pf57al",
+				"name": "E3: Interpreting Audio",
+				"slug": "e3-interpreting-audio",
+				"url": "https://embed.figma.com/slides/s56uiPBFCDyFru49TojQug/F25---In-Motion---E3-Interpreting-Audio?embed-host=share",
 				"newtab": false
-			},
-			{
-				"name": "Working with Audio",
-				"slug": "working-with-audio",
-				"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/edit?tab=t.8bfkfwd4z3t5",
-				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "Lectures",
-		"contents": [
-			{
-				"name": "Unit 2",
-				"slug": "unit-2",
-				"url": "https://docs.google.com/document/d/1VjZcSVTuzG7HhayFORlN1kTa_Ei6PMQzXKWm3OLigbk/edit?usp=sharing",
-				"newtab": false
-			},
-			{
-				"name": "Week 6",
-				"slug": "week-6",
-				"url": "https://docs.google.com/presentation/d/14q6C4Fg_CYSodvmzImBDBmhG4kJrMnoy4o0IQdCy-Cg/edit?usp=sharing",
-				"newtab": false
-			},
-			{
-				"name": "Week 7",
-				"slug": "week-7",
-				"url": "https://embed.figma.com/slides/xKPdakq2mC4kKHD2yRLGCQ/IN-MOTION---Week-7?node-id=2-675&embed-host=share",
-				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "Other Resources",
-		"contents": [
-			{
-				"name": "After Effects Shortcuts",
-				"slug": "after-effects-shortcuts",
-				"url": "https://docs.google.com/document/d/1mfpLDXKdpVot24GR9rY4O382sJoFY9eFBDLkyCMz1NA/edit?usp=sharing",
-				"newtab": true
-			},
-			{
-				"name": "Introduction to After Effects",
-				"slug": "introduction-to-after-effects",
-				"url": "https://drive.google.com/file/d/18ue_bBJaBkR08W42Jgjn7f3gjZwKVMCE/view?usp=sharing",
-				"newtab": true
-			},
-			{
-				"name": "After Effects Cheat Sheet",
-				"slug": "after-effects-cheat-sheet",
-				"url": "https://drive.google.com/file/d/18JP4Fluu4dgAwfOCWJAv4twSkpHFv0K5/view?usp=sharing",
-				"newtab": true
 			}
 		]
 	}
