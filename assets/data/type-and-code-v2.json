@@ -5,8 +5,207 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/F25---Type-Code---Syllabus?embed-host=share",
+				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/Type-Code-v2---Syllabus?embed-host=share",
 				"newtab": false
+			},
+			{
+				"name": "Schedule",
+				"slug": "schedule",
+				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/Type-Code-v2---Syllabus?node-id=18-10673&embed-host=share",
+				"newtab": false
+			},
+			{
+				"name": "Resources",
+				"slug": "resources",
+				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/Type-Code-v2---Syllabus?node-id=2050-16&embed-host=share",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Weekly Schedules",
+		"contents": [
+			{
+				"name": "All Weekly Schedules",
+				"slug": "all-weekly-schedules",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?embed-host=share",
+				"newtab": false
+			},
+			{
+				"name": "Week 1 [9/4/25]",
+				"slug": "week-1",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=10-2983&embed-host=share",
+				"newtab": false
+			},
+			{
+				"name": "Week 2 [9/11/25]",
+				"slug": "week-2",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=12-23318&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 3 [9/18/25]",
+				"slug": "week-3",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=18-18&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 4 [9/25/25]",
+				"slug": "week-4",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=18-2028&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 5 [10/2/25]",
+				"slug": "week-5",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=18-3345&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 6 [10/9/25]",
+				"slug": "week-6",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=18-7325&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 7 [10/16/25]",
+				"slug": "week-7",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=2001-6329&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 8 [10/23/25]",
+				"slug": "week-8",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-7694&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 9 [10/30/25]",
+				"slug": "week-9",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-9059&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 10 [11/6/25]",
+				"slug": "week-10",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-10424&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 11 [11/13/25]",
+				"slug": "week-11",
+				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-11789&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 12 [11/20/25]",
+				"slug": "week-12",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=2001-13154&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "Week 13 [12/11/25]",
+				"slug": "week-13",
+				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=2001-14531&embed-host=share",
+				"newtab": false,
+				"active": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "P1: Point",
+				"slug": "p1-point",
+				"url": "https://embed.figma.com/slides/bO9xFjzxHyn8rBfzSqqA41/Type-Code-v2---P1-Point?node-id=0-1&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "P2: Path",
+				"slug": "p2-path",
+				"url": "https://embed.figma.com/slides/pctC6MUoegiCLjPMgQGkcx/Type-Code-v2---P2-Path?node-id=0-1&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "P3: Polygon",
+				"slug": "p3-polygon",
+				"url": "https://embed.figma.com/slides/cGZ1U1c8NNwliplXRYQS64/Type-Code-v2---P3-Polygon?node-id=9-37&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "P4: Program",
+				"slug": "p4-program",
+				"url": "https://embed.figma.com/slides/eJhWlYq0TUwaiaFlGHai6X/Type-Code-v2---P4-Program?node-id=0-1&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "P5: Publish",
+				"slug": "p5-publish",
+				"url": "https://embed.figma.com/slides/6s4JGu6TgPSFAvtkGKirSS/Type-Code-v2---P5-Publish?node-id=0-1&embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "PS: Passport",
+				"slug": "ps-passport",
+				"url": "https://embed.figma.com/slides/IJdrmiD0uT79kaFHO9FXiu/Type-Code-v2---PS-Passport?node-id=0-1&embed-host=share",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Exercises",
+		"contents": [
+			{
+				"name": "E1: Every Pixel, a Story",
+				"slug": "e1-every-pixel-a-story",
+				"url": "https://embed.figma.com/slides/nxO9p0wUid86gsWCogFpyb/Type-Code-v2---E1-Every-Pixel-a-Story?embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "E2: Bit by Bit",
+				"slug": "e2-bit-by-bit",
+				"url": "https://embed.figma.com/slides/B5mrm0StrrGWwltn5flZ9L/Type-Code-v2---E2-Bit-by-Bit?embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "E3: Glyphic Meditation",
+				"slug": "e3-glyphic-meditation",
+				"url": "https://embed.figma.com/slides/Gfus8h2YVTZ6swqKPTcONJ/Type-Code-v2---E3-Glyphic-Meditation?embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "E4: Self-portraits",
+				"slug": "e4-self-portraits",
+				"url": "https://embed.figma.com/slides/0MARbwWLbRvgj6uADjAkY0/Type-Code-v2---E4-Self-portraits?embed-host=share",
+				"newtab": false,
+				"active": false
+			},
+			{
+				"name": "E5: One Big Move",
+				"slug": "e5-one-big-move",
+				"url": "https://embed.figma.com/slides/u4NB78rvxFW8Q382kFTWk1/Type-Code-v2---E5-One-Big-Move?embed-host=share",
+				"newtab": false,
+				"active": false
 			}
 		]
 	}

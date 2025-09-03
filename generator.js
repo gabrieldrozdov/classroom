@@ -28,6 +28,11 @@ function generatePages() {
 
 		// Build link
 		for (let link of section['contents']) {
+
+			if (link['active'] == false) {
+				continue
+			}
+
 			sectionLinks += `
 				<a href="${link['url']}" target="_blank" style="--primary: var(--${colors[colorIndex]});">
 					<h3>${link['emoji']}&nbsp;&nbsp;${link['name']}</h3>
@@ -142,6 +147,10 @@ function generatePages() {
 	
 				// Build resource link
 				for (let resource of subsection['contents']) {
+			
+					if (resource['active'] == false) {
+						continue
+					}
 
 					let desc = '';
 					if (resource['desc'] != "" && resource['desc'] != undefined) {
@@ -271,6 +280,10 @@ function generatePages() {
 			for (let subsection of jsonCourse) {
 
 				for (let resource of subsection['contents']) {
+			
+					if (resource['active'] == false) {
+						continue
+					}
 
 					// Handle newtab required special case
 					let preview = '';
@@ -429,10 +442,7 @@ function generatePages() {
 				<div class="overview-nav-container">
 					<div class="overview-desc">
 						<p>
-							<strong>Welcome to class!</strong> I’m <a href="https://gdwithgd.com/" target="_blank">Gabriel</a>, and I teach design and code at <a href="https://www.risd.edu/" target="_blank">RISD</a>. This site is a collection of everything I make for my courses. That includes syllabi, schedules, lists of resources, lectures, tutorials, project descriptions, and more. You can tell how many times I taught a course based on its version number.
-						</p>
-						<p>
-							If you’re one of my students, use this site to find everything you need for the semester. If you’re not one of my students, you can still follow along on your own! And if you’re a teacher creating your own course, feel free to borrow whatever you need.
+							<strong>Welcome to class!</strong> I’m <a href="https://gdwithgd.com/" target="_blank">Gabriel</a>, and I teach design and code and everything in between. This site is a collection of everything I make for my courses.
 						</p>
 					</div>
 					<nav class="overview-nav">
