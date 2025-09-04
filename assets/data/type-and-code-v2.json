@@ -23,6 +23,17 @@
 		]
 	},
 	{
+		"name": "Tutorials",
+		"contents": [
+			{
+				"name": "Pixel Fonts",
+				"slug": "pixel-fonts",
+				"url": "https://embed.figma.com/slides/N4Qt9SRNQN3s6uOyFmJP4i/Type-Code-v2---Pixel-Fonts?embed-host=share",
+				"newtab": false
+			}
+		]
+	},
+	{
 		"name": "Weekly Schedules",
 		"contents": [
 			{
@@ -130,8 +141,7 @@
 				"name": "P1: Point",
 				"slug": "p1-point",
 				"url": "https://embed.figma.com/slides/bO9xFjzxHyn8rBfzSqqA41/Type-Code-v2---P1-Point?embed-host=share",
-				"newtab": false,
-				"active": false
+				"newtab": false
 			},
 			{
 				"name": "P2: Path",
@@ -176,22 +186,19 @@
 				"name": "E1: Every Pixel, a Story",
 				"slug": "e1-every-pixel-a-story",
 				"url": "https://embed.figma.com/slides/nxO9p0wUid86gsWCogFpyb/Type-Code-v2---E1-Every-Pixel-a-Story?embed-host=share",
-				"newtab": false,
-				"active": false
+				"newtab": false
 			},
 			{
 				"name": "E2: Bit by Bit",
 				"slug": "e2-bit-by-bit",
 				"url": "https://embed.figma.com/slides/B5mrm0StrrGWwltn5flZ9L/Type-Code-v2---E2-Bit-by-Bit?embed-host=share",
-				"newtab": false,
-				"active": false
+				"newtab": false
 			},
 			{
 				"name": "E3: Glyphic Meditation",
 				"slug": "e3-glyphic-meditation",
 				"url": "https://embed.figma.com/slides/Gfus8h2YVTZ6swqKPTcONJ/Type-Code-v2---E3-Glyphic-Meditation?embed-host=share",
-				"newtab": false,
-				"active": false
+				"newtab": false
 			},
 			{
 				"name": "E4: Self-portraits",
