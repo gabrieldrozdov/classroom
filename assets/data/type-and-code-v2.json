@@ -37,98 +37,91 @@
 		"name": "Weekly Schedules",
 		"contents": [
 			{
-				"name": "All Weekly Schedules",
-				"slug": "all-weekly-schedules",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?embed-host=share",
-				"newtab": false
-			},
-			{
 				"name": "Week 1 [9/4/25]",
 				"slug": "week-1",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=10-2983&embed-host=share",
+				"url": "https://embed.figma.com/slides/Yqa6hEBgIJSVkztDs2hQJP/Type-Code-v2---Week-1?embed-host=share",
 				"newtab": false
 			},
 			{
 				"name": "Week 2 [9/11/25]",
 				"slug": "week-2",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=12-23318&embed-host=share",
-				"newtab": false,
-				"active": false
+				"url": "https://embed.figma.com/slides/iLnavIEE7OGXHJeYJj13Wm/Type-Code-v2---Week-2?embed-host=share",
+				"newtab": false
 			},
 			{
 				"name": "Week 3 [9/18/25]",
 				"slug": "week-3",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=18-18&embed-host=share",
+				"url": "https://embed.figma.com/slides/tzZGFV86CGORBRzvD7UhdT/Type-Code-v2---Week-3?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 4 [9/25/25]",
 				"slug": "week-4",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=18-2028&embed-host=share",
+				"url": "https://embed.figma.com/slides/ITlk5tLy7xvLxfCMF1TDnZ/Type-Code-v2---Week-4?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 5 [10/2/25]",
 				"slug": "week-5",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=18-3345&embed-host=share",
+				"url": "https://embed.figma.com/slides/Bj4k2JKlRowOiYjBnMMmiM/Type-Code-v2---Week-5?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 6 [10/9/25]",
 				"slug": "week-6",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=18-7325&embed-host=share",
+				"url": "https://embed.figma.com/slides/VhnHcXlybEmyM95h4s3KfO/Type-Code-v2---Week-6?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 7 [10/16/25]",
 				"slug": "week-7",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=2001-6329&embed-host=share",
+				"url": "https://embed.figma.com/slides/6kEB9tf41prUjfzAguRVbE/Type-Code-v2---Week-7?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 8 [10/23/25]",
 				"slug": "week-8",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-7694&embed-host=share",
+				"url": "https://embed.figma.com/slides/yv8R03XDhJmST7aENKTe7H/Type-Code-v2---Week-8?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 9 [10/30/25]",
 				"slug": "week-9",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-9059&embed-host=share",
+				"url": "https://embed.figma.com/slides/k2SCajpIPMpT8HbbdcnhRG/Type-Code-v2---Week-9?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 10 [11/6/25]",
 				"slug": "week-10",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-10424&embed-host=share",
+				"url": "https://embed.figma.com/slides/nkWa0Zb4v7rbnmj2MDYnu5/Type-Code-v2---Week-10?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 11 [11/13/25]",
 				"slug": "week-11",
-				"url": "https://embed.figma.com/slides/h5GmbFPa2NW03FKD6aI6eH/Type-Code-v2---Weekly-Schedules?node-id=2001-11789&embed-host=share",
+				"url": "https://embed.figma.com/slides/t8unPY8OrXDKJTqRa3h5KZ/Type-Code-v2---Week-11?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 12 [11/20/25]",
 				"slug": "week-12",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=2001-13154&embed-host=share",
+				"url": "https://embed.figma.com/slides/bOhpwDXGh701jcX9qYuWuZ/Type-Code-v2---Week-12?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
 			{
 				"name": "Week 13 [12/11/25]",
 				"slug": "week-13",
-				"url": "https://embed.figma.com/slides/DYKlcPYUsPblOsRlmMdQhW/Type-Code-v2---Weekly-Schedules?node-id=2001-14531&embed-host=share",
+				"url": "https://embed.figma.com/slides/kjbHLYakHGWq2JHI9lukCb/Type-Code-v2---Week-13?embed-host=share",
 				"newtab": false,
 				"active": false
 			}
@@ -201,9 +194,9 @@
 				"newtab": false
 			},
 			{
-				"name": "E4: Self-portraits",
-				"slug": "e4-self-portraits",
-				"url": "https://embed.figma.com/slides/0MARbwWLbRvgj6uADjAkY0/Type-Code-v2---E4-Self-portraits?embed-host=share",
+				"name": "E4: Pixel Portraits",
+				"slug": "e4-pixel-portraits",
+				"url": "https://embed.figma.com/slides/0MARbwWLbRvgj6uADjAkY0/Type-Code-v2---E4-Pixel-Portraits?embed-host=share",
 				"newtab": false,
 				"active": false
 			},
