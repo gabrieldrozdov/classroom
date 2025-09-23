@@ -45,6 +45,47 @@
 			{
 				"name": "P1: Rehearsal",
 				"slug": "p1-rehearsal",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.17vw6k8ts8m2",
+				"newtab": false
+			},
+			{
+				"name": "P2: Act I",
+				"slug": "p2-act-i",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.0",
+				"newtab": false
+			},
+			{
+				"name": "P3: Intermission",
+				"slug": "p3-intermission",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.2a4yv1ahjuhy",
+				"newtab": false
+			},
+			{
+				"name": "P4: Act II",
+				"slug": "p4-act-ii",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.yp94ibjd3e90",
+				"newtab": false
+			},
+			{
+				"name": "P5: Encore",
+				"slug": "p5-encore",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.d2a9k0uik0ag",
+				"newtab": false
+			},
+			{
+				"name": "PS: Dramaturgy",
+				"slug": "ps-dramaturgy",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.4jpx0fd7l27q",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "P1: Rehearsal",
+				"slug": "p1-rehearsal",
 				"url": "https://embed.figma.com/slides/duw1i1bHBifQzgQ4qAHWCE/In-Motion-v2---P1-Rehearsal?embed-host=share",
 				"newtab": false
 			},
