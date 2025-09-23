@@ -81,50 +81,6 @@
 		]
 	},
 	{
-		"name": "Projects",
-		"contents": [
-			{
-				"name": "P1: Rehearsal",
-				"slug": "p1-rehearsal",
-				"url": "https://embed.figma.com/slides/duw1i1bHBifQzgQ4qAHWCE/In-Motion-v2---P1-Rehearsal?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "P2: Act I",
-				"slug": "p2-act-i",
-				"url": "https://embed.figma.com/slides/gXFBO58htDugQ9k8GxlyPs/In-Motion-v2---P2-Act-I?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "P3: Intermission",
-				"slug": "p3-intermission",
-				"url": "https://embed.figma.com/slides/5Anlw0KvMen4OjbGY7wyer/In-Motion-v2---P3-Intermission?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "P4: Act II",
-				"slug": "p4-act-ii",
-				"url": "https://embed.figma.com/slides/LdBjYEkQAbROBGylkDO7l6/In-Motion-v2---P4-Act-II?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "P5: Encore",
-				"slug": "p5-encore",
-				"url": "https://embed.figma.com/slides/r7ge4iHd1leCe5OXnKw7v3/In-Motion-v2---P5-Encore?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "PS: Dramaturgy",
-				"slug": "ps-dramaturgy",
-				"url": "https://embed.figma.com/slides/Mn9gWmcvfgWnBQZakSJ0ZG/In-Motion-v2---PS-Dramaturgy?embed-host=share",
-				"newtab": false
-			}
-		]
-	},
-	{
 		"name": "Exercises",
 		"contents": [
 			{
