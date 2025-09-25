@@ -5,19 +5,66 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/Type-Code-v2---Syllabus?embed-host=share",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Schedule",
 				"slug": "schedule",
-				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/Type-Code-v2---Syllabus?node-id=18-10673&embed-host=share",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.m0nsq5rbo41b",
 				"newtab": false
 			},
 			{
 				"name": "Resources",
 				"slug": "resources",
-				"url": "https://embed.figma.com/slides/Lwb2T2FMc4zDb0NLPm27AL/Type-Code-v2---Syllabus?node-id=2050-16&embed-host=share",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.11fdjcmcc7dw",
+				"newtab": false
+			},
+			{
+				"name": "Exercises",
+				"slug": "exercises",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.t11m1z9hohhs",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "P1: Point",
+				"slug": "p1-point",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.17vw6k8ts8m2",
+				"newtab": false
+			},
+			{
+				"name": "P2: Path",
+				"slug": "p2-path",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.0",
+				"newtab": false
+			},
+			{
+				"name": "P3: Polygon",
+				"slug": "p3-polygon",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.2a4yv1ahjuhy",
+				"newtab": false
+			},
+			{
+				"name": "P4: Program",
+				"slug": "p4-program",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.yp94ibjd3e90",
+				"newtab": false
+			},
+			{
+				"name": "P5: Publish",
+				"slug": "p5-publish",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.d2a9k0uik0ag",
+				"newtab": false
+			},
+			{
+				"name": "PS: Passport",
+				"slug": "ps-passport",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.4jpx0fd7l27q",
 				"newtab": false
 			}
 		]
@@ -26,15 +73,39 @@
 		"name": "Tutorials",
 		"contents": [
 			{
+				"name": "Glyphs Basics",
+				"slug": "glyphs-basics",
+				"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Setting Up Variable Axes",
+				"slug": "setting-up-variable-axes",
+				"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing",
+				"newtab": true
+			},
+			{
 				"name": "Pixel Fonts",
 				"slug": "pixel-fonts",
+				"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Drawing in Glyphs",
+				"slug": "drawing-in-glyphs",
+				"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing",
+				"newtab": true
+			},
+			{
+				"name": "Pixel Fonts (still finishing this!)",
+				"slug": "pixel-fonts-new",
 				"url": "https://embed.figma.com/slides/N4Qt9SRNQN3s6uOyFmJP4i/Type-Code-v2---Pixel-Fonts?embed-host=share",
 				"newtab": false
 			}
 		]
 	},
 	{
-		"name": "Weekly Schedules",
+		"name": "Lectures",
 		"contents": [
 			{
 				"name": "Week 1 [9/4/25]",
@@ -122,88 +193,6 @@
 				"name": "Week 13 [12/11/25]",
 				"slug": "week-13",
 				"url": "https://embed.figma.com/slides/kjbHLYakHGWq2JHI9lukCb/Type-Code-v2---Week-13?embed-host=share",
-				"newtab": false,
-				"active": false
-			}
-		]
-	},
-	{
-		"name": "Projects",
-		"contents": [
-			{
-				"name": "P1: Point",
-				"slug": "p1-point",
-				"url": "https://embed.figma.com/slides/bO9xFjzxHyn8rBfzSqqA41/Type-Code-v2---P1-Point?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "P2: Path",
-				"slug": "p2-path",
-				"url": "https://embed.figma.com/slides/pctC6MUoegiCLjPMgQGkcx/Type-Code-v2---P2-Path?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "P3: Polygon",
-				"slug": "p3-polygon",
-				"url": "https://embed.figma.com/slides/cGZ1U1c8NNwliplXRYQS64/Type-Code-v2---P3-Polygon?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "P4: Program",
-				"slug": "p4-program",
-				"url": "https://embed.figma.com/slides/eJhWlYq0TUwaiaFlGHai6X/Type-Code-v2---P4-Program?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "P5: Publish",
-				"slug": "p5-publish",
-				"url": "https://embed.figma.com/slides/6s4JGu6TgPSFAvtkGKirSS/Type-Code-v2---P5-Publish?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "PS: Passport",
-				"slug": "ps-passport",
-				"url": "https://embed.figma.com/slides/C5mQyn1CfOnsqFrQmB8bzK/Type-Code-v2---PS-Passport?embed-host=share",
-				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "Exercises",
-		"contents": [
-			{
-				"name": "E1: Every Pixel, a Story",
-				"slug": "e1-every-pixel-a-story",
-				"url": "https://embed.figma.com/slides/nxO9p0wUid86gsWCogFpyb/Type-Code-v2---E1-Every-Pixel-a-Story?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "E2: Bit by Bit",
-				"slug": "e2-bit-by-bit",
-				"url": "https://embed.figma.com/slides/B5mrm0StrrGWwltn5flZ9L/Type-Code-v2---E2-Bit-by-Bit?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "E3: Glyphic Meditation",
-				"slug": "e3-glyphic-meditation",
-				"url": "https://embed.figma.com/slides/Gfus8h2YVTZ6swqKPTcONJ/Type-Code-v2---E3-Glyphic-Meditation?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "E4: Pixel Portraits",
-				"slug": "e4-pixel-portraits",
-				"url": "https://embed.figma.com/slides/0MARbwWLbRvgj6uADjAkY0/Type-Code-v2---E4-Pixel-Portraits?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "E5: One Big Move",
-				"slug": "e5-one-big-move",
-				"url": "https://embed.figma.com/slides/u4NB78rvxFW8Q382kFTWk1/Type-Code-v2---E5-One-Big-Move?embed-host=share",
 				"newtab": false,
 				"active": false
 			}

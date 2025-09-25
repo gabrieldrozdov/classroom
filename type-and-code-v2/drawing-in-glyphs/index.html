@@ -4,7 +4,7 @@
 						<head>
 							<meta charset="UTF-8">
 							<meta name="viewport" content="width=device-width, initial-scale=1.0">
-							<title>🔠  Type + Code, v2 | P1: Point</title>
+							<title>🔠  Type + Code, v2 | Drawing in Glyphs</title>
 							
 	<meta name="author" content="Gabriel Drozdov / GD with GD">
 	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
@@ -42,36 +42,36 @@
 									<button class="nav-link" onclick="toggleMenu('resource');" style="--primary: var(--blue);" id="nav-resource">
 										<div class="nav-link-category">Resource</div>
 										<div class="nav-link-selection">
-											<span>P1: Point</span>
+											<span>Drawing in Glyphs</span>
 											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
 										</div>
 									</button>
 			
-									<a class="nav-link nav-link-url" href="https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.17vw6k8ts8m2" target="_blank">
+									<a class="nav-link nav-link-url" href="https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing" target="_blank">
 										<div class="nav-link-category">Current URL</div>
 										<div class="nav-link-selection">
-											<span class="nav-link-url-text">https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.17vw6k8ts8m2</span>
+											<span class="nav-link-url-text">https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing</span>
 											<span class="nav-link-url-arrow">↗</span>
 										</div>
 									</a>
 			
-									<button class="nav-link nav-link-refresh" onclick="refreshPreview();" style="--primary: var(--yellow);" data-newtab="false">
+									<button class="nav-link nav-link-refresh" onclick="refreshPreview();" style="--primary: var(--yellow);" data-newtab="true">
 										<svg viewBox="0 0 77.88 72.46"><path d="M37.94,72.46v-11.05l1.09.1c.06,0,.21,0,.23,0,14.26,0,25.86-11.6,25.86-25.86,0-5.84-1.95-11.42-5.53-15.97v10.6h-12V0h30.29v11.99h-10.44c5.58,6.64,8.63,14.96,8.63,23.66,0,20.3-16.51,36.81-36.81,36.81h-1.32ZM0,72.46v-11.99h10.44c-5.58-6.64-8.63-14.96-8.63-23.66C1.81,16.51,18.32,0,38.62,0h1.32v11.05l-1.09-.1c-.06,0-.11,0-.17,0h-.06c-14.26,0-25.86,11.6-25.86,25.86,0,5.84,1.95,11.42,5.53,15.97v-10.6h12v30.28H0Z"/></svg>
 										<span class="nav-link-label">Refresh</span>
 									</button>
 			
-									<div class="nav-link nav-link-zoom" style="--primary: var(--purple);" data-newtab="false">
+									<div class="nav-link nav-link-zoom" style="--primary: var(--purple);" data-newtab="true">
 										<input class="nav-link-zoom-range" type="range" min="0" max="100" value="100" oninput="setZoom(this.value)">
 										<div class="nav-link-label">Zoom Level</div>
 									</div>
 			
-									<button class="nav-toggle" onclick="toggleNav(); closeMenus();" data-newtab="false">
+									<button class="nav-toggle" onclick="toggleNav(); closeMenus();" data-newtab="true">
 										<svg viewBox="0 0 24 24"><path d="M0,11.93l3.7,3.72,5.29-5.26v13.61h6v-13.61l5.32,5.3,3.7-3.72L11.98,0,0,11.93Z"/></svg>
 										<span>Hide<br>Menu</span>
 									</button>
 								</nav>
 			
-								<button class="nav-show" onclick="toggleNav();" data-newtab="false">
+								<button class="nav-show" onclick="toggleNav();" data-newtab="true">
 									<svg viewBox="0 0 24 24"><path d="M24,12.07l-3.7-3.72-5.29,5.26V0h-6v13.61l-5.32-5.3-3.7,3.72,12.02,11.96,11.98-11.93Z"/></svg>
 									<span>Show Menu</span>
 									<svg viewBox="0 0 24 24"><path d="M24,12.07l-3.7-3.72-5.29,5.26V0h-6v13.61l-5.32-5.3-3.7,3.72,12.02,11.96,11.98-11.93Z"/></svg>
@@ -79,8 +79,11 @@
 			
 								<main class="preview">
 									
-							<div class="preview-iframe-container">
-								<iframe src="https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.17vw6k8ts8m2" class="preview-iframe"></iframe>
+							<div class="preview-newtab-container">
+								<div class="preview-newtab">
+									<p>To view this resource, you’ll need to open it in a new tab.</p>
+									<a href="https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing" target="_blank">Open in new tab&nbsp;&nbsp;↗</a>
+								</div>
 							</div>
 						
 								</main>
