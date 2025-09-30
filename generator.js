@@ -157,17 +157,15 @@ function generatePages() {
 						desc = `<p>${resource['desc']}</p>`;
 					}
 
-					// Detect if resource starts with an emoji
-					let resourceName = resource['name'];
-					const firstChar = Array.from(resourceName)[0];
-					const emojiRegex = /\p{Extended_Pictographic}/u;
-					if (emojiRegex.test(firstChar)) {
-						resourceName = resourceName.replace(' ', '&nbsp;&nbsp;');
+					// Detect if resource has an emoji
+					let resourceEmoji = '';
+					if (resource['emoji'] != undefined) {
+						resourceEmoji = resource['emoji'] + "&nbsp;&nbsp;";
 					}
 
 					sectionLinks += `
 						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
-							<h3>${resourceName}</h3>
+							<h3>${resourceEmoji}${resource['name']}</h3>
 							${desc}
 							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
 						</a>
@@ -175,7 +173,7 @@ function generatePages() {
 
 					courseSectionLinks += `
 						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
-							<h3>${resourceName}</h3>
+							<h3>${resourceEmoji}${resource['name']}</h3>
 							${desc}
 							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
 						</a>
@@ -187,18 +185,16 @@ function generatePages() {
 					}
 				}
 
-				// Detect if resource starts with an emoji
-				let subsectionName = subsection['name'];
-				const firstChar = Array.from(subsectionName)[0];
-				const emojiRegex = /\p{Extended_Pictographic}/u;
-				if (emojiRegex.test(firstChar)) {
-					subsectionName = subsectionName.replace(' ', '&nbsp;&nbsp;');
+				// Detect if subsection has an emoji
+				let subsectionEmoji = '';
+				if (subsection['emoji'] != undefined) {
+					subsectionEmoji = resource['emoji'] + "&nbsp;&nbsp;";
 				}
 	
 				// Put it all together
 				menuResources += `
 					<section class="nav-menu-section">
-						<h2 class="nav-menu-section-heading">${subsectionName}</h2>
+						<h2 class="nav-menu-section-heading">${subsectionEmoji}${subsection['name']}</h2>
 						<div class="nav-menu-links">
 							${sectionLinks}
 						</div>
@@ -208,7 +204,7 @@ function generatePages() {
 				// For the course page
 				courseResources += `
 					<section class="overview-menu-section">
-						<h2 class="overview-menu-section-heading">${subsectionName}</h2>
+						<h2 class="overview-menu-section-heading">${subsectionEmoji}${subsection['name']}</h2>
 						<div class="overview-menu-links">
 							${courseSectionLinks}
 						</div>
@@ -303,6 +299,12 @@ function generatePages() {
 							</div>
 						`;
 					}
+
+					// Detect if resource has an emoji
+					let resourceEmoji = '';
+					if (resource['emoji'] != undefined) {
+						resourceEmoji = resource['emoji'] + "&nbsp;&nbsp;";
+					}
 	
 					let resourceContent = `
 						<!DOCTYPE html>
@@ -338,7 +340,7 @@ function generatePages() {
 									<button class="nav-link" onclick="toggleMenu('resource');" style="--primary: var(--blue);" id="nav-resource">
 										<div class="nav-link-category">Resource</div>
 										<div class="nav-link-selection">
-											<span>${resource['name']}</span>
+											<span>${resourceEmoji}${resource['name']}</span>
 											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
 										</div>
 									</button>

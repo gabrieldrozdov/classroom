@@ -4,20 +4,77 @@
 		"contents": [
 			{
 				"name": "Syllabus",
+				"emoji": "🎬",
 				"slug": "syllabus",
-				"url": "https://embed.figma.com/slides/ltNd6tklZsR9uLfOVDflQI/In-Motion-v2---Syllabus?embed-host=share",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Schedule",
+				"emoji": "🗓️",
 				"slug": "schedule",
-				"url": "https://embed.figma.com/slides/ltNd6tklZsR9uLfOVDflQI/In-Motion-v2---Syllabus?node-id=18-10673&embed-host=share",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.mluho8o35or9",
 				"newtab": false
 			},
 			{
 				"name": "Resources",
+				"emoji": "🖇️",
 				"slug": "resources",
-				"url": "https://embed.figma.com/slides/ltNd6tklZsR9uLfOVDflQI/In-Motion-v2---Syllabus?node-id=18-7325&embed-host=share",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.emgjdzymxxy9",
+				"newtab": false
+			},
+			{
+				"name": "Exercises",
+				"emoji": "🔥",
+				"slug": "exercises",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.671g7iarmv4m",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "P1: Rehearsal",
+				"emoji": "✏️",
+				"slug": "p1-rehearsal",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.17vw6k8ts8m2",
+				"newtab": false
+			},
+			{
+				"name": "P2: Overture",
+				"emoji": "🎼",
+				"slug": "p2-overture",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.0",
+				"newtab": false
+			},
+			{
+				"name": "P3: Intermission",
+				"emoji": "💥",
+				"slug": "p3-intermission",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.2a4yv1ahjuhy",
+				"newtab": false
+			},
+			{
+				"name": "P4: Showstopper",
+				"emoji": "📣",
+				"slug": "p4-showstopper",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.yp94ibjd3e90",
+				"newtab": false
+			},
+			{
+				"name": "P5: Encore",
+				"emoji": "💻",
+				"slug": "p5-encore",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.d2a9k0uik0ag",
+				"newtab": false
+			},
+			{
+				"name": "PS: Dramaturgy",
+				"emoji": "🎭",
+				"slug": "ps-dramaturgy",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.4jpx0fd7l27q",
 				"newtab": false
 			}
 		]
@@ -35,76 +92,6 @@
 				"name": "Week 2 [9/16/25]",
 				"slug": "week-2",
 				"url": "https://embed.figma.com/slides/t4OINJm22XwULeN5DTjFrD/In-Motion-v2---Week-2?embed-host=share",
-				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "Projects",
-		"contents": [
-			{
-				"name": "P1: Rehearsal",
-				"slug": "p1-rehearsal",
-				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.17vw6k8ts8m2",
-				"newtab": false
-			},
-			{
-				"name": "P2: Act I",
-				"slug": "p2-act-i",
-				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.0",
-				"newtab": false
-			},
-			{
-				"name": "P3: Intermission",
-				"slug": "p3-intermission",
-				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.2a4yv1ahjuhy",
-				"newtab": false
-			},
-			{
-				"name": "P4: Act II",
-				"slug": "p4-act-ii",
-				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.yp94ibjd3e90",
-				"newtab": false
-			},
-			{
-				"name": "P5: Encore",
-				"slug": "p5-encore",
-				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.d2a9k0uik0ag",
-				"newtab": false
-			},
-			{
-				"name": "PS: Dramaturgy",
-				"slug": "ps-dramaturgy",
-				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.4jpx0fd7l27q",
-				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "Exercises",
-		"contents": [
-			{
-				"name": "E1: Feeling Rhythm",
-				"slug": "e1-feeling-rhythm",
-				"url": "https://embed.figma.com/slides/cXadymA9zE33J9RLVL7lGC/In-Motion-v2---E1-Feeling-Rhythm?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "E2: Achieving Motion",
-				"slug": "e2-achieving-motion",
-				"url": "https://embed.figma.com/slides/6kDK2ZK2Q3h3inGL2FeEfY/In-Motion-v2---E2-Achieving-Motion?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "E3: Motion as Performance",
-				"slug": "e3-motion-as-performance",
-				"url": "https://embed.figma.com/slides/s56uiPBFCDyFru49TojQug/In-Motion-v2---E3-Interpreting-Audio?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "E4: Following the Rules",
-				"slug": "e4-following-the-rules",
-				"url": "https://embed.figma.com/slides/PJj3nwNOSpd7k26O4QyV5N/In-Motion-v2---E4-Following-the-Rules?embed-host=share",
 				"newtab": false
 			}
 		]
