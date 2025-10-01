@@ -7,7 +7,7 @@
 				"emoji": "🔠",
 				"name": " Type + Code",
 				"version": "v2",
-				"desc": "Creative coding elective focusing on the connection between font technologies and websites.",
+				"desc": "Design experimental fonts, and then launch a type foundry to showcase your work!",
 				"tags": [
 					"RISD",
 					"Fall 2025",
@@ -19,7 +19,7 @@
 				"emoji": "🎬",
 				"name": "In Motion",
 				"version": "v2",
-				"desc": "Introduction to motion design from the perspective of musical composition, featuring topics ranging from hand drawn animation, to vector-based loops, to kinetic typography, to interaction design.",
+				"desc": "A tour through the world of motion design, with an emphasis on musicality and performance!",
 				"tags": [
 					"RISD",
 					"Fall 2025",
@@ -31,7 +31,7 @@
 				"emoji": "👆",
 				"name": "Design for Interaction",
 				"version": "v1",
-				"desc": "Primer on UI/UX for the perspectives of ludology and performance studies.",
+				"desc": "A primer on UI/UX from the perspectives of performance and playfulness.",
 				"tags": [
 					"RISD",
 					"Spring 2025",
@@ -43,7 +43,7 @@
 				"emoji": "🤖",
 				"name": "Introduction to Computation",
 				"version": "v1",
-				"desc": "Introduction to computer science for designers and artists.",
+				"desc": "Computer science for designers and artists.",
 				"tags": [
 					"RISD",
 					"Spring 2025",
@@ -84,7 +84,7 @@
 				"emoji": "🔡",
 				"name": "Variable Fonts Workshop",
 				"version": "v2",
-				"desc": "Updated 4-week primer on type design through the lens of experimental variable fonts.",
+				"desc": "Type design through the lens of experimental variable fonts.",
 				"tags": [
 					"RISD",
 					"Spring 2024",
@@ -96,7 +96,7 @@
 				"emoji": "🌐",
 				"name": "Web Sites & Stories",
 				"version": "v1",
-				"desc": "Introduction to web design and programming with an emphasis on narrative and storytelling.",
+				"desc": "Web design and development as a medium for storytelling.",
 				"tags": [
 					"RISD",
 					"Winter 2024",
@@ -113,7 +113,7 @@
 				"emoji": "💻",
 				"name": "Web Programming Workshop",
 				"version": "v2",
-				"desc": "Updated 4-week primer on using HTML and CSS to create uniquely digital experiences.",
+				"desc": "The basics of HTML, CSS, and a tiny bit of JavaScript.",
 				"tags": [
 					"RISD",
 					"Fall 2023",
@@ -125,7 +125,7 @@
 				"emoji": "🔡",
 				"name": "Variable Fonts Workshop",
 				"version": "v1",
-				"desc": "4-week primer on type design through the lens of experimental variable fonts.",
+				"desc": "Type design through the lens of experimental variable fonts.",
 				"tags": [
 					"RISD",
 					"Spring 2023",
@@ -154,7 +154,7 @@
 				"emoji": "💻",
 				"name": "Web Programming Workshop",
 				"version": "v1",
-				"desc": "4-week primer on the basics of HTML, CSS, and a tiny bit of JavaScript.",
+				"desc": "The basics of HTML, CSS, and a tiny bit of JavaScript.",
 				"tags": [
 					"RISD",
 					"Fall 2022",

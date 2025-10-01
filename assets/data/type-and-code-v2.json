@@ -5,26 +5,58 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
+				"emoji": "🎬",
+				"desc": "An overview of the full course.",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Schedule",
 				"slug": "schedule",
+				"emoji": "🗓️",
+				"desc": "Agenda and homework for each week.",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.m0nsq5rbo41b",
 				"newtab": false
 			},
 			{
-				"name": "Resources",
-				"slug": "resources",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.11fdjcmcc7dw",
+				"name": "Tutorials",
+				"slug": "tutorials",
+				"emoji": "🎓",
+				"desc": "Learn how to type design in Glyphs and code websites using HTML, CSS, and JavaScript.",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.o9xig14lbdgw",
+				"newtab": false
+			},
+			{
+				"name": "Inspiration",
+				"slug": "inspiration",
+				"emoji": "💡",
+				"desc": "Links to fun fonts and websites!",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.pqqs7cyea8p0",
 				"newtab": false
 			},
 			{
 				"name": "Exercises",
 				"slug": "exercises",
+				"emoji": "🔥",
+				"desc": "Quick, fun assignments that we’ll complete during class.",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.t11m1z9hohhs",
 				"newtab": false
+			},
+			{
+				"name": "Font Gauntlet",
+				"emoji": "🧪",
+				"slug": "font-gauntlet",
+				"desc": "Test your fonts on the web!",
+				"url": "https://fontgauntlet.com/",
+				"newtab": false
+			},
+			{
+				"name": "Student Work",
+				"emoji": "📂",
+				"slug": "student-work",
+				"desc": "Upload your finished projects here!",
+				"url": "https://drive.google.com/drive/folders/1YUjB8sphdKGouBprOU-JPwGfT3oBsDpD?usp=sharing",
+				"newtab": true
 			}
 		]
 	},
@@ -34,72 +66,49 @@
 			{
 				"name": "P1: Point",
 				"slug": "p1-point",
+				"emoji": "👾",
+				"desc": "Design a pixel font!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.17vw6k8ts8m2",
 				"newtab": false
 			},
 			{
 				"name": "P2: Path",
 				"slug": "p2-path",
+				"emoji": "⭕️",
+				"desc": "Remix an open-source font by turning it into a variable font!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.0",
 				"newtab": false
 			},
 			{
 				"name": "P3: Polygon",
 				"slug": "p3-polygon",
+				"emoji": "📐",
+				"desc": "Design an original variable font!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.2a4yv1ahjuhy",
 				"newtab": false
 			},
 			{
 				"name": "P4: Program",
 				"slug": "p4-program",
+				"emoji": "🤖",
+				"desc": "Create a web-based type specimen for your original variable font!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.yp94ibjd3e90",
 				"newtab": false
 			},
 			{
 				"name": "P5: Publish",
 				"slug": "p5-publish",
+				"emoji": "🛜",
+				"desc": "Launch a type foundry with all of the fonts you created this semester!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.d2a9k0uik0ag",
 				"newtab": false
 			},
 			{
 				"name": "PS: Passport",
 				"slug": "ps-passport",
+				"emoji": "✈️",
+				"desc": "Create a presentation compiling examples of innovative uses of typography on websites!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.4jpx0fd7l27q",
-				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "Tutorials",
-		"contents": [
-			{
-				"name": "Glyphs Basics",
-				"slug": "glyphs-basics",
-				"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing",
-				"newtab": true
-			},
-			{
-				"name": "Setting Up Variable Axes",
-				"slug": "setting-up-variable-axes",
-				"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing",
-				"newtab": true
-			},
-			{
-				"name": "Pixel Fonts",
-				"slug": "pixel-fonts",
-				"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing",
-				"newtab": true
-			},
-			{
-				"name": "Drawing in Glyphs",
-				"slug": "drawing-in-glyphs",
-				"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing",
-				"newtab": true
-			},
-			{
-				"name": "Pixel Fonts (still finishing this!)",
-				"slug": "pixel-fonts-new",
-				"url": "https://embed.figma.com/slides/N4Qt9SRNQN3s6uOyFmJP4i/Type-Code-v2---Pixel-Fonts?embed-host=share",
 				"newtab": false
 			}
 		]
@@ -108,93 +117,22 @@
 		"name": "Lectures",
 		"contents": [
 			{
-				"name": "Week 1 [9/4/25]",
+				"name": "Week 1",
 				"slug": "week-1",
 				"url": "https://embed.figma.com/slides/Yqa6hEBgIJSVkztDs2hQJP/Type-Code-v2---Week-1?embed-host=share",
-				"newtab": false
+				"newtab": false,
+				"tags": [
+					"9/4/25"
+				]
 			},
 			{
-				"name": "Week 2 [9/11/25]",
+				"name": "Week 2",
 				"slug": "week-2",
 				"url": "https://embed.figma.com/slides/iLnavIEE7OGXHJeYJj13Wm/Type-Code-v2---Week-2?embed-host=share",
-				"newtab": false
-			},
-			{
-				"name": "Week 3 [9/18/25]",
-				"slug": "week-3",
-				"url": "https://embed.figma.com/slides/tzZGFV86CGORBRzvD7UhdT/Type-Code-v2---Week-3?embed-host=share",
 				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 4 [9/25/25]",
-				"slug": "week-4",
-				"url": "https://embed.figma.com/slides/ITlk5tLy7xvLxfCMF1TDnZ/Type-Code-v2---Week-4?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 5 [10/2/25]",
-				"slug": "week-5",
-				"url": "https://embed.figma.com/slides/Bj4k2JKlRowOiYjBnMMmiM/Type-Code-v2---Week-5?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 6 [10/9/25]",
-				"slug": "week-6",
-				"url": "https://embed.figma.com/slides/VhnHcXlybEmyM95h4s3KfO/Type-Code-v2---Week-6?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 7 [10/16/25]",
-				"slug": "week-7",
-				"url": "https://embed.figma.com/slides/6kEB9tf41prUjfzAguRVbE/Type-Code-v2---Week-7?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 8 [10/23/25]",
-				"slug": "week-8",
-				"url": "https://embed.figma.com/slides/yv8R03XDhJmST7aENKTe7H/Type-Code-v2---Week-8?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 9 [10/30/25]",
-				"slug": "week-9",
-				"url": "https://embed.figma.com/slides/k2SCajpIPMpT8HbbdcnhRG/Type-Code-v2---Week-9?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 10 [11/6/25]",
-				"slug": "week-10",
-				"url": "https://embed.figma.com/slides/nkWa0Zb4v7rbnmj2MDYnu5/Type-Code-v2---Week-10?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 11 [11/13/25]",
-				"slug": "week-11",
-				"url": "https://embed.figma.com/slides/t8unPY8OrXDKJTqRa3h5KZ/Type-Code-v2---Week-11?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 12 [11/20/25]",
-				"slug": "week-12",
-				"url": "https://embed.figma.com/slides/bOhpwDXGh701jcX9qYuWuZ/Type-Code-v2---Week-12?embed-host=share",
-				"newtab": false,
-				"active": false
-			},
-			{
-				"name": "Week 13 [12/11/25]",
-				"slug": "week-13",
-				"url": "https://embed.figma.com/slides/kjbHLYakHGWq2JHI9lukCb/Type-Code-v2---Week-13?embed-host=share",
-				"newtab": false,
-				"active": false
+				"tags": [
+					"9/11/25"
+				]
 			}
 		]
 	}

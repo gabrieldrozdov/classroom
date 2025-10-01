@@ -6,6 +6,7 @@
 				"name": "Syllabus",
 				"emoji": "🎬",
 				"slug": "syllabus",
+				"desc": "An overview of the full course.",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?usp=sharing",
 				"newtab": false
 			},
@@ -13,27 +14,47 @@
 				"name": "Schedule",
 				"emoji": "🗓️",
 				"slug": "schedule",
+				"desc": "Agenda and homework for each week.",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.mluho8o35or9",
 				"newtab": false
 			},
 			{
-				"name": "Resources",
-				"emoji": "🖇️",
-				"slug": "resources",
+				"name": "Tutorials",
+				"slug": "tutorials",
+				"emoji": "🎓",
+				"desc": "Learn how to animate using After Effects, as well as pick up a few other tricks!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.emgjdzymxxy9",
+				"newtab": false
+			},
+			{
+				"name": "Inspiration",
+				"slug": "inspiration",
+				"emoji": "💡",
+				"desc": "Links to wide range of animation references!",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.hrf6t0o6whri",
 				"newtab": false
 			},
 			{
 				"name": "Exercises",
 				"emoji": "🔥",
 				"slug": "exercises",
+				"desc": "Quick, fun assignments that we’ll complete during class.",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.671g7iarmv4m",
 				"newtab": false
+			},
+			{
+				"name": "Student Work Folder",
+				"emoji": "📂",
+				"slug": "student-work-folder",
+				"desc": "Upload your finished projects here!",
+				"url": "https://drive.google.com/drive/folders/13riDfSeFVVSWdmTh4-0BGVr9PT4Jyc7z?usp=sharing",
+				"newtab": true
 			},
 			{
 				"name": "Motion Tools Classic (AE Plug-in)",
 				"emoji": "🔌",
 				"slug": "motion-tools-classic",
+				"desc": "A free plug-in that makes some things in After Effects easier.",
 				"url": "https://motiondesign.school/products/motion-tools-classic/",
 				"newtab": true
 			}
@@ -46,6 +67,7 @@
 				"name": "P1: Rehearsal",
 				"emoji": "✏️",
 				"slug": "p1-rehearsal",
+				"desc": "Create a hand drawn, looping animation inspired by your favorite song (or a song you like)!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.17vw6k8ts8m2",
 				"newtab": false
 			},
@@ -53,6 +75,7 @@
 				"name": "P2: Overture",
 				"emoji": "🎼",
 				"slug": "p2-overture",
+				"desc": "Animate 15 motion studies, each inspired by a different musical concept!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.0",
 				"newtab": false
 			},
@@ -60,6 +83,7 @@
 				"name": "P3: Intermission",
 				"emoji": "💥",
 				"slug": "p3-intermission",
+				"desc": "Put together the ugliest, hardest to watch animation you can possibly conceive of!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.2a4yv1ahjuhy",
 				"newtab": false
 			},
@@ -67,6 +91,7 @@
 				"name": "P4: Showstopper",
 				"emoji": "📣",
 				"slug": "p4-showstopper",
+				"desc": "Tell us a story through kinetic typography!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.yp94ibjd3e90",
 				"newtab": false
 			},
@@ -74,6 +99,7 @@
 				"name": "P5: Encore",
 				"emoji": "💻",
 				"slug": "p5-encore",
+				"desc": "Apply motion graphics to a series of user experience scenarios!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.d2a9k0uik0ag",
 				"newtab": false
 			},
@@ -81,25 +107,32 @@
 				"name": "PS: Dramaturgy",
 				"emoji": "🎭",
 				"slug": "ps-dramaturgy",
+				"desc": "Research an assigned style of motion design and create a presentation for the class!",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.4jpx0fd7l27q",
 				"newtab": false
 			}
 		]
 	},
 	{
-		"name": "Weekly Schedules",
+		"name": "Lectures",
 		"contents": [
 			{
-				"name": "Week 1 [9/9/25]",
+				"name": "Week 1",
 				"slug": "week-1",
 				"url": "https://embed.figma.com/slides/IyB8qiJCR4I13avaAvCeEK/In-Motion-v2---Week-1?embed-host=share",
-				"newtab": false
+				"newtab": false,
+				"tags": [
+					"9/9/25"
+				]
 			},
 			{
-				"name": "Week 2 [9/16/25]",
+				"name": "Week 2",
 				"slug": "week-2",
 				"url": "https://embed.figma.com/slides/t4OINJm22XwULeN5DTjFrD/In-Motion-v2---Week-2?embed-host=share",
-				"newtab": false
+				"newtab": false,
+				"tags": [
+					"9/16/25"
+				]
 			}
 		]
 	}

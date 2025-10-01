@@ -148,10 +148,23 @@ function generatePages() {
 				// Build resource link
 				for (let resource of subsection['contents']) {
 			
+					// Skip if not active
 					if (resource['active'] == false) {
 						continue
 					}
 
+					// Build tags
+					let tags = "";
+					if (resource['tags'] != undefined) {
+						for (let tag of resource['tags']) {
+							tags += `<li>${tag}</li>`;
+						}
+						if (tags.length > 0) {
+							tags = `<ul>${tags}</ul>`;
+						}
+					}
+
+					// Generate description for resource
 					let desc = '';
 					if (resource['desc'] != "" && resource['desc'] != undefined) {
 						desc = `<p>${resource['desc']}</p>`;
@@ -167,6 +180,7 @@ function generatePages() {
 						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
 							<h3>${resourceEmoji}${resource['name']}</h3>
 							${desc}
+							${tags}
 							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
 						</a>
 					`;
@@ -175,6 +189,7 @@ function generatePages() {
 						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
 							<h3>${resourceEmoji}${resource['name']}</h3>
 							${desc}
+							${tags}
 							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
 						</a>
 					`;
@@ -444,7 +459,10 @@ function generatePages() {
 				<div class="overview-nav-container">
 					<div class="overview-desc">
 						<p>
-							<strong>Welcome to class!</strong> I’m <a href="https://gdwithgd.com/" target="_blank">Gabriel</a>, and I teach design and code and everything in between. This site is a collection of everything I make for my courses.
+							<strong>Welcome to class!</strong> I’m Gabriel, and I teach design and code and everything in between. This site is a collection of everything I make for my courses: syllabi, project descriptions, tutorials, and more!
+						</p>
+						<p>
+							Whether you’re a student or a teacher, feel free to browse through these materials and take what you need. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD with GD</a>!
 						</p>
 					</div>
 					<nav class="overview-nav">
