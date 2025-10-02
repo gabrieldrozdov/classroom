@@ -1,11 +1,24 @@
 [
 	{
+		"name": "Workshops",
+		"contents": [
+			{
+				"slug": "risd-fall-2025-figma",
+				"emoji": "🖥️",
+				"name": " Figma!",
+				"version": ":)",
+				"desc": "",
+				"tags": []
+			}
+		]
+	},
+	{
 		"name": "2025",
 		"contents": [
 			{
 				"slug": "type-and-code-v2",
 				"emoji": "🔠",
-				"name": " Type + Code",
+				"name": "Type + Code",
 				"version": "v2",
 				"desc": "Design experimental fonts, and then launch a type foundry to showcase your work!",
 				"tags": [
