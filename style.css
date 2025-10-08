@@ -1,16 +1,9 @@
 /* Base styles */
-/* @font-face {
+@font-face {
 	font-family: "Limkin";
 	src: url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.ttf") format(truetype),
 		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff") format(woff),
 		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff2") format(woff2);
-	font-weight: 100 900;
-} */
-@font-face {
-	font-family: "Limkin";
-	src: url("/assets/fonts/TMTLimkinVF.ttf") format(truetype),
-		 url("/assets/fonts/TMTLimkinVF.woff") format(woff),
-		 url("/assets/fonts/TMTLimkinVF.woff2") format(woff2);
 	font-weight: 100 900;
 }
 :root {

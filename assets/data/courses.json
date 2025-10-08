@@ -1,18 +1,5 @@
 [
 	{
-		"name": "Workshops",
-		"contents": [
-			{
-				"slug": "risd-fall-2025-figma",
-				"emoji": "🖥️",
-				"name": " Figma!",
-				"version": ":)",
-				"desc": "",
-				"tags": []
-			}
-		]
-	},
-	{
 		"name": "2025",
 		"contents": [
 			{
