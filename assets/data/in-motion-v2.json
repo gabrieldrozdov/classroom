@@ -19,7 +19,7 @@
 				"newtab": false
 			},
 			{
-				"name": "Tutorials",
+				"name": "Tutorials/Resources",
 				"slug": "tutorials",
 				"emoji": "🎓",
 				"desc": "Learn how to animate using After Effects, as well as pick up a few other tricks!",
@@ -40,6 +40,14 @@
 				"slug": "exercises",
 				"desc": "Quick, fun assignments that we’ll complete during class.",
 				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.671g7iarmv4m",
+				"newtab": false
+			},
+			{
+				"name": "Prepping your files for submission",
+				"emoji": "💾",
+				"slug": "prepping-your-files",
+				"desc": "Tutorial for how to export, compress, and package your After Effects projects!",
+				"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/edit?tab=t.fi7ub1i3yddx",
 				"newtab": false
 			},
 			{
