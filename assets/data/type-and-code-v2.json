@@ -88,18 +88,18 @@
 				"newtab": false
 			},
 			{
-				"name": "P4: Program",
-				"slug": "p4-program",
-				"emoji": "🤖",
-				"desc": "Create a web-based type specimen for your original variable font!",
+				"name": "P4: Publish",
+				"slug": "p4-publish",
+				"emoji": "🛜",
+				"desc": "Launch a type foundry with all of the fonts you created this semester!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.yp94ibjd3e90",
 				"newtab": false
 			},
 			{
-				"name": "P5: Publish",
-				"slug": "p5-publish",
-				"emoji": "🛜",
-				"desc": "Launch a type foundry with all of the fonts you created this semester!",
+				"name": "P5: Perform",
+				"slug": "p5-perform",
+				"emoji": "🤹",
+				"desc": "Create a web-based type specimen for one of your original variable fonts!",
 				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.d2a9k0uik0ag",
 				"newtab": false
 			},
