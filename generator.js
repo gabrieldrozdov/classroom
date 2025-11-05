@@ -462,7 +462,7 @@ function generatePages() {
 							<strong>Welcome to class!</strong> I’m Gabriel, and I teach design and code and everything in between. This site is a collection of everything I make for my courses: syllabi, project descriptions, tutorials, and more!
 						</p>
 						<p>
-							Whether you’re a student or a teacher, feel free to browse through these materials and take what you need. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD with GD</a>!
+							Whether you’re a student or a teacher, feel free to browse through these materials and take what you need. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>!
 						</p>
 					</div>
 					<nav class="overview-nav">

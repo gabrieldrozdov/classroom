@@ -140,6 +140,9 @@ body {
 		position: relative;
 		top: unset;
 	}
+	.overview-header-title {
+		font-size: clamp(40px, 10vw, 160px);
+	}
 	.overview-header-title-big {
 		letter-spacing: 0;
 	}
@@ -394,6 +397,12 @@ body {
 	.overview-menu-links {
 		grid-template-columns: 1fr;
 	}
+	.overview-menu-links > a {
+		padding: 30px 20px;
+		border-top: unset;
+		border-left: 10px solid var(--primary);
+		border-radius: 2px 15px 15px 2px;
+	}
 }
 @media only screen and (max-width: 900px) {
 	.overview-nav {
@@ -407,12 +416,6 @@ body {
 	.overview-menu-links {
 		grid-auto-rows: auto;
 		gap: 10px;
-	}
-	.overview-menu-links > a {
-		padding: 30px 20px;
-		border-top: unset;
-		border-left: 10px solid var(--primary);
-		border-radius: 2px 15px 15px 2px;;
 	}
 	.overview-menu-links > a > h3 {
 		font-size: 24px;

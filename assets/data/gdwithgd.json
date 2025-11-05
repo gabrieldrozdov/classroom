@@ -19,7 +19,7 @@
 				"url": "https://demoland.gdwithgd.com/",
 				"emoji": "💻",
 				"name": "DEMOLAND",
-				"desc": "In-browser code editor with a library of tutorials!"
+				"desc": "A bookstore that runs on code and teaches it too! Read and edit live demos using a code editor that lives right inside your browser."
 			}
 		]
 	},
@@ -31,13 +31,7 @@
 				"url": "https://babysteps.gdwithgd.com/",
 				"emoji": "👶",
 				"name": "Baby Steps",
-				"desc": "Everything you need to know for when you start coding!"
-			},
-			{
-				"url": "https://pathfinder.gdwithgd.com/",
-				"emoji": "📁",
-				"name": "Pathfinder",
-				"desc": "An explanation of how folder structure works on websites!"
+				"desc": "Everything you need to know for when you first start coding!"
 			},
 			{
 				"url": "https://cheatsheet.gdwithgd.com/",
@@ -46,10 +40,10 @@
 				"desc": "Quick-reference guide for HTML, CSS, and JavaScript!"
 			},
 			{
-				"url": "https://webprogramming.gdwithgd.com/",
-				"emoji": "🎨",
-				"name": "The Designer’s Guide to Web Programming",
-				"desc": "Are you scared of code but want to create websites? Then this is the guide for you!"
+				"url": "https://pathfinder.gdwithgd.com/",
+				"emoji": "📁",
+				"name": "Pathfinder",
+				"desc": "An explanation of how folder structure works on websites!"
 			}
 		]
 	},
@@ -71,15 +65,9 @@
 			},
 			{
 				"url": "https://smallsites.gdwithgd.com/",
-				"emoji": "🌐",
+				"emoji": "📚",
 				"name": "Small Sites; Big Stories",
-				"desc": "Interactive narratives collected in a catalog of microsites written using as little code as possible!"
-			},
-			{
-				"url": "https://testproject1.gdwithgd.com/",
-				"emoji": "🏁",
-				"name": "test-project-1.html",
-				"desc": "Creative coding projects for any skill level!"
+				"desc": "Websites created using as little code as possible!"
 			}
 		]
 	},
@@ -91,37 +79,13 @@
 				"url": "https://variablefonts.gdwithgd.com/",
 				"emoji": "🔠",
 				"name": "Variable Fonts Workshop",
-				"desc": "Toys for playing with an testing variable fonts, as well as a showcase of student fonts!"
+				"desc": "Toys for playing with and testing variable fonts, as well as a showcase of student fonts!"
 			},
 			{
 				"url": "https://gdwithgd.com/generator/",
 				"emoji": "🤖",
 				"name": "Generator",
 				"desc": "Our custom tool for generating GD with GD graphics!"
-			}
-		]
-	},
-	{
-		"name": "Archived Projects",
-		"emoji": "💾",
-		"contents": [
-			{
-				"url": "https://vfw23.gdwithgd.com/",
-				"emoji": "💾",
-				"name": "Variable Fonts Workshop 2023",
-				"desc": "The first draft of the variable fonts workshop type-testing instrument!"
-			},
-			{
-				"url": "https://wpw23.gdwithgd.com/",
-				"emoji": "💾",
-				"name": "Web Programming Workshop 2023",
-				"desc": "The second iteration of my workshop on making websites!"
-			},
-			{
-				"url": "https://wpw22.gdwithgd.com/",
-				"emoji": "💾",
-				"name": "Web Programming Workshop 2022",
-				"desc": "The first iteration of my workshop on making websites!"
 			}
 		]
 	}
