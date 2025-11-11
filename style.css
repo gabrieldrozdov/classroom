@@ -55,6 +55,7 @@ body {
 	background-size: var(--background-size) var(--background-size);
 	background-position: 0 0, 0 calc(var(--background-size) / 2), calc(var(--background-size) / 2) calc(var(--background-size) / -2), calc(var(--background-size) / -2) 0px;
 	animation: background-move 2s infinite cubic-bezier(0.83, 0, 0.17, 1);
+	overflow: hidden;
 }
 .overview-header-content {
 	display: flex;
