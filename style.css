@@ -7,17 +7,26 @@
 	font-weight: 100 900;
 }
 :root {
-	--red: #FF734D;
-	--blue: #5ADDE8;
-	--purple: #A690FC;
-	--yellow: #fcc03a;
 	--pink: #F3A8DD;
 	--green: #98DB6B;
+	--blue: #5ADDE8;
+	--yellow: #fcc03a;
+	--purple: #A690FC;
+	--red: #FF734D;
+
+	--pink-rgb: 243, 168, 221;
+	--green-rgb: 152, 219, 107;
+	--blue-rgb: 90, 221, 232;
+	--yellow-rgb: 252, 192, 58;
+	--purple-rgb: 166, 144, 252;
+	--red-rgb: 255, 115, 77;
+
 	--off-white: #fafafa;
 	--lighter-gray: #f5f5f5;
 	--light-gray: #e5e5e5;
 	--dark-gray: #444444;
 	--off-black: #222222;
+
 	--background-size: 80px;
 	--primary: var(--light-gray);
 }
@@ -278,6 +287,7 @@ body {
 	overflow: hidden;
 	background-color: var(--off-white);
 	outline: 1px solid var(--light-gray);
+	background-color: rgba(var(--primary-rgb), .25);
 	border-radius: 2px 2px 15px 15px;
 	color: var(--off-black);
 	text-decoration: none;
@@ -869,7 +879,7 @@ body {
 	gap: 10px;
 	width: 100%;
 	position: relative;
-	background-color: var(--off-white);
+	background-color: rgba(var(--primary-rgb), .25);
 	transition: color .1s, background-color .1s, opacity .1s, border-color .1s;
 }
 .nav-menu-links > a:hover {

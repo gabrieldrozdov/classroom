@@ -34,7 +34,7 @@ function generatePages() {
 			}
 
 			sectionLinks += `
-				<a href="${link['url']}" target="_blank" style="--primary: var(--${colors[colorIndex]});">
+				<a href="${link['url']}" target="_blank" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
 					<h3>${link['emoji']}&nbsp;&nbsp;${link['name']}</h3>
 					<p>${link['desc']}</p>
 				</a>
@@ -78,7 +78,7 @@ function generatePages() {
 			}
 
 			sectionLinks += `
-				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]});">
+				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
 					<h3>${course['emoji']}&nbsp;&nbsp;${course['name']} <span>${course['version']}</span></h3>
 					<p>${course['desc']}</p>
 					${tags}
@@ -86,7 +86,7 @@ function generatePages() {
 			`;
 
 			homeSectionLinks += `
-				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]});">
+				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
 					<h3>${course['emoji']}&nbsp;&nbsp;${course['name']} <span>${course['version']}</span></h3>
 					<p>${course['desc']}</p>
 					${tags}
@@ -177,7 +177,7 @@ function generatePages() {
 					}
 
 					sectionLinks += `
-						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
+						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
 							<h3>${resourceEmoji}${resource['name']}</h3>
 							${desc}
 							${tags}
@@ -186,7 +186,7 @@ function generatePages() {
 					`;
 
 					courseSectionLinks += `
-						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});">
+						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
 							<h3>${resourceEmoji}${resource['name']}</h3>
 							${desc}
 							${tags}
