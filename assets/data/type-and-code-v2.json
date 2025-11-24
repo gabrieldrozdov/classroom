@@ -57,6 +57,14 @@
 				"desc": "Upload your finished projects here!",
 				"url": "https://drive.google.com/drive/folders/1YUjB8sphdKGouBprOU-JPwGfT3oBsDpD?usp=sharing",
 				"newtab": true
+			},
+			{
+				"name": "Final Checklist",
+				"emoji": "✅",
+				"slug": "final-checklist",
+				"desc": "Make sure you complete all of these items!",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.tu96xmh4d07l",
+				"newtab": false
 			}
 		]
 	},
