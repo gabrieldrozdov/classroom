@@ -1,34 +1,39 @@
 [
 	{
-		"name": "🎓 Course Materials",
+		"name": "Course Materials",
 		"contents": [
 			{
-				"name": "🍎 Syllabus",
+				"name": "Syllabus",
+				"emoji": "🍎",
 				"slug": "syllabus",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.0",
 				"newtab": false
 			},
 			{
-				"name": "🗓️ Schedule",
+				"name": "Schedule",
+				"emoji": "🗓️",
 				"slug": "schedule",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.6x0a5d5zi6im",
 				"newtab": false
 			},
 			{
-				"name": "🖇️ Resources",
+				"name": "Resources",
+				"emoji": "🖇️",
 				"slug": "resources",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.nahqo1ydy1dg",
 				"newtab": false
 			},
 			{
-				"name": "📖 DEMOLAND",
+				"name": "DEMOLAND",
+				"emoji": "📖",
 				"desc": "I recommend opening this in a new tab!",
 				"slug": "demoland",
 				"url": "https://demoland.gdwithgd.com/#introduction-to-computation",
 				"newtab": false
 			},
 			{
-				"name": "✉️ Project Submission Form",
+				"name": "Project Submission Form",
+				"emoji": "✉️",
 				"slug": "project-submission-form",
 				"url": "https://docs.google.com/forms/d/e/1FAIpQLSfUB3rTN8CF_4lO-b4r7O4W_HNnGQSj6aLRaSYBPOk7Vj6G5Q/viewform?usp=dialog",
 				"newtab": true
@@ -36,10 +41,11 @@
 		]
 	},
 	{
-		"name": "📽️ Lectures",
+		"name": "Lectures",
 		"contents": [
 			{
-				"name": "🗓️ Week 2",
+				"name": "Week 2",
+				"emoji": "🗓️",
 				"slug": "week-2",
 				"url": "https://docs.google.com/presentation/d/1DbfYk7416eaKjcIN0IrTgS5Drn6kYvmJID0RU3z_euc/edit?usp=sharing",
 				"newtab": false
@@ -47,28 +53,32 @@
 		]
 	},
 	{
-		"name": "🎓 Lessons",
+		"name": "Lessons",
 		"contents": [
 			{
-				"name": "🎓 Lessons Overview",
+				"name": "Lessons Overview",
+				"emoji": "🎓",
 				"slug": "lessons",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.bt31fyq58o2g",
 				"newtab": false
 			},
 			{
-				"name": "💭 What is code?",
+				"name": "What is code?",
+				"emoji": "💭",
 				"slug": "what-is-code",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.vvowcr4p5zzf",
 				"newtab": false
 			},
 			{
-				"name": "🧸 The basics",
+				"name": "The basics",
+				"emoji": "🧸",
 				"slug": "the-basics",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.k1b61u4frbb",
 				"newtab": false
 			},
 			{
-				"name": "➿ On a loop",
+				"name": "On a loop",
+				"emoji": "➿",
 				"slug": "on-a-loop",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.5nly2kypa9am",
 				"newtab": false
@@ -76,28 +86,32 @@
 		]
 	},
 	{
-		"name": "⏳ Activities",
+		"name": "Activities",
 		"contents": [
 			{
-				"name": "⏳ Activities Overview",
+				"name": "Activities Overview",
+				"emoji": "⏳",
 				"slug": "activities",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.avthqqfm1oro",
 				"newtab": false
 			},
 			{
-				"name": "✍️ Instructing a sketch",
+				"name": "Instructing a sketch",
+				"emoji": "✍️",
 				"slug": "instructing-a-sketch",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.cgph6hoch86k",
 				"newtab": false
 			},
 			{
-				"name": "📦 Time capsule",
+				"name": "Time capsule",
+				"emoji": "📦",
 				"slug": "time-capsule",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.e5ryrqaaw6yw",
 				"newtab": false
 			},
 			{
-				"name": "🔮 The future",
+				"name": "The future",
+				"emoji": "🔮",
 				"slug": "the-future",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.dihpt0px85p1",
 				"newtab": false
@@ -105,28 +119,32 @@
 		]
 	},
 	{
-		"name": "📐 Technicals",
+		"name": "Technicals",
 		"contents": [
 			{
-				"name": "📐 Technicals Overview",
+				"name": "Technicals Overview",
+				"emoji": "📐",
 				"slug": "technicals",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.1j5pc7vndt0p",
 				"newtab": false
 			},
 			{
-				"name": "0️⃣ Technical 0",
+				"name": "Technical 0",
+				"emoji": "0️⃣",
 				"slug": "technical-0",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.9y8z4v8wvp2r",
 				"newtab": false
 			},
 			{
-				"name": "1️⃣ Technical 1",
+				"name": "Technical 1",
+				"emoji": "1️⃣",
 				"slug": "technical-1",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.hu4jciatzn2t",
 				"newtab": false
 			},
 			{
-				"name": "2️⃣ Technical 2",
+				"name": "Technical 2",
+				"emoji": "2️⃣",
 				"slug": "technical-2",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.ydrm7jm3xtoc",
 				"newtab": false
@@ -134,28 +152,32 @@
 		]
 	},
 	{
-		"name": "🛠️ Projects",
+		"name": "Projects",
 		"contents": [
 			{
-				"name": "🛠️ Projects Overview",
+				"name": "Projects Overview",
+				"emoji": "🛠️",
 				"slug": "projects",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.1bbf17dwofun",
 				"newtab": false
 			},
 			{
-				"name": "🏁 Input/Output",
+				"name": "Input/Output",
+				"emoji": "🏁",
 				"slug": "input-output",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.lgz6vx3o12se",
 				"newtab": false
 			},
 			{
-				"name": "⏰ Time Traveler",
+				"name": "Time Traveler",
+				"emoji": "⏰",
 				"slug": "time-traveler",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.82zmncb8akl6",
 				"newtab": false
 			},
 			{
-				"name": "🎭 (Web)site-specific Performance",
+				"name": "(Web)site-specific Performance",
+				"emoji": "🎭",
 				"slug": "website-specific-performance",
 				"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/edit?tab=t.4g8ukzegud5c",
 				"newtab": false

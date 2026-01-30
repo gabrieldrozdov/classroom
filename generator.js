@@ -21,48 +21,10 @@ const colors = ["pink", "green", "blue", "yellow", "purple", "red"];
 let colorIndex = 0;
 function generatePages() {
 
-	// Generate GD with GD menu
-	let menuGD = '';
-	for (let section of jsonGD) {
-		let sectionLinks = '';
-
-		// Build link
-		for (let link of section['contents']) {
-
-			if (link['active'] == false) {
-				continue
-			}
-
-			sectionLinks += `
-				<a href="${link['url']}" target="_blank" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
-					<h3>${link['emoji']}&nbsp;&nbsp;${link['name']}</h3>
-					<p>${link['desc']}</p>
-				</a>
-			`;
-
-			colorIndex++;
-			if (colorIndex >= colors.length) {
-				colorIndex = 0;
-			}
-		}
-
-		// Put it all together
-		menuGD += `
-			<section class="nav-menu-section">
-				<h2 class="nav-menu-section-heading">${section['emoji']}&nbsp;&nbsp;${section['name']}</h2>
-				<div class="nav-menu-links">
-					${sectionLinks}
-				</div>
-			</section>
-		`;
-	}
-
 	// Generate courses menu
-	let menuCourses = '';
 	let homeCourses = '';
 	colorIndex = 0;
 	for (let section of jsonCourses) {
-		let sectionLinks = '';
 		let homeSectionLinks = '';
 
 		// Build link for each course
@@ -71,25 +33,20 @@ function generatePages() {
 			// Build tags
 			let tags = "";
 			for (let tag of course['tags']) {
-				tags += `<li>${tag}</li>`;
+				tags += `<li class="home-menu-link-content-tag">${tag}</li>`;
 			}
 			if (tags.length > 0) {
-				tags = `<ul>${tags}</ul>`;
+				tags = `<ul class="home-menu-link-content-tags">${tags}</ul>`;
 			}
 
-			sectionLinks += `
-				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
-					<h3>${course['emoji']}&nbsp;&nbsp;${course['name']} <span>${course['version']}</span></h3>
-					<p>${course['desc']}</p>
-					${tags}
-				</a>
-			`;
-
 			homeSectionLinks += `
-				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
-					<h3>${course['emoji']}&nbsp;&nbsp;${course['name']} <span>${course['version']}</span></h3>
-					<p>${course['desc']}</p>
-					${tags}
+				<a href="/${course['slug']}/" style="--primary: var(--${colors[colorIndex]});" class="home-menu-link">
+					<div class="home-menu-link-content">
+						<h3 class="home-menu-link-content-title">${course['name']} <span class="home-menu-link-content-version">${course['version']}</span></h3>
+						<p class="home-menu-link-content-desc">${course['desc']}</p>
+						${tags}
+						<div class="home-menu-link-content-emoji">${course['emoji']}</div>
+					</div>
 				</a>
 			`;
 
@@ -99,31 +56,19 @@ function generatePages() {
 			}
 		}
 
-		// Put it all together
-		menuCourses += `
-			<section class="nav-menu-section">
-				<h2 class="nav-menu-section-heading">${section['name']}</h2>
-				<div class="nav-menu-links">
-					${sectionLinks}
-				</div>
-			</section>
-		`;
-
 		// For homepage
 		homeCourses += `
-			<section class="overview-menu-section">
-				<h2 class="overview-menu-section-heading">${section['name']}</h2>
-				<div class="overview-menu-links">
+			<section class="home-menu-section">
+				<h2 class="home-menu-section-heading">${section['name']}</h2>
+				<div class="home-menu-links">
 					${homeSectionLinks}
 				</div>
 			</section>
 		`;
 	}
-	menuCourses += `
-		<a href="/" class="nav-menu-viewall"><span>🍎&nbsp;&nbsp;View all courses</span> <span>↗</span></a>
-	`;
 
 	// Generate pages for each resource
+	let courseColorIndex = 0;
 	for (let section of jsonCourses) {
 
 		// Go through courses in section
@@ -142,7 +87,7 @@ function generatePages() {
 			colorIndex = 0;
 			let courseResources = ``;
 			for (let subsection of jsonCourse) {
-				let sectionLinks = '';
+				let resourceLinks = '';
 				let courseSectionLinks = '';
 	
 				// Build resource link
@@ -157,40 +102,53 @@ function generatePages() {
 					let tags = "";
 					if (resource['tags'] != undefined) {
 						for (let tag of resource['tags']) {
-							tags += `<li>${tag}</li>`;
+							tags += `<li class="course-menu-link-content-tag">${tag}</li>`;
 						}
 						if (tags.length > 0) {
-							tags = `<ul>${tags}</ul>`;
+							tags = `<ul class="course-menu-link-content-tags">${tags}</ul>`;
 						}
 					}
 
 					// Generate description for resource
 					let desc = '';
 					if (resource['desc'] != "" && resource['desc'] != undefined) {
-						desc = `<p>${resource['desc']}</p>`;
+						desc = `<p class="course-menu-link-content-desc">${resource['desc']}</p>`;
 					}
 
 					// Detect if resource has an emoji
 					let resourceEmoji = '';
+					let resourcePageEmoji = '';
 					if (resource['emoji'] != undefined) {
-						resourceEmoji = resource['emoji'] + "&nbsp;&nbsp;";
+						resourceEmoji = `<div class="course-menu-link-content-emoji">${resource['emoji']}</div>`;
+						resourcePageEmoji = `<div class="resource-menu-link-emoji">${resource['emoji']}</div>`;
 					}
 
-					sectionLinks += `
-						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
-							<h3>${resourceEmoji}${resource['name']}</h3>
-							${desc}
-							${tags}
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
+					resourceLinks += `
+						<a href="/${course['slug']}/${resource['slug']}/" style="--primary: var(--${colors[colorIndex]});" class="resource-menu-link">
+							<h3 class="resource-menu-link-heading">${resource['name']}</h3>
+							${resourcePageEmoji}
 						</a>
 					`;
 
+					let resourceInfo = "";
+					if (desc != "" || tags != "") {
+						resourceInfo = `
+							<div>
+								${desc}
+								${tags}
+							</div>
+						`;
+					}
+
 					courseSectionLinks += `
-						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]}); --primary-rgb: var(--${colors[colorIndex]}-rgb);">
-							<h3>${resourceEmoji}${resource['name']}</h3>
-							${desc}
-							${tags}
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('${resource['url']}')">↗</button>
+						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">${resource['name']}</h3>
+								</div>
+								${resourceInfo}
+								${resourceEmoji}
+							</div>
 						</a>
 					`;
 
@@ -208,35 +166,32 @@ function generatePages() {
 	
 				// Put it all together
 				menuResources += `
-					<section class="nav-menu-section">
-						<h2 class="nav-menu-section-heading">${subsectionEmoji}${subsection['name']}</h2>
-						<div class="nav-menu-links">
-							${sectionLinks}
+					<section class="resource-menu-section">
+						<h2 class="resource-menu-section-heading">${subsection['name']}</h2>
+						<div class="resource-menu-links">
+							${resourceLinks}
 						</div>
 					</section>
 				`;
 
 				// For the course page
 				courseResources += `
-					<section class="overview-menu-section">
-						<h2 class="overview-menu-section-heading">${subsectionEmoji}${subsection['name']}</h2>
-						<div class="overview-menu-links">
+					<section class="course-menu-section">
+						<h2 class="course-menu-section-heading">${subsection['name']}</h2>
+						<div class="course-menu-links">
 							${courseSectionLinks}
 						</div>
 					</section>
 				`;
 			}
-			menuResources += `
-				<a href="/${course['slug']}/" class="nav-menu-viewall"><span>${course['emoji']}&nbsp;&nbsp;View all resources</span> <span>↗</span></a>
-			`;
 			
 			// Build tags
 			let tags = "";
 			for (let tag of course['tags']) {
-				tags += `<li>${tag}</li>`;
+				tags += `<li class="menu-desc-tag">${tag}</li>`;
 			}
 			if (tags.length > 0) {
-				tags = `<ul>${tags}</ul>`;
+				tags = `<ul class="menu-desc-tags">${tags}</ul>`;
 			}
 	
 			// Generate course page
@@ -251,32 +206,42 @@ function generatePages() {
 					<link rel="stylesheet" href="/style.css">
 				</head>
 				<body>
-					<main class="overview-container">
-						<header class="overview-header">
-							<div class="overview-header-content">
-								<h1 class="overview-header-title">
-									<span class="overview-header-title-emoji"><span class="overview-header-title-emoji-main">${course['emoji']}</span></span>
-									<span class="overview-header-title-big">${course['name']}</span>
-									<span class="overview-header-version">${course['version']}</span>
+					<main class="menu-container" style="--primary: var(--${colors[courseColorIndex]});">
+						<header class="menu-header">
+							<div class="menu-header-content">
+								<h1 class="menu-header-title">
+									<span class="menu-header-title-emoji"><span class="menu-header-title-emoji-main" onclick="emojiBurst();">${course['emoji']}</span><span class="menu-header-title-emoji-anim-wrapper"></span></span>
+									<span class="menu-header-title-big menu-header-title-big-course">${course['name']}</span>
+									<span class="menu-header-version">${course['version']}</span>
 								</h1>
 							</div>
+							<a href="/" class="menu-header-return">
+								<svg class="menu-header-return-text" viewBox="0 0 100 100"><defs><path id="menu-header-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-return-text">GD with GD Classroom</textPath></text></svg>
+								<div class="menu-header-return-icon">
+									<p>🍎</p>
+								</div>
+							</a>
 						</header>
 		
-						<div class="overview-nav-container">
-							<div class="overview-desc">
-								<p>
+						<div class="menu-nav-container">
+							<div class="menu-desc">
+								<h2 class="menu-desc-heading">
+									<span class="menu-desc-heading-name">${course['name']}</span>
+									<span class="menu-desc-heading-version">${course['version']}</span>
+								</h2>
+								<p class="menu-desc-text">
 									${course['desc']}
 								</p>
 								${tags}
 							</div>
-							<nav class="overview-nav">
+							<nav class="menu-nav">
 								${courseResources}
 							</nav>
-							<a href="/" class="overview-return">🍎&nbsp;&nbsp;View all courses</a>
 						</div>
 					</main>
 					
-					<script src="/overview.js"></script>					
+					<script src="/course.js"></script>		
+					<script src="/emoji.js"></script>			
 					<script src="/script.js"></script>
 				</body>
 				</html>
@@ -288,8 +253,8 @@ function generatePages() {
 			});
 
 			// Generate the individual resource pages
+			let resourceColorIndex = 0;
 			for (let subsection of jsonCourse) {
-
 				for (let resource of subsection['contents']) {
 			
 					if (resource['active'] == false) {
@@ -300,25 +265,19 @@ function generatePages() {
 					let preview = '';
 					if (!resource['newtab']) {
 						preview = `
-							<div class="preview-iframe-container">
-								<iframe src="${resource['url']}" class="preview-iframe"></iframe>
+							<div class="resource-preview-iframe-container">
+								<iframe src="${resource['url']}" class="resource-preview-iframe"></iframe>
 							</div>
 						`;
 					} else {
 						preview = `
-							<div class="preview-newtab-container">
-								<div class="preview-newtab">
+							<div class="resource-preview-newtab-container">
+								<div class="resource-preview-newtab">
 									<p>To view this resource, you’ll need to open it in a new tab.</p>
 									<a href="${resource['url']}" target="_blank">Open in new tab&nbsp;&nbsp;↗</a>
 								</div>
 							</div>
 						`;
-					}
-
-					// Detect if resource has an emoji
-					let resourceEmoji = '';
-					if (resource['emoji'] != undefined) {
-						resourceEmoji = resource['emoji'] + "&nbsp;&nbsp;";
 					}
 	
 					let resourceContent = `
@@ -333,85 +292,65 @@ function generatePages() {
 						</head>
 						<body>
 			
-							<div class="container" data-nav="1">
-			
-								<nav class="nav">
-									<button class="nav-link" onclick="toggleMenu('gdwithgd');" style="--primary: var(--pink);" id="nav-gdwithgd">
-										<div class="nav-link-category">GD with GD</div>
-										<div class="nav-link-selection">
-											<span>🍎&nbsp;&nbsp;Classroom</span>
-											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
-										</div>
-									</button>
-			
-									<button class="nav-link" onclick="toggleMenu('course');" style="--primary: var(--green);" id="nav-course">
-										<div class="nav-link-category">Course</div>
-										<div class="nav-link-selection">
-											<span>${course['emoji']}&nbsp;&nbsp;${course['name']} <span class="nav-link-selection-version">${course['version']}</span></span>
-											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
-										</div>
-									</button>
-			
-									<button class="nav-link" onclick="toggleMenu('resource');" style="--primary: var(--blue);" id="nav-resource">
-										<div class="nav-link-category">Resource</div>
-										<div class="nav-link-selection">
-											<span>${resourceEmoji}${resource['name']}</span>
-											<svg viewBox="0 0 100 100"><polygon points="100 32.07 50 82.07 0 32.07 14.14 17.93 50 53.79 85.85 17.93 100 32.07"/></svg>
-										</div>
-									</button>
-			
-									<a class="nav-link nav-link-url" href="${resource['url']}" target="_blank">
-										<div class="nav-link-category">Current URL</div>
-										<div class="nav-link-selection">
-											<span class="nav-link-url-text">${resource['url']}</span>
-											<span class="nav-link-url-arrow">↗</span>
+							<div class="resource-container" style="--primary: var(--${colors[resourceColorIndex]});" data-menu="0">
+								<nav class="resource-menu">
+									<div class="resource-menu-content">
+										<header class="resource-menu-header">
+											<div class="resource-menu-header-label">
+												Current Course
+											</div>
+											<h1 class="resource-menu-header-title">
+												<a href="../">
+													${course['name']}
+													<span class="resource-menu-header-version">${course['version']}</span>
+												</a>
+											</h1>
+										</header>
+										${menuResources}
+									</div>
+									<div class="resource-menu-header-links">
+										<a href="../" class="resource-menu-header-link">
+											<svg class="resource-menu-header-link-text" viewBox="0 0 100 100"><defs><path id="resource-menu-header-link-text1" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-header-link-text1">${course['name']}</textPath></text></svg>
+											<div class="resource-menu-header-link-icon">
+												<p>${course['emoji']}</p>
+											</div>
+										</a>
+										<a href="/" class="resource-menu-header-link">
+											<svg class="resource-menu-header-link-text" viewBox="0 0 100 100"><defs><path id="resource-menu-header-link-text2" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-header-link-text2">Classroom Homepage</textPath></text></svg>
+											<div class="resource-menu-header-link-icon">
+												<p>🏠</p>
+											</div>
+										</a>
+										<a href="https://gdwithgd.com" class="resource-menu-header-link" target="_blank">
+											<svg class="resource-menu-header-link-text" viewBox="0 0 100 100"><defs><path id="resource-menu-header-link-text3" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-header-link-text3">GD with GD</textPath></text></svg>
+											<div class="resource-menu-header-link-icon">
+												<p>🍎</p>
+											</div>
+										</a>
+									</div>
+								</nav>
+
+								<main class="resource-main">
+									<a class="resource-url" href="${resource['url']}" target="_blank">
+										<div class="resource-url-label">Current URL</div>
+										<div class="resource-url-content">
+											<span class="resource-url-content-text">${resource['url']}</span>
+											<span class="resource-url-content-arrow">↗</span>
 										</div>
 									</a>
-			
-									<button class="nav-link nav-link-refresh" onclick="refreshPreview();" style="--primary: var(--yellow);" data-newtab="${resource['newtab']}">
-										<svg viewBox="0 0 77.88 72.46"><path d="M37.94,72.46v-11.05l1.09.1c.06,0,.21,0,.23,0,14.26,0,25.86-11.6,25.86-25.86,0-5.84-1.95-11.42-5.53-15.97v10.6h-12V0h30.29v11.99h-10.44c5.58,6.64,8.63,14.96,8.63,23.66,0,20.3-16.51,36.81-36.81,36.81h-1.32ZM0,72.46v-11.99h10.44c-5.58-6.64-8.63-14.96-8.63-23.66C1.81,16.51,18.32,0,38.62,0h1.32v11.05l-1.09-.1c-.06,0-.11,0-.17,0h-.06c-14.26,0-25.86,11.6-25.86,25.86,0,5.84,1.95,11.42,5.53,15.97v-10.6h12v30.28H0Z"/></svg>
-										<span class="nav-link-label">Refresh</span>
-									</button>
-			
-									<div class="nav-link nav-link-zoom" style="--primary: var(--purple);" data-newtab="${resource['newtab']}">
-										<input class="nav-link-zoom-range" type="range" min="0" max="100" value="100" oninput="setZoom(this.value)">
-										<div class="nav-link-label">Zoom Level</div>
+
+									<div class="resource-preview">
+										${preview}
 									</div>
-			
-									<button class="nav-toggle" onclick="toggleNav(); closeMenus();" data-newtab="${resource['newtab']}">
-										<svg viewBox="0 0 24 24"><path d="M0,11.93l3.7,3.72,5.29-5.26v13.61h6v-13.61l5.32,5.3,3.7-3.72L11.98,0,0,11.93Z"/></svg>
-										<span>Hide<br>Menu</span>
-									</button>
-								</nav>
-			
-								<button class="nav-show" onclick="toggleNav();" data-newtab="${resource['newtab']}">
-									<svg viewBox="0 0 24 24"><path d="M24,12.07l-3.7-3.72-5.29,5.26V0h-6v13.61l-5.32-5.3-3.7,3.72,12.02,11.96,11.98-11.93Z"/></svg>
-									<span>Show Menu</span>
-									<svg viewBox="0 0 24 24"><path d="M24,12.07l-3.7-3.72-5.29,5.26V0h-6v13.61l-5.32-5.3-3.7,3.72,12.02,11.96,11.98-11.93Z"/></svg>
-								</button>
-			
-								<main class="preview">
-									${preview}
 								</main>
-			
-								<!-- Nav menus -->
-								<div class="nav-menu" id="menu-gdwithgd" data-active="0" style="--primary: var(--pink);">
-									${menuGD}
-								</div>
-			
-								<div class="nav-menu" id="menu-course" data-active="0" style="--primary: var(--green);">
-									${menuCourses}
-								</div>
-			
-								<div class="nav-menu" id="menu-resource" data-active="0" style="--primary: var(--blue);">
-									${menuResources}
-								</div>
-			
-								<div class="nav-overlay" data-active="0" onclick="closeMenus();"></div>
-			
+
+								<button class="resource-nav-toggle" onclick="toggleMenu();">
+									<span class="resource-nav-toggle-open">Open Menu</span>
+									<span class="resource-nav-toggle-close">Close Menu</span>
+								</button>
 							</div>
 							
-							<script src="/script.js"></script>
+							<script src="/resource.js"></script>
 						</body>
 						</html>
 					`;
@@ -428,7 +367,17 @@ function generatePages() {
 							console.error(err);
 						}
 					});
+
+					resourceColorIndex++;
+					if (resourceColorIndex >= colors.length) {
+						resourceColorIndex = 0;
+					}
 				}
+			}
+
+			courseColorIndex++;
+			if (courseColorIndex >= colors.length) {
+				courseColorIndex = 0;
 			}
 		}
 	}
@@ -446,32 +395,35 @@ function generatePages() {
 		</head>
 		<body>
 
-			<main class="overview-container">
-				<header class="overview-header">
-					<div class="overview-header-content">
-						<h1 class="overview-header-title">
-							<span class="overview-header-title-emoji"><span class="overview-header-title-emoji-main">🍎</span></span>
-							<span class="overview-header-title-big">GD with GD Classroom!</span>
+			<main class="menu-container">
+				<header class="menu-header">
+					<div class="menu-header-content">
+						<h1 class="menu-header-title">
+							<span class="menu-header-title-emoji"><span class="menu-header-title-emoji-main" onclick="emojiBurst();">🍎</span><span class="menu-header-title-emoji-anim-wrapper"></span></span>
+							<span class="menu-header-title-big">GD with GD Classroom!</span>
 						</h1>
 					</div>
 				</header>
 
-				<div class="overview-nav-container">
-					<div class="overview-desc">
-						<p>
-							<strong>Welcome to class!</strong> I’m Gabriel, and I teach design and code and everything in between. This site is a collection of everything I make for my courses: syllabi, project descriptions, tutorials, and more!
-						</p>
-						<p>
-							Whether you’re a student or a teacher, feel free to browse through these materials and take what you need. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>!
-						</p>
+				<div class="menu-nav-container">
+					<div class="menu-desc">
+						<div class="menu-desc-text">
+							<p>
+								<strong>Welcome to class!</strong> I’m Gabriel, and I teach design and code and everything in between. This site is a collection of everything I make for my courses: syllabi, project descriptions, tutorials, and more!
+							</p>
+							<p>
+								Whether you’re a student or a teacher, feel free to browse through these materials and take what you need. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>!
+							</p>
+						</div>
 					</div>
-					<nav class="overview-nav">
+					<nav class="menu-nav">
 						${homeCourses}
 					</nav>
 				</div>
 			</main>
 			
-			<script src="/overview.js"></script>
+			<script src="/home.js"></script>
+			<script src="/emoji.js"></script>
 			<script src="/script.js"></script>
 		</body>
 		</html>
@@ -483,3 +435,12 @@ function generatePages() {
 	});
 }
 generatePages();
+
+
+// TODO
+// homepage link for course page
+// long descriptions for courses
+// new opengraph image needed
+// Safari glitches:
+// - emoji getting cutoff on homepage big title
+// - circle buttons disappearing on resource page

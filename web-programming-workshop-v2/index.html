@@ -19,151 +19,200 @@
 					<link rel="stylesheet" href="/style.css">
 				</head>
 				<body>
-					<main class="overview-container">
-						<header class="overview-header">
-							<div class="overview-header-content">
-								<h1 class="overview-header-title">
-									<span class="overview-header-title-emoji"><span class="overview-header-title-emoji-main">💻</span></span>
-									<span class="overview-header-title-big">Web Programming Workshop</span>
-									<span class="overview-header-version">v2</span>
+					<main class="menu-container" style="--primary: var(--blue);">
+						<header class="menu-header">
+							<div class="menu-header-content">
+								<h1 class="menu-header-title">
+									<span class="menu-header-title-emoji"><span class="menu-header-title-emoji-main" onclick="emojiBurst();">💻</span><span class="menu-header-title-emoji-anim-wrapper"></span></span>
+									<span class="menu-header-title-big menu-header-title-big-course">Web Programming Workshop</span>
+									<span class="menu-header-version">v2</span>
 								</h1>
 							</div>
+							<a href="/" class="menu-header-return">
+								<svg class="menu-header-return-text" viewBox="0 0 100 100"><defs><path id="menu-header-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-return-text">GD with GD Classroom</textPath></text></svg>
+								<div class="menu-header-return-icon">
+									<p>🍎</p>
+								</div>
+							</a>
 						</header>
 		
-						<div class="overview-nav-container">
-							<div class="overview-desc">
-								<p>
+						<div class="menu-nav-container">
+							<div class="menu-desc">
+								<h2 class="menu-desc-heading">
+									<span class="menu-desc-heading-name">Web Programming Workshop</span>
+									<span class="menu-desc-heading-version">v2</span>
+								</h2>
+								<p class="menu-desc-text">
 									The basics of HTML, CSS, and a tiny bit of JavaScript.
 								</p>
-								<ul><li>RISD</li><li>Fall 2023</li><li>GRAPH 3188</li></ul>
+								<ul class="menu-desc-tags"><li class="menu-desc-tag">RISD</li><li class="menu-desc-tag">Fall 2023</li><li class="menu-desc-tag">GRAPH 3188</li></ul>
 							</div>
-							<nav class="overview-nav">
+							<nav class="menu-nav">
 								
-					<section class="overview-menu-section">
-						<h2 class="overview-menu-section-heading">Course Materials</h2>
-						<div class="overview-menu-links">
+					<section class="course-menu-section">
+						<h2 class="course-menu-section-heading">Course Materials</h2>
+						<div class="course-menu-links">
 							
-						<a href="/web-programming-workshop-v2/class-website" style="--primary: var(--pink); --primary-rgb: var(--pink-rgb);">
-							<h3>Class Website</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://wpw23.gdwithgd.com/')">↗</button>
+						<a href="/web-programming-workshop-v2/class-website" style="--primary: var(--pink);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Class Website</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
-						<a href="/web-programming-workshop-v2/syllabus" style="--primary: var(--green); --primary-rgb: var(--green-rgb);">
-							<h3>Syllabus</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1UG59e9pNNIaiRYODHAac_s2GuTw0p6m-MVLf8W8nXXw/edit?usp=sharing')">↗</button>
+						<a href="/web-programming-workshop-v2/syllabus" style="--primary: var(--green);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Syllabus</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
-						<a href="/web-programming-workshop-v2/resources" style="--primary: var(--blue); --primary-rgb: var(--blue-rgb);">
-							<h3>Resources</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1AegPwvBtgPwyvJC0SI4VUZT_YAFdY-pc0fYLDwXApUw/edit?usp=sharing')">↗</button>
-						</a>
-					
-						</div>
-					</section>
-				
-					<section class="overview-menu-section">
-						<h2 class="overview-menu-section-heading">Tutorials</h2>
-						<div class="overview-menu-links">
-							
-						<a href="/web-programming-workshop-v2/github-tutorial" style="--primary: var(--yellow); --primary-rgb: var(--yellow-rgb);">
-							<h3>GitHub Tutorial</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://drive.google.com/file/d/1jGdIYjchg6IPYNVSW09xIksjhFCVd-Tn/view?usp=sharing')">↗</button>
-						</a>
-					
-						<a href="/web-programming-workshop-v2/links-to-everything" style="--primary: var(--purple); --primary-rgb: var(--purple-rgb);">
-							<h3>Links to Everything</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1G6xxxL5ogpgNXkgQ5JpI6fYsuoXcdNn4cVvR0NfUvEU/edit?usp=sharing')">↗</button>
-						</a>
-					
-						<a href="/web-programming-workshop-v2/glossary" style="--primary: var(--red); --primary-rgb: var(--red-rgb);">
-							<h3>Glossary</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1GhjUq1Ei1561fibVtVIIQzerFG216nbXcqmNL__8A0o/edit?usp=sharing')">↗</button>
-						</a>
-					
-						<a href="/web-programming-workshop-v2/portfolio-example" style="--primary: var(--pink); --primary-rgb: var(--pink-rgb);">
-							<h3>Portfolio Example</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://gabrieldrozdov.github.io/wpw-portfolio/')">↗</button>
+						<a href="/web-programming-workshop-v2/resources" style="--primary: var(--blue);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Resources</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
 						</div>
 					</section>
 				
-					<section class="overview-menu-section">
-						<h2 class="overview-menu-section-heading">Projects</h2>
-						<div class="overview-menu-links">
+					<section class="course-menu-section">
+						<h2 class="course-menu-section-heading">Tutorials</h2>
+						<div class="course-menu-links">
 							
-						<a href="/web-programming-workshop-v2/week-1-exercises" style="--primary: var(--green); --primary-rgb: var(--green-rgb);">
-							<h3>Week 1 Exercises</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1QnieR03j57KvoIK4GlaOOqWjZH5O2QT8URLKf7kaCgA/edit?usp=sharing')">↗</button>
+						<a href="/web-programming-workshop-v2/github-tutorial" style="--primary: var(--yellow);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">GitHub Tutorial</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
-						<a href="/web-programming-workshop-v2/assignment-1" style="--primary: var(--blue); --primary-rgb: var(--blue-rgb);">
-							<h3>Assignment 1</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1_QmiKHDeN7OZGGvCFgQl6WKVj_j5mexUQZy7HXLqRRc/edit?usp=sharing')">↗</button>
+						<a href="/web-programming-workshop-v2/links-to-everything" style="--primary: var(--purple);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Links to Everything</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
-						<a href="/web-programming-workshop-v2/assignment-2" style="--primary: var(--yellow); --primary-rgb: var(--yellow-rgb);">
-							<h3>Assignment 2</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1Qv5FymDcDLOlHzwuvdA4rmmFQds_h45KBXLQpL2RhrM/edit?usp=sharing')">↗</button>
+						<a href="/web-programming-workshop-v2/glossary" style="--primary: var(--red);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Glossary</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
-						<a href="/web-programming-workshop-v2/final-project-section-1" style="--primary: var(--purple); --primary-rgb: var(--purple-rgb);">
-							<h3>Final Project [Section 1]</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1n3BtByN_YN_LKHYaq_ZCcNDc1fzVcZCWAtIYuFBCxAY/edit?usp=sharing')">↗</button>
-						</a>
-					
-						<a href="/web-programming-workshop-v2/final-project-section-2" style="--primary: var(--red); --primary-rgb: var(--red-rgb);">
-							<h3>Final Project [Section 2]</h3>
-							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1ZgmAo7KCKG34DuMJTSb9ZienZU_HIPRUHMBEBeg792s/edit?usp=sharing')">↗</button>
+						<a href="/web-programming-workshop-v2/portfolio-example" style="--primary: var(--pink);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Portfolio Example</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
 						</div>
 					</section>
 				
-					<section class="overview-menu-section">
-						<h2 class="overview-menu-section-heading">Lectures</h2>
-						<div class="overview-menu-links">
+					<section class="course-menu-section">
+						<h2 class="course-menu-section-heading">Projects</h2>
+						<div class="course-menu-links">
 							
-						<a href="/web-programming-workshop-v2/lessons" style="--primary: var(--pink); --primary-rgb: var(--pink-rgb);">
-							<h3>Lessons</h3>
+						<a href="/web-programming-workshop-v2/week-1-exercises" style="--primary: var(--green);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Week 1 Exercises</h3>
+								</div>
+								
+								
+							</div>
+						</a>
+					
+						<a href="/web-programming-workshop-v2/assignment-1" style="--primary: var(--blue);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Assignment 1</h3>
+								</div>
+								
+								
+							</div>
+						</a>
+					
+						<a href="/web-programming-workshop-v2/assignment-2" style="--primary: var(--yellow);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Assignment 2</h3>
+								</div>
+								
+								
+							</div>
+						</a>
+					
+						<a href="/web-programming-workshop-v2/final-project-section-1" style="--primary: var(--purple);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Final Project [Section 1]</h3>
+								</div>
+								
+								
+							</div>
+						</a>
+					
+						<a href="/web-programming-workshop-v2/final-project-section-2" style="--primary: var(--red);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Final Project [Section 2]</h3>
+								</div>
+								
+								
+							</div>
+						</a>
+					
+						</div>
+					</section>
+				
+					<section class="course-menu-section">
+						<h2 class="course-menu-section-heading">Lectures</h2>
+						<div class="course-menu-links">
 							
-							
-							<button onclick="event.stopPropagation(); event.preventDefault(); openInNewTab('https://docs.google.com/document/d/1cFaFQb0GpR8-JsGUlFotaea3JdkvHrmZpgdAw8bOGKM/edit?usp=sharing')">↗</button>
+						<a href="/web-programming-workshop-v2/lessons" style="--primary: var(--pink);" class="course-menu-link">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Lessons</h3>
+								</div>
+								
+								
+							</div>
 						</a>
 					
 						</div>
 					</section>
 				
 							</nav>
-							<a href="/" class="overview-return">🍎&nbsp;&nbsp;View all courses</a>
 						</div>
 					</main>
 					
-					<script src="/overview.js"></script>					
+					<script src="/course.js"></script>		
+					<script src="/emoji.js"></script>			
 					<script src="/script.js"></script>
 				</body>
 				</html>
