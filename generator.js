@@ -184,6 +184,14 @@ function generatePages() {
 					</section>
 				`;
 			}
+			courseResources += `
+				<a href="/" class="course-menu-return">
+					<svg class="course-menu-return-text" viewBox="0 0 100 100"><defs><path id="course-menu-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#course-menu-return-text">Select Another Course</textPath></text></svg>
+					<div class="course-menu-return-icon">
+						<p>🎓</p>
+					</div>
+				</a>
+			`;
 			
 			// Build tags
 			let tags = "";
@@ -229,9 +237,9 @@ function generatePages() {
 									<span class="menu-desc-heading-name">${course['name']}</span>
 									<span class="menu-desc-heading-version">${course['version']}</span>
 								</h2>
-								<p class="menu-desc-text">
-									${course['desc']}
-								</p>
+								<div class="menu-desc-text">
+									${course['long-desc']}
+								</div>
 								${tags}
 							</div>
 							<nav class="menu-nav">
@@ -435,12 +443,3 @@ function generatePages() {
 	});
 }
 generatePages();
-
-
-// TODO
-// homepage link for course page
-// long descriptions for courses
-// new opengraph image needed
-// Safari glitches:
-// - emoji getting cutoff on homepage big title
-// - circle buttons disappearing on resource page
