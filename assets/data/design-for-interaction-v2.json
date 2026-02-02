@@ -1,0 +1,47 @@
+[
+	{
+		"name": "Course Materials",
+		"contents": [
+			{
+				"name": "Syllabus",
+				"emoji": "👆",
+				"slug": "syllabus",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Calendar",
+				"emoji": "🗓️",
+				"slug": "calendar",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.mluho8o35or9",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+			{
+				"name": "Project 1: Designing for Play",
+				"emoji": "🪗",
+				"slug": "project-1-designing-for-play",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.17vw6k8ts8m2",
+				"newtab": false
+			},
+			{
+				"name": "Project 2: Designing a Community",
+				"emoji": "🏘️",
+				"slug": "project-2-designing-a-community",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.rq8z4igaonvm",
+				"newtab": false
+			},
+			{
+				"name": "Project 3: Design as an Act of Service",
+				"emoji": "🛠️",
+				"slug": "project-3-design-as-an-act-of-service",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.jqkpmi4fp9mx",
+				"newtab": false
+			}
+		]
+	}
+]

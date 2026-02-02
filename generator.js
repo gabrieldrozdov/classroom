@@ -2,7 +2,6 @@ const fs = require('fs');
 
 // Get JSONs
 const jsonCourses = require('./assets/data/courses.json');
-const jsonGD = require('./assets/data/gdwithgd.json');
 
 // Global elements
 const meta = `
@@ -78,7 +77,10 @@ function generatePages() {
 			// If not, create directory
 			let dir = './' + course['slug'];
 			if (!fs.existsSync(dir)){
-				fs.mkdirSync(dir);
+				fs.mkdirSync(dir, { recursive: true });
+			} else {
+				fs.rmSync(dir, { recursive: true, force: true });
+				fs.mkdirSync(dir, { recursive: true });
 			}
 		
 			// Generate menu for course resources
@@ -131,6 +133,7 @@ function generatePages() {
 					`;
 
 					let resourceInfo = "";
+					let courseInfo = false;
 					if (desc != "" || tags != "") {
 						resourceInfo = `
 							<div>
@@ -138,10 +141,11 @@ function generatePages() {
 								${tags}
 							</div>
 						`;
+						courseInfo = true;
 					}
 
 					courseSectionLinks += `
-						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});" class="course-menu-link">
+						<a href="/${course['slug']}/${resource['slug']}" style="--primary: var(--${colors[colorIndex]});" class="course-menu-link" data-info="${courseInfo}">
 							<div class="course-menu-link-content">
 								<div>
 									<h3 class="course-menu-link-content-title">${resource['name']}</h3>
@@ -250,7 +254,6 @@ function generatePages() {
 					
 					<script src="/course.js"></script>		
 					<script src="/emoji.js"></script>			
-					<script src="/script.js"></script>
 				</body>
 				</html>
 			`;
@@ -367,7 +370,10 @@ function generatePages() {
 					// If not, create directory
 					let dir = `./${course['slug']}/${resource['slug']}`;
 					if (!fs.existsSync(dir)){
-						fs.mkdirSync(dir);
+						fs.mkdirSync(dir, { recursive: true });
+					} else {
+						fs.rmSync(dir, { recursive: true, force: true });
+						fs.mkdirSync(dir, { recursive: true });
 					}
 			
 					fs.writeFile(`./${course['slug']}/${resource['slug']}/index.html`, resourceContent, err => {
@@ -432,7 +438,6 @@ function generatePages() {
 			
 			<script src="/home.js"></script>
 			<script src="/emoji.js"></script>
-			<script src="/script.js"></script>
 		</body>
 		</html>
 	`;

@@ -130,6 +130,7 @@ body {
 	font-weight: 800;
 	text-align: center;
 	padding: 10px;
+	color: var(--off-white);
 }
 .menu-header-title-big > span {
 	display: inline-block;
@@ -579,6 +580,9 @@ body {
 	position: relative;
 	transition: background-color .2s, opacity .2s, border-color .2s, transform .2s, box-shadow .2s;
 	z-index: 1;
+}
+.course-menu-link[data-info="false"] .course-menu-link-content {
+	grid-template-columns: 1fr;
 }
 .course-menu-link:hover .course-menu-link-content {
 	background-color: var(--primary);
@@ -1130,6 +1134,13 @@ body {
 }
 .resource-container[data-menu="1"] .resource-nav-toggle-open {
 	display: none;
+}
+@media only screen and (max-width: 1200px) {
+	.resource-preview-iframe {
+		width: 200%;
+		height: 200%;
+		transform: scale(.5);
+	}
 }
 @media only screen and (max-width: 800px) {
 	.resource-container {

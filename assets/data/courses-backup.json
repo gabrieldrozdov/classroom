@@ -1,0 +1,209 @@
+[
+	{
+		"name": "2026",
+		"contents": [
+			{
+				"slug": "design-for-interaction-v2",
+				"emoji": "👆",
+				"name": "Design for Interaction",
+				"version": "v2",
+				"desc": "A primer on UI/UX from the perspectives of performance and playfulness.",
+				"long-desc": "<p>How do you turn an object, such as a flat, digital screen, into something people can interact with and understand? This question underscores the field of user interface and experience (UI/UX) design, which aims to create legible, meaningful experiences for virtually everything we interact with. In this studio elective, we’ll study UI/UX from a digital perspective, exploring the interface design of various mediums including apps, websites, operating systems, video games, appliances, exhibitions, and more. Instruction and projects will focus primarily on using Figma to create mockups and prototypes, with digressions into practices for user experience research. While this is not a coding course, lectures and exercises will explore the relationship between designers and developers. Familiarity with graphic design and typography is recommended but not required.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2026",
+					"GRAPH 3327"
+				]
+			},
+			{
+				"slug": "introduction-to-computation-v2",
+				"emoji": "🤖",
+				"name": "Introduction to Computation",
+				"version": "v2",
+				"desc": "Computer science for designers and artists.",
+				"long-desc": "<p>Introduction to Computation is the pathway course to the CTC Concentration. In this course, students learn the essentials of computer science, including the design of algorithms, user interface and experience design, and generative art. Instruction covers object-oriented programming using JavaScript, paired with HTML and CSS for web development. Further instruction covers JavaScript libraries like p5.js. Beyond these technical studies, this course engages with the history of code as an artistic medium, bringing in references ranging from early video game design, to contemporary artists engaging with websites and applications as fine art mediums.</p><p>This course is open to students of all majors and is designed for those with little or no experience in programming.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2026",
+					"CTC 1000"
+				]
+			}
+		]
+	},
+	{
+		"name": "2025",
+		"contents": [
+			{
+				"slug": "type-and-code-v2",
+				"emoji": "🔠",
+				"name": "Type + Code",
+				"version": "v2",
+				"desc": "Design experimental fonts, and then launch a type foundry to showcase your work!",
+				"long-desc": "<p>Type + Code is a studio course in which students combine web programming with variable fonts to create interactive, dynamic typographic experiences. Students will become proficient in code (HTML, CSS, and JavaScript) and type design (Glyphs) to create original fonts, web specimens, digital articles, and more. This course encourages students to push the boundaries on contemporary type design and find new or underutilized use cases for experimental typography, both as a form of expression and in practical applications. These experiments are supported by readings from a wide variety of influences, including video games, performance studies, and computer science.</p><p>No prior experience in type design or coding is required.</p>",
+				"tags": [
+					"RISD",
+					"Fall 2025",
+					"GRAPH 3123"
+				]
+			},
+			{
+				"slug": "in-motion-v2",
+				"emoji": "🎬",
+				"name": "In Motion",
+				"version": "v2",
+				"desc": "A tour through the world of motion design, with an emphasis on musicality and performance!",
+				"long-desc": "<p>Motion design is a powerful, foundational feature of digital screens. It helps direct the viewer’s attention, present information sequentially, add personality or depth to otherwise static graphics, contextualize interactive elements, and so much more. In this studio elective, students will learn the fundamentals of motion design and explore a wide variety of video and animation techniques. We will look at a wide range of influences and styles ranging from stop motion animation, to film title sequences, to early-Internet Flash animations, to interface design, to contemporary practices for brand identities and social media.</p><p>Instruction will focus on digital motion design using Adobe After Effects, with additional tutorials in Premiere Pro, audio production, and HTML/CSS for web-based animations. Students will leave the course with a broad overview of the field of motion design and a deep understanding of rhythm, timing, sequence, narrative, and expression.</p>",
+				"tags": [
+					"RISD",
+					"Fall 2025",
+					"GRAPH 2216"
+				]
+			},
+			{
+				"slug": "design-for-interaction-v1",
+				"emoji": "👆",
+				"name": "Design for Interaction",
+				"version": "v1",
+				"desc": "A primer on UI/UX from the perspectives of performance and playfulness.",
+				"long-desc": "<p>How do you turn an object, such as a flat, digital screen, into something people can interact with and understand? This question underscores the field of user interface and experience (UI/UX) design, which aims to create legible, meaningful experiences for virtually everything we interact with. In this studio elective, we’ll study UI/UX from a digital perspective, exploring the interface design of various mediums including apps, websites, operating systems, video games, appliances, exhibitions, and more. Instruction and projects will focus primarily on using Figma to create mockups and prototypes, with digressions into practices for user experience research. While this is not a coding course, lectures and exercises will explore the relationship between designers and developers. Familiarity with graphic design and typography is recommended but not required.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2025",
+					"GRAPH 3327"
+				]
+			},
+			{
+				"slug": "introduction-to-computation-v1",
+				"emoji": "🤖",
+				"name": "Introduction to Computation",
+				"version": "v1",
+				"desc": "Computer science for designers and artists.",
+				"long-desc": "<p>Introduction to Computation is the pathway course to the CTC Concentration. In this course, students learn the essentials of computer science, including the design of algorithms, user interface and experience design, and generative art. Instruction covers object-oriented programming using JavaScript, paired with HTML and CSS for web development. Further instruction covers JavaScript libraries like p5.js. Beyond these technical studies, this course engages with the history of code as an artistic medium, bringing in references ranging from early video game design, to contemporary artists engaging with websites and applications as fine art mediums.</p><p>This course is open to students of all majors and is designed for those with little or no experience in programming.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2025",
+					"CTC 1000"
+				]
+			}
+		]
+	},
+	{
+		"name": "2024",
+		"contents": [
+			{
+				"slug": "type-and-code-v1",
+				"emoji": "🔠",
+				"name": "Type + Code",
+				"version": "v1",
+				"desc": "Creative coding elective focusing on type design, digital fonts, and unique reading experiences.",
+				"long-desc": "<p>Type + Code is a studio course in which students combine web programming with variable fonts to create interactive, dynamic typographic experiences. Students will become proficient in code (HTML, CSS, and JavaScript) and type design (Glyphs) to create original fonts, web specimens, digital articles, and more. This course encourages students to push the boundaries on contemporary type design and find new or underutilized use cases for experimental typography, both as a form of expression and in practical applications. These experiments are supported by readings from a wide variety of influences, including video games, performance studies, and computer science. No prior experience in type design or coding is required.</p>",
+				"tags": [
+					"RISD",
+					"Fall 2024",
+					"GRAPH 3123"
+				]
+			},
+			{
+				"slug": "in-motion-v1",
+				"emoji": "🎬",
+				"name": "In Motion",
+				"version": "v1",
+				"desc": "Motion design elective exploring a wide range of skills and use cases for animation.",
+				"long-desc": "<p>Motion design is a powerful, foundational feature of digital screens. It helps direct the viewer’s attention, sequence information, add personality or depth to otherwise static graphics, contextualize interactive elements, and so much more. In this studio elective, students will learn the fundamentals of motion design and explore a wide variety of video and animation techniques. We will look at a wide range of influences and styles ranging from stop motion animation, to film title sequences, to early-Internet Flash animations, to interface design, to contemporary practices for brand identities and social media. Instruction will focus on digital motion design using Adobe After Effects, with additional tutorials in Premiere Pro, audio production, and HTML/CSS for web-based animations. Students will leave the course with a broad overview of the field of motion design and a deep understanding of rhythm, timing, sequence, narrative, and expression.</p>",
+				"tags": [
+					"RISD",
+					"Fall 2024",
+					"GRAPH 2216"
+				]
+			},
+			{
+				"slug": "variable-fonts-workshop-v2",
+				"emoji": "🔡",
+				"name": "Variable Fonts Workshop",
+				"version": "v2",
+				"desc": "Type design through the lens of experimental variable fonts.",
+				"long-desc": "<p>Variable fonts offer graphic designers new ways to create dynamic, complex, and consistent typographic systems. While digital typefaces traditionally require multiple font files to cover a range of weights and styles, variable fonts instead store glyphs as a range of possible forms with infinite variations. In this four-week workshop, students learn how to utilize and design variable fonts for a wide variety of use cases including typographic identity systems, interpolated animations, and context-aware adjustments like optical sizing. Projects involve designing several original variable font designs. Course instruction includes Glyphs for designing typefaces and basic HTML/CSS for animating variable fonts; no background in type design or coding is required.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2024",
+					"GRAPH 3163"
+				]
+			},
+			{
+				"slug": "web-sites-and-stories-v1",
+				"emoji": "🌐",
+				"name": "Web Sites & Stories",
+				"version": "v1",
+				"desc": "Web design and development as a medium for storytelling.",
+				"long-desc": "<p>Since the dawn of the Internet, we’ve thought of websites as metaphors for places to visit — web “sites,” navigated to via web browsers like Safari (or the now-forgotten Internet Explorer). This metaphor lets us think of the Internet not as a singular medium, but as a network for distributing interactive, digital experiences. In effect, every website is a world with its own internal logic. The web designer or developer’s challenge is to define these rules for interaction in a way that makes sense to visitors. Therefore, the goal of a website is to convey meaning to an audience through interaction, not just graphics.</p><p>In this course, we’ll play the role of both web designer and developer to discover the full gamut of possible user experiences that websites afford. Students will learn industry-standard tools and practices for prototyping and launching websites, including Figma, Webflow, GitHub, and web programming languages (HTML, CSS, and JavaScript). The course explores websites as a paradoxical medium with clashing creative and commercial motives, united by the common purpose of telling stories through interactivity.</p>",
+				"tags": [
+					"RISD",
+					"Winter 2024",
+					"GRAPH 3271"
+				]
+			}
+		]
+	},
+	{
+		"name": "2023",
+		"contents": [
+			{
+				"slug": "web-programming-workshop-v2",
+				"emoji": "💻",
+				"name": "Web Programming Workshop",
+				"version": "v2",
+				"desc": "The basics of HTML, CSS, and a tiny bit of JavaScript.",
+				"long-desc": "<p>Code is intimidating. To start coding, it can feel that you need to learn everything before creating anything of value. Web programming offers an alternative path by proving that you don’t need to know much about code to make incredible things with it. In this course, we’ll explore the field of designing with code through the lens of web development, discovering the capabilities of coded experiences and crafting projects that explore those possibilities. By working directly with HTML, CSS, and JavaScript, you’ll gain an understanding of how code fundamentally changes the design process and see firsthand the exciting outcomes that emerge.</p>",
+				"tags": [
+					"RISD",
+					"Fall 2023",
+					"GRAPH 3188"
+				]
+			},
+			{
+				"slug": "variable-fonts-workshop-v1",
+				"emoji": "🔡",
+				"name": "Variable Fonts Workshop",
+				"version": "v1",
+				"desc": "Type design through the lens of experimental variable fonts.",
+				"long-desc": "<p>Variable fonts offer graphic designers new ways to create dynamic, complex, and consistent typographic systems. While digital typefaces traditionally require multiple font files to cover a range of weights and styles, variable fonts instead store glyphs as a range of possible forms with infinite variations. In this four-week workshop, students learn how to utilize and design variable fonts for a wide variety of use cases including typographic identity systems, interpolated animations, and context-aware adjustments like optical sizing. Projects include designing graphics with variable fonts, modifying open source typefaces to introduce variable functionality, and conceiving of original variable font designs. Course instruction includes Glyphs for designing typefaces and basic HTML/CSS for animating variable fonts; no background in type design or coding is required.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2023",
+					"GRAPH 3163"
+				]
+			},
+			{
+				"slug": "digital-form-v1",
+				"emoji": "📺",
+				"name": "Digital Form",
+				"version": "v1",
+				"desc": "Introduction to graphic, motion, and web design from a digital-first perspective.",
+				"long-desc": "<p>What kinds of graphic forms are unique to digital screens? How can we or should we design for phones, laptops, and other digital devices? *What is this digital material capable of?*</p><p>This introductory studio course is an exploration of these questions and the range of possibilities that digital tools and spaces afford us. We will look at a vast and ever-changing landscape that includes multiple mediums, practices, technologies, geographies, histories, and more. To guide these explorations, we will focus on three key ideas:</p><p>1) Phenomenologies of light and computation, particularly additive color and binary;</p><p>2) Keyframing, sequencing, and programming of motion design and animation; and,</p><p>3) Structuring and integrating responsive and interactive design elements or systems, particularly websites and user interfaces.</p><p>Students build up facility and familiarity with digital practices through small workshops, larger overarching projects, and opportunities to share independent research. In addition to studio work, students will look at historical developments and conflicts in the world of digital design and technology, including discussions of equity and inequity.</p>",
+				"tags": [
+					"RISD",
+					"Winter 2023",
+					"GRAPH 1566"
+				]
+			}
+		]
+	},
+	{
+		"name": "2022",
+		"contents": [
+			{
+				"slug": "web-programming-workshop-v1",
+				"emoji": "💻",
+				"name": "Web Programming Workshop",
+				"version": "v1",
+				"desc": "The basics of HTML, CSS, and a tiny bit of JavaScript.",
+				"long-desc": "<p>At their core, websites are boxes within boxes within boxes of information. But, what are websites actually made of, and what can they do? This four-week workshop explores programming as a dynamic digital material, giving rise to unique design languages and possibilities. Students start as programming novices, reading and writing HTML, CSS, and JavaScript to build up foundational skills in web design and development. Alongside hands-on assignments, weekly lectures expose the field of web programming, including topics in computer science, digital design tools and systems (e.g. Figma, Material Design), and professional web development tools (e.g. Webflow, WordPress, Bootstrap, React). Students emerge with portfolio projects and the ability to effectively collaborate with other web developers.</p>",
+				"tags": [
+					"RISD",
+					"Fall 2022",
+					"GRAPH 3188"
+				]
+			}
+		]
+	}
+]

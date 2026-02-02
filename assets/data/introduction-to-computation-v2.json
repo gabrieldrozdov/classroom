@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Course Materials",
+		"contents": [
+			{
+				"name": "Syllabus",
+				"emoji": "🍎",
+				"slug": "syllabus",
+				"url": "https://docs.google.com/document/d/1PQGPguauPCHGgsAEYy4GFoYU3DiXfiqpxY1R2NFxF14/preview?usp=sharing",
+				"newtab": false
+			},
+			{
+				"name": "Schedule",
+				"emoji": "🗓️",
+				"slug": "schedule",
+				"url": "https://docs.google.com/document/d/1PQGPguauPCHGgsAEYy4GFoYU3DiXfiqpxY1R2NFxF14/preview?tab=t.mluho8o35or9",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Projects",
+		"contents": [
+		]
+	}
+]

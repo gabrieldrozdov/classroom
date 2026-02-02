@@ -12,7 +12,7 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://docs.google.com/document/d/1p75xhOY0SbjzDh8brEKP_vmFXiKNmN67LGd-JO_cpp8/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1p75xhOY0SbjzDh8brEKP_vmFXiKNmN67LGd-JO_cpp8/preview?usp=sharing",
 				"newtab": false
 			}
 		]
@@ -23,26 +23,26 @@
 			{
 				"name": "Glyphs Basics",
 				"slug": "glyphs-basics",
-				"url": "https://drive.google.com/file/d/1ajxzdSoY1w6--iULtBD2axUTWG1Js0sv/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1ajxzdSoY1w6--iULtBD2axUTWG1Js0sv/preview",
+				"newtab": false
 			},
 			{
 				"name": "Setting Up Variable Axes",
 				"slug": "setting-up-variable-axes",
-				"url": "https://drive.google.com/file/d/1b-YD5SXhS0RQgqjhf55wTbwnVkFogpg9/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1b-YD5SXhS0RQgqjhf55wTbwnVkFogpg9/preview",
+				"newtab": false
 			},
 			{
 				"name": "Pixel Fonts",
 				"slug": "pixel-fonts",
-				"url": "https://drive.google.com/file/d/1asVGqYFGyifMhNRaYuxexs1oswrUdEeC/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1asVGqYFGyifMhNRaYuxexs1oswrUdEeC/preview",
+				"newtab": false
 			},
 			{
 				"name": "Drawing in Glyphs",
 				"slug": "drawing-in-glyphs",
-				"url": "https://drive.google.com/file/d/1aEdIKpT4cnEgIP0fu4A82g36ITKi9b69/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1aEdIKpT4cnEgIP0fu4A82g36ITKi9b69/preview",
+				"newtab": false
 			}
 		]
 	},
@@ -52,43 +52,43 @@
 			{
 				"name": "Bitmapped",
 				"slug": "bitmapped",
-				"url": "https://docs.google.com/document/d/185VU47-h2uXb1nOeJCzhtKTupKbbAbpO7KsiY6yMm-A/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/185VU47-h2uXb1nOeJCzhtKTupKbbAbpO7KsiY6yMm-A/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Open Sourced",
 				"slug": "open-sourced",
-				"url": "https://docs.google.com/document/d/1HEzKqZl5Y1c1fYZkwm41MPxa7Mwelr29XmACfJndFQs/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1HEzKqZl5Y1c1fYZkwm41MPxa7Mwelr29XmACfJndFQs/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Digitized",
 				"slug": "digitized",
-				"url": "https://docs.google.com/document/d/1mG2pcCnjngu02iN40aYTmqNUB0zAg7kHoPNjzan3DZo/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1mG2pcCnjngu02iN40aYTmqNUB0zAg7kHoPNjzan3DZo/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "One Big Move",
 				"slug": "one-big-move",
-				"url": "https://docs.google.com/document/d/1Ay1lChSu1binI5GyiH-5cB4pzqgaJ5Ymb20jU5H2BkY/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1Ay1lChSu1binI5GyiH-5cB4pzqgaJ5Ymb20jU5H2BkY/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Variable Remix",
 				"slug": "variable-remix",
-				"url": "https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Variable Gamut",
 				"slug": "variable-gamut",
-				"url": "https://docs.google.com/document/d/1DrOvt4y3Iwsb2GPXfkIOpVITfcs1TlyJYJ_jtbuFxuk/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1DrOvt4y3Iwsb2GPXfkIOpVITfcs1TlyJYJ_jtbuFxuk/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Type Design as Performance",
 				"slug": "type-design-as-performance",
-				"url": "https://docs.google.com/document/d/1nEQ4itdAGRA-qwmWRxj4MRP5OCZ4mAo8XLVr2gmIm6I/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1nEQ4itdAGRA-qwmWRxj4MRP5OCZ4mAo8XLVr2gmIm6I/preview?usp=sharing",
 				"newtab": false
 			}
 		]
@@ -99,14 +99,14 @@
 			{
 				"name": "Week 1",
 				"slug": "week-1",
-				"url": "https://drive.google.com/file/d/1aFRIc8zmYwsQSWWYPbKmZqOdeuXnlOPM/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1aFRIc8zmYwsQSWWYPbKmZqOdeuXnlOPM/preview",
+				"newtab": false
 			},
 			{
 				"name": "Week 2",
 				"slug": "week-2",
-				"url": "https://drive.google.com/file/d/1aZXyvkGSmgrpvylVks6CE9u-TV-kmaA-/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1aZXyvkGSmgrpvylVks6CE9u-TV-kmaA-/preview",
+				"newtab": false
 			}
 		]
 	}

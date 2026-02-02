@@ -7,7 +7,7 @@
 				"slug": "syllabus",
 				"emoji": "🎬",
 				"desc": "An overview of the full course.",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?usp=sharing",
 				"newtab": false
 			},
 			{
@@ -15,7 +15,7 @@
 				"slug": "schedule",
 				"emoji": "🗓️",
 				"desc": "Agenda and homework for each week.",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.m0nsq5rbo41b",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.m0nsq5rbo41b",
 				"newtab": false
 			},
 			{
@@ -23,7 +23,7 @@
 				"slug": "tutorials",
 				"emoji": "🎓",
 				"desc": "Learn how to type design in Glyphs and code websites using HTML, CSS, and JavaScript.",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.o9xig14lbdgw",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.o9xig14lbdgw",
 				"newtab": false
 			},
 			{
@@ -31,7 +31,7 @@
 				"slug": "inspiration",
 				"emoji": "💡",
 				"desc": "Links to fun fonts and websites!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.pqqs7cyea8p0",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.pqqs7cyea8p0",
 				"newtab": false
 			},
 			{
@@ -39,7 +39,7 @@
 				"slug": "exercises",
 				"emoji": "🔥",
 				"desc": "Quick, fun assignments that we’ll complete during class.",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.t11m1z9hohhs",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.t11m1z9hohhs",
 				"newtab": false
 			},
 			{
@@ -63,7 +63,7 @@
 				"emoji": "✅",
 				"slug": "final-checklist",
 				"desc": "Make sure you complete all of these items!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.tu96xmh4d07l",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.tu96xmh4d07l",
 				"newtab": false
 			}
 		]
@@ -76,7 +76,7 @@
 				"slug": "p1-point",
 				"emoji": "👾",
 				"desc": "Design a pixel font!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.17vw6k8ts8m2",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.17vw6k8ts8m2",
 				"newtab": false
 			},
 			{
@@ -84,7 +84,7 @@
 				"slug": "p2-path",
 				"emoji": "⭕️",
 				"desc": "Remix an open-source font by turning it into a variable font!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.0",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.0",
 				"newtab": false
 			},
 			{
@@ -92,7 +92,7 @@
 				"slug": "p3-polygon",
 				"emoji": "📐",
 				"desc": "Design an original variable font!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.2a4yv1ahjuhy",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.2a4yv1ahjuhy",
 				"newtab": false
 			},
 			{
@@ -100,7 +100,7 @@
 				"slug": "p4-publish",
 				"emoji": "🛜",
 				"desc": "Launch a type foundry with all of the fonts you created this semester!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.yp94ibjd3e90",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.yp94ibjd3e90",
 				"newtab": false
 			},
 			{
@@ -108,7 +108,7 @@
 				"slug": "p5-perform",
 				"emoji": "🤹",
 				"desc": "Create a web-based type specimen for one of your original variable fonts!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.d2a9k0uik0ag",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.d2a9k0uik0ag",
 				"newtab": false
 			},
 			{
@@ -116,7 +116,7 @@
 				"slug": "ps-passport",
 				"emoji": "✈️",
 				"desc": "Create a presentation compiling examples of innovative uses of typography on websites!",
-				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/edit?tab=t.4jpx0fd7l27q",
+				"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.4jpx0fd7l27q",
 				"newtab": false
 			}
 		]

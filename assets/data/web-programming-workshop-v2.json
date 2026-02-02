@@ -11,13 +11,13 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://docs.google.com/document/d/1UG59e9pNNIaiRYODHAac_s2GuTw0p6m-MVLf8W8nXXw/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1UG59e9pNNIaiRYODHAac_s2GuTw0p6m-MVLf8W8nXXw/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Resources",
 				"slug": "resources",
-				"url": "https://docs.google.com/document/d/1AegPwvBtgPwyvJC0SI4VUZT_YAFdY-pc0fYLDwXApUw/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1AegPwvBtgPwyvJC0SI4VUZT_YAFdY-pc0fYLDwXApUw/preview?usp=sharing",
 				"newtab": false
 			}
 		]
@@ -28,19 +28,19 @@
 			{
 				"name": "GitHub Tutorial",
 				"slug": "github-tutorial",
-				"url": "https://drive.google.com/file/d/1jGdIYjchg6IPYNVSW09xIksjhFCVd-Tn/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1jGdIYjchg6IPYNVSW09xIksjhFCVd-Tn/preview",
+				"newtab": false
 			},
 			{
 				"name": "Links to Everything",
 				"slug": "links-to-everything",
-				"url": "https://docs.google.com/document/d/1G6xxxL5ogpgNXkgQ5JpI6fYsuoXcdNn4cVvR0NfUvEU/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1G6xxxL5ogpgNXkgQ5JpI6fYsuoXcdNn4cVvR0NfUvEU/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Glossary",
 				"slug": "glossary",
-				"url": "https://docs.google.com/document/d/1GhjUq1Ei1561fibVtVIIQzerFG216nbXcqmNL__8A0o/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1GhjUq1Ei1561fibVtVIIQzerFG216nbXcqmNL__8A0o/preview?usp=sharing",
 				"newtab": false
 			},
 			{
@@ -57,31 +57,31 @@
 			{
 				"name": "Week 1 Exercises",
 				"slug": "week-1-exercises",
-				"url": "https://docs.google.com/document/d/1QnieR03j57KvoIK4GlaOOqWjZH5O2QT8URLKf7kaCgA/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1QnieR03j57KvoIK4GlaOOqWjZH5O2QT8URLKf7kaCgA/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Assignment 1",
 				"slug": "assignment-1",
-				"url": "https://docs.google.com/document/d/1_QmiKHDeN7OZGGvCFgQl6WKVj_j5mexUQZy7HXLqRRc/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1_QmiKHDeN7OZGGvCFgQl6WKVj_j5mexUQZy7HXLqRRc/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Assignment 2",
 				"slug": "assignment-2",
-				"url": "https://docs.google.com/document/d/1Qv5FymDcDLOlHzwuvdA4rmmFQds_h45KBXLQpL2RhrM/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1Qv5FymDcDLOlHzwuvdA4rmmFQds_h45KBXLQpL2RhrM/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Final Project [Section 1]",
 				"slug": "final-project-section-1",
-				"url": "https://docs.google.com/document/d/1n3BtByN_YN_LKHYaq_ZCcNDc1fzVcZCWAtIYuFBCxAY/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1n3BtByN_YN_LKHYaq_ZCcNDc1fzVcZCWAtIYuFBCxAY/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Final Project [Section 2]",
 				"slug": "final-project-section-2",
-				"url": "https://docs.google.com/document/d/1ZgmAo7KCKG34DuMJTSb9ZienZU_HIPRUHMBEBeg792s/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1ZgmAo7KCKG34DuMJTSb9ZienZU_HIPRUHMBEBeg792s/preview?usp=sharing",
 				"newtab": false
 			}
 		]
@@ -92,7 +92,7 @@
 			{
 				"name": "Lessons",
 				"slug": "lessons",
-				"url": "https://docs.google.com/document/d/1cFaFQb0GpR8-JsGUlFotaea3JdkvHrmZpgdAw8bOGKM/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1cFaFQb0GpR8-JsGUlFotaea3JdkvHrmZpgdAw8bOGKM/preview?usp=sharing",
 				"newtab": false
 			}
 		]

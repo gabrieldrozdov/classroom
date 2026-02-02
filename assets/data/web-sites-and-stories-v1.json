@@ -5,7 +5,7 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://docs.google.com/document/d/1i34q-M4Wnae1QlO-UXo58X3MNYW3UkDX_E20Kml1PDE/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1i34q-M4Wnae1QlO-UXo58X3MNYW3UkDX_E20Kml1PDE/preview?usp=sharing",
 				"newtab": false
 			},
 			{
@@ -34,7 +34,7 @@
 			{
 				"name": "Things You Should Know",
 				"slug": "things-you-should-know",
-				"url": "https://docs.google.com/document/d/1OP4WN5g3v_NVYaLKvukky_wYqbMbVnxyOz1alTNsUD8/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1OP4WN5g3v_NVYaLKvukky_wYqbMbVnxyOz1alTNsUD8/preview?usp=sharing",
 				"newtab": false
 			},
 			{
@@ -51,25 +51,25 @@
 			{
 				"name": "Project 1: Interface Report",
 				"slug": "project-1",
-				"url": "https://docs.google.com/document/d/1iz2NCf7wZA7zmiIvCweTzNOPNDtzHEHoVqU6mrMIeI8/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1iz2NCf7wZA7zmiIvCweTzNOPNDtzHEHoVqU6mrMIeI8/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Worksheet A: HTML, CSS, and GitHub",
 				"slug": "worksheet-a",
-				"url": "https://docs.google.com/document/d/1xw1NyaUoUHyFGbZo35Zd0d7H-u7cJOjDpGxksBKk4bw/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1xw1NyaUoUHyFGbZo35Zd0d7H-u7cJOjDpGxksBKk4bw/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Project 2: Small Sites; Big Stories",
 				"slug": "project-2",
-				"url": "https://docs.google.com/document/d/1uWEy46tA8XXPeRMEEdgLjwNoyvpSynEfact5BqyUH88/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1uWEy46tA8XXPeRMEEdgLjwNoyvpSynEfact5BqyUH88/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Project 3: Small Sites; Big Stories [2]",
 				"slug": "project-3",
-				"url": "https://docs.google.com/document/d/1nG5gPmPlY-Zgtdlc8fIcekvtWTPDHKs7i4cj79WQqV8/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1nG5gPmPlY-Zgtdlc8fIcekvtWTPDHKs7i4cj79WQqV8/preview?usp=sharing",
 				"newtab": false
 			}
 		]
@@ -80,56 +80,56 @@
 			{
 				"name": "Class 1: Lecture",
 				"slug": "class-1-lecture",
-				"url": "https://docs.google.com/document/d/12w_DSvfBrsejLJ9QNKLjrFF8boYQ5XalVbuTbZ3w2Nc/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/12w_DSvfBrsejLJ9QNKLjrFF8boYQ5XalVbuTbZ3w2Nc/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Class 1: Slide Deck",
 				"slug": "class-1-slide-deck",
-				"url": "https://drive.google.com/file/d/1iU8NDTQXjC-5SfR3Y-xN3KEY5y6lolOB/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1iU8NDTQXjC-5SfR3Y-xN3KEY5y6lolOB/preview",
+				"newtab": false
 			},
 			{
 				"name": "Class 2: Lecture",
 				"slug": "class-2-lecture",
-				"url": "https://docs.google.com/document/d/1vBSFb_smLDRqftFHeidIBsHyAILjq3dlcR_AtaCliZE/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1vBSFb_smLDRqftFHeidIBsHyAILjq3dlcR_AtaCliZE/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Class 2: Slide Deck",
 				"slug": "class-2-slide-deck",
-				"url": "https://drive.google.com/file/d/1eSQSp981YUxYDRbkoIj8Lfxx7QC_HdBs/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1eSQSp981YUxYDRbkoIj8Lfxx7QC_HdBs/preview",
+				"newtab": false
 			},
 			{
 				"name": "Class 3: Lecture",
 				"slug": "class-3-lecture",
-				"url": "https://docs.google.com/document/d/1iUkCNrP-PN40gYGLwBn8NTGarn9QTYVIY24ygC5H7bM/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1iUkCNrP-PN40gYGLwBn8NTGarn9QTYVIY24ygC5H7bM/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Class 3: Slide Deck",
 				"slug": "class-3-slide-deck",
-				"url": "https://drive.google.com/file/d/1RU-1ue_bd0Jp4IQ6Itpz3tb7Xt8xnD8J/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1RU-1ue_bd0Jp4IQ6Itpz3tb7Xt8xnD8J/preview",
+				"newtab": false
 			},
 			{
 				"name": "Class 8: Lecture",
 				"slug": "class-8-lecture",
-				"url": "https://docs.google.com/document/d/12kTC59nXxflz70nEsjbLrp2q8XKWsqx4ZIkCl76R5lk/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/12kTC59nXxflz70nEsjbLrp2q8XKWsqx4ZIkCl76R5lk/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Class 8: Slide Deck",
 				"slug": "class-8-slide-deck",
-				"url": "https://drive.google.com/file/d/1QIZYefs_iMqhU5hLd0wBrBpMoGepUQQk/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1QIZYefs_iMqhU5hLd0wBrBpMoGepUQQk/preview",
+				"newtab": false
 			},
 			{
 				"name": "Class 11: Slide Deck",
 				"slug": "class-11-slide-deck",
-				"url": "https://drive.google.com/file/d/1Uebh5xA9BwqjhNb-BHzYwSLPCixa58Y4/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1Uebh5xA9BwqjhNb-BHzYwSLPCixa58Y4/preview",
+				"newtab": false
 			}
 		]
 	}

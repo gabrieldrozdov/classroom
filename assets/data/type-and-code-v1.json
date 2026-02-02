@@ -5,19 +5,19 @@
 			{
 				"name": "Syllabus",
 				"slug": "syllabus",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?usp=sharing",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?usp=sharing",
 				"newtab": false
 			},
 			{
 				"name": "Schedule",
 				"slug": "schedule",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.uwu9i2pbz132",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.uwu9i2pbz132",
 				"newtab": false
 			},
 			{
 				"name": "Resources",
 				"slug": "resources",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.tumfv79f53pr",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.tumfv79f53pr",
 				"newtab": false
 			}
 		]
@@ -28,25 +28,25 @@
 			{
 				"name": "Research & Analysis",
 				"slug": "research-and-analysis",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.g1ln27r7vbjd",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.g1ln27r7vbjd",
 				"newtab": false
 			},
 			{
 				"name": "Project 1: Time Traveler",
 				"slug": "project-1",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.qyjwo2qodni",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.qyjwo2qodni",
 				"newtab": false
 			},
 			{
 				"name": "Project 2: Live Type",
 				"slug": "project-2",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.93s6zdjxh731",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.93s6zdjxh731",
 				"newtab": false
 			},
 			{
 				"name": "Project 3: Not a Book",
 				"slug": "project-3",
-				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/edit?tab=t.6upzmi3qezwt",
+				"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.6upzmi3qezwt",
 				"newtab": false
 			}
 		]
@@ -86,26 +86,26 @@
 			{
 				"name": "Glyphs Basics",
 				"slug": "glyphs-basics",
-				"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/preview",
+				"newtab": false
 			},
 			{
 				"name": "Setting Up Variable Axes",
 				"slug": "setting-up-variable-axes",
-				"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/preview",
+				"newtab": false
 			},
 			{
 				"name": "Pixel Fonts",
 				"slug": "pixel-fonts",
-				"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/preview",
+				"newtab": false
 			},
 			{
 				"name": "Drawing in Glyphs",
 				"slug": "drawing-in-glyphs",
-				"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/view?usp=sharing",
-				"newtab": true
+				"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/preview",
+				"newtab": false
 			}
 		]
 	},
