@@ -1,5 +1,36 @@
 [
 	{
+		"name": "2026",
+		"contents": [
+			{
+				"slug": "design-for-interaction-v2",
+				"emoji": "👆",
+				"name": "Design for Interaction",
+				"version": "v2",
+				"desc": "A primer on UI/UX from the perspectives of performance and playfulness.",
+				"long-desc": "<p>How do you turn an object, such as a flat, digital screen, into something people can interact with and understand? This question underscores the field of user interface and experience (UI/UX) design, which aims to create legible, meaningful experiences for virtually everything we interact with. In this studio elective, we’ll study UI/UX from a digital perspective, exploring the interface design of various mediums including apps, websites, operating systems, video games, appliances, exhibitions, and more. Instruction and projects will focus primarily on using Figma to create mockups and prototypes, with digressions into practices for user experience research. While this is not a coding course, lectures and exercises will explore the relationship between designers and developers. Familiarity with graphic design and typography is recommended but not required.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2026",
+					"GRAPH 3327"
+				]
+			},
+			{
+				"slug": "introduction-to-computation-v2",
+				"emoji": "🤖",
+				"name": "Introduction to Computation",
+				"version": "v2",
+				"desc": "Computer science for designers and artists.",
+				"long-desc": "<p>Introduction to Computation is the pathway course to the CTC Concentration. In this course, students learn the essentials of computer science, including the design of algorithms, user interface and experience design, and generative art. Instruction covers object-oriented programming using JavaScript, paired with HTML and CSS for web development. Further instruction covers JavaScript libraries like p5.js. Beyond these technical studies, this course engages with the history of code as an artistic medium, bringing in references ranging from early video game design, to contemporary artists engaging with websites and applications as fine art mediums.</p><p>This course is open to students of all majors and is designed for those with little or no experience in programming.</p>",
+				"tags": [
+					"RISD",
+					"Spring 2026",
+					"CTC 2101"
+				]
+			}
+		]
+	},
+	{
 		"name": "2025",
 		"contents": [
 			{

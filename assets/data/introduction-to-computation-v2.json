@@ -4,16 +4,63 @@
 		"contents": [
 			{
 				"name": "Syllabus",
-				"emoji": "🍎",
+				"emoji": "🤖",
 				"slug": "syllabus",
-				"url": "https://docs.google.com/document/d/1PQGPguauPCHGgsAEYy4GFoYU3DiXfiqpxY1R2NFxF14/preview?usp=sharing",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?usp=sharing",
 				"newtab": false
 			},
 			{
-				"name": "Schedule",
+				"name": "Calendar",
 				"emoji": "🗓️",
-				"slug": "schedule",
-				"url": "https://docs.google.com/document/d/1PQGPguauPCHGgsAEYy4GFoYU3DiXfiqpxY1R2NFxF14/preview?tab=t.mluho8o35or9",
+				"slug": "calendar",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.mluho8o35or9",
+				"newtab": false
+			},
+			{
+				"name": "Resources",
+				"emoji": "🖇️",
+				"slug": "resources",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.c4wwcv87h97v",
+				"newtab": false
+			},
+			{
+				"name": "Exercises",
+				"emoji": "🔥",
+				"slug": "exercises",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.9datd5habbc6",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Resources",
+		"contents": [
+			{
+				"name": "Baby Steps",
+				"emoji": "👶",
+				"slug": "baby-steps",
+				"url": "https://babysteps.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "Cheatsheet",
+				"emoji": "📝",
+				"slug": "cheatsheet",
+				"url": "https://cheatsheet.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "DEMOLAND",
+				"emoji": "💻",
+				"slug": "demoland",
+				"url": "https://demoland.gdwithgd.com/",
+				"newtab": false
+			},
+			{
+				"name": "Web Editor",
+				"emoji": "💾",
+				"slug": "web-editor",
+				"url": "https://demoland.gdwithgd.com/editor/",
 				"newtab": false
 			}
 		]
@@ -21,6 +68,27 @@
 	{
 		"name": "Projects",
 		"contents": [
+			{
+				"name": "P1: Time Traveler",
+				"emoji": "🕰️",
+				"slug": "p1-time-traveler",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.17vw6k8ts8m2",
+				"newtab": false
+			},
+			{
+				"name": "P2: Web Recipes",
+				"emoji": "🍳",
+				"slug": "p2-web-recipes",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.rq8z4igaonvm",
+				"newtab": false
+			},
+			{
+				"name": "P3: (Web)site-specific Performance",
+				"emoji": "🎭",
+				"slug": "p3-website-specific-performance",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.jqkpmi4fp9mx",
+				"newtab": false
+			}
 		]
 	}
 ]

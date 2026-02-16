@@ -34,6 +34,7 @@ body {
 	font-weight: 400;
 	background-color: var(--lighter-gray);
 	color: var(--off-black);
+	text-transform: lowercase;
 }
 @keyframes background-move {
 	0% {
@@ -338,7 +339,7 @@ body {
 	opacity: .25;
 }
 .menu-desc-tag {
-	font-size: 10px;
+	font-size: 11px;
 	text-transform: uppercase;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
@@ -495,13 +496,12 @@ body {
 	padding-right: 40px;
 }
 .home-menu-link-content-tag {
-	font-size: 10px;
-	text-transform: uppercase;
-	font-variation-settings: "wght" 700, "SRFF" 0;
-	font-weight: 700;
+	font-size: 11px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
 	color: color-mix(in hsl, var(--off-black) 50%, var(--primary) 100%);
 	line-height: 1em;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.05em;
 	padding-top: .2em;
 }
 .home-menu-link-content-emoji {
@@ -634,13 +634,12 @@ body {
 	padding-top: .2em;
 }
 .course-menu-link-content-tag {
-	font-size: 10px;
-	text-transform: uppercase;
-	font-variation-settings: "wght" 700, "SRFF" 0;
-	font-weight: 700;
+	font-size: 11px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
 	color: color-mix(in hsl, var(--off-black) 50%, var(--primary) 100%);
 	line-height: 1em;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.05em;
 	padding-top: .2em;
 }
 .course-menu-link-content-emoji {
@@ -770,11 +769,10 @@ body {
 	padding: 10px;
 }
 .resource-menu-header-label {
-	font-size: 10px;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-variation-settings: "wght" 800, "SRFF" 0;
-	font-weight: 800;
+	font-size: 11px;
+	letter-spacing: .05em;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
 	line-height: 1em;
 	border-radius: 5px;
 	color: var(--off-black);
@@ -879,11 +877,10 @@ body {
 	gap: 5px;
 }
 .resource-menu-section-heading {
-	font-size: 10px;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-variation-settings: "wght" 800, "SRFF" 0;
-	font-weight: 800;
+	font-size: 11px;
+	letter-spacing: .05em;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
 	line-height: 1em;
 	border-radius: 5px;
 	color: var(--off-black);
@@ -965,11 +962,10 @@ body {
 	overflow: hidden;
 }
 .resource-url-label {
-	font-size: 10px;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-variation-settings: "wght" 800, "SRFF" 0;
-	font-weight: 800;
+	font-size: 11px;
+	letter-spacing: .05em;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
 	line-height: 1.2em;
 	border-radius: 10px;
 	height: 20px;
@@ -993,7 +989,7 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	flex-grow: 1;
-	padding-top: .05em;
+	padding-top: .15em;
 }
 .resource-url-content-arrow {
 	background-color: var(--primary);
@@ -1106,7 +1102,7 @@ body {
 	transition: opacity .2s, background-color .2s;
 }
 .resource-nav-toggle span {
-	font-size: 10px;
+	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-variation-settings: "wght" 800, "SRFF" 0;

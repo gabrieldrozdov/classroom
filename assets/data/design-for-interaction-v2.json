@@ -1,45 +1,130 @@
 [
 	{
-		"name": "Course Materials",
+		"name": "course materials",
 		"contents": [
 			{
-				"name": "Syllabus",
+				"name": "syllabus",
 				"emoji": "👆",
 				"slug": "syllabus",
 				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?usp=sharing",
 				"newtab": false
 			},
 			{
-				"name": "Calendar",
+				"name": "calendar",
 				"emoji": "🗓️",
 				"slug": "calendar",
 				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.mluho8o35or9",
+				"newtab": false
+			},
+			{
+				"name": "student work folder",
+				"emoji": "📂",
+				"slug": "student-work",
+				"url": "https://drive.google.com/drive/folders/1he1J2NeEAOX6j2j-MsbMhe92tucVNPiV?usp=sharing",
+				"newtab": true
+			}
+		]
+	},
+	{
+		"name": "resources",
+		"contents": [
+			{
+				"name": "software",
+				"emoji": "💽",
+				"slug": "resources-software",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.vey1omp75jwe",
+				"newtab": false
+			},
+			{
+				"name": "concepts",
+				"emoji": "🎓",
+				"slug": "resources-concepts",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.9nu5qtasxhi7",
+				"newtab": false
+			},
+			{
+				"name": "inspiration",
+				"emoji": "💡",
+				"slug": "resources-inspiration",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.k2uv2nzawi3x",
 				"newtab": false
 			}
 		]
 	},
 	{
-		"name": "Projects",
+		"name": "projects",
 		"contents": [
 			{
-				"name": "Project 1: Designing for Play",
+				"name": "p1: designing for play",
 				"emoji": "🪗",
-				"slug": "project-1-designing-for-play",
+				"slug": "p1-designing-for-play",
 				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.17vw6k8ts8m2",
 				"newtab": false
 			},
 			{
-				"name": "Project 2: Designing a Community",
+				"name": "p2: designing a community",
 				"emoji": "🏘️",
-				"slug": "project-2-designing-a-community",
+				"slug": "p2-designing-a-community",
 				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.rq8z4igaonvm",
 				"newtab": false
 			},
 			{
-				"name": "Project 3: Design as an Act of Service",
+				"name": "p3: design as an act of service",
 				"emoji": "🛠️",
-				"slug": "project-3-design-as-an-act-of-service",
+				"slug": "p3-design-as-an-act-of-service",
 				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.jqkpmi4fp9mx",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "lectures",
+		"contents": [
+			{
+				"name": "week 1",
+				"emoji": "👋",
+				"slug": "week-1",
+				"url": "https://docs.google.com/presentation/d/1dNRNxJQftWZib8mhLg1f3GfxaTsxY1-oBAejJJrRwho/preview?usp=sharing",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "exercises",
+		"contents": [
+			{
+				"name": "exercises",
+				"emoji": "🔥",
+				"slug": "exercises",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.9dvkq0pcrzzk",
+				"newtab": false
+			},
+			{
+				"name": "playground",
+				"emoji": "🛝",
+				"slug": "exercise-playground",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.6305ao68vj36",
+				"newtab": false
+			},
+			{
+				"name": "conditional design",
+				"emoji": "➿",
+				"slug": "exercise-conditional-design",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.sq49vuuc8zqk",
+				"newtab": false
+			},
+			{
+				"name": "composition",
+				"emoji": "🎼",
+				"slug": "exercise-composition",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.307eyppw8ovi",
+				"newtab": false
+			},
+			{
+				"name": "arcade",
+				"emoji": "🕹️",
+				"slug": "exercise-arcade",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.rw0lpsy233yn",
 				"newtab": false
 			}
 		]
