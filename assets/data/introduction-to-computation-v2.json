@@ -22,13 +22,6 @@
 				"slug": "resources",
 				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.c4wwcv87h97v",
 				"newtab": false
-			},
-			{
-				"name": "Exercises",
-				"emoji": "🔥",
-				"slug": "exercises",
-				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.9datd5habbc6",
-				"newtab": false
 			}
 		]
 	},
@@ -76,9 +69,9 @@
 				"newtab": false
 			},
 			{
-				"name": "P2: Web Recipes",
-				"emoji": "🍳",
-				"slug": "p2-web-recipes",
+				"name": "P2: Small Sites; Big Stories",
+				"emoji": "📚",
+				"slug": "p2-small-sites-big-stories",
 				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.rq8z4igaonvm",
 				"newtab": false
 			},
@@ -87,6 +80,30 @@
 				"emoji": "🎭",
 				"slug": "p3-website-specific-performance",
 				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.jqkpmi4fp9mx",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Lectures",
+		"contents": [
+			{
+				"name": "week 1",
+				"emoji": "👋",
+				"slug": "week-11",
+				"url": "https://docs.google.com/presentation/d/1EFekWOIo9KUtb7BkNPtZF72509b2MmvErCYNXf8M11w/preview?usp=sharing",
+				"newtab": false
+			}
+		]
+	},
+	{
+		"name": "Exercises",
+		"contents": [
+			{
+				"name": "instructing a sketch",
+				"emoji": "🐾",
+				"slug": "exercise-instructing-a-sketch",
+				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.oa9p9ejrb57e",
 				"newtab": false
 			}
 		]
