@@ -29,6 +29,13 @@
 				"slug": "exercises",
 				"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.2skkrin9bvdh",
 				"newtab": false
+			},
+			{
+				"name": "Project Submissions",
+				"emoji": "📂",
+				"slug": "submissions",
+				"url": "https://docs.google.com/spreadsheets/d/1ZoIWzAXIOUNPi8jNYYdai4sCenPpKZE1qYOrjL0Kcbo/edit?usp=sharing",
+				"newtab": false
 			}
 		]
 	},
