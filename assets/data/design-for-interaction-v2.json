@@ -17,6 +17,13 @@
 				"newtab": false
 			},
 			{
+				"name": "exercises",
+				"emoji": "🔥",
+				"slug": "exercises",
+				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.flrs7n5x7xut",
+				"newtab": false
+			},
+			{
 				"name": "student work folder",
 				"emoji": "📂",
 				"slug": "student-work",
@@ -78,7 +85,7 @@
 		]
 	},
 	{
-		"name": "lectures",
+		"name": "weekly agendas",
 		"contents": [
 			{
 				"name": "week 1",
@@ -107,45 +114,12 @@
 				"slug": "week-4",
 				"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=744-111&embed-host=share",
 				"newtab": false
-			}
-		]
-	},
-	{
-		"name": "exercises",
-		"contents": [
-			{
-				"name": "exercises",
-				"emoji": "🔥",
-				"slug": "exercises",
-				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.9dvkq0pcrzzk",
-				"newtab": false
 			},
 			{
-				"name": "playground",
-				"emoji": "🛝",
-				"slug": "exercise-playground",
-				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.6305ao68vj36",
-				"newtab": false
-			},
-			{
-				"name": "conditional design",
-				"emoji": "➿",
-				"slug": "exercise-conditional-design",
-				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.sq49vuuc8zqk",
-				"newtab": false
-			},
-			{
-				"name": "composition",
-				"emoji": "🎼",
-				"slug": "exercise-composition",
-				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.307eyppw8ovi",
-				"newtab": false
-			},
-			{
-				"name": "arcade",
-				"emoji": "🕹️",
-				"slug": "exercise-arcade",
-				"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.rw0lpsy233yn",
+				"name": "week 5",
+				"emoji": "🦆",
+				"slug": "week-5",
+				"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=1089-301&embed-host=share",
 				"newtab": false
 			}
 		]
