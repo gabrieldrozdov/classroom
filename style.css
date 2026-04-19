@@ -759,7 +759,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	overflow: scroll;
+	overflow: auto;
 	padding: 20px;
 	border-radius: 20px;
 	border: 1px solid color-mix(in hsl, var(--off-black) 50%, var(--primary) 100%);
