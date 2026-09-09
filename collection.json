@@ -32,6 +32,13 @@
 								"slug": "student-work",
 								"url": "https://drive.google.com/drive/folders/1PySVmI2KXaGTAj067KKZySXbgXtBXqtF?usp=sharing",
 								"newtab": true
+							},
+							{
+								"name": "Figjam",
+								"emoji": "👆",
+								"slug": "figjam",
+								"url": "https://embed.figma.com/board/D0zSet8Bv63DLj6bxzRuoB/risd-f26---ds3?node-id=0-1&embed-host=share",
+								"newtab": false
 							}
 						]
 					},
