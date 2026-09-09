@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>📝 Editor | GD with GD Classroom</title>
+	<meta name="robots" content="noindex">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+	<div class="editor" id="editor">
+		<section class="editor-source">
+			<header class="editor-source-header">
+				<h1 class="editor-title"><a href="/">📝&nbsp;&nbsp;markdown editor</a></h1>
+				<label class="editor-fontsize" title="Type size">
+					<span>size</span>
+					<input type="range" id="fontsize" min="11" max="24" step="1" value="14" aria-label="Type size">
+				</label>
+				<button class="editor-toggle" id="toggle-toolbar" aria-expanded="true"><span>✍️</span> <span>shortcodes</span></button>
+				<button class="editor-toggle" id="toggle-spellcheck" aria-pressed="false"><span>🔠</span> <span>spellcheck</span></button>
+				<button class="editor-toggle" id="toggle-pause" aria-pressed="false"><span>⏸️</span> <span>pause</span></button>
+			</header>
+
+			<div class="editor-toolbar" id="toolbar"></div>
+
+			<div class="editor-input" id="input"></div>
+
+			<footer class="editor-source-footer">
+				<label class="editor-filename">
+					<input type="text" id="filename" value="untitled" spellcheck="false" autocomplete="off">
+					<span>.md</span>
+				</label>
+				<button class="editor-file-button" id="save"><span>💾</span> <span>save</span></button>
+				<button class="editor-file-button" id="load"><span>💿</span> <span>load</span></button>
+				<button class="editor-file-button" id="new"><span>📄</span> <span>new</span></button>
+				<button class="editor-file-button" id="upload"><span>⬆️</span> <span>upload</span></button>
+				<button class="editor-file-button" id="download"><span>⬇️</span> <span>download</span></button>
+				<input type="file" id="file" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
+				<span class="editor-status" id="status"></span>
+			</footer>
+		</section>
+
+		<div class="editor-divider" id="divider" role="separator" aria-label="Resize panes" tabindex="0"></div>
+
+		<section class="editor-preview">
+			<iframe class="editor-frame" id="frame" title="Preview"></iframe>
+			<div class="editor-tools">
+				<button class="resource-menu-control" id="present" aria-label="Present">
+					<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="editor-tool-present" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#editor-tool-present">present</textPath></text></svg>
+					<div class="resource-menu-control-icon"><p>📺</p></div>
+				</button>
+				<button class="resource-menu-control" id="print" aria-label="Print">
+					<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="editor-tool-print" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#editor-tool-print">print</textPath></text></svg>
+					<div class="resource-menu-control-icon"><p>🖨️</p></div>
+				</button>
+			</div>
+		</section>
+	</div>
+
+	<dialog class="editor-dialog" id="library">
+		<div class="editor-dialog-inner">
+			<header class="editor-dialog-header">
+				<h2 class="editor-dialog-title">💿&nbsp;&nbsp;saved files</h2>
+				<button class="editor-file-button" id="library-close"><span>❌</span> <span>close</span></button>
+			</header>
+			<div class="editor-dialog-list" id="library-list"></div>
+			<footer class="editor-dialog-footer" id="library-footer">
+				<button class="editor-file-button" id="download-all"><span>💾</span> <span>download all</span></button>
+				<button class="editor-file-button" id="erase-all"><span>🗑️</span> <span>erase all</span></button>
+			</footer>
+		</div>
+	</dialog>
+
+	<script src="/assets/scripts/generate.js"></script>
+	<script src="/assets/scripts/codemirror.js"></script>
+	<script src="/assets/scripts/editor.js"></script>
+</body>
+</html>

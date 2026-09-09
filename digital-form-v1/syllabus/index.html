@@ -17,26 +17,33 @@
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
 
 							<link rel="stylesheet" href="/style.css">
+							
 						</head>
 						<body>
 			
 							<div class="resource-container" style="--primary: var(--pink);" data-menu="0">
 								<nav class="resource-menu">
 									<div class="resource-menu-content">
+										<a href="/" class="resource-menu-home"><span class="resource-menu-home-emoji">🍎</span><span class="resource-menu-home-text"><span style="color: var(--pink);">G</span><span style="color: var(--green);">D</span> <span style="color: var(--blue);">w</span><span style="color: var(--yellow);">i</span><span style="color: var(--purple);">t</span><span style="color: var(--red);">h</span> <span style="color: var(--pink);">G</span><span style="color: var(--green);">D</span> Classroom</span></a>
 										<header class="resource-menu-header">
 											<div class="resource-menu-header-label">
-												Current Course
+												<span class="resource-menu-header-label-emoji">📺</span>
+												<span class="resource-menu-header-label-text">Current Course</span>
 											</div>
-											<h1 class="resource-menu-header-title">
+											<p class="resource-menu-header-title">
 												<a href="../">
 													Digital Form
 													<span class="resource-menu-header-version">v1</span>
 												</a>
-											</h1>
+											</p>
 										</header>
-										
+										<div class="resource-menu-list">
+											
 					<section class="resource-menu-section">
-						<h2 class="resource-menu-section-heading">Course Materials</h2>
+						<div class="resource-menu-section-header">
+							
+							<h2 class="resource-menu-section-heading">Course Materials</h2>
+						</div>
 						<div class="resource-menu-links">
 							
 						<a href="/digital-form-v1/syllabus/" style="--primary: var(--pink);" class="resource-menu-link">
@@ -58,7 +65,10 @@
 					</section>
 				
 					<section class="resource-menu-section">
-						<h2 class="resource-menu-section-heading">Tutorials</h2>
+						<div class="resource-menu-section-header">
+							
+							<h2 class="resource-menu-section-heading">Tutorials</h2>
+						</div>
 						<div class="resource-menu-links">
 							
 						<a href="/digital-form-v1/introduction-to-illustrator/" style="--primary: var(--yellow);" class="resource-menu-link">
@@ -90,7 +100,10 @@
 					</section>
 				
 					<section class="resource-menu-section">
-						<h2 class="resource-menu-section-heading">Projects</h2>
+						<div class="resource-menu-section-header">
+							
+							<h2 class="resource-menu-section-heading">Projects</h2>
+						</div>
 						<div class="resource-menu-links">
 							
 						<a href="/digital-form-v1/small-project-1/" style="--primary: var(--blue);" class="resource-menu-link">
@@ -142,7 +155,10 @@
 					</section>
 				
 					<section class="resource-menu-section">
-						<h2 class="resource-menu-section-heading">Lectures</h2>
+						<div class="resource-menu-section-header">
+							
+							<h2 class="resource-menu-section-heading">Lectures</h2>
+						</div>
 						<div class="resource-menu-links">
 							
 						<a href="/digital-form-v1/class-1/" style="--primary: var(--red);" class="resource-menu-link">
@@ -193,37 +209,66 @@
 						</div>
 					</section>
 				
-									</div>
-									<div class="resource-menu-header-links">
-										<a href="../" class="resource-menu-header-link">
-											<svg class="resource-menu-header-link-text" viewBox="0 0 100 100"><defs><path id="resource-menu-header-link-text1" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-header-link-text1">Digital Form</textPath></text></svg>
-											<div class="resource-menu-header-link-icon">
-												<p>📺</p>
+										</div>
+										<div class="resource-menu-controls">
+											<button class="resource-menu-control" onclick="if(window.enterDraw)window.enterDraw('annotate');" aria-label="Annotate">
+												<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-menu-control-annotate" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-control-annotate">annotate</textPath></text></svg>
+												<div class="resource-menu-control-icon">
+													<p>📝</p>
+												</div>
+											</button>
+											<button class="resource-menu-control" onclick="if(window.enterDraw)window.enterDraw('whiteboard');" aria-label="Whiteboard">
+												<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-menu-control-whiteboard" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-control-whiteboard">whiteboard</textPath></text></svg>
+												<div class="resource-menu-control-icon">
+													<p>✏️</p>
+												</div>
+											</button>
+											<button class="resource-menu-control" onclick="window.createPin();" aria-label="Pin">
+												<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-menu-control-pin" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-control-pin">pin</textPath></text></svg>
+												<div class="resource-menu-control-icon">
+													<p>📌</p>
+												</div>
+											</button>
+											<button class="resource-menu-control" onclick="window.createTimer();" aria-label="Timer">
+												<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-menu-control-timer" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-control-timer">timer</textPath></text></svg>
+												<div class="resource-menu-control-icon">
+													<p>⏰</p>
+												</div>
+											</button>
+											<button class="resource-menu-control" onclick="window.createRandomizer();" aria-label="Randomizer">
+												<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-menu-control-randomize" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-control-randomize">randomizer</textPath></text></svg>
+												<div class="resource-menu-control-icon">
+													<p>🎲</p>
+												</div>
+											</button>
+											<button class="resource-menu-control" onclick="if(window.toggleSoundboard)window.toggleSoundboard();" aria-label="Soundboard">
+												<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-menu-control-soundboard" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-control-soundboard">soundboard</textPath></text></svg>
+												<div class="resource-menu-control-icon">
+													<p>🔊</p>
+												</div>
+											</button>
+										</div>
+										<div class="resource-menu-divider">
+											<div class="resource-menu-divider-block">
+												<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
 											</div>
-										</a>
-										<a href="/" class="resource-menu-header-link">
-											<svg class="resource-menu-header-link-text" viewBox="0 0 100 100"><defs><path id="resource-menu-header-link-text2" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-header-link-text2">Classroom Homepage</textPath></text></svg>
-											<div class="resource-menu-header-link-icon">
-												<p>🏠</p>
+											<div class="resource-menu-divider-block">
+												<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
 											</div>
-										</a>
-										<a href="https://gdwithgd.com" class="resource-menu-header-link" target="_blank">
-											<svg class="resource-menu-header-link-text" viewBox="0 0 100 100"><defs><path id="resource-menu-header-link-text3" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-menu-header-link-text3">GD with GD</textPath></text></svg>
-											<div class="resource-menu-header-link-icon">
-												<p>🍎</p>
-											</div>
-										</a>
+										</div>
 									</div>
 								</nav>
 
 								<main class="resource-main">
-									<a class="resource-url" href="https://docs.google.com/document/d/19AlNcFVLS3moF2CVuAyIMRyJq9DbIEJ9S7m7Q0hZhwo/preview?usp=sharing" target="_blank">
-										<div class="resource-url-label">Current URL</div>
-										<div class="resource-url-content">
-											<span class="resource-url-content-text">https://docs.google.com/document/d/19AlNcFVLS3moF2CVuAyIMRyJq9DbIEJ9S7m7Q0hZhwo/preview?usp=sharing</span>
-											<span class="resource-url-content-arrow">↗</span>
-										</div>
-									</a>
+									
+							<a class="resource-url" href="https://docs.google.com/document/d/19AlNcFVLS3moF2CVuAyIMRyJq9DbIEJ9S7m7Q0hZhwo/preview?usp=sharing" target="_blank">
+								<div class="resource-url-label">Current URL</div>
+								<div class="resource-url-content">
+									<span class="resource-url-content-text">https://docs.google.com/document/d/19AlNcFVLS3moF2CVuAyIMRyJq9DbIEJ9S7m7Q0hZhwo/preview?usp=sharing</span>
+									<span class="resource-url-content-arrow">↗</span>
+								</div>
+							</a>
+						
 
 									<div class="resource-preview">
 										
@@ -235,12 +280,29 @@
 								</main>
 
 								<button class="resource-nav-toggle" onclick="toggleMenu();">
-									<span class="resource-nav-toggle-open">Open Menu</span>
-									<span class="resource-nav-toggle-close">Close Menu</span>
+									<span class="resource-nav-toggle-open">🧭 <span>Menu</span></span>
+									<span class="resource-nav-toggle-close">❌ <span>Close</span></span>
 								</button>
+
+								<div class="resource-mobile-divider">
+									<div class="resource-mobile-divider-block">
+										<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
+									</div>
+									<div class="resource-mobile-divider-block">
+										<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
+									</div>
+								</div>
 							</div>
 							
-							<script src="/resource.js"></script>
+							<script src="/assets/scripts/brand.js"></script>
+							<script src="/assets/scripts/widget.js"></script>
+							<script src="/assets/scripts/soundboard.js"></script>
+							<script src="/assets/scripts/timer.js"></script>
+							<script src="/assets/scripts/randomizer.js"></script>
+							<script src="/assets/scripts/pin.js"></script>
+							<script src="/assets/scripts/markdown.js"></script>
+							<script src="/assets/scripts/presentation.js"></script>
+							<script src="/assets/scripts/resource.js"></script>
 						</body>
 						</html>
 					

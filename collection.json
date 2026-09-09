@@ -1,0 +1,2472 @@
+[
+	{
+		"name": "🎓 now teaching",
+		"contents": [
+			{
+				"slug": "ds3-f26",
+				"emoji": "🌏",
+				"name": "Design Studio 3",
+				"version": "F26",
+				"desc": "RISD Graphic Design core curriculum: Culture, Context, Community",
+				"long-desc": "<p>Welcome to DS3! Design Studio ~ the GD Department’s 2-year core studio track ~ explores many realms, all stemming from the overarching questions: “How does (graphic) design operate?” and “What can graphic design accomplish?” This course is the continuation of your studies already begun in DS1 and DS2, and may be seen as a synthesis of skills and methods introduced in your first year, and a furthering of the idea of using graphic design to give voice to complex ideas.</p><p>As juniors ready to jump into the next phase of this multi-phase sequence, you will be given longer-term projects intermixed with in-studio workshops and exercises. Our focus will be on the relational aspects of graphic design: culture, context, and community. Upon completion of the Design Studio track, you will have a deeper sense of your own identity as a designer, and will be better able to frame questions and lines of inquiry on your own. End forms will be more emphasized than in DS1 and 2, in part as evidence that craft and working methods are evolving.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2026",
+					"GRAPH 3226"
+				],
+				"contents": [
+					{
+						"name": "📚 course materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"emoji": "🔠",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1-92cNh6MY2ORNJrAkOMJD6Esm4MVvNmjuI-bKMdPoCg/preview",
+								"newtab": false
+							},
+							{
+								"name": "Final Student Work Archive",
+								"emoji": "🔠",
+								"slug": "student-work",
+								"url": "https://drive.google.com/drive/folders/1PySVmI2KXaGTAj067KKZySXbgXtBXqtF?usp=sharing",
+								"newtab": true
+							}
+						]
+					},
+					{
+						"name": "✏️ Units",
+						"contents": [
+							{
+								"name": "Unit 9: Collections",
+								"emoji": "📦",
+								"slug": "unit-9",
+								"url": "https://docs.google.com/document/d/1oRSa8cNa90sSI9yBD--cx6NETPkAAlrjeyLMOgkyTtU/preview",
+								"newtab": false
+							},
+							{
+								"name": "Unit 9: Kick-off Slides",
+								"emoji": "📦",
+								"slug": "unit-9-kick-off",
+								"url": "https://docs.google.com/presentation/d/1FaY6OzQ1UpV3cIbv2HevHbNOGN06g9gYyjgoThBfI8g/preview",
+								"newtab": false
+							},
+							{
+								"name": "Archives / Libraries / Collections",
+								"emoji": "🏛️",
+								"slug": "archives-libraries-collections",
+								"url": "https://www.are.na/gabriel-drozdov/risd-f26-ds3-unit-9",
+								"newtab": false
+							},
+							{
+								"name": "Unit 10: Mapping & Visualizing Data",
+								"emoji": "📊",
+								"slug": "unit-10",
+								"url": "https://docs.google.com/document/d/1xaSE0StMCdm8n1OuZhASOkRqMuu408lC5TWJG3S2Sxs/preview",
+								"newtab": false,
+								"active": false
+							},
+							{
+								"name": "Unit 11: Designing with Purpose",
+								"emoji": "⚖️",
+								"slug": "unit-11",
+								"url": "https://docs.google.com/document/d/1ku4e1Ox2sNlJ4CnNGAuX5EeXXHeicAy6Rj6DhVQ9JCE/preview",
+								"newtab": false,
+								"active": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "type-and-code-v3",
+				"emoji": "🔠",
+				"name": "Type + Code",
+				"version": "v3",
+				"desc": "Design original fonts and make websites to bring them to life!",
+				"long-desc": "<p>Type + Code is a studio course in which students combine web programming with variable fonts to create interactive, dynamic typographic experiences. Students will become proficient in code (HTML, CSS, and JavaScript) and type design (Glyphs) to create original fonts, web specimens, digital articles, and more. This course encourages students to push the boundaries on contemporary type design and find new or underutilized use cases for experimental typography, both as a form of expression and in practical applications. These experiments are supported by readings from a wide variety of influences, including video games, performance studies, and computer science.</p><p>No prior experience in type design or coding is required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2026",
+					"GRAPH 3123"
+				],
+				"contents": [
+					{
+						"name": "📚 course materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"emoji": "🔠",
+								"slug": "syllabus",
+								"url": "/assets/markdown/type-and-code-v3/syllabus.md",
+								"newtab": false
+							},
+							{
+								"name": "Calendar",
+								"emoji": "🗓️",
+								"slug": "calendar",
+								"url": "/assets/markdown/type-and-code-v3/calendar.md",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "✏️ projects",
+						"contents": [
+							{
+								"name": "P1 ~ Textile",
+								"emoji": "🧶",
+								"slug": "p1",
+								"url": "/assets/markdown/type-and-code-v3/p1.md",
+								"newtab": false
+							},
+							{
+								"name": "P2 ~ Automaton",
+								"emoji": "🤖",
+								"slug": "p2",
+								"url": "/assets/markdown/type-and-code-v3/p2.md",
+								"newtab": false,
+								"active": false
+							},
+							{
+								"name": "P3 ~ Dialectic",
+								"emoji": "🗣️",
+								"slug": "p3",
+								"url": "/assets/markdown/type-and-code-v3/p3.md",
+								"newtab": false,
+								"active": false
+							},
+							{
+								"name": "P4 ~ Specimen",
+								"emoji": "🔬",
+								"slug": "p4",
+								"url": "/assets/markdown/type-and-code-v3/p4.md",
+								"newtab": false,
+								"active": false
+							},
+							{
+								"name": "PS ~ Community",
+								"emoji": "👯",
+								"slug": "ps",
+								"url": "/assets/markdown/type-and-code-v3/ps.md",
+								"newtab": false,
+								"active": false
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "🦴 ancient history",
+		"contents": [
+			{
+				"slug": "design-for-interaction-v2",
+				"emoji": "👆",
+				"name": "Design for Interaction",
+				"version": "v2",
+				"desc": "A primer on UI/UX from the perspectives of performance and playfulness.",
+				"long-desc": "<p>How do you turn an object, such as a flat, digital screen, into something people can interact with and understand? This question underscores the field of user interface and experience (UI/UX) design, which aims to create legible, meaningful experiences for virtually everything we interact with. In this studio elective, we’ll study UI/UX from a digital perspective, exploring the interface design of various mediums including apps, websites, operating systems, video games, appliances, exhibitions, and more. Instruction and projects will focus primarily on using Figma to create mockups and prototypes, with digressions into practices for user experience research. While this is not a coding course, lectures and exercises will explore the relationship between designers and developers. Familiarity with graphic design and typography is recommended but not required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Spring 2026",
+					"GRAPH 3327"
+				],
+				"contents": [
+					{
+						"name": "course materials",
+						"contents": [
+							{
+								"name": "syllabus",
+								"emoji": "👆",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "calendar",
+								"emoji": "🗓️",
+								"slug": "calendar",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.mluho8o35or9",
+								"newtab": false
+							},
+							{
+								"name": "exercises",
+								"emoji": "🔥",
+								"slug": "exercises",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.flrs7n5x7xut",
+								"newtab": false
+							},
+							{
+								"name": "student work folder",
+								"emoji": "📂",
+								"slug": "student-work",
+								"url": "https://drive.google.com/drive/folders/1he1J2NeEAOX6j2j-MsbMhe92tucVNPiV?usp=sharing",
+								"newtab": true
+							}
+						]
+					},
+					{
+						"name": "resources",
+						"contents": [
+							{
+								"name": "software",
+								"emoji": "💽",
+								"slug": "resources-software",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.vey1omp75jwe",
+								"newtab": false
+							},
+							{
+								"name": "concepts",
+								"emoji": "🎓",
+								"slug": "resources-concepts",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.9nu5qtasxhi7",
+								"newtab": false
+							},
+							{
+								"name": "inspiration",
+								"emoji": "💡",
+								"slug": "resources-inspiration",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.k2uv2nzawi3x",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "projects",
+						"contents": [
+							{
+								"name": "p1: designing for play",
+								"emoji": "🪗",
+								"slug": "p1-designing-for-play",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.i3ot3t9cshao",
+								"newtab": false
+							},
+							{
+								"name": "p2: designing a community",
+								"emoji": "🏘️",
+								"slug": "p2-designing-a-community",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.rq8z4igaonvm",
+								"newtab": false
+							},
+							{
+								"name": "p3: design as an act of service",
+								"emoji": "🛠️",
+								"slug": "p3-design-as-an-act-of-service",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.ysotzsmdklf",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "weekly agendas",
+						"contents": [
+							{
+								"name": "week 1",
+								"emoji": "👋",
+								"slug": "week-1",
+								"url": "https://docs.google.com/presentation/d/1dNRNxJQftWZib8mhLg1f3GfxaTsxY1-oBAejJJrRwho/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "week 2",
+								"emoji": "❄️",
+								"slug": "week-2",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=0-1&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 3",
+								"emoji": "🎶",
+								"slug": "week-3",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=400-111&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 4",
+								"emoji": "🍌",
+								"slug": "week-4",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=744-111&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 5",
+								"emoji": "🦆",
+								"slug": "week-5",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=1089-301&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 6",
+								"emoji": "🪨",
+								"slug": "week-6",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=1663-344&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 7",
+								"emoji": "🚀",
+								"slug": "week-7",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=2351-344&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 9",
+								"emoji": "⏳",
+								"slug": "week-9",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=2774-341&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "week 10",
+								"emoji": "📣",
+								"slug": "week-10",
+								"url": "https://embed.figma.com/board/aWoMTZzstwATAH9WaksAt5/design-for-interaction--s26--class-meetings?node-id=3304-344&embed-host=share",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "intro-to-computation-v2",
+				"emoji": "🤖",
+				"name": "Intro to Computation",
+				"version": "v2",
+				"desc": "Computer science for designers and artists.",
+				"long-desc": "<p>Intro to Computation is the pathway course to the CTC Concentration. In this course, students learn the essentials of computer science, including the design of algorithms, user interface and experience design, and generative art. Instruction covers object-oriented programming using JavaScript, paired with HTML and CSS for web development. Further instruction covers JavaScript libraries like p5.js. Beyond these technical studies, this course engages with the history of code as an artistic medium, bringing in references ranging from early video game design, to contemporary artists engaging with websites and applications as fine art mediums.</p><p>This course is open to students of all majors and is designed for those with little or no experience in programming.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Spring 2026",
+					"CTC 2101"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"emoji": "🤖",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Calendar",
+								"emoji": "🗓️",
+								"slug": "calendar",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.mluho8o35or9",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"emoji": "🖇️",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.c4wwcv87h97v",
+								"newtab": false
+							},
+							{
+								"name": "Exercises",
+								"emoji": "🔥",
+								"slug": "exercises",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.2skkrin9bvdh",
+								"newtab": false
+							},
+							{
+								"name": "Project Submissions",
+								"emoji": "📂",
+								"slug": "submissions",
+								"url": "https://docs.google.com/spreadsheets/d/1ZoIWzAXIOUNPi8jNYYdai4sCenPpKZE1qYOrjL0Kcbo/edit?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Resources",
+						"contents": [
+							{
+								"name": "Baby Steps",
+								"emoji": "👶",
+								"slug": "baby-steps",
+								"url": "https://babysteps.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "Cheatsheet",
+								"emoji": "📝",
+								"slug": "cheatsheet",
+								"url": "https://cheatsheet.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "DEMOLAND",
+								"emoji": "💻",
+								"slug": "demoland",
+								"url": "https://demoland.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "Web Editor",
+								"emoji": "💾",
+								"slug": "web-editor",
+								"url": "https://demoland.gdwithgd.com/editor/",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "P1: Time Traveler",
+								"emoji": "🕰️",
+								"slug": "p1-time-traveler",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.pnr65ptsyh28",
+								"newtab": false
+							},
+							{
+								"name": "P2: Small Sites; Big Stories",
+								"emoji": "📚",
+								"slug": "p2-small-sites-big-stories",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.5b30z1hgmd",
+								"newtab": false
+							},
+							{
+								"name": "P3: (Web)site-specific Performance",
+								"emoji": "🎭",
+								"slug": "p3-website-specific-performance",
+								"url": "https://docs.google.com/document/d/1I9L474yCnRqLCuCFN54rv6PWEirdHW03_LivRTMuXxE/preview?tab=t.28h27zp92nkb",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "week 1",
+								"emoji": "👋",
+								"slug": "week-11",
+								"url": "https://docs.google.com/presentation/d/1EFekWOIo9KUtb7BkNPtZF72509b2MmvErCYNXf8M11w/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "type-and-code-v2",
+				"emoji": "🔠",
+				"name": "Type + Code",
+				"version": "v2",
+				"desc": "Design experimental fonts, and then launch a type foundry to showcase your work!",
+				"long-desc": "<p>Type + Code is a studio course in which students combine web programming with variable fonts to create interactive, dynamic typographic experiences. Students will become proficient in code (HTML, CSS, and JavaScript) and type design (Glyphs) to create original fonts, web specimens, digital articles, and more. This course encourages students to push the boundaries on contemporary type design and find new or underutilized use cases for experimental typography, both as a form of expression and in practical applications. These experiments are supported by readings from a wide variety of influences, including video games, performance studies, and computer science.</p><p>No prior experience in type design or coding is required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2025",
+					"GRAPH 3123"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"emoji": "🎬",
+								"desc": "An overview of the full course.",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"slug": "schedule",
+								"emoji": "🗓️",
+								"desc": "Agenda and homework for each week.",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.m0nsq5rbo41b",
+								"newtab": false
+							},
+							{
+								"name": "Tutorials",
+								"slug": "tutorials",
+								"emoji": "🎓",
+								"desc": "Learn how to type design in Glyphs and code websites using HTML, CSS, and JavaScript.",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.o9xig14lbdgw",
+								"newtab": false
+							},
+							{
+								"name": "Inspiration",
+								"slug": "inspiration",
+								"emoji": "💡",
+								"desc": "Links to fun fonts and websites!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.pqqs7cyea8p0",
+								"newtab": false
+							},
+							{
+								"name": "Exercises",
+								"slug": "exercises",
+								"emoji": "🔥",
+								"desc": "Quick, fun assignments that we’ll complete during class.",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.t11m1z9hohhs",
+								"newtab": false
+							},
+							{
+								"name": "Font Gauntlet",
+								"emoji": "🧪",
+								"slug": "font-gauntlet",
+								"desc": "Test your fonts on the web!",
+								"url": "https://fontgauntlet.com/",
+								"newtab": false
+							},
+							{
+								"name": "Student Work",
+								"emoji": "📂",
+								"slug": "student-work",
+								"desc": "Upload your finished projects here!",
+								"url": "https://drive.google.com/drive/folders/1YUjB8sphdKGouBprOU-JPwGfT3oBsDpD?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Final Checklist",
+								"emoji": "✅",
+								"slug": "final-checklist",
+								"desc": "Make sure you complete all of these items!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.tu96xmh4d07l",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "P1: Point",
+								"slug": "p1-point",
+								"emoji": "👾",
+								"desc": "Design a pixel font!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.17vw6k8ts8m2",
+								"newtab": false
+							},
+							{
+								"name": "P2: Path",
+								"slug": "p2-path",
+								"emoji": "⭕️",
+								"desc": "Remix an open-source font by turning it into a variable font!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.0",
+								"newtab": false
+							},
+							{
+								"name": "P3: Polygon",
+								"slug": "p3-polygon",
+								"emoji": "📐",
+								"desc": "Design an original variable font!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.2a4yv1ahjuhy",
+								"newtab": false
+							},
+							{
+								"name": "P4: Publish",
+								"slug": "p4-publish",
+								"emoji": "🛜",
+								"desc": "Launch a type foundry with all of the fonts you created this semester!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.yp94ibjd3e90",
+								"newtab": false
+							},
+							{
+								"name": "P5: Perform",
+								"slug": "p5-perform",
+								"emoji": "🤹",
+								"desc": "Create a web-based type specimen for one of your original variable fonts!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.d2a9k0uik0ag",
+								"newtab": false
+							},
+							{
+								"name": "PS: Passport",
+								"slug": "ps-passport",
+								"emoji": "✈️",
+								"desc": "Create a presentation compiling examples of innovative uses of typography on websites!",
+								"url": "https://docs.google.com/document/d/1prqEvQARvxf9Q9GSVh4sHfJJV3e5Dl_BwkD83vVcwKs/preview?tab=t.4jpx0fd7l27q",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Week 1",
+								"slug": "week-1",
+								"url": "https://embed.figma.com/slides/Yqa6hEBgIJSVkztDs2hQJP/Type-Code-v2---Week-1?embed-host=share",
+								"newtab": false,
+								"tags": [
+									"9/4/25"
+								]
+							},
+							{
+								"name": "Week 2",
+								"slug": "week-2",
+								"url": "https://embed.figma.com/slides/iLnavIEE7OGXHJeYJj13Wm/Type-Code-v2---Week-2?embed-host=share",
+								"newtab": false,
+								"tags": [
+									"9/11/25"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "in-motion-v2",
+				"emoji": "🎬",
+				"name": "In Motion",
+				"version": "v2",
+				"desc": "A tour through the world of motion design, with an emphasis on musicality and performance!",
+				"long-desc": "<p>Motion design is a powerful, foundational feature of digital screens. It helps direct the viewer’s attention, present information sequentially, add personality or depth to otherwise static graphics, contextualize interactive elements, and so much more. In this studio elective, students will learn the fundamentals of motion design and explore a wide variety of video and animation techniques. We will look at a wide range of influences and styles ranging from stop motion animation, to film title sequences, to early-Internet Flash animations, to interface design, to contemporary practices for brand identities and social media.</p><p>Instruction will focus on digital motion design using Adobe After Effects, with additional tutorials in Premiere Pro, audio production, and HTML/CSS for web-based animations. Students will leave the course with a broad overview of the field of motion design and a deep understanding of rhythm, timing, sequence, narrative, and expression.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2025",
+					"GRAPH 2216"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"emoji": "🎬",
+								"slug": "syllabus",
+								"desc": "An overview of the full course.",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"emoji": "🗓️",
+								"slug": "schedule",
+								"desc": "Agenda and homework for each week.",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.mluho8o35or9",
+								"newtab": false
+							},
+							{
+								"name": "Tutorials",
+								"slug": "tutorials",
+								"emoji": "🎓",
+								"desc": "Learn how to animate using After Effects, as well as pick up a few other tricks!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.emgjdzymxxy9",
+								"newtab": false
+							},
+							{
+								"name": "Inspiration",
+								"slug": "inspiration",
+								"emoji": "💡",
+								"desc": "Links to wide range of animation references!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.hrf6t0o6whri",
+								"newtab": false
+							},
+							{
+								"name": "Exercises",
+								"emoji": "🔥",
+								"slug": "exercises",
+								"desc": "Quick, fun assignments that we’ll complete during class.",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.671g7iarmv4m",
+								"newtab": false
+							},
+							{
+								"name": "Prepping your files for submission",
+								"emoji": "💾",
+								"slug": "prepping-your-files",
+								"desc": "Tutorial for how to export, compress, and package your After Effects projects!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.fi7ub1i3yddx",
+								"newtab": false
+							},
+							{
+								"name": "Student Work Folder",
+								"emoji": "📂",
+								"slug": "student-work-folder",
+								"desc": "Upload your finished projects here!",
+								"url": "https://drive.google.com/drive/folders/13riDfSeFVVSWdmTh4-0BGVr9PT4Jyc7z?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Motion Tools Classic (AE Plug-in)",
+								"emoji": "🔌",
+								"slug": "motion-tools-classic",
+								"desc": "A free plug-in that makes some things in After Effects easier.",
+								"url": "https://motiondesign.school/products/motion-tools-classic/",
+								"newtab": true
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "P1: Rehearsal",
+								"emoji": "✏️",
+								"slug": "p1-rehearsal",
+								"desc": "Create a hand drawn, looping animation inspired by your favorite song (or a song you like)!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.17vw6k8ts8m2",
+								"newtab": false
+							},
+							{
+								"name": "P2: Overture",
+								"emoji": "🎼",
+								"slug": "p2-overture",
+								"desc": "Animate 15 motion studies, each inspired by a different musical concept!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.0",
+								"newtab": false
+							},
+							{
+								"name": "P3: Intermission",
+								"emoji": "💥",
+								"slug": "p3-intermission",
+								"desc": "Put together the ugliest, hardest to watch animation you can possibly conceive of!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.2a4yv1ahjuhy",
+								"newtab": false
+							},
+							{
+								"name": "P4: Showstopper",
+								"emoji": "📣",
+								"slug": "p4-showstopper",
+								"desc": "Tell us a story through kinetic typography!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.yp94ibjd3e90",
+								"newtab": false
+							},
+							{
+								"name": "P5: Encore",
+								"emoji": "💻",
+								"slug": "p5-encore",
+								"desc": "Apply motion graphics to a series of user experience scenarios!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.d2a9k0uik0ag",
+								"newtab": false
+							},
+							{
+								"name": "PS: Dramaturgy",
+								"emoji": "🎭",
+								"slug": "ps-dramaturgy",
+								"desc": "Research an assigned style of motion design and create a presentation for the class!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.4jpx0fd7l27q",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Week 1",
+								"slug": "week-1",
+								"url": "https://embed.figma.com/slides/IyB8qiJCR4I13avaAvCeEK/In-Motion-v2---Week-1?embed-host=share",
+								"newtab": false,
+								"tags": [
+									"9/9/25"
+								]
+							},
+							{
+								"name": "Week 2",
+								"slug": "week-2",
+								"url": "https://embed.figma.com/slides/t4OINJm22XwULeN5DTjFrD/In-Motion-v2---Week-2?embed-host=share",
+								"newtab": false,
+								"tags": [
+									"9/16/25"
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "design-for-interaction-v1",
+				"emoji": "👆",
+				"name": "Design for Interaction",
+				"version": "v1",
+				"desc": "A primer on UI/UX from the perspectives of performance and playfulness.",
+				"long-desc": "<p>How do you turn an object, such as a flat, digital screen, into something people can interact with and understand? This question underscores the field of user interface and experience (UI/UX) design, which aims to create legible, meaningful experiences for virtually everything we interact with. In this studio elective, we’ll study UI/UX from a digital perspective, exploring the interface design of various mediums including apps, websites, operating systems, video games, appliances, exhibitions, and more. Instruction and projects will focus primarily on using Figma to create mockups and prototypes, with digressions into practices for user experience research. While this is not a coding course, lectures and exercises will explore the relationship between designers and developers. Familiarity with graphic design and typography is recommended but not required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Spring 2025",
+					"GRAPH 3327"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"emoji": "🍎",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.0",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"emoji": "🗓️",
+								"slug": "schedule",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.6x0a5d5zi6im",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"emoji": "🖇️",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.nahqo1ydy1dg",
+								"newtab": false
+							},
+							{
+								"name": "Project Submission Form",
+								"emoji": "✉️",
+								"slug": "project-submission-form",
+								"url": "https://docs.google.com/forms/d/e/1FAIpQLSd_9cJzdXjGPUFST90HXyeYOWxSic62W3k4pmniB3fqYizgSQ/viewform?usp=dialog",
+								"newtab": true
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Week 1",
+								"emoji": "🗓️",
+								"slug": "week-1",
+								"url": "https://docs.google.com/presentation/d/1hxa-67fCQHQ5lJk0XJkDNN-u7zNl40wqTmqs4g0Yf3A/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Week 2",
+								"emoji": "🗓️",
+								"slug": "week-2",
+								"url": "https://docs.google.com/presentation/d/1-r1Ajbz_et_RJuxLo6eS0lt4oIFmDaoqVLSznw3hg5c/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Week 3",
+								"emoji": "🗓️",
+								"slug": "week-3",
+								"url": "https://docs.google.com/presentation/d/1D2W8KmlTUbHYFFIhQBIHwzpBQWXW0_prwIc_jc15ZlY/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Week 4",
+								"emoji": "🗓️",
+								"slug": "week-4",
+								"url": "https://docs.google.com/presentation/d/12Pt6DC0I30jkMp3Ioxvi_9JTEhFh-f1_NYGu9wkK-S4/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Week 10",
+								"emoji": "🗓️",
+								"slug": "week-10",
+								"url": "https://docs.google.com/presentation/d/1yF9U0UPIzU7Vyau_c7yJTso8P0AV9NHvDRvcPBgjGaI/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Activities",
+						"contents": [
+							{
+								"name": "Activities Overview",
+								"emoji": "⏳",
+								"slug": "activities",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.bt31fyq58o2g",
+								"newtab": false
+							},
+							{
+								"name": "Dialog Trees",
+								"emoji": "🌳",
+								"slug": "dialog-trees",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.nnt40280846i",
+								"newtab": false
+							},
+							{
+								"name": "Arcade",
+								"emoji": "🕹️",
+								"slug": "arcade",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.uvcx28q3cj3o",
+								"newtab": false
+							},
+							{
+								"name": "Conditional Design",
+								"emoji": "➿",
+								"slug": "conditional-design",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.cgph6hoch86k",
+								"newtab": false
+							},
+							{
+								"name": "Sketch Models",
+								"emoji": "🏠",
+								"slug": "sketch-models",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.yqeio2tbjam2",
+								"newtab": false
+							},
+							{
+								"name": "Stop/Go",
+								"emoji": "🚦",
+								"slug": "stop-go",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.4uhehid3hrw6",
+								"newtab": false
+							},
+							{
+								"name": "Heads-Up Display (HUD)",
+								"emoji": "📺",
+								"slug": "heads-up-display-hud",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.l2alxdyu6g55",
+								"newtab": false
+							},
+							{
+								"name": "Play and Playfulness",
+								"emoji": "🃏",
+								"slug": "play-and-playfulness",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.b24tywg5gldy",
+								"newtab": false
+							},
+							{
+								"name": "Personas",
+								"emoji": "👯",
+								"slug": "personas",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.jb5ttsbzrdm",
+								"newtab": false
+							},
+							{
+								"name": "Surveys",
+								"emoji": "☑️",
+								"slug": "surveys",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.yp3p09h0p7y1",
+								"newtab": false
+							},
+							{
+								"name": "Workshops",
+								"emoji": "💭",
+								"slug": "workshops",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.z5ws3p57rxi1",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Technicals",
+						"contents": [
+							{
+								"name": "Technicals Overview",
+								"emoji": "📐",
+								"slug": "technicals",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.1j5pc7vndt0p",
+								"newtab": false
+							},
+							{
+								"name": "Call-to-Action",
+								"emoji": "👆",
+								"slug": "call-to-action",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.hu4jciatzn2t",
+								"newtab": false
+							},
+							{
+								"name": "Look & Feel",
+								"emoji": "👁️",
+								"slug": "look-and-feel",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.8molqn5d04sq",
+								"newtab": false
+							},
+							{
+								"name": "Information Architecture",
+								"emoji": "🖥️",
+								"slug": "information-architecture",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.hl208emwwyqo",
+								"newtab": false
+							},
+							{
+								"name": "Telling the Time",
+								"emoji": "⌚️",
+								"slug": "telling-the-time",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.24wi759gi5dg",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Projects Overview",
+								"emoji": "🛠️",
+								"slug": "projects",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.1bbf17dwofun",
+								"newtab": false
+							},
+							{
+								"name": "Designing for Play",
+								"emoji": "🏁",
+								"slug": "designing-for-play",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.lgz6vx3o12se",
+								"newtab": false
+							},
+							{
+								"name": "It’s Your Niche",
+								"emoji": "🌝",
+								"slug": "its-your-niche",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.4g8ukzegud5c",
+								"newtab": false
+							},
+							{
+								"name": "Component Catalog",
+								"emoji": "💾",
+								"slug": "component-catalog",
+								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.pfcoq7zhv7xs",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "intro-to-computation-v1",
+				"emoji": "🤖",
+				"name": "Intro to Computation",
+				"version": "v1",
+				"desc": "Computer science for designers and artists.",
+				"long-desc": "<p>Intro to Computation is the pathway course to the CTC Concentration. In this course, students learn the essentials of computer science, including the design of algorithms, user interface and experience design, and generative art. Instruction covers object-oriented programming using JavaScript, paired with HTML and CSS for web development. Further instruction covers JavaScript libraries like p5.js. Beyond these technical studies, this course engages with the history of code as an artistic medium, bringing in references ranging from early video game design, to contemporary artists engaging with websites and applications as fine art mediums.</p><p>This course is open to students of all majors and is designed for those with little or no experience in programming.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Spring 2025",
+					"CTC 1000"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"emoji": "🍎",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.0",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"emoji": "🗓️",
+								"slug": "schedule",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.6x0a5d5zi6im",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"emoji": "🖇️",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.nahqo1ydy1dg",
+								"newtab": false
+							},
+							{
+								"name": "DEMOLAND",
+								"emoji": "📖",
+								"desc": "I recommend opening this in a new tab!",
+								"slug": "demoland",
+								"url": "https://demoland.gdwithgd.com/#intro-to-computation",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Week 2",
+								"emoji": "🗓️",
+								"slug": "week-2",
+								"url": "https://docs.google.com/presentation/d/1DbfYk7416eaKjcIN0IrTgS5Drn6kYvmJID0RU3z_euc/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lessons",
+						"contents": [
+							{
+								"name": "Lessons Overview",
+								"emoji": "🎓",
+								"slug": "lessons",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.bt31fyq58o2g",
+								"newtab": false
+							},
+							{
+								"name": "What is code?",
+								"emoji": "💭",
+								"slug": "what-is-code",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.vvowcr4p5zzf",
+								"newtab": false
+							},
+							{
+								"name": "The basics",
+								"emoji": "🧸",
+								"slug": "the-basics",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.k1b61u4frbb",
+								"newtab": false
+							},
+							{
+								"name": "On a loop",
+								"emoji": "➿",
+								"slug": "on-a-loop",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.5nly2kypa9am",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Activities",
+						"contents": [
+							{
+								"name": "Activities Overview",
+								"emoji": "⏳",
+								"slug": "activities",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.avthqqfm1oro",
+								"newtab": false
+							},
+							{
+								"name": "Instructing a sketch",
+								"emoji": "✍️",
+								"slug": "instructing-a-sketch",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.cgph6hoch86k",
+								"newtab": false
+							},
+							{
+								"name": "Time capsule",
+								"emoji": "📦",
+								"slug": "time-capsule",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.e5ryrqaaw6yw",
+								"newtab": false
+							},
+							{
+								"name": "The future",
+								"emoji": "🔮",
+								"slug": "the-future",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.dihpt0px85p1",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Technicals",
+						"contents": [
+							{
+								"name": "Technicals Overview",
+								"emoji": "📐",
+								"slug": "technicals",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.1j5pc7vndt0p",
+								"newtab": false
+							},
+							{
+								"name": "Technical 0",
+								"emoji": "0️⃣",
+								"slug": "technical-0",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.9y8z4v8wvp2r",
+								"newtab": false
+							},
+							{
+								"name": "Technical 1",
+								"emoji": "1️⃣",
+								"slug": "technical-1",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.hu4jciatzn2t",
+								"newtab": false
+							},
+							{
+								"name": "Technical 2",
+								"emoji": "2️⃣",
+								"slug": "technical-2",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.ydrm7jm3xtoc",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Projects Overview",
+								"emoji": "🛠️",
+								"slug": "projects",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.1bbf17dwofun",
+								"newtab": false
+							},
+							{
+								"name": "Input/Output",
+								"emoji": "🍳",
+								"slug": "input-output",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.lgz6vx3o12se",
+								"newtab": false
+							},
+							{
+								"name": "Time Traveler",
+								"emoji": "⏰",
+								"slug": "time-traveler",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.82zmncb8akl6",
+								"newtab": false
+							},
+							{
+								"name": "(Web)site-specific Performance",
+								"emoji": "🎭",
+								"slug": "website-specific-performance",
+								"url": "https://docs.google.com/document/d/1dN4dM4OgRlph7hQLMNuVtyKEIUnI7LC1iwdztK8EeCM/preview?tab=t.4g8ukzegud5c",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "type-and-code-v1",
+				"emoji": "🔠",
+				"name": "Type + Code",
+				"version": "v1",
+				"desc": "Creative coding elective focusing on type design, digital fonts, and unique reading experiences.",
+				"long-desc": "<p>Type + Code is a studio course in which students combine web programming with variable fonts to create interactive, dynamic typographic experiences. Students will become proficient in code (HTML, CSS, and JavaScript) and type design (Glyphs) to create original fonts, web specimens, digital articles, and more. This course encourages students to push the boundaries on contemporary type design and find new or underutilized use cases for experimental typography, both as a form of expression and in practical applications. These experiments are supported by readings from a wide variety of influences, including video games, performance studies, and computer science. No prior experience in type design or coding is required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2024",
+					"GRAPH 3123"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"slug": "schedule",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.uwu9i2pbz132",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.tumfv79f53pr",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Research & Analysis",
+								"slug": "research-and-analysis",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.g1ln27r7vbjd",
+								"newtab": false
+							},
+							{
+								"name": "Project 1: Time Traveler",
+								"slug": "project-1",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.qyjwo2qodni",
+								"newtab": false
+							},
+							{
+								"name": "Project 2: Live Type",
+								"slug": "project-2",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.93s6zdjxh731",
+								"newtab": false
+							},
+							{
+								"name": "Project 3: Not a Book",
+								"slug": "project-3",
+								"url": "https://docs.google.com/document/d/1beax-B405dmTYEXaxn2o4PUs67ePcU1ZqW0o_ZF5A9U/preview?tab=t.6upzmi3qezwt",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Class Websites",
+						"contents": [
+							{
+								"name": "Baby Steps",
+								"slug": "baby-steps",
+								"url": "https://babysteps.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "The Designer’s Guide to Web Programming",
+								"slug": "designers-guide-to-web-programming",
+								"url": "https://webprogramming.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "DEMOLAND",
+								"slug": "demoland",
+								"url": "https://demoland.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "test-project-1.html",
+								"slug": "test-project-1",
+								"url": "https://testproject1.gdwithgd.com/",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Type Design Tutorials",
+						"contents": [
+							{
+								"name": "Glyphs Basics",
+								"slug": "glyphs-basics",
+								"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/preview",
+								"newtab": false
+							},
+							{
+								"name": "Setting Up Variable Axes",
+								"slug": "setting-up-variable-axes",
+								"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/preview",
+								"newtab": false
+							},
+							{
+								"name": "Pixel Fonts",
+								"slug": "pixel-fonts",
+								"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/preview",
+								"newtab": false
+							},
+							{
+								"name": "Drawing in Glyphs",
+								"slug": "drawing-in-glyphs",
+								"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/preview",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Readings",
+						"contents": [
+							{
+								"name": "Introduction to the World Wide Web",
+								"slug": "introduction-to-the-world-wide-web",
+								"desc": "By Dave Raggett",
+								"url": "https://www.w3.org/People/Raggett/book4/ch01.html",
+								"tags": [
+									"Week 2"
+								],
+								"newtab": true
+							},
+							{
+								"name": "A History of HTML",
+								"slug": "a-history-of-html",
+								"desc": "By Dave Raggett",
+								"url": "https://www.w3.org/People/Raggett/book4/ch02.html",
+								"tags": [
+									"Week 2"
+								],
+								"newtab": true
+							},
+							{
+								"name": "Cascading HTML style sheets -- a proposal",
+								"slug": "cascading-html-style-sheets-a-proposal",
+								"desc": "By Håkon W Lie",
+								"url": "https://www.w3.org/People/howcome/p/cascade.html",
+								"tags": [
+									"Week 2"
+								],
+								"newtab": true
+							},
+							{
+								"name": "20 Years of CSS",
+								"slug": "20-years-of-css",
+								"desc": "By Bert Bos",
+								"url": "https://www.w3.org/Style/CSS20/",
+								"tags": [
+									"Week 2"
+								],
+								"newtab": true
+							},
+							{
+								"name": "A brief history of CSS until 2016",
+								"slug": "a-brief-history-of-css-until-2016",
+								"desc": "By Bert Bos",
+								"url": "https://www.w3.org/Style/CSS20/history.html",
+								"tags": [
+									"Week 2"
+								],
+								"newtab": true
+							},
+							{
+								"name": "Web Design in 4 Minutes",
+								"slug": "web-design-in-4-minutes",
+								"desc": "By Jeremy Thomas",
+								"url": "https://jgthms.com/web-design-in-4-minutes/",
+								"tags": [
+									"Week 3"
+								],
+								"newtab": false
+							},
+							{
+								"name": "A Handmade Web",
+								"slug": "a-handmade-web",
+								"desc": "By J. R. Carpenter",
+								"url": "https://luckysoap.com/statements/handmadeweb.html",
+								"tags": [
+									"Week 3"
+								],
+								"newtab": false
+							},
+							{
+								"name": "We Are Family! I’ve Got All My Variations With Me",
+								"slug": "we-are-family",
+								"desc": "By David Jonathan Ross",
+								"url": "https://www.youtube.com/watch?v=wWa8TLrKMeI",
+								"tags": [
+									"Week 5"
+								],
+								"newtab": true
+							},
+							{
+								"name": "Typeface as Programme",
+								"slug": "typeface-as-programme",
+								"desc": "By Jürg Lehni",
+								"url": "https://www.typotheque.com/articles/typeface-as-programme",
+								"tags": [
+									"Week 6"
+								],
+								"newtab": true
+							},
+							{
+								"name": "Letter & Spirit",
+								"slug": "letter-and-spirit",
+								"desc": "By Dexter Sinister",
+								"url": "https://www.servinglibrary.org/journal/3/letter-and-spirit",
+								"tags": [
+									"Week 7"
+								],
+								"newtab": false
+							},
+							{
+								"name": "How Google perfected the web",
+								"slug": "how-google-perfected-the-web",
+								"desc": "By Mia Sato",
+								"url": "https://www.theverge.com/c/23998379/google-search-seo-algorithm-webpage-optimization",
+								"tags": [
+									"Week 9"
+								],
+								"newtab": true
+							},
+							{
+								"name": "My website is a shifting house next to a river of knowledge. What could yours be?",
+								"slug": "my-website-is-a-shifting-house",
+								"desc": "By Laurel Schwulst",
+								"url": "https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/",
+								"tags": [
+									"Week 10"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Net Art Anthology",
+								"slug": "net-art-anthology",
+								"desc": "By Rhizome",
+								"url": "https://anthology.rhizome.org/",
+								"tags": [
+									"Week 12"
+								],
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "in-motion-v1",
+				"emoji": "🎬",
+				"name": "In Motion",
+				"version": "v1",
+				"desc": "Motion design elective exploring a wide range of skills and use cases for animation.",
+				"long-desc": "<p>Motion design is a powerful, foundational feature of digital screens. It helps direct the viewer’s attention, sequence information, add personality or depth to otherwise static graphics, contextualize interactive elements, and so much more. In this studio elective, students will learn the fundamentals of motion design and explore a wide variety of video and animation techniques. We will look at a wide range of influences and styles ranging from stop motion animation, to film title sequences, to early-Internet Flash animations, to interface design, to contemporary practices for brand identities and social media. Instruction will focus on digital motion design using Adobe After Effects, with additional tutorials in Premiere Pro, audio production, and HTML/CSS for web-based animations. Students will leave the course with a broad overview of the field of motion design and a deep understanding of rhythm, timing, sequence, narrative, and expression.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2024",
+					"GRAPH 2216"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"slug": "schedule",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.7ubr7cuas863",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.mskmi0lq4jc8",
+								"newtab": false
+							},
+							{
+								"name": "New Canon Are.na Channel",
+								"slug": "new-canon-arena-channel",
+								"url": "https://www.are.na/gabriel-drozdov/in-motion-f24-00-new-canon",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "New Canon",
+								"slug": "new-canon",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.987huextsgif",
+								"newtab": false
+							},
+							{
+								"name": "Motion Studies",
+								"slug": "motion-studies",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.yxsuvki1tvwu",
+								"newtab": false
+							},
+							{
+								"name": "Exquisite Corpse",
+								"slug": "exquisite-corpse",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.z4ng7jz82thu",
+								"newtab": false
+							},
+							{
+								"name": "Final Project: Sequence",
+								"slug": "final-project-sequence",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.m2dacsvocbhk",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "Making GIFs in Photoshop",
+								"slug": "making-gifs-in-photoshop",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.gyvpgx4tgtp4",
+								"newtab": false
+							},
+							{
+								"name": "Exporting and Compressing Files",
+								"slug": "exporting-and-compressing-files",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.tjwf15qv0k5",
+								"newtab": false
+							},
+							{
+								"name": "Importing Files from Illustrator and Photoshop",
+								"slug": "importing-files-from-illustrator-and-photoshop",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.l18at4pf57al",
+								"newtab": false
+							},
+							{
+								"name": "Working with Audio",
+								"slug": "working-with-audio",
+								"url": "https://docs.google.com/document/d/12bIeL9Cu5ZXDkcOfiK3fl7-PM4yrka_3jdIwsd58F1I/preview?tab=t.8bfkfwd4z3t5",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Unit 2",
+								"slug": "unit-2",
+								"url": "https://docs.google.com/document/d/1VjZcSVTuzG7HhayFORlN1kTa_Ei6PMQzXKWm3OLigbk/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Week 6",
+								"slug": "week-6",
+								"url": "https://docs.google.com/presentation/d/14q6C4Fg_CYSodvmzImBDBmhG4kJrMnoy4o0IQdCy-Cg/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Week 7",
+								"slug": "week-7",
+								"url": "https://embed.figma.com/slides/xKPdakq2mC4kKHD2yRLGCQ/IN-MOTION---Week-7?node-id=2-675&embed-host=share",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Other Resources",
+						"contents": [
+							{
+								"name": "After Effects Shortcuts",
+								"slug": "after-effects-shortcuts",
+								"url": "https://docs.google.com/document/d/1mfpLDXKdpVot24GR9rY4O382sJoFY9eFBDLkyCMz1NA/preview?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Introduction to After Effects",
+								"slug": "introduction-to-after-effects",
+								"url": "https://drive.google.com/file/d/18ue_bBJaBkR08W42Jgjn7f3gjZwKVMCE/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "After Effects Cheat Sheet",
+								"slug": "after-effects-cheat-sheet",
+								"url": "https://drive.google.com/file/d/18JP4Fluu4dgAwfOCWJAv4twSkpHFv0K5/view?usp=sharing",
+								"newtab": true
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "variable-fonts-workshop-v2",
+				"emoji": "🔡",
+				"name": "Variable Fonts Workshop",
+				"version": "v2",
+				"desc": "Type design through the lens of experimental variable fonts.",
+				"long-desc": "<p>Variable fonts offer graphic designers new ways to create dynamic, complex, and consistent typographic systems. While digital typefaces traditionally require multiple font files to cover a range of weights and styles, variable fonts instead store glyphs as a range of possible forms with infinite variations. In this four-week workshop, students learn how to utilize and design variable fonts for a wide variety of use cases including typographic identity systems, interpolated animations, and context-aware adjustments like optical sizing. Projects involve designing several original variable font designs. Course instruction includes Glyphs for designing typefaces and basic HTML/CSS for animating variable fonts; no background in type design or coding is required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Spring 2024",
+					"GRAPH 3163"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Class Website",
+								"slug": "class-website",
+								"url": "https://variablefonts.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1wL56yoGGAFSuBwQng9lTGgCxjBmKPurAOR5htraaFGE/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "Glyphs Basics",
+								"slug": "glyphs-basics",
+								"url": "https://drive.google.com/file/d/1-DWbTWKy6Z5EAqAcjvKEZl9YKAW0LXuj/preview",
+								"newtab": false
+							},
+							{
+								"name": "Setting Up Variable Axes",
+								"slug": "setting-up-variable-axes",
+								"url": "https://drive.google.com/file/d/1-Br0cSwgXDyMwbkaI_todDg6Mr-QRQV6/preview",
+								"newtab": false
+							},
+							{
+								"name": "Pixel Fonts",
+								"slug": "pixel-fonts",
+								"url": "https://drive.google.com/file/d/1-Cby3PegV7LFOGWpVeEXUPE0DZsTZ7Lo/preview",
+								"newtab": false
+							},
+							{
+								"name": "Drawing in Glyphs",
+								"slug": "drawing-in-glyphs",
+								"url": "https://drive.google.com/file/d/1-3dJAux-7VDbcSERtY0pEVfxEwqaYC0T/preview",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Exercise A: Open Sourced",
+								"slug": "exercise-a",
+								"url": "https://docs.google.com/document/d/1tsAUGygYGynmEBKhJCOHOpVv_g9Kc6YayK-KUj8jFKk/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Exercise B: Pixel Self-portrait",
+								"slug": "exercise-b",
+								"url": "https://docs.google.com/document/d/1Sup2TVxQhmIosgMjiv2c5QQFTbkjKdvNkGKr-GsQDk0/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Exercise C: Variable Mpreviewation",
+								"slug": "exercise-c",
+								"url": "https://docs.google.com/document/d/1r53pprvVMkmLCD6PBuBoJvNn1YQsLX9bCMbgi-_eZL8/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Exercise D: One Big Move",
+								"slug": "exercise-d",
+								"url": "https://docs.google.com/document/d/1F1IOwzClfM_JJoekRkJdU3tqYInG0biSDhu6xun3JJ0/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Exercise E: Variable Gamut",
+								"slug": "exercise-e",
+								"url": "https://docs.google.com/document/d/15Wpphtb3ee39iz4Op0D--Eev0AIxLpgyIGVqPRfWc0Y/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Project 1: Dot Dot Dot",
+								"slug": "project-1",
+								"url": "https://docs.google.com/document/d/1PU3GPpBEHl5aB53Q29t3ynihNKRSqNkysL1P2Iigkgk/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Project 2: Type Design as Performance",
+								"slug": "project-2",
+								"url": "https://docs.google.com/document/d/12tmWnYQ3K5PPTKqEy4r3ssroq0lGlWULfvjHM_Yw-uk/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Week 1",
+								"slug": "week-1",
+								"url": "https://drive.google.com/file/d/1CETJKVAMYT6uwtcy_keIXNK2rv6BLyRf/preview",
+								"newtab": false
+							},
+							{
+								"name": "Week 2",
+								"slug": "week-2",
+								"url": "https://drive.google.com/file/d/103mRfldnuYerGx3siUelD_Y9T5AgjY6N/preview",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "web-sites-and-stories-v1",
+				"emoji": "🌐",
+				"name": "Web Sites & Stories",
+				"version": "v1",
+				"desc": "Web design and development as a medium for storytelling.",
+				"long-desc": "<p>Since the dawn of the Internet, we’ve thought of websites as metaphors for places to visit — web “sites,” navigated to via web browsers like Safari (or the now-forgotten Internet Explorer). This metaphor lets us think of the Internet not as a singular medium, but as a network for distributing interactive, digital experiences. In effect, every website is a world with its own internal logic. The web designer or developer’s challenge is to define these rules for interaction in a way that makes sense to visitors. Therefore, the goal of a website is to convey meaning to an audience through interaction, not just graphics.</p><p>In this course, we’ll play the role of both web designer and developer to discover the full gamut of possible user experiences that websites afford. Students will learn industry-standard tools and practices for prototyping and launching websites, including Figma, Webflow, GitHub, and web programming languages (HTML, CSS, and JavaScript). The course explores websites as a paradoxical medium with clashing creative and commercial motives, united by the common purpose of telling stories through interactivity.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Winter 2024",
+					"GRAPH 3271"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1i34q-M4Wnae1QlO-UXo58X3MNYW3UkDX_E20Kml1PDE/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Small Sites; Big Stories",
+								"slug": "small-sites-big-stories",
+								"url": "https://smallsites.gdwithgd.com/",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "GitHub Tutorial",
+								"slug": "github-tutorial",
+								"url": "https://drive.google.com/file/d/1pYJ-wB-Ouk5jKDykkbdM_CBE2Jt1szIW/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "HTML and CSS Basics Cheatsheet",
+								"slug": "html-and-css-basics-cheatsheet",
+								"url": "https://drive.google.com/file/d/1Fua7Oiy6banJmQp6LlGwwUykUqxuEAfX/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Things You Should Know",
+								"slug": "things-you-should-know",
+								"url": "https://docs.google.com/document/d/1OP4WN5g3v_NVYaLKvukky_wYqbMbVnxyOz1alTNsUD8/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Web Design Tutorials",
+								"slug": "web-design-tutorials",
+								"url": "https://gabrieldrozdov.github.io/wpw24-tutorials/",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Project 1: Interface Report",
+								"slug": "project-1",
+								"url": "https://docs.google.com/document/d/1iz2NCf7wZA7zmiIvCweTzNOPNDtzHEHoVqU6mrMIeI8/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Worksheet A: HTML, CSS, and GitHub",
+								"slug": "worksheet-a",
+								"url": "https://docs.google.com/document/d/1xw1NyaUoUHyFGbZo35Zd0d7H-u7cJOjDpGxksBKk4bw/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Project 2: Small Sites; Big Stories",
+								"slug": "project-2",
+								"url": "https://docs.google.com/document/d/1uWEy46tA8XXPeRMEEdgLjwNoyvpSynEfact5BqyUH88/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Project 3: Small Sites; Big Stories [2]",
+								"slug": "project-3",
+								"url": "https://docs.google.com/document/d/1nG5gPmPlY-Zgtdlc8fIcekvtWTPDHKs7i4cj79WQqV8/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Class 1: Lecture",
+								"slug": "class-1-lecture",
+								"url": "https://docs.google.com/document/d/12w_DSvfBrsejLJ9QNKLjrFF8boYQ5XalVbuTbZ3w2Nc/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Class 1: Slide Deck",
+								"slug": "class-1-slide-deck",
+								"url": "https://drive.google.com/file/d/1iU8NDTQXjC-5SfR3Y-xN3KEY5y6lolOB/preview",
+								"newtab": false
+							},
+							{
+								"name": "Class 2: Lecture",
+								"slug": "class-2-lecture",
+								"url": "https://docs.google.com/document/d/1vBSFb_smLDRqftFHeidIBsHyAILjq3dlcR_AtaCliZE/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Class 2: Slide Deck",
+								"slug": "class-2-slide-deck",
+								"url": "https://drive.google.com/file/d/1eSQSp981YUxYDRbkoIj8Lfxx7QC_HdBs/preview",
+								"newtab": false
+							},
+							{
+								"name": "Class 3: Lecture",
+								"slug": "class-3-lecture",
+								"url": "https://docs.google.com/document/d/1iUkCNrP-PN40gYGLwBn8NTGarn9QTYVIY24ygC5H7bM/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Class 3: Slide Deck",
+								"slug": "class-3-slide-deck",
+								"url": "https://drive.google.com/file/d/1RU-1ue_bd0Jp4IQ6Itpz3tb7Xt8xnD8J/preview",
+								"newtab": false
+							},
+							{
+								"name": "Class 8: Lecture",
+								"slug": "class-8-lecture",
+								"url": "https://docs.google.com/document/d/12kTC59nXxflz70nEsjbLrp2q8XKWsqx4ZIkCl76R5lk/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Class 8: Slide Deck",
+								"slug": "class-8-slide-deck",
+								"url": "https://drive.google.com/file/d/1QIZYefs_iMqhU5hLd0wBrBpMoGepUQQk/preview",
+								"newtab": false
+							},
+							{
+								"name": "Class 11: Slide Deck",
+								"slug": "class-11-slide-deck",
+								"url": "https://drive.google.com/file/d/1Uebh5xA9BwqjhNb-BHzYwSLPCixa58Y4/preview",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "web-programming-workshop-v2",
+				"emoji": "💻",
+				"name": "Web Programming Workshop",
+				"version": "v2",
+				"desc": "The basics of HTML, CSS, and a tiny bit of JavaScript.",
+				"long-desc": "<p>Code is intimidating. To start coding, it can feel that you need to learn everything before creating anything of value. Web programming offers an alternative path by proving that you don’t need to know much about code to make incredible things with it. In this course, we’ll explore the field of designing with code through the lens of web development, discovering the capabilities of coded experiences and crafting projects that explore those possibilities. By working directly with HTML, CSS, and JavaScript, you’ll gain an understanding of how code fundamentally changes the design process and see firsthand the exciting outcomes that emerge.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2023",
+					"GRAPH 3188"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Class Website",
+								"slug": "class-website",
+								"url": "https://wpw23.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1UG59e9pNNIaiRYODHAac_s2GuTw0p6m-MVLf8W8nXXw/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/1AegPwvBtgPwyvJC0SI4VUZT_YAFdY-pc0fYLDwXApUw/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "GitHub Tutorial",
+								"slug": "github-tutorial",
+								"url": "https://drive.google.com/file/d/1jGdIYjchg6IPYNVSW09xIksjhFCVd-Tn/preview",
+								"newtab": false
+							},
+							{
+								"name": "Links to Everything",
+								"slug": "links-to-everything",
+								"url": "https://docs.google.com/document/d/1G6xxxL5ogpgNXkgQ5JpI6fYsuoXcdNn4cVvR0NfUvEU/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Glossary",
+								"slug": "glossary",
+								"url": "https://docs.google.com/document/d/1GhjUq1Ei1561fibVtVIIQzerFG216nbXcqmNL__8A0o/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Portfolio Example",
+								"slug": "portfolio-example",
+								"url": "https://gabrieldrozdov.github.io/wpw-portfolio/",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Week 1 Exercises",
+								"slug": "week-1-exercises",
+								"url": "https://docs.google.com/document/d/1QnieR03j57KvoIK4GlaOOqWjZH5O2QT8URLKf7kaCgA/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Assignment 1",
+								"slug": "assignment-1",
+								"url": "https://docs.google.com/document/d/1_QmiKHDeN7OZGGvCFgQl6WKVj_j5mexUQZy7HXLqRRc/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Assignment 2",
+								"slug": "assignment-2",
+								"url": "https://docs.google.com/document/d/1Qv5FymDcDLOlHzwuvdA4rmmFQds_h45KBXLQpL2RhrM/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Final Project [Section 1]",
+								"slug": "final-project-section-1",
+								"url": "https://docs.google.com/document/d/1n3BtByN_YN_LKHYaq_ZCcNDc1fzVcZCWAtIYuFBCxAY/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Final Project [Section 2]",
+								"slug": "final-project-section-2",
+								"url": "https://docs.google.com/document/d/1ZgmAo7KCKG34DuMJTSb9ZienZU_HIPRUHMBEBeg792s/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Lessons",
+								"slug": "lessons",
+								"url": "https://docs.google.com/document/d/1cFaFQb0GpR8-JsGUlFotaea3JdkvHrmZpgdAw8bOGKM/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "variable-fonts-workshop-v1",
+				"emoji": "🔡",
+				"name": "Variable Fonts Workshop",
+				"version": "v1",
+				"desc": "Type design through the lens of experimental variable fonts.",
+				"long-desc": "<p>Variable fonts offer graphic designers new ways to create dynamic, complex, and consistent typographic systems. While digital typefaces traditionally require multiple font files to cover a range of weights and styles, variable fonts instead store glyphs as a range of possible forms with infinite variations. In this four-week workshop, students learn how to utilize and design variable fonts for a wide variety of use cases including typographic identity systems, interpolated animations, and context-aware adjustments like optical sizing. Projects include designing graphics with variable fonts, modifying open source typefaces to introduce variable functionality, and conceiving of original variable font designs. Course instruction includes Glyphs for designing typefaces and basic HTML/CSS for animating variable fonts; no background in type design or coding is required.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Spring 2023",
+					"GRAPH 3163"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Class Website",
+								"slug": "class-website",
+								"desc": "Type testing tool and student work showcase.",
+								"url": "https://vfw23.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1p75xhOY0SbjzDh8brEKP_vmFXiKNmN67LGd-JO_cpp8/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "Glyphs Basics",
+								"slug": "glyphs-basics",
+								"url": "https://drive.google.com/file/d/1ajxzdSoY1w6--iULtBD2axUTWG1Js0sv/preview",
+								"newtab": false
+							},
+							{
+								"name": "Setting Up Variable Axes",
+								"slug": "setting-up-variable-axes",
+								"url": "https://drive.google.com/file/d/1b-YD5SXhS0RQgqjhf55wTbwnVkFogpg9/preview",
+								"newtab": false
+							},
+							{
+								"name": "Pixel Fonts",
+								"slug": "pixel-fonts",
+								"url": "https://drive.google.com/file/d/1asVGqYFGyifMhNRaYuxexs1oswrUdEeC/preview",
+								"newtab": false
+							},
+							{
+								"name": "Drawing in Glyphs",
+								"slug": "drawing-in-glyphs",
+								"url": "https://drive.google.com/file/d/1aEdIKpT4cnEgIP0fu4A82g36ITKi9b69/preview",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Bitmapped",
+								"slug": "bitmapped",
+								"url": "https://docs.google.com/document/d/185VU47-h2uXb1nOeJCzhtKTupKbbAbpO7KsiY6yMm-A/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Open Sourced",
+								"slug": "open-sourced",
+								"url": "https://docs.google.com/document/d/1HEzKqZl5Y1c1fYZkwm41MPxa7Mwelr29XmACfJndFQs/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Digitized",
+								"slug": "digitized",
+								"url": "https://docs.google.com/document/d/1mG2pcCnjngu02iN40aYTmqNUB0zAg7kHoPNjzan3DZo/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "One Big Move",
+								"slug": "one-big-move",
+								"url": "https://docs.google.com/document/d/1Ay1lChSu1binI5GyiH-5cB4pzqgaJ5Ymb20jU5H2BkY/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Variable Remix",
+								"slug": "variable-remix",
+								"url": "https://docs.google.com/document/d/1FDpVrk1EackS3ewbIEtutBdJA9WJ7a40-w5--IvAOig/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Variable Gamut",
+								"slug": "variable-gamut",
+								"url": "https://docs.google.com/document/d/1DrOvt4y3Iwsb2GPXfkIOpVITfcs1TlyJYJ_jtbuFxuk/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Type Design as Performance",
+								"slug": "type-design-as-performance",
+								"url": "https://docs.google.com/document/d/1nEQ4itdAGRA-qwmWRxj4MRP5OCZ4mAo8XLVr2gmIm6I/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Week 1",
+								"slug": "week-1",
+								"url": "https://drive.google.com/file/d/1aFRIc8zmYwsQSWWYPbKmZqOdeuXnlOPM/preview",
+								"newtab": false
+							},
+							{
+								"name": "Week 2",
+								"slug": "week-2",
+								"url": "https://drive.google.com/file/d/1aZXyvkGSmgrpvylVks6CE9u-TV-kmaA-/preview",
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "digital-form-v1",
+				"emoji": "📺",
+				"name": "Digital Form",
+				"version": "v1",
+				"desc": "Introduction to graphic, motion, and web design from a digital-first perspective.",
+				"long-desc": "<p>What kinds of graphic forms are unique to digital screens? How can we or should we design for phones, laptops, and other digital devices? *What is this digital material capable of?*</p><p>This introductory studio course is an exploration of these questions and the range of possibilities that digital tools and spaces afford us. We will look at a vast and ever-changing landscape that includes multiple mediums, practices, technologies, geographies, histories, and more. To guide these explorations, we will focus on three key ideas:</p><p>1) Phenomenologies of light and computation, particularly additive color and binary;</p><p>2) Keyframing, sequencing, and programming of motion design and animation; and,</p><p>3) Structuring and integrating responsive and interactive design elements or systems, particularly websites and user interfaces.</p><p>Students build up facility and familiarity with digital practices through small workshops, larger overarching projects, and opportunities to share independent research. In addition to studio work, students will look at historical developments and conflicts in the world of digital design and technology, including discussions of equity and inequity.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Winter 2023",
+					"GRAPH 1566"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/19AlNcFVLS3moF2CVuAyIMRyJq9DbIEJ9S7m7Q0hZhwo/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Schedule",
+								"slug": "schedule",
+								"url": "https://docs.google.com/document/d/1KgjuJLL0iC7bh6ky1U_U-Hbnk_IiUb7VFYyTvy3bLLw/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Resources",
+								"slug": "resources",
+								"url": "https://docs.google.com/document/d/1bgUwDIJzFBwcCPtWQMkUAxNjrcInVTdHP26uHcbAz6U/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "Introduction to Illustrator",
+								"slug": "introduction-to-illustrator",
+								"url": "https://drive.google.com/file/d/1-Tn1mx5-29YoSPXVpv4gus4zVsZHWooq/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Introduction to Photoshop",
+								"slug": "introduction-to-photoshop",
+								"url": "https://drive.google.com/file/d/1-uRojhVZK-fpz9yEM_hFkb3awNelN-r1/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Introduction to After Effects",
+								"slug": "introduction-to-after-effects",
+								"url": "https://drive.google.com/file/d/18ue_bBJaBkR08W42Jgjn7f3gjZwKVMCE/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "After Effects Cheat Sheet",
+								"slug": "after-effects-cheat-sheet",
+								"url": "https://drive.google.com/file/d/18JP4Fluu4dgAwfOCWJAv4twSkpHFv0K5/view?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "Webflow Cheat Sheet",
+								"slug": "webflow-cheat-sheet",
+								"url": "https://docs.google.com/document/d/1uz0ErAYXiQcYMQ7Hwm2axTMcbFXggY9XCMG-u1SU6bg/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Projects",
+						"contents": [
+							{
+								"name": "Small Project 1: This is *not* paper.",
+								"slug": "small-project-1",
+								"url": "https://docs.google.com/document/d/1aFt0P81TQjg0fZEF0a3LLQPhWCC-ESzIOyqOzaIPDxQ/preview?usp=sharing",
+								"tags": [
+									"Unit 1: Light"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Research Prompt 1: Digital Designers and Designs",
+								"slug": "research-prompt-1",
+								"url": "https://docs.google.com/document/d/1I2dcyjzEivpkArffEbaEqXWcgBylEuoVQfvKYliYZYc/preview?usp=sharing",
+								"tags": [
+									"Unit 1: Light"
+								],
+								"newtab": false
+							},
+							{
+								"name": " Project 1: This is *not* a poster.",
+								"slug": "project-1",
+								"url": "https://docs.google.com/document/d/1IMFLb2xqZxqbbW4LSeVi2xmxuIenpbPln6Gx12KQcxg/preview?usp=sharing",
+								"tags": [
+									"Unit 1: Light"
+								]
+							},
+							{
+								"name": "Small Project 2: This is *not* a ball.",
+								"slug": "small-project-2",
+								"url": "https://docs.google.com/document/d/1Av2kyc_kqxPNH1YEO9Ztm0WV6LwJMfbykGaL1ibVZvw/preview?usp=sharing",
+								"tags": [
+									"Unit 2: Motion"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Research Prompt 2: Animators and Animations",
+								"slug": "research-prompt-2",
+								"url": "https://docs.google.com/document/d/1uMy2wDVrC0yKjJrItVhT5UKLYU1pfIUiYuN-zrbH1uM/preview?usp=sharing",
+								"tags": [
+									"Unit 2: Motion"
+								],
+								"newtab": false
+							},
+							{
+								"name": " Project 2: This is *not* an image.",
+								"slug": "project-2",
+								"url": "https://docs.google.com/document/d/1WnyzG610TNc9dgsfTSMorAsSJp_bzsWZzlL-jGXi1Og/preview?usp=sharing",
+								"tags": [
+									"Unit 2: Motion"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Small Project 3: This is *not* a microwave.",
+								"slug": "small-project-3",
+								"url": "https://docs.google.com/document/d/1T4wbF3B_G2Im4_7UKyKf8NI78qz5eJTqhKl39_PQypM/preview?usp=sharing",
+								"tags": [
+									"Unit 3: Interaction"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Research Prompt 3: User Interfaces",
+								"slug": "research-prompt-3",
+								"url": "https://docs.google.com/document/d/1L_gzBkznKF5rC5w2GKGpxSl49LgbGbwkm6Y5INuXqok/preview?usp=sharing",
+								"tags": [
+									"Unit 3: Interaction"
+								],
+								"newtab": false
+							},
+							{
+								"name": " Project 3: This is *not* a book.",
+								"slug": "project-3",
+								"url": "https://docs.google.com/document/d/1R3vr753ReqFuzZRLRVBWDUb_hBQVxh8vE052G-qMuQ0/preview?usp=sharing",
+								"tags": [
+									"Unit 3: Interaction"
+								],
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Class 1",
+								"slug": "class-1",
+								"url": "https://drive.google.com/file/d/1-o_EKlI965naXMLeV5nK1xSUZf8otjLJ/preview",
+								"tags": [
+									"Unit 1: Light",
+									"1/9/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 2",
+								"slug": "class-2",
+								"url": "https://drive.google.com/file/d/102RYc3YRWP0bfqKqQUzbpm6JmRnEYdBY/preview",
+								"tags": [
+									"Unit 1: Light",
+									"1/10/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 3",
+								"slug": "class-3",
+								"url": "https://drive.google.com/file/d/1-mSbcowogWfWu7utqwu7JU4aoaYoLJWb/preview",
+								"tags": [
+									"Unit 1: Light",
+									"1/11/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 4",
+								"slug": "class-4",
+								"url": "https://drive.google.com/file/d/1-hfSfVNsH4bvvsrbd2reKgK3wTy6n5Ue/preview",
+								"tags": [
+									"Unit 1: Light",
+									"1/17/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 5",
+								"slug": "class-5",
+								"url": "https://drive.google.com/file/d/18zByqe_TX6npvsCkNK_KtGFqFnwslNFT/preview",
+								"tags": [
+									"Unit 2: Motion",
+									"1/23/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 6",
+								"slug": "class-6",
+								"url": "https://drive.google.com/file/d/19uwjJBTG7-5t0Jo3kVS25UrGIlWfTeSt/preview",
+								"tags": [
+									"Unit 2: Motion",
+									"1/24/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 7",
+								"slug": "class-7",
+								"url": "https://drive.google.com/file/d/19utpHNbYE9YnYB7PGwLQIFGwB0gevpxU/preview",
+								"tags": [
+									"Unit 2: Motion",
+									"1/30/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 9",
+								"slug": "class-9",
+								"url": "https://drive.google.com/file/d/18P-My7I85y1YTo2u28XiP_nWsms_Zszv/preview",
+								"tags": [
+									"Unit 3: Interaction",
+									"1/31/2023"
+								],
+								"newtab": false
+							},
+							{
+								"name": "Class 10",
+								"slug": "class-10",
+								"url": "https://drive.google.com/file/d/18KPgl4suucGOkyPvQuilXqxIpKyEZ1QB/preview",
+								"tags": [
+									"Unit 3: Interaction",
+									"2/6/2023"
+								],
+								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "web-programming-workshop-v1",
+				"emoji": "💻",
+				"name": "Web Programming Workshop",
+				"version": "v1",
+				"desc": "The basics of HTML, CSS, and a tiny bit of JavaScript.",
+				"long-desc": "<p>At their core, websites are boxes within boxes within boxes of information. But, what are websites actually made of, and what can they do? This four-week workshop explores programming as a dynamic digital material, giving rise to unique design languages and possibilities. Students start as programming novices, reading and writing HTML, CSS, and JavaScript to build up foundational skills in web design and development. Alongside hands-on assignments, weekly lectures expose the field of web programming, including topics in computer science, digital design tools and systems (e.g. Figma, Material Design), and professional web development tools (e.g. Webflow, WordPress, Bootstrap, React). Students emerge with portfolio projects and the ability to effectively collaborate with other web developers.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"Fall 2022",
+					"GRAPH 3188"
+				],
+				"contents": [
+					{
+						"name": "Course Materials",
+						"contents": [
+							{
+								"name": "Class Website",
+								"slug": "class-website",
+								"url": "https://wpw22.gdwithgd.com/",
+								"newtab": false
+							},
+							{
+								"name": "Syllabus",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1bkGhEPcJnFYpjDfKoAD-qYVb1k7rCuRRFH8Mh4JM9HI/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Tutorials",
+						"contents": [
+							{
+								"name": "Getting Started",
+								"slug": "getting-started",
+								"url": "https://docs.google.com/document/d/163Q_yuZX7QLb_5T7P_6xNLqNNtFuQrJU1svwK4Ur4p4/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "How to Code",
+								"slug": "how-to-code",
+								"url": "https://docs.google.com/presentation/d/1cve_a3XhmVs6SrS3ZbufAvnZBNRh9_oCVXiy7mYphos/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "Lectures",
+						"contents": [
+							{
+								"name": "Lecture 1: I Love Websites",
+								"slug": "lecture-1",
+								"url": "https://docs.google.com/presentation/d/1wHAp_tmEtEz-Zme_mImZgYqmthhKATssVEW93ZJGnIg/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "Lecture 2: I Love Fonts",
+								"slug": "lecture-2",
+								"url": "https://docs.google.com/presentation/d/15zJNXs8FjgYtZKXoWl_cg8Sz6JvlzjiZkDXFxiO9kL4/preview?usp=sharing",
+								"newtab": false
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,776 @@
+
+:root {
+	--pink: #F3A8DD;
+	--green: #98DB6B;
+	--blue: #5ADDE8;
+	--yellow: #fcc03a;
+	--purple: #A690FC;
+	--red: #FF734D;
+
+	--off-white: #fafafa;
+	--light-gray: #eaeaea;
+	--gray: #dadada;
+	--dark-gray: #3a3a3a;
+	--off-black: #1a1a1a;
+}	
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+/* --split is the size of the plaintext side; the divider between the two panes sets it by dragging */
+.editor {
+	height: 100dvh;
+	display: grid;
+	grid-template-columns: minmax(0, var(--split, 50%)) auto minmax(0, 1fr);
+	background-color: var(--gray);
+}
+/* the frame swallows pointer events, so it stops taking them for the length of a drag */
+.editor[data-dragging="1"] {
+	cursor: col-resize;
+	user-select: none;
+}
+.editor[data-dragging="1"] .editor-frame {
+	pointer-events: none;
+}
+
+/* ——————————— */
+/* PLAINTEXT SIDE */
+/* ——————————— */
+
+/* a column rather than a grid with named rows: the shortcodes menu collapses out of the flow entirely, and a grid would leave its row behind for the editor to sit in */
+.editor-source {
+	min-width: 0;
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background-color: var(--off-black);
+	color: var(--off-white);
+}
+.editor-source-header {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 15px 20px;
+	border-bottom: 1px solid var(--dark-gray);
+	background-color: var(--off-black);
+	flex-shrink: 0;
+	overflow: auto;
+}
+.editor-title {
+	font-size: 20px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1em;
+	margin-right: auto;
+	white-space: nowrap;
+	padding-top: .2em;
+}
+.editor-title a {
+	color: inherit;
+	text-decoration: none;
+	transition: opacity .2s;
+}
+.editor-title a:hover {
+	opacity: .5;
+}
+.editor-title a:active {
+	opacity: .25;
+}
+.editor-filename {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	color: var(--gray);
+	margin-right: 10px;
+}
+.editor-filename input {
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	text-transform: none;
+	color: var(--off-white);
+	background-color: var(--dark-gray);
+	border: unset;
+	border-radius: 10px;
+	padding: 5px 10px;
+	width: 14ch;
+}
+.editor-filename input:focus {
+	outline: 1px solid var(--off-white);
+}
+.editor-fontsize {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-family: var(--mono);
+	font-size: 10px;
+	color: var(--gray);
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+.editor-fontsize input {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 80px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: var(--dark-gray);
+	cursor: pointer;
+}
+.editor-fontsize input::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: unset;
+	background-color: var(--gray);
+	cursor: pointer;
+}
+.editor-fontsize input::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: unset;
+	background-color: var(--gray);
+	cursor: pointer;
+}
+.editor-fontsize input:hover::-webkit-slider-thumb {
+	background-color: var(--off-white);
+}
+.editor-fontsize input:hover::-moz-range-thumb {
+	background-color: var(--off-white);
+}
+
+/* small header switches: collapsing the shortcodes, turning spellcheck on and off */
+.editor-toggle {
+	font-family: inherit;
+	font-size: 14px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	text-transform: lowercase;
+	line-height: 1em;
+	color: var(--off-white);
+	background-color: var(--off-black);
+	border: 1px solid var(--dark-gray);
+	border-radius: 10px;
+	gap: 5px;
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: background-color .2s, color .2s, border-color .2s, opacity .2s;
+	white-space: nowrap;
+}
+.editor-toggle span:nth-child(1) {
+	padding-top: .15em;
+}
+.editor-toggle:hover {
+	background-color: var(--off-white);
+	color: var(--off-black);
+	border-color: var(--off-white);
+}
+.editor-toggle:active {
+	opacity: .25;
+}
+.editor-toggle[data-on="1"] {
+	color: var(--off-black);
+	background-color: var(--off-white);
+	border-color: var(--off-white);
+}
+
+/* shortcode buttons, one row per group: the name in a column of its own on the left, its buttons wrapping in the space beside it */
+.editor-toolbar {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	align-items: baseline;
+	gap: 5px 10px;
+	padding: 10px 20px;
+	background-color: var(--off-black);
+	max-height: 35vh;
+	overflow-y: auto;
+	flex-shrink: 0;
+	border-bottom: 1px solid var(--dark-gray);
+}
+.editor-toolbar[hidden] {
+	display: none;
+}
+.editor-group-label {
+	font-family: var(--mono);
+	font-size: 10px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	color: var(--primary);
+	text-align: right;
+	padding-top: .2em;
+}
+.editor-group-label:nth-of-type(6n+1) {
+	--primary: var(--pink);
+}
+.editor-group-label:nth-of-type(6n+2) {
+	--primary: var(--green);
+}
+.editor-group-label:nth-of-type(6n+3) {
+	--primary: var(--blue);
+}
+.editor-group-label:nth-of-type(6n+4) {
+	--primary: var(--yellow);
+}
+.editor-group-label:nth-of-type(6n+5) {
+	--primary: var(--purple);
+}
+.editor-group-label:nth-of-type(6n+6) {
+	--primary: var(--red);
+}
+.editor-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px;
+}
+.editor-group:nth-of-type(6n+1) {
+	--primary: var(--pink);
+}
+.editor-group:nth-of-type(6n+2) {
+	--primary: var(--green);
+}
+.editor-group:nth-of-type(6n+3) {
+	--primary: var(--blue);
+}
+.editor-group:nth-of-type(6n+4) {
+	--primary: var(--yellow);
+}
+.editor-group:nth-of-type(6n+5) {
+	--primary: var(--purple);
+}
+.editor-group:nth-of-type(6n+6) {
+	--primary: var(--red);
+}
+.editor-button {
+	font-family: var(--mono);
+	font-size: 12px;
+	text-transform: none;
+	line-height: 1em;
+	color: var(--primary);
+	background-color: var(--off-black);
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	border: 1px solid var(--dark-gray);
+	border-radius: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: background-color .2s, opacity .2s, color .2s, border-color .2s;
+	white-space: nowrap;
+}
+.editor-button:hover {
+	background-color: var(--primary);
+	color: var(--off-black);
+	border-color: var(--primary);
+}
+.editor-button:active {
+	opacity: .25;
+}
+
+/* ——————————— */
+/* CODEMIRROR */
+/* ——————————— */
+
+.editor-input {
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
+	background-color: var(--dark-gray);
+}
+/* the site lowercases every bit of text on the page, which would hide the case of the markdown being written */
+.editor-input .cm-editor {
+	height: 100%;
+	text-transform: none;
+	font-family: var(--mono);
+	font-size: var(--editor-font-size, 14px);
+	background-color: var(--off-black);
+	color: var(--off-white);
+	font-variation-settings: "wght" 400;
+	font-weight: 400;
+	font-feature-settings: "liga" 0;
+}
+.editor-input .cm-editor.cm-focused {
+	outline: none;
+}
+.editor-input .cm-scroller {
+	font-family: var(--mono);
+	line-height: 1.6em;
+	overflow: auto;
+}
+.editor-input .cm-content {
+	padding: 20px 0;
+	caret-color: var(--off-white);
+}
+.editor-input .cm-line {
+	padding: 0 20px;
+}
+.editor-input .cm-cursor {
+	border-left-color: var(--off-white);
+	border-left-width: 2px;
+}
+/* every cursor after the first, so a multi-cursor edit is visible at a glance */
+.editor-input .cm-cursor-secondary {
+	border-left-color: var(--yellow);
+}
+.editor-input .cm-selectionBackground,
+.editor-input .cm-content ::selection {
+	background-color: #dadada33;
+}
+/* CodeMirror's own focused-selection rule is four classes deep (&light.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground) and sets a pale blue, so matching its shape is what it takes to win */
+.editor-input .cm-editor.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {
+	background-color: #dadada4d;
+}
+.editor-input .cm-activeLine {
+	background-color: #ffffff0d;
+}
+.editor-input .cm-selectionMatch {
+	background-color: #dadada26;
+	outline: 1px solid #dadada40;
+}
+
+/* the site's own shortcodes, which aren't markdown and so aren't the language's to color */
+.editor-input .cm-gd-marker {
+	color: var(--purple);
+	font-variation-settings: "wght" 600;
+	font-weight: 600;
+}
+.editor-input .cm-gd-fence {
+	color: var(--yellow);
+}
+.editor-input .cm-gd-inline {
+	color: var(--blue);
+}
+
+/* find and replace, restyled from the browser-default look CodeMirror ships with */
+.editor-input .cm-panels {
+	background-color: var(--off-black);
+	color: var(--off-white);
+	border: unset;
+}
+.editor-input .cm-panels.cm-panels-top {
+	border-bottom: 1px solid var(--dark-gray);
+}
+.editor-input .cm-panel.cm-search {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 20px;
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	text-transform: none;
+}
+/* the panel is built as a run of inline elements separated by <br>, which a flex row lays out for us */
+.editor-input .cm-panel.cm-search br {
+	display: none;
+}
+.editor-input .cm-panel.cm-search input:not([type="checkbox"]) {
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	text-transform: none;
+	line-height: 1em;
+	color: var(--off-white);
+	background-color: var(--dark-gray);
+	border: unset;
+	border-radius: 10px;
+	padding: 3.5px 10px;
+	min-width: 20ch;
+	margin: 0;
+}
+.editor-input .cm-panel.cm-search input:not([type="checkbox"])::placeholder {
+	color: var(--gray);
+	opacity: .5;
+}
+.editor-input .cm-panel.cm-search input:not([type="checkbox"]):focus {
+	outline: 1px solid var(--off-white);
+}
+.editor-input .cm-panel.cm-search button:not([name="close"]) {
+	font-family: var(--mono);
+	font-size: 12px;
+	text-transform: none;
+	line-height: 1em;
+	color: var(--off-white);
+	background-color: var(--dark-gray);
+	background-image: none;
+	border: unset;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	margin: 0;
+	cursor: pointer;
+	transition: background-color .2s, color .2s, opacity .2s;
+}
+.editor-input .cm-panel.cm-search button:not([name="close"]):hover {
+	color: var(--off-black);
+	background-color: var(--off-white);
+}
+.editor-input .cm-panel.cm-search button:not([name="close"]):active {
+	opacity: .25;
+}
+.editor-input .cm-panel.cm-search label {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	color: var(--off-white);
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid var(--dark-gray);
+	padding: 4px 10px;
+	border-radius: 10px;
+	margin: 0;
+}
+.editor-input .cm-panel.cm-search label:hover {
+	opacity: 1;
+}
+.editor-input .cm-panel.cm-search input[type="checkbox"] {
+	accent-color: var(--off-white);
+	margin: 0;
+	cursor: pointer;
+}
+.editor-input .cm-panel.cm-search [name="close"] {
+	margin-left: auto;
+	color: var(--off-white);
+	opacity: .5;
+	background: none;
+	border: unset;
+	cursor: pointer;
+	font-family: var(--mono);
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1em;
+	padding: 5px 10px;
+	transition: opacity .2s;
+}
+.editor-input .cm-panel.cm-search [name="close"]:hover {
+	opacity: 1;
+}
+.editor-input .cm-panel.cm-search [name="close"]:active {
+	opacity: .25;
+}
+
+/* ——————————— */
+/* FOOTER */
+/* ——————————— */
+
+.editor-source-footer {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 20px;
+	border-top: 1px solid var(--dark-gray);
+	background-color: var(--off-black);
+	flex-shrink: 0;
+	overflow: auto;
+}
+.editor-file-button {
+	font-family: inherit;
+	font-size: 14px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	text-transform: lowercase;
+	line-height: 1em;
+	color: var(--off-white);
+	background-color: var(--off-black);
+	border: 1px solid var(--dark-gray);
+	border-radius: 10px;
+	gap: 5px;
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: background-color .2s, color .2s, border-color .2s, opacity .2s;
+	white-space: nowrap;
+}
+.editor-file-button span:nth-child(1) {
+	padding-top: .15em;
+}
+.editor-file-button:hover {
+	background-color: var(--off-white);
+	color: var(--off-black);
+	border-color: var(--off-white);
+}
+.editor-file-button:active {
+	opacity: .25;
+}
+.editor-status {
+	margin-left: auto;
+	font-family: var(--mono);
+	font-size: 10px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	color: var(--gray);
+	text-align: right;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	white-space: nowrap;
+	flex-wrap: wrap;
+	padding-left: 10px;
+}
+.editor-status[data-note="paused"] {
+	color: var(--yellow);
+	opacity: 1;
+}
+.editor-status[data-note="saved"] {
+	color: var(--green);
+	opacity: 1;
+}
+.editor-status span {
+	margin-left: 10px;
+}
+
+/* ——————————— */
+/* SAVED FILES */
+/* ——————————— */
+
+.editor-dialog {
+	/* style.css zeroes the margin on everything, which takes the centering a modal dialog normally gets from the browser with it */
+	margin: auto;
+	width: min(640px, calc(100vw - 40px));
+	max-height: min(680px, calc(100dvh - 40px));
+	padding: 0;
+	border: unset;
+	border-radius: 20px;
+	background-color: var(--off-black);
+	color: var(--off-white);
+	overflow: hidden;
+	border: 1px solid var(--dark-gray);
+}
+.editor-dialog::backdrop {
+	background-color: rgba(0,0,0,.5);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+.editor-dialog-inner {
+	display: flex;
+	flex-direction: column;
+	max-height: min(680px, calc(100dvh - 40px));
+}
+.editor-dialog-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 20px;
+	border-bottom: 1px solid var(--dark-gray);
+	flex-shrink: 0;
+}
+.editor-dialog-title {
+	font-size: 20px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1em;
+	margin-right: auto;
+	white-space: nowrap;
+	padding-top: .2em;
+}
+.editor-dialog-list {
+	overflow-y: auto;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.editor-file {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: var(--dark-gray);
+}
+.editor-file-open {
+	flex: 1;
+	min-width: 0;
+	text-align: left;
+	font-family: inherit;
+	text-transform: none;
+	color: var(--off-white);
+	background: none;
+	border: unset;
+	cursor: pointer;
+	padding: 5px 0;
+	margin-right: 10px;
+}
+.editor-file-name {
+	display: block;
+	font-family: var(--mono);
+	font-size: 14px;
+	line-height: 1.2em;
+	font-variation-settings: "wght" 400;
+	font-weight: 400;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.editor-file-open:hover .editor-file-name {
+	text-decoration: underline;
+}
+.editor-file-meta {
+	display: block;
+	font-family: var(--mono);
+	font-size: 10px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	color: var(--gray);
+	margin-top: 5px;
+}
+.editor-file-action {
+	font-size: 16px;
+	line-height: 1em;
+	background-color: var(--off-black);
+	border: unset;
+	border-radius: 10px;
+	padding-top: .1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2em;
+	height: 2em;
+	cursor: pointer;
+	transition: background-color .15s;
+}
+.editor-file-action:hover {
+	background-color: var(--off-white);
+}
+.editor-file-action[data-danger="1"]:hover {
+	background-color: var(--red);
+}
+.editor-dialog-footer {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 20px;
+	border-top: 1px solid var(--dark-gray);
+	flex-shrink: 0;
+}
+/* the class rule above sets a display, which would otherwise beat the hidden attribute's */
+.editor-dialog-footer[hidden] {
+	display: none;
+}
+.editor-dialog-empty {
+	padding: 40px 20px;
+	text-align: center;
+	font-family: var(--mono);
+	font-size: 12px;
+	color: var(--gray);
+	opacity: .55;
+}
+
+/* ——————————— */
+/* DIVIDER */
+/* ——————————— */
+
+.editor-divider {
+	position: relative;
+	width: 6px;
+	background-color: var(--dark-gray);
+	cursor: col-resize;
+	touch-action: none;
+	transition: background-color .15s;
+}
+.editor-divider:hover,
+.editor[data-dragging="1"] .editor-divider {
+	background-color: var(--pink);
+}
+/* a thin bar is hard to grab, so the hit area reaches well past what's drawn */
+.editor-divider::before {
+	content: "";
+	position: absolute;
+	inset: 0 -6px;
+}
+/* the grip itself */
+.editor-divider::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	width: 2px;
+	height: 32px;
+	border-radius: 2px;
+	opacity: .4;
+}
+
+/* ——————————— */
+/* PREVIEW SIDE */
+/* ——————————— */
+
+.editor-preview {
+	position: relative;
+	min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+	background-color: var(--off-white);
+}
+.editor-frame {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: unset;
+	background-color: var(--off-white);
+}
+/* the same tools the built pages carry, driving the frame from out here */
+.editor-tools {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 5;
+	display: flex;
+	gap: 5px;
+}
+.editor-tools .resource-menu-control {
+	background-color: var(--off-black);
+	fill: var(--off-white);
+	color: var(--off-white);
+}
+/* the presentation runs inside the frame, and these would sit on top of it */
+.editor-tools[data-presenting="1"] {
+	display: none;
+}
+
+/* stacked on narrow screens, with the divider turning horizontal to match */
+@media (max-width: 900px) {
+	.editor {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: minmax(0, var(--split-v, 50%)) auto minmax(0, 1fr);
+	}
+	.editor[data-dragging="1"] {
+		cursor: row-resize;
+	}
+	.editor-divider {
+		width: auto;
+		height: 6px;
+		cursor: row-resize;
+	}
+	.editor-divider::before {
+		inset: -6px 0;
+	}
+	.editor-divider::after {
+		width: 32px;
+		height: 2px;
+	}
+	.editor-source-header {
+		flex-wrap: wrap;
+	}
+}

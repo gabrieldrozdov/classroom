@@ -20,7 +20,7 @@
 		</head>
 		<body>
 
-			<main class="menu-container">
+			<main class="menu-container home">
 				<header class="menu-header">
 					<div class="menu-header-content">
 						<h1 class="menu-header-title">
@@ -28,6 +28,44 @@
 							<span class="menu-header-title-big">GD with GD Classroom!</span>
 						</h1>
 					</div>
+					
+	<div class="menu-header-tools">
+		<button class="resource-menu-control" onclick="if(window.enterDraw)window.enterDraw('annotate');" aria-label="Annotate">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-annotate" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-annotate">annotate</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>📝</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="if(window.enterDraw)window.enterDraw('whiteboard');" aria-label="Whiteboard">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-whiteboard" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-whiteboard">whiteboard</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>✏️</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="window.createPin();" aria-label="Pin">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-pin" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-pin">pin</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>📌</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="window.createTimer();" aria-label="Timer">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-timer" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-timer">timer</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>⏰</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="window.createRandomizer();" aria-label="Randomizer">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-randomize" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-randomize">randomizer</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>🎲</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="if(window.toggleSoundboard)window.toggleSoundboard();" aria-label="Soundboard">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-soundboard" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-soundboard">soundboard</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>🔊</p></div>
+		</button>
+	</div>
+
+					
+	<div class="menu-divider">
+		<div class="menu-divider-block">
+			<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
+		</div>
+		<div class="menu-divider-block">
+			<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
+		</div>
+	</div>
+
 				</header>
 
 				<div class="menu-nav-container">
@@ -44,159 +82,176 @@
 					<nav class="menu-nav">
 						
 			<section class="home-menu-section">
-				<h2 class="home-menu-section-heading">2026</h2>
+				<div class="menu-section-header">
+					<span class="menu-section-emoji">🎓</span>
+					<h2 class="menu-section-heading">now teaching</h2>
+					<div class="menu-section-line">
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+					</div>
+				</div>
 				<div class="home-menu-links">
 					
-				<a href="/design-for-interaction-v2/" style="--primary: var(--pink);" class="home-menu-link">
+				<a href="/ds3-f26/" style="--primary: var(--pink);" class="home-menu-link">
+					<div class="home-menu-link-content">
+						<h3 class="home-menu-link-content-title">Design Studio 3 <span class="home-menu-link-content-version">F26</span></h3>
+						<p class="home-menu-link-content-desc">RISD Graphic Design core curriculum: Culture, Context, Community</p>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2026</li><li class="home-menu-link-content-tag">GRAPH 3226</li></ul>
+						<div class="home-menu-link-content-emoji">🌏</div>
+					</div>
+				</a>
+			
+				<a href="/type-and-code-v3/" style="--primary: var(--green);" class="home-menu-link">
+					<div class="home-menu-link-content">
+						<h3 class="home-menu-link-content-title">Type + Code <span class="home-menu-link-content-version">v3</span></h3>
+						<p class="home-menu-link-content-desc">Design original fonts and make websites to bring them to life!</p>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2026</li><li class="home-menu-link-content-tag">GRAPH 3123</li></ul>
+						<div class="home-menu-link-content-emoji">🔠</div>
+					</div>
+				</a>
+			
+				</div>
+			</section>
+		
+			<section class="home-menu-section">
+				<div class="menu-section-header">
+					<span class="menu-section-emoji">🦴</span>
+					<h2 class="menu-section-heading">ancient history</h2>
+					<div class="menu-section-line">
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+						<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+					</div>
+				</div>
+				<div class="home-menu-links">
+					
+				<a href="/design-for-interaction-v2/" style="--primary: var(--blue);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Design for Interaction <span class="home-menu-link-content-version">v2</span></h3>
 						<p class="home-menu-link-content-desc">A primer on UI/UX from the perspectives of performance and playfulness.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Spring 2026</li><li class="home-menu-link-content-tag">GRAPH 3327</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Spring 2026</li><li class="home-menu-link-content-tag">GRAPH 3327</li></ul>
 						<div class="home-menu-link-content-emoji">👆</div>
 					</div>
 				</a>
 			
-				<a href="/introduction-to-computation-v2/" style="--primary: var(--green);" class="home-menu-link">
+				<a href="/intro-to-computation-v2/" style="--primary: var(--yellow);" class="home-menu-link">
 					<div class="home-menu-link-content">
-						<h3 class="home-menu-link-content-title">Introduction to Computation <span class="home-menu-link-content-version">v2</span></h3>
+						<h3 class="home-menu-link-content-title">Intro to Computation <span class="home-menu-link-content-version">v2</span></h3>
 						<p class="home-menu-link-content-desc">Computer science for designers and artists.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Spring 2026</li><li class="home-menu-link-content-tag">CTC 2101</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Spring 2026</li><li class="home-menu-link-content-tag">CTC 2101</li></ul>
 						<div class="home-menu-link-content-emoji">🤖</div>
 					</div>
 				</a>
 			
-				</div>
-			</section>
-		
-			<section class="home-menu-section">
-				<h2 class="home-menu-section-heading">2025</h2>
-				<div class="home-menu-links">
-					
-				<a href="/type-and-code-v2/" style="--primary: var(--blue);" class="home-menu-link">
+				<a href="/type-and-code-v2/" style="--primary: var(--purple);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Type + Code <span class="home-menu-link-content-version">v2</span></h3>
 						<p class="home-menu-link-content-desc">Design experimental fonts, and then launch a type foundry to showcase your work!</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Fall 2025</li><li class="home-menu-link-content-tag">GRAPH 3123</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2025</li><li class="home-menu-link-content-tag">GRAPH 3123</li></ul>
 						<div class="home-menu-link-content-emoji">🔠</div>
 					</div>
 				</a>
 			
-				<a href="/in-motion-v2/" style="--primary: var(--yellow);" class="home-menu-link">
+				<a href="/in-motion-v2/" style="--primary: var(--red);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">In Motion <span class="home-menu-link-content-version">v2</span></h3>
 						<p class="home-menu-link-content-desc">A tour through the world of motion design, with an emphasis on musicality and performance!</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Fall 2025</li><li class="home-menu-link-content-tag">GRAPH 2216</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2025</li><li class="home-menu-link-content-tag">GRAPH 2216</li></ul>
 						<div class="home-menu-link-content-emoji">🎬</div>
 					</div>
 				</a>
 			
-				<a href="/design-for-interaction-v1/" style="--primary: var(--purple);" class="home-menu-link">
+				<a href="/design-for-interaction-v1/" style="--primary: var(--pink);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Design for Interaction <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">A primer on UI/UX from the perspectives of performance and playfulness.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Spring 2025</li><li class="home-menu-link-content-tag">GRAPH 3327</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Spring 2025</li><li class="home-menu-link-content-tag">GRAPH 3327</li></ul>
 						<div class="home-menu-link-content-emoji">👆</div>
 					</div>
 				</a>
 			
-				<a href="/introduction-to-computation-v1/" style="--primary: var(--red);" class="home-menu-link">
+				<a href="/intro-to-computation-v1/" style="--primary: var(--green);" class="home-menu-link">
 					<div class="home-menu-link-content">
-						<h3 class="home-menu-link-content-title">Introduction to Computation <span class="home-menu-link-content-version">v1</span></h3>
+						<h3 class="home-menu-link-content-title">Intro to Computation <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">Computer science for designers and artists.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Spring 2025</li><li class="home-menu-link-content-tag">CTC 1000</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Spring 2025</li><li class="home-menu-link-content-tag">CTC 1000</li></ul>
 						<div class="home-menu-link-content-emoji">🤖</div>
 					</div>
 				</a>
 			
-				</div>
-			</section>
-		
-			<section class="home-menu-section">
-				<h2 class="home-menu-section-heading">2024</h2>
-				<div class="home-menu-links">
-					
-				<a href="/type-and-code-v1/" style="--primary: var(--pink);" class="home-menu-link">
+				<a href="/type-and-code-v1/" style="--primary: var(--blue);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Type + Code <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">Creative coding elective focusing on type design, digital fonts, and unique reading experiences.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Fall 2024</li><li class="home-menu-link-content-tag">GRAPH 3123</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2024</li><li class="home-menu-link-content-tag">GRAPH 3123</li></ul>
 						<div class="home-menu-link-content-emoji">🔠</div>
 					</div>
 				</a>
 			
-				<a href="/in-motion-v1/" style="--primary: var(--green);" class="home-menu-link">
+				<a href="/in-motion-v1/" style="--primary: var(--yellow);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">In Motion <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">Motion design elective exploring a wide range of skills and use cases for animation.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Fall 2024</li><li class="home-menu-link-content-tag">GRAPH 2216</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2024</li><li class="home-menu-link-content-tag">GRAPH 2216</li></ul>
 						<div class="home-menu-link-content-emoji">🎬</div>
 					</div>
 				</a>
 			
-				<a href="/variable-fonts-workshop-v2/" style="--primary: var(--blue);" class="home-menu-link">
+				<a href="/variable-fonts-workshop-v2/" style="--primary: var(--purple);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Variable Fonts Workshop <span class="home-menu-link-content-version">v2</span></h3>
 						<p class="home-menu-link-content-desc">Type design through the lens of experimental variable fonts.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Spring 2024</li><li class="home-menu-link-content-tag">GRAPH 3163</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Spring 2024</li><li class="home-menu-link-content-tag">GRAPH 3163</li></ul>
 						<div class="home-menu-link-content-emoji">🔡</div>
 					</div>
 				</a>
 			
-				<a href="/web-sites-and-stories-v1/" style="--primary: var(--yellow);" class="home-menu-link">
+				<a href="/web-sites-and-stories-v1/" style="--primary: var(--red);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Web Sites & Stories <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">Web design and development as a medium for storytelling.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Winter 2024</li><li class="home-menu-link-content-tag">GRAPH 3271</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Winter 2024</li><li class="home-menu-link-content-tag">GRAPH 3271</li></ul>
 						<div class="home-menu-link-content-emoji">🌐</div>
 					</div>
 				</a>
 			
-				</div>
-			</section>
-		
-			<section class="home-menu-section">
-				<h2 class="home-menu-section-heading">2023</h2>
-				<div class="home-menu-links">
-					
-				<a href="/web-programming-workshop-v2/" style="--primary: var(--purple);" class="home-menu-link">
+				<a href="/web-programming-workshop-v2/" style="--primary: var(--pink);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Web Programming Workshop <span class="home-menu-link-content-version">v2</span></h3>
 						<p class="home-menu-link-content-desc">The basics of HTML, CSS, and a tiny bit of JavaScript.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Fall 2023</li><li class="home-menu-link-content-tag">GRAPH 3188</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2023</li><li class="home-menu-link-content-tag">GRAPH 3188</li></ul>
 						<div class="home-menu-link-content-emoji">💻</div>
 					</div>
 				</a>
 			
-				<a href="/variable-fonts-workshop-v1/" style="--primary: var(--red);" class="home-menu-link">
+				<a href="/variable-fonts-workshop-v1/" style="--primary: var(--green);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Variable Fonts Workshop <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">Type design through the lens of experimental variable fonts.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Spring 2023</li><li class="home-menu-link-content-tag">GRAPH 3163</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Spring 2023</li><li class="home-menu-link-content-tag">GRAPH 3163</li></ul>
 						<div class="home-menu-link-content-emoji">🔡</div>
 					</div>
 				</a>
 			
-				<a href="/digital-form-v1/" style="--primary: var(--pink);" class="home-menu-link">
+				<a href="/digital-form-v1/" style="--primary: var(--blue);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Digital Form <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">Introduction to graphic, motion, and web design from a digital-first perspective.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Winter 2023</li><li class="home-menu-link-content-tag">GRAPH 1566</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Winter 2023</li><li class="home-menu-link-content-tag">GRAPH 1566</li></ul>
 						<div class="home-menu-link-content-emoji">📺</div>
 					</div>
 				</a>
 			
-				</div>
-			</section>
-		
-			<section class="home-menu-section">
-				<h2 class="home-menu-section-heading">2022</h2>
-				<div class="home-menu-links">
-					
-				<a href="/web-programming-workshop-v1/" style="--primary: var(--green);" class="home-menu-link">
+				<a href="/web-programming-workshop-v1/" style="--primary: var(--yellow);" class="home-menu-link">
 					<div class="home-menu-link-content">
 						<h3 class="home-menu-link-content-title">Web Programming Workshop <span class="home-menu-link-content-version">v1</span></h3>
 						<p class="home-menu-link-content-desc">The basics of HTML, CSS, and a tiny bit of JavaScript.</p>
-						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">RISD</li><li class="home-menu-link-content-tag">Fall 2022</li><li class="home-menu-link-content-tag">GRAPH 3188</li></ul>
+						<ul class="home-menu-link-content-tags"><li class="home-menu-link-content-tag">risd</li><li class="home-menu-link-content-tag">in-person</li><li class="home-menu-link-content-tag">Fall 2022</li><li class="home-menu-link-content-tag">GRAPH 3188</li></ul>
 						<div class="home-menu-link-content-emoji">💻</div>
 					</div>
 				</a>
@@ -208,8 +263,15 @@
 				</div>
 			</main>
 			
-			<script src="/home.js"></script>
-			<script src="/emoji.js"></script>
+			<script src="/assets/scripts/home.js"></script>
+			<script src="/assets/scripts/emoji.js"></script>
+			<script src="/assets/scripts/brand.js"></script>
+			<script src="/assets/scripts/widget.js"></script>
+			<script src="/assets/scripts/soundboard.js"></script>
+			<script src="/assets/scripts/timer.js"></script>
+			<script src="/assets/scripts/randomizer.js"></script>
+			<script src="/assets/scripts/pin.js"></script>
+			<script src="/assets/scripts/presentation.js"></script>
 		</body>
 		</html>
 	

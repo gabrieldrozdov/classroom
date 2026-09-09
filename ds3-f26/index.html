@@ -1,0 +1,197 @@
+
+				<!DOCTYPE html>
+				<html lang="en">
+				<head>
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>🌏 Design Studio 3, F26</title>
+					
+	<meta name="author" content="Gabriel Drozdov / GD with GD">
+	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
+	<meta name="description" content="Open-source archive for all of Gabriel Drozdov’s courses and teaching materials!">
+	<meta property="og:url" content="https://classroom.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="Classroom, by GD with GD">
+	<meta property="og:description" content="Open-source archive for all of Gabriel Drozdov’s courses and teaching materials!">
+	<meta property="og:image" content="/assets/meta/opengraph.jpg">
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
+
+					<link rel="stylesheet" href="/style.css">
+				</head>
+				<body>
+					<main class="menu-container" style="--primary: var(--pink);">
+						<header class="menu-header">
+							<div class="menu-header-content">
+								<h1 class="menu-header-title">
+									<span class="menu-header-title-emoji"><span class="menu-header-title-emoji-main" onclick="emojiBurst();">🌏</span><span class="menu-header-title-emoji-anim-wrapper"></span></span>
+									<span class="menu-header-title-big menu-header-title-big-course">Design Studio 3</span>
+									<span class="menu-header-version">F26</span>
+								</h1>
+							</div>
+							<a href="/" class="menu-header-return">
+								<svg class="menu-header-return-text" viewBox="0 0 100 100"><defs><path id="menu-header-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-return-text">GD with GD Classroom</textPath></text></svg>
+								<div class="menu-header-return-icon">
+									<p>🍎</p>
+								</div>
+							</a>
+							
+	<div class="menu-header-tools">
+		<button class="resource-menu-control" onclick="if(window.enterDraw)window.enterDraw('annotate');" aria-label="Annotate">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-annotate" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-annotate">annotate</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>📝</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="if(window.enterDraw)window.enterDraw('whiteboard');" aria-label="Whiteboard">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-whiteboard" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-whiteboard">whiteboard</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>✏️</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="window.createPin();" aria-label="Pin">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-pin" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-pin">pin</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>📌</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="window.createTimer();" aria-label="Timer">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-timer" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-timer">timer</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>⏰</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="window.createRandomizer();" aria-label="Randomizer">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-randomize" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-randomize">randomizer</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>🎲</p></div>
+		</button>
+		<button class="resource-menu-control" onclick="if(window.toggleSoundboard)window.toggleSoundboard();" aria-label="Soundboard">
+			<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="menu-header-tool-soundboard" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-tool-soundboard">soundboard</textPath></text></svg>
+			<div class="resource-menu-control-icon"><p>🔊</p></div>
+		</button>
+	</div>
+
+
+							
+	<div class="menu-divider">
+		<div class="menu-divider-block">
+			<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
+		</div>
+		<div class="menu-divider-block">
+			<svg viewBox="0 0 30 1000" preserveAspectRatio="none"><path d="M30,0v1000h-10c0-11.1-4.23-16.38-9.12-22.5-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5c-5.1-6.37-10.88-13.6-10.88-27.5s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5s-4.23-16.38-9.12-22.5C5.78,71.13,0,63.9,0,50s5.78-21.13,10.88-27.5c4.89-6.12,9.12-11.4,9.12-22.5h10Z"/></svg>
+		</div>
+	</div>
+
+						</header>
+		
+						<div class="menu-nav-container">
+							<div class="menu-desc">
+								<h2 class="menu-desc-heading">
+									<span class="menu-desc-heading-name">Design Studio 3</span>
+									<span class="menu-desc-heading-version">F26</span>
+								</h2>
+								<div class="menu-desc-text">
+									<p>Welcome to DS3! Design Studio ~ the GD Department’s 2-year core studio track ~ explores many realms, all stemming from the overarching questions: “How does (graphic) design operate?” and “What can graphic design accomplish?” This course is the continuation of your studies already begun in DS1 and DS2, and may be seen as a synthesis of skills and methods introduced in your first year, and a furthering of the idea of using graphic design to give voice to complex ideas.</p><p>As juniors ready to jump into the next phase of this multi-phase sequence, you will be given longer-term projects intermixed with in-studio workshops and exercises. Our focus will be on the relational aspects of graphic design: culture, context, and community. Upon completion of the Design Studio track, you will have a deeper sense of your own identity as a designer, and will be better able to frame questions and lines of inquiry on your own. End forms will be more emphasized than in DS1 and 2, in part as evidence that craft and working methods are evolving.</p>
+								</div>
+								<ul class="menu-desc-tags"><li class="menu-desc-tag">risd</li><li class="menu-desc-tag">in-person</li><li class="menu-desc-tag">Fall 2026</li><li class="menu-desc-tag">GRAPH 3226</li></ul>
+							</div>
+							<nav class="menu-nav">
+								
+					<section class="course-menu-section">
+						<div class="menu-section-header">
+							<span class="menu-section-emoji">📚</span>
+							<h2 class="menu-section-heading">course materials</h2>
+							<div class="menu-section-line">
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+							</div>
+						</div>
+						<div class="course-menu-links">
+							
+						<a href="/ds3-f26/syllabus" style="--primary: var(--pink);" class="course-menu-link" data-info="false">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Syllabus</h3>
+								</div>
+								
+								<div class="course-menu-link-content-emoji">🔠</div>
+							</div>
+						</a>
+					
+						<a href="/ds3-f26/student-work" style="--primary: var(--green);" class="course-menu-link" data-info="false">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Final Student Work Archive</h3>
+								</div>
+								
+								<div class="course-menu-link-content-emoji">🔠</div>
+							</div>
+						</a>
+					
+						</div>
+					</section>
+				
+					<section class="course-menu-section">
+						<div class="menu-section-header">
+							<span class="menu-section-emoji">✏️</span>
+							<h2 class="menu-section-heading">Units</h2>
+							<div class="menu-section-line">
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+								<svg viewBox="0 -10 1000 41"><path d="M1000,.5c-13.9,0-21.13,5.78-27.5,10.88-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12c-6.37-5.1-13.6-10.88-27.5-10.88s-21.13,5.78-27.5,10.88c-6.12,4.9-11.4,9.12-22.5,9.12s-16.38-4.23-22.5-9.12C21.13,6.28,13.9.5,0,.5"/></svg>
+							</div>
+						</div>
+						<div class="course-menu-links">
+							
+						<a href="/ds3-f26/unit-9" style="--primary: var(--blue);" class="course-menu-link" data-info="false">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Unit 9: Collections</h3>
+								</div>
+								
+								<div class="course-menu-link-content-emoji">📦</div>
+							</div>
+						</a>
+					
+						<a href="/ds3-f26/unit-9-kick-off" style="--primary: var(--yellow);" class="course-menu-link" data-info="false">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Unit 9: Kick-off Slides</h3>
+								</div>
+								
+								<div class="course-menu-link-content-emoji">📦</div>
+							</div>
+						</a>
+					
+						<a href="/ds3-f26/archives-libraries-collections" style="--primary: var(--purple);" class="course-menu-link" data-info="false">
+							<div class="course-menu-link-content">
+								<div>
+									<h3 class="course-menu-link-content-title">Archives / Libraries / Collections</h3>
+								</div>
+								
+								<div class="course-menu-link-content-emoji">🏛️</div>
+							</div>
+						</a>
+					
+						</div>
+					</section>
+				
+				<a href="/" class="course-menu-return">
+					<svg class="course-menu-return-text" viewBox="0 0 100 100"><defs><path id="course-menu-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#course-menu-return-text">go back home</textPath></text></svg>
+					<div class="course-menu-return-icon">
+						<p>🍎</p>
+					</div>
+				</a>
+			
+							</nav>
+						</div>
+					</main>
+					
+					<script src="/assets/scripts/course.js"></script>
+					<script src="/assets/scripts/emoji.js"></script>
+					<script src="/assets/scripts/brand.js"></script>
+					<script src="/assets/scripts/widget.js"></script>
+					<script src="/assets/scripts/soundboard.js"></script>
+					<script src="/assets/scripts/timer.js"></script>
+					<script src="/assets/scripts/randomizer.js"></script>
+					<script src="/assets/scripts/pin.js"></script>
+					<script src="/assets/scripts/presentation.js"></script>
+				</body>
+				</html>
+			
