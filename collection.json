@@ -21,14 +21,14 @@
 						"contents": [
 							{
 								"name": "Syllabus",
-								"emoji": "🔠",
+								"emoji": "🌏",
 								"slug": "syllabus",
 								"url": "https://docs.google.com/document/d/1-92cNh6MY2ORNJrAkOMJD6Esm4MVvNmjuI-bKMdPoCg/preview",
 								"newtab": false
 							},
 							{
 								"name": "Final Student Work Archive",
-								"emoji": "🔠",
+								"emoji": "📂",
 								"slug": "student-work",
 								"url": "https://drive.google.com/drive/folders/1PySVmI2KXaGTAj067KKZySXbgXtBXqtF?usp=sharing",
 								"newtab": true
@@ -36,18 +36,18 @@
 						]
 					},
 					{
-						"name": "✏️ Units",
+						"name": "📦 Unit 9: Collections",
 						"contents": [
 							{
-								"name": "Unit 9: Collections",
-								"emoji": "📦",
+								"name": "Unit Overview",
+								"emoji": "🔍",
 								"slug": "unit-9",
 								"url": "https://docs.google.com/document/d/1oRSa8cNa90sSI9yBD--cx6NETPkAAlrjeyLMOgkyTtU/preview",
 								"newtab": false
 							},
 							{
-								"name": "Unit 9: Kick-off Slides",
-								"emoji": "📦",
+								"name": "Kick-off Slides",
+								"emoji": "📽️",
 								"slug": "unit-9-kick-off",
 								"url": "https://docs.google.com/presentation/d/1FaY6OzQ1UpV3cIbv2HevHbNOGN06g9gYyjgoThBfI8g/preview",
 								"newtab": false
@@ -58,18 +58,28 @@
 								"slug": "archives-libraries-collections",
 								"url": "https://www.are.na/gabriel-drozdov/risd-f26-ds3-unit-9",
 								"newtab": false
-							},
+							}
+						]
+					},
+					{
+						"name": "📊 Unit 10: Mapping & Visualizing Data",
+						"contents": [
 							{
-								"name": "Unit 10: Mapping & Visualizing Data",
-								"emoji": "📊",
+								"name": "Unit Overview",
+								"emoji": "🔍",
 								"slug": "unit-10",
 								"url": "https://docs.google.com/document/d/1xaSE0StMCdm8n1OuZhASOkRqMuu408lC5TWJG3S2Sxs/preview",
 								"newtab": false,
 								"active": false
-							},
+							}
+						]
+					},
+					{
+						"name": "⚖️ Unit 11: Designing with Purpose",
+						"contents": [
 							{
-								"name": "Unit 11: Designing with Purpose",
-								"emoji": "⚖️",
+								"name": "Unit Overview",
+								"emoji": "🔍",
 								"slug": "unit-11",
 								"url": "https://docs.google.com/document/d/1ku4e1Ox2sNlJ4CnNGAuX5EeXXHeicAy6Rj6DhVQ9JCE/preview",
 								"newtab": false,
