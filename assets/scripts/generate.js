@@ -68,6 +68,21 @@ function markdownToHTML(markdown) {
 		return escapeHTML(text).replace(/"/g, '&quot;');
 	}
 
+	// indentation measured in columns, so tabs and spaces can be mixed without changing what a line is nested under. a tab counts as four, which is how it's usually set. it's what tells a sub-item which list it belongs to and a file tree entry which folder it sits in.
+	function indentWidth(line) {
+		let width = 0;
+		for (let character of line) {
+			if (character == '\t') {
+				width += 4;
+			} else if (character == ' ') {
+				width += 1;
+			} else {
+				break;
+			}
+		}
+		return width;
+	}
+
 	// turn heading text into a URL-friendly id for anchor links
 	function slugify(text) {
 		return text
@@ -515,25 +530,12 @@ function markdownToHTML(markdown) {
 			return '';
 		}).trim();
 
-		// indentation is measured in columns so tabs and spaces can be mixed; the shallowest line in the block becomes the root level
-		function indentOf(line) {
-			let width = 0;
-			for (let char of line) {
-				if (char == '\t') {
-					width += 4;
-				} else if (char == ' ') {
-					width += 1;
-				} else {
-					break;
-				}
-			}
-			return width;
-		}
-		let widths = [...new Set(lines.map(indentOf))].sort((a, b) => a - b);
+		// the shallowest line in the block is the root level, and every deeper indentation found in it is a level below that
+		let widths = [...new Set(lines.map(indentWidth))].sort((a, b) => a - b);
 
 		let entries = [];
 		for (let line of lines) {
-			let depth = widths.indexOf(indentOf(line));
+			let depth = widths.indexOf(indentWidth(line));
 			let text = line.trim();
 
 			// a leading emoji overrides whatever the extension would give
@@ -644,11 +646,18 @@ function markdownToHTML(markdown) {
 	// convert inline markdown within a single line of text
 	function inline(text) {
 
-		// pull out inline code first so its contents aren't reformatted, then drop the finished spans back in at the end
+		// pull out inline code first so its contents aren't reformatted, then drop the finished spans back in at the end. a backtick written with a backslash in front of it doesn't open a span, which is what lets a backtick be written as text.
 		let codeSpans = [];
-		text = text.replace(/`([^`]+)`/g, (match, code) => {
+		text = text.replace(/(^|[^\\])`([^`]+)`/g, (match, before, code) => {
 			codeSpans.push(`<code>${escapeHTML(code)}</code>`);
-			return `\u0000${codeSpans.length - 1}\u0000`;
+			return `${before}\u0000${codeSpans.length - 1}\u0000`;
+		});
+
+		// escaped punctuation: a backslash in front of a character means the character itself rather than the markup it usually makes, so "\\*not italic\\*" keeps its asterisks. each one is taken out of the text here and put back once everything else has been converted, so nothing in between can read it as markup — and because this runs after inline code has been lifted out, a backslash inside code is left alone, which is what keeps a "\\n" written in code intact.
+		let escapes = [];
+		text = text.replace(/\\([\\`*_{}\[\]()<>&#+\-.!|~@:])/g, (match, character) => {
+			escapes.push(escapeHTML(character));
+			return `\u0001${escapes.length - 1}\u0001`;
 		});
 
 		// inline images (and other media)
@@ -674,10 +683,46 @@ function markdownToHTML(markdown) {
 		text = text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
 		text = text.replace(/(^|[^\w])_([^_]+)_(?=[^\w]|$)/g, '$1<em>$2</em>');
 
+		// put the escaped characters back, now that there's nothing left to misread them
+		text = text.replace(/\u0001(\d+)\u0001/g, (match, index) => escapes[index]);
+
 		// restore inline code
 		text = text.replace(/\u0000(\d+)\u0000/g, (match, index) => codeSpans[index]);
 
 		return text;
+	}
+
+	// a line that opens a list item: its indentation, the number if it was written as an ordered one, and whatever follows the marker
+	const listItem = /^([ \t]*)(?:[-*+]|(\d+)\.)\s+(.*)$/;
+
+	// fold a run of list lines into nested lists. an item indented further than the one above it opens a list inside that item, and each level keeps the kind of marker that opened it, so a numbered list can sit inside a bulleted one and the other way round.
+	// an ordered list counts from the number it was written with rather than always from 1, which is what lets a list carry on from an earlier one — write "4." and it starts at four.
+	function buildList(items, index) {
+		let level = items[index].indent;
+		let ordered = items[index].ordered;
+		let start = items[index].number;
+		let number = start;
+		let itemsHTML = '';
+		while (index < items.length && items[index].indent >= level && items[index].ordered == ordered) {
+			let content = inline(items[index].content);
+			let marker = ordered ? number : '→';
+			index++;
+
+			// anything indented past this level belongs to the item just written, as a list of its own inside it
+			let nested = '';
+			while (index < items.length && items[index].indent > level) {
+				let inner = buildList(items, index);
+				nested += inner.html;
+				index = inner.index;
+			}
+			itemsHTML += `<li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">${marker}</span><div class="resource-preview-markdown-list-content">${content}${nested}</div></li>`;
+			number++;
+		}
+
+		// the numbers are drawn rather than counted by the browser, but the attribute keeps the markup honest for anything reading it on its own — a screen reader, or text copied out of the page
+		let tag = ordered ? 'ol' : 'ul';
+		let attrs = ordered && start != 1 ? ` start="${start}"` : '';
+		return { html: `<${tag} class="resource-preview-markdown-list"${attrs}>${itemsHTML}</${tag}>`, index: index };
 	}
 
 	// process the document line by line, grouping block elements
@@ -910,29 +955,22 @@ function markdownToHTML(markdown) {
 			continue;
 		}
 
-		// unordered lists (marker and content split into their own elements)
-		if (/^\s*[-*+]\s+/.test(line)) {
-			let items = '';
-			while (i < lines.length && /^\s*[-*+]\s+/.test(lines[i])) {
-				let content = inline(lines[i].replace(/^\s*[-*+]\s+/, ''));
-				items += `<li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">→</span><div class="resource-preview-markdown-list-content">${content}</div></li>`;
+		// lists, unordered or ordered, nested by indentation (marker and content split into their own elements)
+		if (listItem.test(line)) {
+			let items = [];
+			while (i < lines.length && listItem.test(lines[i])) {
+				let item = lines[i].match(listItem);
+				items.push({ indent: indentWidth(lines[i]), ordered: item[2] != undefined, number: item[2] ? parseInt(item[2]) : 1, content: item[3] });
 				i++;
 			}
-			html += `<ul class="resource-preview-markdown-list">${items}</ul>`;
-			continue;
-		}
 
-		// ordered lists (marker and content split into their own elements)
-		if (/^\s*\d+\.\s+/.test(line)) {
-			let items = '';
-			let number = 1;
-			while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
-				let content = inline(lines[i].replace(/^\s*\d+\.\s+/, ''));
-				items += `<li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">${number}</span><div class="resource-preview-markdown-list-content">${content}</div></li>`;
-				number++;
-				i++;
+			// one run can hold more than one list: switching marker at the top level starts a new one rather than carrying on in the old, which is how it reads on the page
+			let index = 0;
+			while (index < items.length) {
+				let built = buildList(items, index);
+				html += built.html;
+				index = built.index;
 			}
-			html += `<ol class="resource-preview-markdown-list">${items}</ol>`;
 			continue;
 		}
 

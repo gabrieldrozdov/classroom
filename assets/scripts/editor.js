@@ -72,7 +72,8 @@ const groups = [
 			{ label: '{h: highlight}', before: '{h:yellow ', placeholder: 'highlighted text', after: '}' },
 			{ label: '{bg: cell}', before: '{bg:pink} ' },
 			{ label: '{center} cell', before: '{center} ' },
-			{ label: '\\ cell line', before: ' \\ ' }
+			{ label: '\\ cell line', before: ' \\ ' },
+			{ label: '\\ escape', before: '\\', placeholder: '*' }
 		]
 	},
 	{
@@ -84,6 +85,7 @@ const groups = [
 			{ label: '### h3', block: true, before: '### ', placeholder: 'Heading' },
 			{ label: '- list', block: true, before: '- ', placeholder: 'First item', after: '\n- Second item' },
 			{ label: '1. list', block: true, before: '1. ', placeholder: 'First item', after: '\n2. Second item' },
+			{ label: '↳ sub item', block: true, before: '\t- ', placeholder: 'Sub item' },
 			{ label: '> quote', block: true, before: '> ', placeholder: 'Quoted text' },
 			{ label: 'table', block: true, before: '| ', placeholder: 'Column', after: ' | Column |\n| --- | --- |\n| Cell | Cell |\n| Cell | Cell |' },
 			{ label: 'table widths', block: true, before: '| ', placeholder: 'Wide', after: ' | Narrow | Narrow |\n| --- 2 | --- 1 | --- 1 |\n| Cell | Cell | Cell |' },

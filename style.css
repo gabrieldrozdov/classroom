@@ -64,7 +64,7 @@ body {
 	font-weight: 400;
 	background-color: var(--off-white);
 	color: var(--off-black);
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 }
 
 /* ——————————— */
@@ -451,7 +451,7 @@ body {
 }
 .menu-desc-tag {
 	font-size: 24px;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	font-variation-settings: "wght" 650, "SRFF" 0;
 	font-weight: 650;
 	line-height: 1em;
@@ -1571,7 +1571,7 @@ body {
 	font-variation-settings: "wght" 600, "SRFF" 0;
 	font-weight: 600;
 	font-size: 14px;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	color: var(--off-white);
 	background-color: var(--off-black);
 	padding: calc(10px + .2em) 15px 10px 15px;
@@ -1939,11 +1939,22 @@ h3 .resource-preview-markdown-heading-text {
 }
 .resource-preview-markdown-list-marker {
 	flex-shrink: 0;
-	color: var(--primary);
+	font-variation-settings: "wght" 700;
+	font-weight: 700;
+	background-color: var(--primary);
 	text-align: center;
-	width: 1ch;
-	font-variation-settings: "wght" 600, "SRFF" 0;
-	font-weight: 600;
+	line-height: 1em;
+	color: var(--off-black);
+	padding-bottom: .08em;
+	border-radius: 50%;
+	width: 2.5ch;
+	height: 2.5ch;
+	font-family: var(--mono);
+	transform: translateY(-.2em);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: .75em;
 }
 .resource-preview-markdown-band .resource-preview-markdown-list-marker {
 	color: var(--off-black);
@@ -1951,6 +1962,14 @@ h3 .resource-preview-markdown-heading-text {
 .resource-preview-markdown-list-content {
 	flex-grow: 1;
 	min-width: 0;
+}
+
+/* a list nested inside another hangs under the item that owns it rather than starting over at the page's own indent, so the levels step in by one marker each. the width comes off its parent for the same reason: the text column is set once, at the top level. */
+.resource-preview-markdown-list .resource-preview-markdown-list {
+	max-width: none;
+	width: auto;
+	padding: 0;
+	margin: var(--unit-half) 0 0;
 }
 
 /* buttons */
@@ -2189,7 +2208,7 @@ h3 .resource-preview-markdown-heading-text {
 	font-weight: 300;
 	font-size: .9em;
 	text-transform: none !important;
-	background-color: var(--light-gray);
+	background: color-mix(in srgb, var(--primary) 50%, var(--off-white) 15%);
 	padding: .1em .4em;
 	border-radius: var(--unit-half);
 	font-feature-settings: "liga" 0;
@@ -2289,7 +2308,7 @@ h3 .resource-preview-markdown-heading-text {
 	font-variation-settings: "wght" 600, "SRFF" 0;
 	font-weight: 600;
 	font-size: 14px;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	padding: calc(10px + .2em) 15px 10px 15px;
 	border-radius: 10px;
 	transition: opacity .2s, transform .2s;
@@ -2809,7 +2828,7 @@ body.presentation-notes .presentation-notes-body::before {
 	margin-left: auto;
 	font-family: "Limkin", sans-serif;
 	font-size: .85em;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	color: var(--off-black);
 	background-color: var(--off-white);
 	border: none;
@@ -3582,7 +3601,7 @@ a.resource-preview-markdown-files-tile:active {
 	flex-shrink: 0;
 	border-radius: 5px;
 	white-space: nowrap;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 	transition: background-color .1s;
@@ -4009,7 +4028,7 @@ a.resource-preview-markdown-files-tile:active {
 	flex-direction: column;
 	gap: 5px;
 	font-size: .5em;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	cursor: text;
 }
 .randomizer-field input {
@@ -4040,7 +4059,7 @@ a.resource-preview-markdown-files-tile:active {
 	cursor: pointer;
 	font-family: inherit;
 	font-size: .55em;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	color: inherit;
 	border-radius: .5em;
 	padding: .5em .3em;
@@ -4877,7 +4896,7 @@ body[data-draw] .presentation-draw-toolbar {
 }
 .resource-nav-toggle > span {
 	font-size: 18px;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	font-variation-settings: "wght" 600, "SRFF" 0;
 	font-weight: 600;
 	line-height: 1em;
@@ -5360,7 +5379,7 @@ body[data-soundboard="1"] .presentation-draw-toolbar {
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 1em;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -5682,7 +5701,7 @@ body[data-soundboard="1"] .presentation-draw-toolbar {
 	align-items: center;
 	justify-content: center;
 	line-height: 1em;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	cursor: pointer;
 }
 .soundboard-drumpad-key:nth-child(6n+1) {

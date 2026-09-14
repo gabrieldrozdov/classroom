@@ -661,7 +661,7 @@ function generatePages() {
 					<div class="menu-header-content">
 						<h1 class="menu-header-title">
 							<span class="menu-header-title-emoji"><span class="menu-header-title-emoji-main" onclick="emojiBurst();">🍎</span><span class="menu-header-title-emoji-anim-wrapper"></span></span>
-							<span class="menu-header-title-big">GD with GD Classroom!</span>
+							<span class="menu-header-title-big">gd with gd classroom!</span>
 						</h1>
 					</div>
 					${menuHeaderTools}
@@ -672,10 +672,10 @@ function generatePages() {
 					<div class="menu-desc">
 						<div class="menu-desc-text">
 							<p>
-								<strong>Welcome to class!</strong> I’m Gabriel, and I teach design and code and everything in between. This site is a collection of everything I make for my courses: syllabi, project descriptions, tutorials, and more!
+								<strong>welcome to class!</strong> i’m gabriel, and i teach design and code and everything in between. this site is a collection of everything i make for my courses: syllabi, project descriptions, tutorials, and more!
 							</p>
 							<p>
-								Whether you’re a student or a teacher, feel free to browse through these materials and take what you need. For more resources, check out <a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>!
+								whether you’re a student or a teacher, feel free to browse through these materials and take what you need. for more resources, check out <a href="https://gdwithgd.com/" target="_blank">gd&nbsp;with&nbsp;gd</a>!
 							</p>
 						</div>
 					</div>

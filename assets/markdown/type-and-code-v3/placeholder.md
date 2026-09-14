@@ -14,6 +14,8 @@ You can write **bold**, *italic*, `inline code`, and [links](https://gdwithgd.co
 
 Both take the grays as well as the six brand colors — {h:off-black off-black}, {h:dark-gray dark-gray}, {h:light-gray light-gray} — and a hex code, like {h:#b5e48c this one} or {c:#2b3a55 this text}. A highlight sets its own text to black or white, whichever stays readable on it.
 
+Put a backslash in front of a character and it stands for itself rather than being read as markup: \*asterisks\*, \_underscores\_, \[brackets\], \{braces\}, \`backticks\`. Inside `inline code` a backslash is left alone, so a `\n` written in code stays as it is.
+
 > Blockquotes still work for callouts and pull quotes.
 
 [primary rotate]
@@ -71,11 +73,20 @@ Unordered lists use custom split markers:
 - Second item, with some **bold** text
 - Third item
 
-Ordered lists number themselves:
+Ordered lists count from the number they start with, so a list can pick up where an earlier one left off:
 
 1. Step one
 2. Step two
 3. Step three
+
+Indent an item to nest it under the one above. Either kind of list can sit inside the other, as deep as you like:
+
+- First item
+	- A sub item
+	- Another sub item
+		4. A numbered sub item, counting from four
+		5. The next one
+- Back out at the top level
 
 [primary rotate]
 [page]
@@ -301,7 +312,7 @@ A `::: files` block lists a folder structure. One entry per line, nested by inde
 
 Each entry gets an emoji from its file extension: 🌐 for html, 🎨 for css, ⚙️ for js, 🖼️ for images, 🔤 for fonts, 📁 for folders, and so on. Start a line with your own emoji to override it. An entry can also be a link, written the usual way as `[name](url)`.
 
-Text after the block name becomes its title, and the toggle in the corner swaps the indented file view for a folder view: one folder at a time as a grid of icons, where the title becomes the path you are in and each part of it is clickable, with a back arrow beside it. Add `[folder]` to open in that view instead — as in ``::: files [folder] my-site`` — or `[file]` to be explicit about the default. Printing always uses the indented listing.
+Text after the block name becomes its title, and the toggle in the corner swaps the indented file view for a folder view: one folder at a time as a grid of icons, where the title becomes the path you are in and each part of it is clickable, with a back arrow beside it. Add `[folder]` to open in that view instead — as in `::: files [folder] my-site` — or `[file]` to be explicit about the default. Printing always uses the indented listing.
 
 ::: files [folder] my-site
 index.html

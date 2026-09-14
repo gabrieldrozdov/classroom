@@ -180,8 +180,8 @@ function initPresentation() {
 	finalSlide.style.setProperty('--primary', 'var(--off-white)');
 	finalSlide.innerHTML = `
 		<div class="resource-preview-markdown presentation-finished">
-			<p class="presentation-finished-text">We’ve reached the end!</p>
-			<button class="presentation-finished-close">Let’s get out of here</button>
+			<p class="presentation-finished-text">we’ve reached the end!</p>
+			<button class="presentation-finished-close">let’s get out of here</button>
 		</div>
 	`;
 	addDrifters(finalSlide, ['🎬', '🎉', '🪩', '🐱', '💥', '🫪']);
