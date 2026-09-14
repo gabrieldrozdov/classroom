@@ -1958,6 +1958,7 @@ h3 .resource-preview-markdown-heading-text {
 }
 .resource-preview-markdown-band .resource-preview-markdown-list-marker {
 	color: var(--off-black);
+	background-color: var(--off-white);
 }
 .resource-preview-markdown-list-content {
 	flex-grow: 1;

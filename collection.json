@@ -93,7 +93,8 @@
 								"slug": "09-16-26",
 								"url": "/assets/markdown/ds3-f26/09-16-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": ["unit 9"],
+								"active": false
 							},
 							{
 								"name": "class 4, sep. 21",
@@ -101,7 +102,8 @@
 								"slug": "09-21-26",
 								"url": "/assets/markdown/ds3-f26/09-21-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": ["unit 9"],
+								"active": false
 							},
 							{
 								"name": "class 5, sep. 23",
@@ -109,7 +111,8 @@
 								"slug": "09-23-26",
 								"url": "/assets/markdown/ds3-f26/09-23-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": ["unit 9"],
+								"active": false
 							},
 							{
 								"name": "class 6, sep. 28",
@@ -117,7 +120,8 @@
 								"slug": "09-28-26",
 								"url": "/assets/markdown/ds3-f26/09-28-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": ["unit 9"],
+								"active": false
 							}
 						]
 					}
