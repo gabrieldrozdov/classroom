@@ -12,7 +12,7 @@
 [10/6/26 green]
 
 [10/12/26 gray]
-🚫 Indigenous Peoples’ Day, no classes
+🚫 indigenous peoples’ day, no classes
 
 [10/13/26 green]
 🤖 crit p2
@@ -64,7 +64,7 @@
 
 | class | things due | agenda |
 | --- 1.5 | --- 3 | --- 3 |
-| **1** <br>sep. 15 | - nothing, you just got here! | - introductions \ - go over syllabus \ - pixel font exercises \ - glyphs tutorial \ - introduce p1 and ps |
+| **1** <br>sep. 15 | - nothing, you just got here! | - introductions \ - go over syllabus \ - pixel font exercises \ - glyphs tutorial \ - introduce p1 |
 | **2** <br>sep. 22 | - completed pixel font | - html+css tutorial and exercises |
 | **3** <br>sep. 29 | - completed ascii art website | - 🏆 crit p1 \ - introduce p2 \ - dingbat font exercises |
 

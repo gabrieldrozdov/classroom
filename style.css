@@ -3136,6 +3136,8 @@ a.resource-preview-markdown-files-tile:active {
 .resource-preview-markdown-media video {
 	display: block;
 	width: 100%;
+	max-height: 480px;
+	object-fit: contain;
 }
 .resource-preview-markdown-media audio {
 	width: 100%;
@@ -3316,6 +3318,9 @@ a.resource-preview-markdown-files-tile:active {
 /* a band, an image, or an embed alone on a slide runs to the card's edges and draws its own outline, so the card doesn't draw a second one around it */
 .presentation-slide > .resource-preview-markdown:not(:has(> :is(.resource-preview-markdown-band, .resource-preview-markdown-media, .resource-preview-markdown-embed):only-child)) {
 	outline: var(--unit) solid var(--off-black);
+}
+.presentation-slide img {
+	max-height: unset !important;
 }
 @keyframes resource-preview-markdown-rl {
 	from {
