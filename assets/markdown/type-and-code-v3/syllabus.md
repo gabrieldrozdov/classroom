@@ -9,7 +9,7 @@
 | **📍 location** | design center 208 |
 | **⏰ time** | tuesdays, 8:00am – 1:00pm |
 | **💯 credits** | 3 |
-| **💬 office hours** | dc 505 \ \ monday: 9:30–11am \ \ wednesday: 2:30–3:30pm \ \ [by appointment](https://calendar.app.google/CmYch9BQf55qGJ8WA) |
+| **💬 office hours** | dc 505 \ \ mondays: 9:30–11am \ \ tuesdays: 2:30–3:30pm \ \ [by appointment](https://calendar.app.google/CmYch9BQf55qGJ8WA) |
 | **💻 class website** | [classroom.gdwithgd.com/type-and-code-v3](https://classroom.gdwithgd.com/type-and-code-v3/) |
 
 [slide]

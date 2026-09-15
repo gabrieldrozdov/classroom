@@ -157,6 +157,13 @@
 								"slug": "calendar",
 								"url": "/assets/markdown/type-and-code-v3/calendar.md",
 								"newtab": false
+							},
+							{
+								"name": "resources",
+								"emoji": "📂",
+								"slug": "resources",
+								"url": "https://drive.google.com/drive/folders/1tRqnxs5RDCD6J5nCKta9lXxfPyNf09Bw?usp=sharing",
+								"newtab": true
 							}
 						]
 					},
