@@ -60,6 +60,20 @@
 								"newtab": false
 							},
 							{
+								"name": "annotations, audience",
+								"emoji": "🖋️",
+								"slug": "unit-9-annotations-audience",
+								"url": "https://docs.google.com/presentation/d/1tUgOaMPAAolBhFVXoa1dh3UkGmxYwyJZX7uJndpsw4w/preview",
+								"newtab": false
+							},
+							{
+								"name": "making public",
+								"emoji": "📢",
+								"slug": "unit-9-making-public",
+								"url": "https://docs.google.com/presentation/d/1ws-Fs-ybHvK8HcSBRXuZtq3TPBY4_d4t-Ieoz7FpDvU/preview",
+								"newtab": false
+							},
+							{
 								"name": "archives, libraries, collections",
 								"emoji": "🏛️",
 								"slug": "archives-libraries-collections",
@@ -93,8 +107,7 @@
 								"slug": "09-16-26",
 								"url": "/assets/markdown/ds3-f26/09-16-26.md",
 								"newtab": false,
-								"tags": ["unit 9"],
-								"active": false
+								"tags": ["unit 9"]
 							},
 							{
 								"name": "class 4, sep. 21",
