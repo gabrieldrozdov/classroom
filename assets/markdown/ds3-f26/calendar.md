@@ -41,11 +41,12 @@ present two draft posters
 
 ## {c:primary day 4}
 
-present refined versions of your posters
+present refined versions of your posters (digital design is allowed now!)
 
 - print in color at half size, 12" x 18" (tiled or plotter)
 - optionally, also print in black-and-white at full size, tiled 24" x 36"
-- rough sketch of “making public” concept
+
+rough sketch of “making public” concept
 
 [9/23/26 pink]
 
