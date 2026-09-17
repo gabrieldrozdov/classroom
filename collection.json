@@ -28,7 +28,7 @@
 							},
 							{
 								"name": "calendar",
-								"emoji": "🌏",
+								"emoji": "🗓️",
 								"slug": "calendar",
 								"url": "/assets/markdown/ds3-f26/calendar.md",
 								"newtab": false
