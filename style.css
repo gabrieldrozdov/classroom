@@ -2480,6 +2480,7 @@ h3 .resource-preview-markdown-heading-text {
 	padding: 0 0 var(--unit-half) var(--unit-half);
 	display: flex;
 	justify-content: space-between;
+	text-transform: lowercase;
 	gap: .5ch;
 }
 .resource-preview-markdown-calendar-month-label-year {
@@ -2490,6 +2491,7 @@ h3 .resource-preview-markdown-heading-text {
 	display: grid;
 	grid-template-columns: repeat(7, minmax(0, 1fr));
 	gap: var(--calendar-gap);
+	text-transform: lowercase;
 }
 .resource-preview-markdown-calendar-weekday {
 	font-family: var(--mono);
@@ -2571,6 +2573,7 @@ h3 .resource-preview-markdown-heading-text {
 	pointer-events: auto;
 	transform: translateY(0px);
 	box-shadow: var(--unit-half) var(--unit-half) var(--light-gray);
+	pointer-events: none;
 }
 .resource-preview-markdown-calendar-annotation {
 	position: relative;
@@ -2593,6 +2596,7 @@ h3 .resource-preview-markdown-heading-text {
 	margin-bottom: var(--unit);
 	font-family: var(--mono);
 	margin-bottom: var(--unit);
+	text-transform: lowercase;
 }
 .resource-preview-markdown-calendar-tooltip .resource-preview-markdown-calendar-annotation-content * {
 	padding-left: 0 !important;
@@ -2631,7 +2635,7 @@ h3 .resource-preview-markdown-heading-text {
 	gap: var(--unit);
 }
 .resource-preview-markdown-calendar-tooltip .resource-preview-markdown-list-marker {
-	color: var(--entry-color);
+	background-color: var(--entry-color);
 }
 .resource-preview-markdown-calendar-tooltip h1,
 .resource-preview-markdown-calendar-tooltip h2,
@@ -2639,7 +2643,7 @@ h3 .resource-preview-markdown-heading-text {
 .resource-preview-markdown-calendar-tooltip h4,
 .resource-preview-markdown-calendar-tooltip h5,
 .resource-preview-markdown-calendar-tooltip h6 {
-	font-size: 1em;
+	font-size: 1.5em;
 	line-height: 1.3em;
 	margin: var(--unit-half) 0;
 }
@@ -2651,32 +2655,46 @@ h3 .resource-preview-markdown-heading-text {
 }
 /* the key below the grid. it's the same list the tooltip copies from, so hovering a day and reading the key show the same note — every rule here is scoped to the key itself, leaving the tooltip's own styling alone. */
 .resource-preview-markdown-calendar-annotations {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
-	grid-auto-rows: 1fr;
+	display: flex;
+	flex-direction: column;
 	gap: var(--unit-2x);
-	margin-top: var(--unit-3x);
+	margin-top: var(--unit-4x);
 }
 .resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation {
 	break-inside: avoid;
+	display: grid;
+	grid-template-columns: 160px 1fr;
+	gap: var(--unit-2x);
+	border-bottom: 1px solid var(--light-gray);
+	padding-bottom: var(--unit-2x);
+}
+.resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation:nth-last-child(1) {
+	padding-bottom: unset;
+	border-bottom: unset;
 }
 .resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation-date {
 	font-variation-settings: "wght" 600, "SRFF" 0;
 	font-weight: 600;
-	font-size: .6em;
+	font-size: .8em;
 	line-height: 1em;
 	font-family: var(--mono);
 	letter-spacing: -0.02em;
-	margin-bottom: var(--unit);
+	text-transform: lowercase;
+	padding-top: .45em;
+}
+.resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation-content {
+	padding-top: .2em;
 }
 .resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation-content > * {
 	padding-left: 0;
 	padding-right: 0;
 	max-width: none;
-	font-size: .8em;
-	line-height: 1.3em;
-	margin-top: var(--unit-half);
-	margin-bottom: var(--unit-half);
+}
+.resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation-content > h2 {
+	font-size: 1.5em;
+	margin-top: 0;
+	margin-bottom: var(--unit-2x);
+	letter-spacing: -0.02em;
 }
 .resource-preview-markdown-calendar-annotations .resource-preview-markdown-calendar-annotation-content > *:nth-child(1) {
 	margin-top: 0;
@@ -2685,7 +2703,7 @@ h3 .resource-preview-markdown-heading-text {
 	margin-bottom: 0;
 }
 .resource-preview-markdown-calendar-annotations .resource-preview-markdown-list-marker {
-	color: var(--entry-color);
+	background-color: var(--entry-color);
 }
 
 /* stripped back to just the slide (the eye button / i). reset when the presentation closes, so it never persists into the next one */
@@ -4812,27 +4830,11 @@ body[data-draw] .presentation-draw-toolbar {
 	}
 
 	/* calendar */
-	.resource-preview-markdown-calendar-months {
-		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
-	}
 	.resource-preview-markdown-calendar-month {
 		background-color: white;
 	}
 	.resource-preview-markdown-calendar-tooltip {
 		display: none !important;
-	}
-	.resource-preview-markdown-calendar-weekday {
-		/* font-size: 1em; */
-	}
-	.resource-preview-markdown-calendar-day {
-		/* font-size: 1.25em; */
-	}
-	.resource-preview-markdown-calendar-annotations {
-		/* display: grid; */
-		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
-		/* gap: var(--unit-4x); */
-		/* margin-top: var(--unit-4x); */
-		break-inside: avoid;
 	}
 	.resource-preview-markdown-calendar-annotation {
 		break-inside: avoid;
@@ -4853,7 +4855,7 @@ body[data-draw] .presentation-draw-toolbar {
 		margin-bottom: 0 !important;
 	}
 	.resource-preview-markdown-calendar-annotation .resource-preview-markdown-list-marker {
-		color: var(--entry-color);
+		background-color: var(--entry-color);
 	}
 
 	/* faq with no +- icons */

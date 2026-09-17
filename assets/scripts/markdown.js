@@ -190,7 +190,7 @@ function initHeadingCopy() {
 	// a small confirmation toast shared by all headings
 	let toast = document.createElement('div');
 	toast.className = 'resource-preview-markdown-toast';
-	toast.textContent = 'Link copied';
+	toast.textContent = 'link copied!';
 	markdown.closest('.resource-preview').appendChild(toast);
 	let toastTimer;
 

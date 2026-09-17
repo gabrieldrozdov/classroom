@@ -27,18 +27,18 @@
 								"newtab": false
 							},
 							{
+								"name": "calendar",
+								"emoji": "🌏",
+								"slug": "calendar",
+								"url": "/assets/markdown/ds3-f26/calendar.md",
+								"newtab": false
+							},
+							{
 								"name": "final student work archive",
 								"emoji": "📂",
 								"slug": "student-work",
 								"url": "https://drive.google.com/drive/folders/1PySVmI2KXaGTAj067KKZySXbgXtBXqtF?usp=sharing",
 								"newtab": true
-							},
-							{
-								"name": "figjam",
-								"emoji": "👆",
-								"slug": "figjam",
-								"url": "https://embed.figma.com/board/D0zSet8Bv63DLj6bxzRuoB/risd-f26---ds3?node-id=0-1&embed-host=share",
-								"newtab": false
 							}
 						]
 					},
@@ -93,7 +93,7 @@
 						"name": "🗓️ weekly agendas",
 						"contents": [
 							{
-								"name": "class 1, sep. 9",
+								"name": "day 1, sep. 9",
 								"emoji": "📦",
 								"slug": "09-09-26",
 								"url": "/assets/markdown/ds3-f26/09-09-26.md",
@@ -101,7 +101,7 @@
 								"tags": ["unit 9"]
 							},
 							{
-								"name": "class 2, sep. 14",
+								"name": "day 2, sep. 14",
 								"emoji": "📦",
 								"slug": "09-14-26",
 								"url": "/assets/markdown/ds3-f26/09-14-26.md",
@@ -109,7 +109,7 @@
 								"tags": ["unit 9"]
 							},
 							{
-								"name": "class 3, sep. 16",
+								"name": "day 3, sep. 16",
 								"emoji": "📦",
 								"slug": "09-16-26",
 								"url": "/assets/markdown/ds3-f26/09-16-26.md",
@@ -117,7 +117,7 @@
 								"tags": ["unit 9"]
 							},
 							{
-								"name": "class 4, sep. 21",
+								"name": "day 4, sep. 21",
 								"emoji": "📦",
 								"slug": "09-21-26",
 								"url": "/assets/markdown/ds3-f26/09-21-26.md",
@@ -126,7 +126,7 @@
 								"active": false
 							},
 							{
-								"name": "class 5, sep. 23",
+								"name": "day 5, sep. 23",
 								"emoji": "📦",
 								"slug": "09-23-26",
 								"url": "/assets/markdown/ds3-f26/09-23-26.md",
@@ -135,7 +135,7 @@
 								"active": false
 							},
 							{
-								"name": "class 6, sep. 28",
+								"name": "day 6, sep. 28",
 								"emoji": "📦",
 								"slug": "09-28-26",
 								"url": "/assets/markdown/ds3-f26/09-28-26.md",
