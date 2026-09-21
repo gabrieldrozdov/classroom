@@ -454,7 +454,7 @@ function generatePages() {
 									${markdownToHTML(markdownRaw)}
 								</article>
 							</div>
-							<div class="resource-preview-markdown-tools">
+							<div class="resource-preview-markdown-tools" data-src="${resource['url']}">
 								<button class="resource-menu-control resource-preview-markdown-tool" onclick="openPresentation();" aria-label="Present">
 									<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-present" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-present">present</textPath></text></svg>
 									<div class="resource-menu-control-icon"><p>📺</p></div>
@@ -463,10 +463,6 @@ function generatePages() {
 									<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-print" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-print">print</textPath></text></svg>
 									<div class="resource-menu-control-icon"><p>🖨️</p></div>
 								</button>
-								<a class="resource-menu-control resource-preview-markdown-tool" href="/editor/?src=${encodeURIComponent(resource['url'])}" aria-label="Edit this page">
-									<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-edit" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-edit">edit</textPath></text></svg>
-									<div class="resource-menu-control-icon"><p>✍️</p></div>
-								</a>
 							</div>
 						`;
 					} else if (!resource['newtab']) {

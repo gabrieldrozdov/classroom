@@ -57,7 +57,8 @@ rough sketch of “making public” concept
 present refined versions of your posters
 
 - print tiled in color at full size, 24" x 36"
-- updated sketch of “making public” concept
+- refined rendering of “making public” concept (sketched or designed)
+- all documentation added to figjam file
 
 [9/28/26 pink]
 

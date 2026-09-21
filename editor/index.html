@@ -10,14 +10,36 @@
 	<link rel="stylesheet" href="editor.css">
 </head>
 <body>
-	<div class="editor" id="editor">
+	<div class="editor" id="editor" data-sidebar="0">
+		<nav class="editor-sidebar" id="sidebar">
+			<div class="editor-sidebar-content">
+				<button class="editor-sidebar-close" id="sidebar-close"><span>❌</span> <span>hide</span></button>
+				<header class="editor-sidebar-header">
+					<p class="editor-sidebar-header-title"><a href="/">🍎&nbsp;&nbsp;gd with gd classroom</a></p>
+				</header>
+				<div class="editor-sidebar-list" id="sidebar-list"></div>
+				<footer class="editor-sidebar-footer">
+					<button class="editor-file-button" id="new-draft"><span>📄</span> <span>draft</span></button>
+					<button class="editor-file-button" id="new-course"><span>🎓</span> <span>course</span></button>
+					<button class="editor-file-button" id="reload"><span>🔄</span> <span>reload</span></button>
+				</footer>
+			</div>
+		</nav>
+
 		<section class="editor-source">
 			<header class="editor-source-header">
-				<h1 class="editor-title"><a href="/">📝&nbsp;&nbsp;markdown editor</a></h1>
-				<label class="editor-fontsize" title="Type size">
-					<span>size</span>
-					<input type="range" id="fontsize" min="11" max="24" step="1" value="14" aria-label="Type size">
+				<label class="editor-filename">
+					<input type="text" id="filename" value="untitled" spellcheck="false" autocomplete="off">
+					<span>.md</span>
 				</label>
+				<span class="editor-source-file" id="source" hidden>
+					<span class="editor-source-file-path" id="source-path"></span>
+					<button type="button" class="editor-source-file-detach" id="source-detach" title="Stop saving to this file" aria-label="Stop saving to this file">✕</button>
+				</span>
+				<button class="editor-file-button" id="save" hidden><span>💾</span> <span>save</span></button>
+				<button class="editor-file-button" id="media" hidden><span>🖼️</span> <span>media</span></button>
+				<input type="file" id="media-file" accept="image/*,video/*,audio/*,.pdf" multiple hidden>
+				<button class="editor-toggle editor-sidebar-toggle" id="toggle-sidebar" aria-pressed="false" hidden><span>🗂️</span> <span>all files</span></button>
 				<button class="editor-toggle" id="toggle-toolbar" aria-expanded="true"><span>✍️</span> <span>shortcodes</span></button>
 				<button class="editor-toggle" id="toggle-spellcheck" aria-pressed="false"><span>🔠</span> <span>spellcheck</span></button>
 				<button class="editor-toggle" id="toggle-pause" aria-pressed="false"><span>⏸️</span> <span>pause</span></button>
@@ -28,16 +50,10 @@
 			<div class="editor-input" id="input"></div>
 
 			<footer class="editor-source-footer">
-				<label class="editor-filename">
-					<input type="text" id="filename" value="untitled" spellcheck="false" autocomplete="off">
-					<span>.md</span>
+				<label class="editor-fontsize" title="Type size">
+					<span>size</span>
+					<input type="range" id="fontsize" min="11" max="24" step="1" value="14" aria-label="Type size">
 				</label>
-				<button class="editor-file-button" id="save"><span>💾</span> <span>save</span></button>
-				<button class="editor-file-button" id="load"><span>💿</span> <span>load</span></button>
-				<button class="editor-file-button" id="new"><span>📄</span> <span>new</span></button>
-				<button class="editor-file-button" id="upload"><span>⬆️</span> <span>upload</span></button>
-				<button class="editor-file-button" id="download"><span>⬇️</span> <span>download</span></button>
-				<input type="file" id="file" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
 				<span class="editor-status" id="status"></span>
 			</footer>
 		</section>
@@ -59,22 +75,24 @@
 		</section>
 	</div>
 
-	<dialog class="editor-dialog" id="library">
-		<div class="editor-dialog-inner">
+	<!-- one dialog for every form: the fields are built from whatever is being edited -->
+	<dialog class="editor-dialog" id="form">
+		<form class="editor-dialog-inner" id="form-inner" method="dialog">
 			<header class="editor-dialog-header">
-				<h2 class="editor-dialog-title">💿&nbsp;&nbsp;saved files</h2>
-				<button class="editor-file-button" id="library-close"><span>❌</span> <span>close</span></button>
+				<h2 class="editor-dialog-title" id="form-title"></h2>
+				<button type="button" class="editor-file-button" id="form-close"><span>❌</span> <span>close</span></button>
 			</header>
-			<div class="editor-dialog-list" id="library-list"></div>
-			<footer class="editor-dialog-footer" id="library-footer">
-				<button class="editor-file-button" id="download-all"><span>💾</span> <span>download all</span></button>
-				<button class="editor-file-button" id="erase-all"><span>🗑️</span> <span>erase all</span></button>
+			<div class="editor-dialog-list" id="form-fields"></div>
+			<footer class="editor-dialog-footer">
+				<button type="submit" class="editor-file-button" id="form-save"><span>💾</span> <span>save</span></button>
+				<span class="editor-dialog-note" id="form-note"></span>
 			</footer>
-		</div>
+		</form>
 	</dialog>
 
 	<script src="/assets/scripts/generate.js"></script>
 	<script src="/assets/scripts/codemirror.js"></script>
 	<script src="/assets/scripts/editor.js"></script>
+	<script src="/assets/scripts/manager.js"></script>
 </body>
 </html>

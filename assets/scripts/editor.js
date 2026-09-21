@@ -668,14 +668,36 @@ function endPresentation() {
 
 // the panes are stacked rather than side by side on a narrow screen, so the divider moves the other axis there
 let divider = document.getElementById('divider');
+let sourcePane = document.querySelector('.editor-source');
 const stacked = () => window.matchMedia('(max-width: 900px)').matches;
 
-function setSplit(ratio) {
-	let value = `${(Math.min(0.85, Math.max(0.15, ratio)) * 100).toFixed(2)}%`;
-	let property = stacked() ? '--split-v' : '--split';
-	editorEl.style.setProperty(property, value);
-	remember(property, value);
+// the split is kept as a share of what the two panes have between them, rather than as the width the css ends up with. the sidebar has a column of its own, so that width changes whenever the sidebar opens, closes, or the window is resized — and a share survives all three, where a saved percentage would drift a little further out of place each time.
+let splits = { '--split': Number(recall('split')) || 0.5, '--split-v': Number(recall('split-v')) || 0.5 };
+
+// how much of the editor's width the panes actually have: everything to the right of where the plaintext pane starts. stacked, the sidebar comes over the top instead of beside, so they have all of it.
+function paneShare() {
+	let rect = editorEl.getBoundingClientRect();
+	if (stacked() || rect.width == 0) {
+		return 1;
+	}
+	return (rect.width - (sourcePane.getBoundingClientRect().left - rect.left)) / rect.width;
 }
+
+// --split is written as a share of the whole editor, since that's what a grid column percentage resolves against
+function applySplit() {
+	editorEl.style.setProperty('--split', `${(splits['--split'] * paneShare() * 100).toFixed(2)}%`);
+	editorEl.style.setProperty('--split-v', `${(splits['--split-v'] * 100).toFixed(2)}%`);
+}
+
+function setSplit(ratio) {
+	let property = stacked() ? '--split-v' : '--split';
+	splits[property] = Math.min(0.85, Math.max(0.15, ratio));
+	remember(property == '--split-v' ? 'split-v' : 'split', splits[property]);
+	applySplit();
+}
+
+// the sidebar's column is part of the sum, and so is the window
+window.addEventListener('resize', applySplit);
 
 divider.addEventListener('pointerdown', (e) => {
 	e.preventDefault();
@@ -687,7 +709,8 @@ divider.addEventListener('pointermove', (e) => {
 		return;
 	}
 	let rect = editorEl.getBoundingClientRect();
-	setSplit(stacked() ? (e.clientY - rect.top) / rect.height : (e.clientX - rect.left) / rect.width);
+	// measured from where the plaintext pane starts rather than from the edge of the editor, so the divider lands under the pointer whether or not the sidebar is open
+	setSplit(stacked() ? (e.clientY - rect.top) / rect.height : (e.clientX - sourcePane.getBoundingClientRect().left) / (rect.width * paneShare()));
 });
 for (let event of ['pointerup', 'pointercancel']) {
 	divider.addEventListener(event, (e) => {
@@ -701,195 +724,30 @@ for (let event of ['pointerup', 'pointercancel']) {
 divider.addEventListener('dblclick', () => setSplit(0.5));
 // and nudgeable from the keyboard, since it's focusable
 divider.addEventListener('keydown', (e) => {
-	let current = parseFloat(getComputedStyle(editorEl).getPropertyValue(stacked() ? '--split-v' : '--split')) || 50;
+	let current = splits[stacked() ? '--split-v' : '--split'];
 	if (e.key == 'ArrowLeft' || e.key == 'ArrowUp') {
 		e.preventDefault();
-		setSplit((current - 2) / 100);
+		setSplit(current - 0.02);
 	} else if (e.key == 'ArrowRight' || e.key == 'ArrowDown') {
 		e.preventDefault();
-		setSplit((current + 2) / 100);
+		setSplit(current + 0.02);
 	}
 });
 
 // ——————————————————————————————
-// SAVED FILES
+// FILES
 // ——————————————————————————————
 
-// saved files live in this browser under one key, filed by name. saving under a name that's already there replaces it, which is what makes the save button a save rather than a fresh copy every time.
-const FILES = 'gdwithgd-editor-files';
+// every file the editor works on is a real file in assets/markdown — a course page where the course keeps its pages, a draft in the drafts folder. nothing is kept in this browser, so what's on screen is what's on disk, and a page opened here is the same page the build reads.
 
-function readFiles() {
-	try {
-		let saved = JSON.parse(localStorage.getItem(FILES));
-		return saved && typeof saved == 'object' ? saved : {};
-	} catch (error) {
-		return {};
-	}
-}
-
-function writeFiles(files) {
-	try {
-		localStorage.setItem(FILES, JSON.stringify(files));
-		return true;
-	} catch (error) {
-		// out of room, or site data blocked. the caller says so rather than pretending it worked.
-		return false;
-	}
-}
-
-function saveFile() {
-	let name = filename();
-	let files = readFiles();
-	files[name] = { text: text(), saved: Date.now() };
-	if (!writeFiles(files)) {
-		note('couldn’t save — this browser’s storage is full', 'paused');
-		return false;
-	}
-	markClean();
-	note(`saved “${name}”`);
-	if (library.open) {
-		renderLibrary();
-	}
-	return true;
-}
-
-// whether the working text differs from whatever is saved under its name, which is what makes replacing it worth asking about.
-// `baseline` is the last text that doesn't count as work — the starter document, or whatever was just opened or saved — so opening a page straight from the site doesn't stop to ask about text the writer never touched.
+// `baseline` is the last text that doesn't count as work — the starter document, or whatever was just opened or saved — so reading a page without touching it doesn't stop to ask about changes nobody made.
 let baseline = '';
 function markClean() {
 	baseline = text();
 }
 function isDirty() {
 	let value = text();
-	if (value.trim() == '' || value == baseline) {
-		return false;
-	}
-	let saved = readFiles()[filename()];
-	return !saved || saved.text != value;
-}
-
-function openFile(name, entry) {
-	if (isDirty() && !confirm(`Opening “${name}” will replace the unsaved changes in the editor. Continue?`)) {
-		return;
-	}
-	setText(entry.text);
-	filenameField.value = name;
-	markClean();
-	clearTimeout(pending);
-	render();
-	library.close();
-	note(`opened “${name}”`);
-}
-
-function downloadText(name, value) {
-	downloadBlob(`${name}.md`, new Blob([value], { type: 'text/markdown' }));
-}
-
-// a zip is a run of file records followed by a directory of where each one started. writing it out by hand is a page of code, but it's a page that never goes stale — the alternative was carrying a compression library for a single button, or firing off one download per file and making the browser ask about it.
-const crcTable = (() => {
-	let table = new Uint32Array(256);
-	for (let i = 0; i < 256; i++) {
-		let c = i;
-		for (let bit = 0; bit < 8; bit++) {
-			c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1;
-		}
-		table[i] = c >>> 0;
-	}
-	return table;
-})();
-
-function crc32(bytes) {
-	let c = 0xFFFFFFFF;
-	for (let i = 0; i < bytes.length; i++) {
-		c = crcTable[(c ^ bytes[i]) & 0xFF] ^ (c >>> 8);
-	}
-	return (c ^ 0xFFFFFFFF) >>> 0;
-}
-
-// the browser's own deflate, where it has one. markdown packs down to about a third of its size; without it the entries simply go in whole, which is just as valid a zip.
-async function deflate(bytes) {
-	if (typeof CompressionStream != 'function') {
-		return null;
-	}
-	try {
-		let packed = new Blob([bytes]).stream().pipeThrough(new CompressionStream('deflate-raw'));
-		return new Uint8Array(await new Response(packed).arrayBuffer());
-	} catch (error) {
-		return null;
-	}
-}
-
-async function zip(entries) {
-	let encoder = new TextEncoder();
-	let parts = [];
-	let directory = [];
-	let offset = 0;
-
-	// zip keeps timestamps in the DOS format: seconds in two-second steps, and years counted from 1980
-	let now = new Date();
-	let time = (now.getHours() << 11) | (now.getMinutes() << 5) | (now.getSeconds() >> 1);
-	let date = ((now.getFullYear() - 1980) << 9) | ((now.getMonth() + 1) << 5) | now.getDate();
-
-	for (let entry of entries) {
-		let name = encoder.encode(entry.name);
-		let raw = encoder.encode(entry.text);
-		let crc = crc32(raw);
-		let packed = await deflate(raw);
-		let deflated = packed != null && packed.length < raw.length;
-		let data = deflated ? packed : raw;
-
-		let header = new DataView(new ArrayBuffer(30));
-		header.setUint32(0, 0x04034b50, true);
-		header.setUint16(4, 20, true);
-		// bit 11 says the name is UTF-8
-		header.setUint16(6, 0x0800, true);
-		header.setUint16(8, deflated ? 8 : 0, true);
-		header.setUint16(10, time, true);
-		header.setUint16(12, date, true);
-		header.setUint32(14, crc, true);
-		header.setUint32(18, data.length, true);
-		header.setUint32(22, raw.length, true);
-		header.setUint16(26, name.length, true);
-		parts.push(new Uint8Array(header.buffer), name, data);
-
-		let record = new DataView(new ArrayBuffer(46));
-		record.setUint32(0, 0x02014b50, true);
-		record.setUint16(4, 20, true);
-		record.setUint16(6, 20, true);
-		record.setUint16(8, 0x0800, true);
-		record.setUint16(10, deflated ? 8 : 0, true);
-		record.setUint16(12, time, true);
-		record.setUint16(14, date, true);
-		record.setUint32(16, crc, true);
-		record.setUint32(20, data.length, true);
-		record.setUint32(24, raw.length, true);
-		record.setUint16(28, name.length, true);
-		record.setUint32(42, offset, true);
-		directory.push(new Uint8Array(record.buffer), name);
-
-		offset += 30 + name.length + data.length;
-	}
-
-	let directorySize = directory.reduce((total, part) => total + part.length, 0);
-	let end = new DataView(new ArrayBuffer(22));
-	end.setUint32(0, 0x06054b50, true);
-	end.setUint16(8, entries.length, true);
-	end.setUint16(10, entries.length, true);
-	end.setUint32(12, directorySize, true);
-	end.setUint32(16, offset, true);
-
-	return new Blob([...parts, ...directory, new Uint8Array(end.buffer)], { type: 'application/zip' });
-}
-
-function downloadBlob(name, blob) {
-	let url = URL.createObjectURL(blob);
-	let link = document.createElement('a');
-	link.href = url;
-	link.download = name;
-	document.body.appendChild(link);
-	link.click();
-	link.remove();
-	setTimeout(() => URL.revokeObjectURL(url), 1000);
+	return value.trim() != '' && value != baseline;
 }
 
 // how long ago, in the roughest terms that are still useful; the exact time is on the tooltip
@@ -912,200 +770,280 @@ function when(stamp) {
 	return new Date(stamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
-let library = document.getElementById('library');
-let libraryList = document.getElementById('library-list');
-let libraryFooter = document.getElementById('library-footer');
+function downloadBlob(name, blob) {
+	let url = URL.createObjectURL(blob);
+	let link = document.createElement('a');
+	link.href = url;
+	link.download = name;
+	document.body.appendChild(link);
+	link.click();
+	link.remove();
+	setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
 
-function renderLibrary() {
-	let files = readFiles();
-	// most recently saved first, since that's what you're most likely coming back for
-	let names = Object.keys(files).sort((a, b) => files[b].saved - files[a].saved);
-	libraryList.replaceChildren();
-	libraryFooter.hidden = names.length == 0;
+function downloadText(name, value) {
+	downloadBlob(`${name}.md`, new Blob([value], { type: 'text/markdown' }));
+}
 
-	if (names.length == 0) {
-		let empty = document.createElement('p');
-		empty.className = 'editor-dialog-empty';
-		empty.innerHTML = 'nothing saved yet!<br><br>press the “💾 save” button to keep the file you’re working on.<br><br>warning: saved files are stored only locally in this browser on your computer, so if you clear cookies/cache you’ll lose this data!';
-		libraryList.appendChild(empty);
-		return;
+// ——————————————————————————————
+// CONNECTED TO THE SITE
+// ——————————————————————————————
+
+// running `node dev.js` puts a small server in front of the repo, and the editor becomes a way of working on the site itself: the sidebar lists what the site is made of, saving writes the file the page is built from, and media lands in a folder beside it. all of it is behind a check for that server, so classroom.gdwithgd.com/editor/ stays the scratchpad it always was — type, and download what you typed.
+// `source` is the repo path of the file the open text came from. it's what makes saving a save rather than a guess, and what tells an uploaded image which folder it belongs in — so anything that replaces the text without coming from a file clears it.
+let connected = false;
+let source = null;
+
+// pages nothing points at yet. they're ordinary files in the ordinary place, so a draft becomes a course page by being pointed at rather than by being moved.
+const DRAFTS = '/assets/markdown/drafts';
+
+// the first new-page-N the drafts folder doesn't already have
+function newDraftName() {
+	let taken = new Set((typeof drafts == 'object' && drafts ? drafts : []).map(draft => draft.name));
+	let number = 1;
+	while (taken.has(`new-page-${number}`)) {
+		number++;
 	}
+	return `new-page-${number}`;
+}
 
-	for (let name of names) {
-		let entry = files[name];
-		let row = document.createElement('div');
-		row.className = 'editor-file';
+let sourceChip = document.getElementById('source');
+let sourcePath = document.getElementById('source-path');
+let saveButton = document.getElementById('save');
+let mediaButton = document.getElementById('media');
 
-		let open = document.createElement('button');
-		open.className = 'editor-file-open';
-		open.type = 'button';
-		open.title = `Open “${name}”`;
-		let title = document.createElement('span');
-		title.className = 'editor-file-name';
-		title.textContent = `${name}.md`;
-		let meta = document.createElement('span');
-		meta.className = 'editor-file-meta';
-		meta.textContent = `saved ${when(entry.saved)} · ${entry.text.length.toLocaleString()} characters`;
-		meta.title = new Date(entry.saved).toLocaleString();
-		open.append(title, meta);
-		open.addEventListener('click', () => openFile(name, entry));
-		row.appendChild(open);
+function updateSiteButtons() {
+	// with no server there's nowhere to write, so the buttons that write aren't there either
+	saveButton.hidden = !connected;
+	// media needs a page to sit beside, which an unsaved draft doesn't have yet
+	mediaButton.hidden = !connected || !source;
+}
 
-		let actions = [
-			{
-				emoji: '✏️',
-				label: `Rename “${name}”`,
-				run: () => {
-					let asked = prompt(`Rename “${name}.md” to:`, name);
-					if (asked == null) {
-						return;
-					}
-					let renamed = sanitizeName(asked.trim().replace(/\.md$/i, ''));
-					if (renamed == '' || renamed == name) {
-						return;
-					}
-					// a rename onto a name already in use would quietly swallow the file that's there
-					if (files[renamed]) {
-						alert(`There’s already a file called “${renamed}.md”.`);
-						return;
-					}
-					files[renamed] = files[name];
-					delete files[name];
-					if (!writeFiles(files)) {
-						note('couldn’t rename — this browser’s storage is full', 'paused');
-						return;
-					}
-					// the file being renamed might be the one open in the editor
-					if (filename() == name) {
-						filenameField.value = renamed;
-					}
-					renderLibrary();
-				}
-			},
-			{
-				emoji: '👯',
-				label: `Duplicate “${name}”`,
-				run: () => {
-					// "name-copy", then "name-copy-2", and so on until one is free
-					let copy = `${name}-copy`;
-					let n = 2;
-					while (files[copy]) {
-						copy = `${name}-copy-${n}`;
-						n++;
-					}
-					files[copy] = { text: entry.text, saved: Date.now() };
-					if (writeFiles(files)) {
-						renderLibrary();
-					} else {
-						note('couldn’t duplicate — this browser’s storage is full', 'paused');
-					}
-				}
-			},
-			{
-				emoji: '⬇️',
-				label: `Download “${name}”`,
-				run: () => downloadText(name, entry.text)
-			},
-			{
-				emoji: '🗑️',
-				danger: true,
-				label: `Erase “${name}”`,
-				run: () => {
-					if (!confirm(`Erase “${name}.md”? This can’t be undone.`)) {
-						return;
-					}
-					delete files[name];
-					writeFiles(files);
-					renderLibrary();
-				}
-			}
-		];
-		for (let action of actions) {
-			let button = document.createElement('button');
-			button.className = 'editor-file-action';
-			button.type = 'button';
-			button.textContent = action.emoji;
-			button.title = action.label;
-			button.setAttribute('aria-label', action.label);
-			if (action.danger) {
-				button.dataset.danger = 1;
-			}
-			button.addEventListener('click', action.run);
-			row.appendChild(button);
-		}
-
-		libraryList.appendChild(row);
+function setConnected(on) {
+	connected = on;
+	if (!on) {
+		setSource(null);
+	}
+	updateSiteButtons();
+	if (typeof renderSidebar == 'function') {
+		renderSidebar();
 	}
 }
 
-document.getElementById('save').addEventListener('click', saveFile);
+function setSource(url) {
+	source = url || null;
+	if (source) {
+		// the folder is what's worth showing — the name sits in the field beside it, and that field is what a save writes to
+		sourcePath.textContent = source.replace(/^\/assets\/markdown\//, '').replace(/[^/]+$/, '');
+		sourcePath.title = source;
+	}
+	sourceChip.hidden = !source;
+	updateSiteButtons();
+	if (typeof markOpenInSidebar == 'function') {
+		markOpenInSidebar(source);
+	}
+}
 
-// a fresh page: a heading and a paragraph, under the first new-page-N name that isn't taken
-document.getElementById('new').addEventListener('click', () => {
-	if (isDirty() && !confirm('Starting a new page will replace the unsaved changes in the editor. Continue?')) {
+// the folder part of a path, trailing slash included
+function folderOf(url) {
+	return url.replace(/[^/]+$/, '');
+}
+
+// a message that stays until something replaces it, for the stretch where a save or an upload is out at the server
+function working(message) {
+	clearTimeout(noteTimer);
+	noteShowing = true;
+	statusLabel.textContent = message;
+	statusLabel.dataset.note = 'working';
+}
+
+function clearNote() {
+	clearTimeout(noteTimer);
+	noteShowing = false;
+	delete statusLabel.dataset.note;
+	updateCounts();
+}
+
+// the server going away mid-request is the one failure worth handling everywhere: the buttons come off rather than staying on to fail again
+function lostServer() {
+	setConnected(false);
+	note('the local server stopped answering', 'paused');
+}
+
+async function post(endpoint, body) {
+	let response = await fetch(endpoint, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(body)
+	});
+	return await response.json();
+}
+
+// ——————————————————————————————
+
+// write the open text to disk, then wait for the rebuild so the note can say the site is current rather than only that the file is.
+// a page with nowhere to go yet becomes a draft, which is an ordinary file in the drafts folder rather than anything special.
+async function save() {
+	if (!connected) {
 		return;
 	}
-	let files = readFiles();
-	let number = 1;
-	while (files[`new-page-${number}`]) {
-		number++;
+	// the name in the field is what gets written, so renaming it writes a new file in the same folder instead of quietly saving over the one that was opened
+	let folder = source ? folderOf(source) : `${DRAFTS}/`;
+	let target = `${folder}${filename()}.md`;
+	if (source && target != source && !confirm(`Save this as “${filename()}.md”? That makes a new file in ${folder} ~ the page you opened stays as it was.`)) {
+		return;
 	}
-	let name = `new-page-${number}`;
-
-	setText('# Heading\n\nParagraph.\n');
-	filenameField.value = name;
+	working(`saving ${filename()}.md…`);
+	let result;
+	try {
+		result = await post('/_dev/save', { path: target, text: text() });
+	} catch (error) {
+		lostServer();
+		return;
+	}
+	if (!result.ok) {
+		note(result.message || 'couldn’t save', 'paused');
+		return;
+	}
+	setSource(result.path);
 	markClean();
-	files[name] = { text: text(), saved: Date.now() };
-	if (writeFiles(files)) {
-		note(`created “${name}”`);
+	if (result.draft) {
+		note(`saved to ${result.path}`);
+	} else if (result.built) {
+		note(`saved · site rebuilt in ${(result.ms / 1000).toFixed(1)}s`);
 	} else {
-		note('couldn’t save — this browser’s storage is full', 'paused');
+		// the file is on disk either way, which is the part worth being clear about
+		note(`saved, but the build failed ~ ${result.message}`, 'paused');
 	}
+	if (typeof refreshSidebar == 'function') {
+		refreshSidebar();
+	}
+}
+
+// open a page from the file it's built from, rather than from a copy of it
+async function openPage(url) {
+	let name = url.split('/').pop();
+	if (isDirty() && !confirm(`Opening “${name}” will replace the unsaved changes in the editor. Continue?`)) {
+		return false;
+	}
+	try {
+		let response = await fetch(url, { cache: 'no-store' });
+		if (!response.ok) {
+			throw new Error();
+		}
+		setText(await response.text());
+	} catch (error) {
+		note(`couldn’t open ${url}`, 'paused');
+		return false;
+	}
+	filenameField.value = name.replace(/\.md$/i, '');
+	setSource(url);
+	markClean();
 	clearTimeout(pending);
 	render();
-	if (library.open) {
-		renderLibrary();
-	}
-});
-document.getElementById('load').addEventListener('click', () => {
-	renderLibrary();
-	library.showModal();
-});
-document.getElementById('library-close').addEventListener('click', () => library.close());
-// a click that lands on the dialog element itself came down on the backdrop around it, since the panel inside covers the dialog box entirely
-library.addEventListener('click', (e) => {
-	if (e.target == library) {
-		library.close();
-	}
-});
+	note(`opened ${url}`);
+	return true;
+}
 
-document.getElementById('download-all').addEventListener('click', async () => {
-	let files = readFiles();
-	let names = Object.keys(files);
-	if (names.length == 0) {
+// media lands in a media folder beside the markdown, matching where type-and-code-v3 already keeps its images, and the shortcode for it lands at the cursor.
+// files go up as base64 inside the json body — a form-data parser was more server than one upload button is worth.
+async function uploadMedia(files) {
+	if (!connected) {
+		note('media uploads need the local server', 'paused');
 		return;
 	}
-	let stamp = new Date().toISOString().slice(0, 10);
-	let archive = await zip(names.map(name => ({ name: `${name}.md`, text: files[name].text })));
-	downloadBlob(`markdown-files-${stamp}.zip`, archive);
-});
-
-document.getElementById('erase-all').addEventListener('click', () => {
-	let count = Object.keys(readFiles()).length;
-	if (count == 0 || !confirm(`Erase all ${count} saved file${count == 1 ? '' : 's'}? This can’t be undone.`)) {
+	if (!source) {
+		note('save the page first, so the media has a folder to go in', 'paused');
 		return;
 	}
-	writeFiles({});
-	renderLibrary();
+	let added = [];
+	for (let file of files) {
+		working(`uploading ${file.name}…`);
+		let data;
+		try {
+			data = await new Promise((resolve, reject) => {
+				let reader = new FileReader();
+				reader.onload = () => resolve(String(reader.result));
+				reader.onerror = () => reject(reader.error);
+				reader.readAsDataURL(file);
+			});
+		} catch (error) {
+			note(`couldn’t read ${file.name}`, 'paused');
+			continue;
+		}
+		let result;
+		try {
+			result = await post('/_dev/media', { path: source, name: file.name, data: data });
+		} catch (error) {
+			lostServer();
+			return;
+		}
+		if (!result.ok) {
+			note(result.message || `couldn’t upload ${file.name}`, 'paused');
+			continue;
+		}
+		// the filename makes a serviceable first draft of the alt text, and it's selected on the way in so it can be typed over
+		added.push({ url: result.url, alt: file.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').trim() });
+	}
+	if (added.length == 0) {
+		return;
+	}
+	if (added.length == 1) {
+		insert({ block: true, before: '![', placeholder: added[0].alt, after: `](${added[0].url})` });
+	} else {
+		insert({ block: true, before: added.map(item => `![${item.alt}](${item.url})`).join('\n\n') });
+	}
+	note(`added ${added.length} file${added.length == 1 ? '' : 's'} to ${folderOf(source)}media/ ~ save to keep the page pointing at ${added.length == 1 ? 'it' : 'them'}`);
+}
+
+// ——————————————————————————————
+
+saveButton.addEventListener('click', save);
+
+document.getElementById('source-detach').addEventListener('click', () => {
+	setSource(null);
+	note('no longer saving to a file on disk');
 });
+
+let mediaInput = document.getElementById('media-file');
+mediaButton.addEventListener('click', () => mediaInput.click());
+mediaInput.addEventListener('change', () => {
+	if (mediaInput.files.length > 0) {
+		uploadMedia([...mediaInput.files]);
+	}
+	// cleared so the same file can be picked again after replacing it on disk
+	mediaInput.value = '';
+});
+
+// the check only runs on a local address, so the published editor never asks for an endpoint that isn't there
+(function () {
+	if (!['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
+		return;
+	}
+	fetch('/_dev/status', { cache: 'no-store' })
+		.then(response => response.ok ? response.json() : Promise.reject())
+		.then((result) => {
+			if (!result.ok) {
+				return;
+			}
+			setConnected(true);
+			if (typeof receiveStatus == 'function') {
+				receiveStatus(result);
+			}
+			if (!result.writing) {
+				note('connected, but this isn’t the computer running the server ~ nothing here can change files', 'paused');
+			}
+		})
+		.catch(() => {
+			// no server, which is the ordinary case: the editor stays the published one
+		});
+})();
 
 // ——————————————————————————————
 // FILES ON DISK
 // ——————————————————————————————
 
-let fileInput = document.getElementById('file');
-document.getElementById('upload').addEventListener('click', () => fileInput.click());
-
+// there's no upload button any more, but a markdown file dragged onto the window still opens — it's the one way in for something that isn't already in the site
 function load(file) {
 	let reader = new FileReader();
 	reader.onload = () => {
@@ -1114,6 +1052,7 @@ function load(file) {
 		}
 		setText(reader.result);
 		filenameField.value = file.name.replace(/\.(md|markdown|txt)$/i, '');
+		setSource(null);
 		markClean();
 		clearTimeout(pending);
 		render();
@@ -1121,31 +1060,45 @@ function load(file) {
 	reader.readAsText(file);
 }
 
-fileInput.addEventListener('change', () => {
-	if (fileInput.files[0]) {
-		load(fileInput.files[0]);
-	}
-	// cleared so the same file can be picked again after editing it elsewhere
-	fileInput.value = '';
-});
-
-document.getElementById('download').addEventListener('click', () => downloadText(filename(), text()));
-
-// cmd-S saves into the browser rather than downloading, which is the one you reach for while writing
+// cmd-S writes the file and rebuilds, which is the save you reach for while writing. with no server there's nothing to write to, so it downloads instead.
 document.addEventListener('keydown', (e) => {
 	if ((e.metaKey || e.ctrlKey) && e.key == 's') {
 		e.preventDefault();
-		saveFile();
+		if (connected) {
+			save();
+		} else {
+			downloadText(filename(), text());
+		}
 	}
 });
 
-// dropping a markdown file anywhere on the page loads it, same as the upload button
-document.addEventListener('dragover', (e) => e.preventDefault());
+// dropping a markdown file anywhere on the page loads it, same as the upload button. anything else dropped is media for the page that's open, which only means something with a server to put it somewhere — so the outline only shows when there's a folder for it to land in.
+document.addEventListener('dragover', (e) => {
+	e.preventDefault();
+	if (connected && source && [...(e.dataTransfer.types || [])].includes('Files')) {
+		editorEl.dataset.dropping = 1;
+	}
+});
+document.addEventListener('dragleave', (e) => {
+	// only when the pointer has left the window, rather than every time it crosses something inside it
+	if (e.relatedTarget == null) {
+		delete editorEl.dataset.dropping;
+	}
+});
 document.addEventListener('drop', (e) => {
 	e.preventDefault();
-	if (e.dataTransfer.files[0]) {
-		load(e.dataTransfer.files[0]);
+	delete editorEl.dataset.dropping;
+	let files = [...(e.dataTransfer.files || [])];
+	if (files.length == 0) {
+		return;
 	}
+	// a markdown file is a page to open, and opening two at once isn't a thing, so the first one wins
+	let markdown = files.find(file => /\.(md|markdown|txt)$/i.test(file.name));
+	if (markdown) {
+		load(markdown);
+		return;
+	}
+	uploadMedia(files);
 });
 
 // ——————————————————————————————
@@ -1154,7 +1107,8 @@ document.addEventListener('drop', (e) => {
 
 function saveDraft() {
 	try {
-		localStorage.setItem(STORAGE, JSON.stringify({ name: filenameField.value, text: text() }));
+		// the source goes with the draft so a reload comes back to the same file rather than quietly turning into a scratch page
+		localStorage.setItem(STORAGE, JSON.stringify({ name: filenameField.value, text: text(), source: source }));
 	} catch (error) {
 		// as above
 	}
@@ -1167,6 +1121,8 @@ function restoreDraft() {
 			if (saved.name) {
 				filenameField.value = saved.name;
 			}
+			// the buttons for it stay hidden until the check for the server comes back, so this is safe whether or not the server is up
+			setSource(typeof saved.source == 'string' ? saved.source : null);
 			return true;
 		}
 	} catch (error) {
@@ -1175,12 +1131,7 @@ function restoreDraft() {
 	return false;
 }
 
-for (let property of ['--split', '--split-v']) {
-	let saved = recall(property);
-	if (saved) {
-		editorEl.style.setProperty(property, saved);
-	}
-}
+applySplit();
 setToolbar(recall('toolbar') != '0');
 // the editor was already built with this, so the button is only being brought into line with it
 setSpellcheck(spellcheckOn);
@@ -1198,7 +1149,7 @@ Write markdown on the left and watch it build on the right. Every button above d
 
 - Press **present** to step through the slides.
 - Press **print** to check the page breaks.
-- Press **💾 save** to keep this in the browser, and **💿 load** to come back to it.
+- With the local server running, the sidebar lists everything the site is made of, and **💾 save** writes the file behind the page you're on.
 
 ---
 `;
@@ -1227,19 +1178,6 @@ render();
 		note('couldn’t open that file', 'paused');
 		return;
 	}
-	let name = decodeURIComponent(src.split('/').pop() || '').replace(/\.(md|markdown|txt)$/i, '');
-	if (isDirty() && !confirm(`Opening “${name}” will replace the unsaved changes in the editor. Continue?`)) {
-		return;
-	}
-	fetch(src)
-		.then(response => response.ok ? response.text() : Promise.reject(response.status))
-		.then(markdown => {
-			setText(markdown);
-			filenameField.value = name;
-			markClean();
-			clearTimeout(pending);
-			render();
-			note(`opened “${name}”`);
-		})
-		.catch(() => note(`couldn’t open ${src}`, 'paused'));
+	// the ✍️ link only appears with the server running, so this is the file itself and opening it is the same as opening it from the sidebar
+	openPage(decodeURIComponent(src));
 })();

@@ -22,8 +22,12 @@ html, body {
 .editor {
 	height: 100dvh;
 	display: grid;
-	grid-template-columns: minmax(0, var(--split, 50%)) auto minmax(0, 1fr);
+	/* the sidebar's column is there whether or not it's open, so opening it doesn't reflow the panes into a different layout */
+	grid-template-columns: 0 minmax(0, var(--split, 50%)) auto minmax(0, 1fr);
 	background-color: var(--gray);
+}
+.editor[data-sidebar="1"] {
+	grid-template-columns: var(--sidebar, 280px) minmax(0, var(--split, 50%)) auto minmax(0, 1fr);
 }
 /* the frame swallows pointer events, so it stops taking them for the length of a drag */
 .editor[data-dragging="1"] {
@@ -50,6 +54,7 @@ html, body {
 }
 .editor-source-header {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 5px;
 	padding: 15px 20px;
@@ -57,27 +62,6 @@ html, body {
 	background-color: var(--off-black);
 	flex-shrink: 0;
 	overflow: auto;
-}
-.editor-title {
-	font-size: 20px;
-	font-variation-settings: "wght" 600, "SRFF" 0;
-	font-weight: 600;
-	letter-spacing: -0.02em;
-	line-height: 1em;
-	margin-right: auto;
-	white-space: nowrap;
-	padding-top: .2em;
-}
-.editor-title a {
-	color: inherit;
-	text-decoration: none;
-	transition: opacity .2s;
-}
-.editor-title a:hover {
-	opacity: .5;
-}
-.editor-title a:active {
-	opacity: .25;
 }
 .editor-filename {
 	display: flex;
@@ -115,8 +99,6 @@ html, body {
 	color: var(--gray);
 	font-variation-settings: "wght" 500;
 	font-weight: 500;
-	margin-left: 20px;
-	margin-right: 10px;
 }
 .editor-fontsize input {
 	-webkit-appearance: none;
@@ -475,7 +457,7 @@ html, body {
 .editor-source-footer {
 	display: flex;
 	align-items: center;
-	gap: 5px;
+	gap: 20px;
 	padding: 10px 20px;
 	border-top: 1px solid var(--dark-gray);
 	background-color: var(--off-black);
@@ -512,6 +494,10 @@ html, body {
 .editor-file-button:active {
 	opacity: .25;
 }
+.editor-file-button:disabled {
+	opacity: .4;
+	cursor: wait;
+}
 .editor-status {
 	margin-left: auto;
 	font-family: var(--mono);
@@ -525,7 +511,7 @@ html, body {
 	align-items: center;
 	white-space: nowrap;
 	flex-wrap: wrap;
-	padding-left: 10px;
+	gap: 10px 20px;
 }
 .editor-status[data-note="paused"] {
 	color: var(--yellow);
@@ -535,9 +521,77 @@ html, body {
 	color: var(--green);
 	opacity: 1;
 }
-.editor-status span {
-	margin-left: 10px;
+.editor-status[data-note="working"] {
+	color: var(--blue);
+	opacity: 1;
 }
+
+/* ——————————— */
+/* CONNECTED TO THE SITE */
+/* ——————————— */
+
+/* only ever on screen when the local server is running, so it can be loud about which file is about to be overwritten */
+.editor-source-file {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	color: var(--off-black);
+	background-color: var(--green);
+	border-radius: 10px;
+	padding: 5px 5px 5px 10px;
+	white-space: nowrap;
+}
+.editor-source-file[hidden] {
+	display: none;
+}
+.editor-source-file-detach {
+	font-family: inherit;
+	font-size: 10px;
+	line-height: 1em;
+	color: inherit;
+	background-color: transparent;
+	border: unset;
+	border-radius: 5px;
+	padding: 3px 4px;
+	cursor: pointer;
+	opacity: .5;
+	transition: opacity .2s;
+}
+.editor-source-file-detach:hover {
+	opacity: 1;
+}
+.editor-source-file-detach:active {
+	opacity: .25;
+}
+
+/* the buttons that write into the repo read as their own thing rather than as more file buttons */
+#save,
+#media {
+	border-color: var(--green);
+	color: var(--green);
+}
+#save:hover,
+#media:hover {
+	background-color: var(--green);
+	border-color: var(--green);
+	color: var(--off-black);
+}
+/* the class rules above set a display, which would otherwise beat the hidden attribute's */
+.editor-file-button[hidden],
+.editor-toggle[hidden] {
+	display: none;
+}
+
+/* dragging media over the window says where it's about to land, since the answer depends on which page is open */
+.editor[data-dropping] .editor-input {
+	outline: 2px solid var(--blue);
+	outline-offset: -2px;
+}
+
 
 /* ——————————— */
 /* SAVED FILES */
@@ -586,10 +640,10 @@ html, body {
 }
 .editor-dialog-list {
 	overflow-y: auto;
-	padding: 10px;
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 20px;
 }
 .editor-file {
 	display: flex;
@@ -750,10 +804,429 @@ html, body {
 }
 
 /* stacked on narrow screens, with the divider turning horizontal to match */
+/* ——————————— */
+/* SIDEBAR */
+/* ——————————— */
+
+/* the site drawn out as a tree: groups, the courses in them, the sections in those, and the materials in those. it only exists with the local server running, so everything here is off on the published page. */
+.editor-sidebar {
+	min-width: 0;
+	overflow: hidden;
+	background-color: var(--off-black);
+	color: var(--off-white);
+	border-right: 1px solid var(--dark-gray);
+}
+/* never display: none, and never the hidden attribute either: a grid item that isn't displayed comes out of the grid, and the three panes each slide a column to the left — which is what broke the divider. closed is a column of no width, with what's inside it clipped and out of reach. */
+.editor[data-sidebar="0"] .editor-sidebar {
+	visibility: hidden;
+}
+/* a fixed width inside the column, so the contents don't reflow while the column animates or while a pane is dragged */
+.editor-sidebar-content {
+	width: var(--sidebar, 280px);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+/* only on a narrow screen, where the sidebar covers everything and the toggle behind it can't be reached */
+.editor-sidebar-close {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 2;
+	font-family: inherit;
+	font-size: 14px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	text-transform: lowercase;
+	line-height: 1em;
+	color: var(--off-white);
+	background-color: var(--off-black);
+	border: 1px solid var(--dark-gray);
+	border-radius: 10px;
+	gap: 5px;
+	align-items: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.editor-sidebar-close span:nth-child(1) {
+	padding-top: .15em;
+}
+.editor-sidebar-close:active {
+	opacity: .25;
+}
+.editor-sidebar-content {
+	position: relative;
+}
+.editor-sidebar-header {
+	padding: 15px 20px;
+	border-bottom: 1px solid var(--dark-gray);
+	flex-shrink: 0;
+}
+.editor-sidebar-header-title {
+	font-size: 20px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1em;
+	margin-top: 5px;
+	text-transform: lowercase;
+}
+.editor-sidebar-header-title a {
+	color: inherit;
+	text-decoration: none;
+}
+.editor-sidebar-header-title a:hover {
+	opacity: .5;
+}
+.editor-sidebar-list {
+	flex: 1;
+	min-height: 0;
+	overflow-y: auto;
+	padding: 20px;
+	gap: 5px;
+	display: flex;
+	flex-direction: column;
+}
+.editor-sidebar-footer {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 10px;
+	border-top: 1px solid var(--dark-gray);
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+.editor-sidebar-group {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 20px 0 10px 0;
+	font-size: 14px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	text-transform: lowercase;
+	color: var(--off-white);
+	border-top: 1px dashed var(--dark-gray);
+	margin-top: 10px;
+}
+.editor-sidebar-group:nth-of-type(1) {
+	padding-top: 0;
+	border-top: unset;
+	margin-top: unset;
+}
+.editor-sidebar-group-label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-right: auto;
+	min-width: 0;
+}
+.editor-sidebar-empty {
+	padding: 5px 10px 5px 25px;
+	font-family: var(--mono);
+	font-size: 10px;
+	color: var(--gray);
+	opacity: .4;
+}
+
+/* ——————————— */
+/* SIDEBAR ROWS */
+/* ——————————— */
+
+.editor-row {
+	position: relative;
+	display: flex;
+	align-items: center;
+	/* gap: 2px; */
+	/* padding: 5px; */
+	border-radius: 10px;
+}
+.editor-row:nth-child(6n+1) {
+	--primary: var(--pink);
+}
+.editor-row:nth-child(6n+2) {
+	--primary: var(--green);
+}
+.editor-row:nth-child(6n+3) {
+	--primary: var(--blue);
+}
+.editor-row:nth-child(6n+4) {
+	--primary: var(--yellow);
+}
+.editor-row:nth-child(6n+5) {
+	--primary: var(--purple);
+}
+.editor-row:nth-child(6n+6) {
+	--primary: var(--red);
+}
+.editor-row:hover {
+	background-color: var(--off-black);
+}
+/* the file that's open in the editor, so the sidebar says where you are */
+.editor-row[data-open="1"] {
+	/* background-color: var(--dark-gray); */
+	box-shadow: inset 0 0 0 1px var(--primary);
+}
+/* a material with active: false isn't built at all, so it reads as switched off rather than merely different */
+.editor-row[data-dim="1"] .editor-row-open {
+	opacity: .25;
+}
+.editor-row[data-dragging="1"] {
+	opacity: .25;
+}
+/* the nesting is all that says what belongs to what, so the indents are the structure */
+.editor-row[data-kind="draft"],
+.editor-row[data-kind="section"] {
+	padding-left: 20px;
+}
+.editor-row[data-kind="resource"] {
+	padding-left: 40px;
+}
+.editor-row-open {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	text-align: left;
+	font-family: inherit;
+	text-transform: none;
+	color: var(--off-white);
+	background: none;
+	border: unset;
+	cursor: pointer;
+	padding: 5px 0;
+}
+.editor-row-emoji {
+	font-size: 12px;
+	line-height: 1em;
+	width: 25px;
+	height: 25px;
+	flex-shrink: 0;
+	color: var(--off-black);
+	background-color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+.editor-row-label {
+	min-width: 0;
+}
+.editor-row-name {
+	display: block;
+	/* font-family: var(--limkin); */
+	font-size: 12px;
+	line-height: 1.2em;
+	font-family: "Limkin", sans-serif;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 400;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.editor-row-open:hover .editor-row-name {
+	color: var(--primary);
+}
+.editor-row-meta {
+	display: block;
+	font-size: 10px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 500;
+	color: var(--primary);
+	letter-spacing: .02em;
+	margin-top: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* the actions stay out of the way until the row is pointed at, so a long list reads as names rather than as buttons.
+   they come over the end of the row rather than pushing into it, since five buttons in a 280px sidebar would leave a course page called "annotations, audi…" */
+.editor-row-actions {
+	display: none;
+	flex-shrink: 0;
+	gap: 1px;
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 20px;
+	background: linear-gradient(to right, transparent, var(--off-black) 20px);
+	/* the strip sits over the row, so only the buttons themselves take a click ~ the fade in front of them would otherwise swallow a press meant for the name underneath */
+	pointer-events: none;
+}
+.editor-row-actions > * {
+	pointer-events: auto;
+}
+.editor-row:hover .editor-row-actions,
+.editor-row:focus-within .editor-row-actions {
+	display: flex;
+}
+/* a group heading's ➕ isn't sitting on top of anything, so it stays in the flow */
+.editor-sidebar-group .editor-row-actions {
+	display: flex;
+	position: static;
+	transform: none;
+	padding-left: 0;
+	background: none;
+}
+.editor-row-action {
+	font-size: 12px;
+	line-height: 1em;
+	background-color: var(--dark-gray);
+	border: unset;
+	border-radius: 50%;
+	padding-top: .1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2em;
+	height: 2em;
+	cursor: pointer;
+	transition: background-color .15s;
+}
+.editor-row-action:hover {
+	background-color: var(--off-white);
+}
+.editor-row-action[data-danger="1"]:hover {
+	background-color: var(--red);
+}
+/* where a dragged row would land */
+.editor-row[data-drop]::after {
+	content: '';
+	position: absolute;
+	left: 10px;
+	right: 5px;
+	height: 2px;
+	background-color: var(--blue);
+	border-radius: 2px;
+}
+.editor-row[data-drop="before"]::after {
+	top: -1px;
+}
+.editor-row[data-drop="after"]::after {
+	bottom: -1px;
+}
+
+/* ——————————— */
+/* FORMS */
+/* ——————————— */
+
+.editor-field {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	border-bottom: 1px dashed var(--dark-gray);
+	padding-bottom: 20px;
+}
+.editor-field:nth-last-child(1) {
+	border-bottom: unset;
+	padding-bottom: unset;
+}
+.editor-field:nth-of-type(6n+1) {
+	--primary: var(--pink);
+}
+.editor-field:nth-of-type(6n+2) {
+	--primary: var(--green);
+}
+.editor-field:nth-of-type(6n+3) {
+	--primary: var(--blue);
+}
+.editor-field:nth-of-type(6n+4) {
+	--primary: var(--yellow);
+}
+.editor-field:nth-of-type(6n+5) {
+	--primary: var(--purple);
+}
+.editor-field:nth-of-type(6n+6) {
+	--primary: var(--red);
+}
+.editor-field[hidden] {
+	display: none;
+}
+/* a checkbox reads as its label with a box in front of it, rather than as a field with a label above it */
+.editor-field[data-check="1"] {
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+}
+.editor-field-label {
+	font-family: var(--mono);
+	font-size: 10px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	text-transform: lowercase;
+	color: var(--primary);
+}
+.editor-field-input {
+	font-family: var(--mono);
+	font-size: 13px;
+	font-variation-settings: "wght" 400;
+	font-weight: 400;
+	line-height: 1.4em;
+	color: var(--off-white);
+	background-color: var(--dark-gray);
+	border: unset;
+	border-radius: 5px;
+	padding: 8px 10px;
+	width: 100%;
+	resize: vertical;
+}
+.editor-field-input:focus {
+	outline: 1px solid var(--off-white);
+}
+.editor-field-check {
+	width: 16px;
+	height: 16px;
+	accent-color: var(--green);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+.editor-field-hint {
+	font-family: var(--mono);
+	font-size: 9px;
+	color: var(--gray);
+	opacity: .5;
+	line-height: 1.4em;
+}
+.editor-dialog-note {
+	font-family: var(--mono);
+	font-size: 10px;
+	color: var(--yellow);
+	margin-left: 10px;
+}
+
 @media (max-width: 900px) {
-	.editor {
+	.editor,
+	.editor[data-sidebar="1"] {
 		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: minmax(0, var(--split-v, 50%)) auto minmax(0, 1fr);
+	}
+	/* no room for a column this narrow, so it takes the whole screen and goes away again */
+	.editor-sidebar {
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		z-index: 10;
+		transform: translateX(-100%);
+		transition: transform .2s;
+		border-right: unset;
+	}
+	.editor-sidebar-close {
+		display: flex;
+	}
+	/* clear of the button in the corner */
+	.editor-sidebar-header {
+		padding-right: 90px;
+	}
+	.editor[data-sidebar="1"] .editor-sidebar {
+		transform: none;
+	}
+	.editor-sidebar-content {
+		width: 100%;
 	}
 	.editor[data-dragging="1"] {
 		cursor: row-resize;

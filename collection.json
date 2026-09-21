@@ -27,18 +27,18 @@
 								"newtab": false
 							},
 							{
-								"name": "calendar",
-								"emoji": "🗓️",
-								"slug": "calendar",
-								"url": "/assets/markdown/ds3-f26/calendar.md",
-								"newtab": false
-							},
-							{
 								"name": "final student work archive",
 								"emoji": "📂",
 								"slug": "student-work",
 								"url": "https://drive.google.com/drive/folders/1PySVmI2KXaGTAj067KKZySXbgXtBXqtF?usp=sharing",
 								"newtab": true
+							},
+							{
+								"name": "calendar",
+								"emoji": "🗓️",
+								"slug": "calendar",
+								"url": "/assets/markdown/ds3-f26/calendar.md",
+								"newtab": false
 							}
 						]
 					},
@@ -84,7 +84,7 @@
 								"name": "process documentation",
 								"emoji": "📸",
 								"slug": "unit-9-process",
-								"url": "https://embed.figma.com/board/D0zSet8Bv63DLj6bxzRuoB/risd-f26---ds3?node-id=301-7&embed-host=share",
+								"url": "https://embed.figma.com/board/LgwmgCnuOfvqqbElSIbVTS/risd-f26---ds3?node-id=0-1&embed-host=share",
 								"newtab": false
 							}
 						]
@@ -98,7 +98,9 @@
 								"slug": "09-09-26",
 								"url": "/assets/markdown/ds3-f26/09-09-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": [
+									"unit 9"
+								]
 							},
 							{
 								"name": "day 2, sep. 14",
@@ -106,7 +108,9 @@
 								"slug": "09-14-26",
 								"url": "/assets/markdown/ds3-f26/09-14-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": [
+									"unit 9"
+								]
 							},
 							{
 								"name": "day 3, sep. 16",
@@ -114,7 +118,9 @@
 								"slug": "09-16-26",
 								"url": "/assets/markdown/ds3-f26/09-16-26.md",
 								"newtab": false,
-								"tags": ["unit 9"]
+								"tags": [
+									"unit 9"
+								]
 							},
 							{
 								"name": "day 4, sep. 21",
@@ -122,8 +128,9 @@
 								"slug": "09-21-26",
 								"url": "/assets/markdown/ds3-f26/09-21-26.md",
 								"newtab": false,
-								"tags": ["unit 9"],
-								"active": false
+								"tags": [
+									"unit 9"
+								]
 							},
 							{
 								"name": "day 5, sep. 23",
@@ -131,7 +138,9 @@
 								"slug": "09-23-26",
 								"url": "/assets/markdown/ds3-f26/09-23-26.md",
 								"newtab": false,
-								"tags": ["unit 9"],
+								"tags": [
+									"unit 9"
+								],
 								"active": false
 							},
 							{
@@ -140,7 +149,9 @@
 								"slug": "09-28-26",
 								"url": "/assets/markdown/ds3-f26/09-28-26.md",
 								"newtab": false,
-								"tags": ["unit 9"],
+								"tags": [
+									"unit 9"
+								],
 								"active": false
 							}
 						]
@@ -248,17 +259,17 @@
 						"name": "course materials",
 						"contents": [
 							{
-								"name": "syllabus",
-								"emoji": "👆",
-								"slug": "syllabus",
-								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?usp=sharing",
-								"newtab": false
-							},
-							{
 								"name": "calendar",
 								"emoji": "🗓️",
 								"slug": "calendar",
 								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.mluho8o35or9",
+								"newtab": false
+							},
+							{
+								"name": "syllabus",
+								"emoji": "👆",
+								"slug": "syllabus",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?usp=sharing",
 								"newtab": false
 							},
 							{
@@ -274,6 +285,13 @@
 								"slug": "student-work",
 								"url": "https://drive.google.com/drive/folders/1he1J2NeEAOX6j2j-MsbMhe92tucVNPiV?usp=sharing",
 								"newtab": true
+							},
+							{
+								"name": "student work folder copy",
+								"emoji": "📂",
+								"slug": "student-work-copy",
+								"url": "https://drive.google.com/drive/folders/1he1J2NeEAOX6j2j-MsbMhe92tucVNPiV?usp=sharing",
+								"newtab": true
 							}
 						]
 					},
@@ -281,17 +299,17 @@
 						"name": "resources",
 						"contents": [
 							{
-								"name": "software",
-								"emoji": "💽",
-								"slug": "resources-software",
-								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.vey1omp75jwe",
-								"newtab": false
-							},
-							{
 								"name": "concepts",
 								"emoji": "🎓",
 								"slug": "resources-concepts",
 								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.9nu5qtasxhi7",
+								"newtab": false
+							},
+							{
+								"name": "software",
+								"emoji": "💽",
+								"slug": "resources-software",
+								"url": "https://docs.google.com/document/d/1YK_mhBGTpAqqHKUAi6txzISgZqc69Z6yEpIo94LYmzY/preview?tab=t.vey1omp75jwe",
 								"newtab": false
 							},
 							{
@@ -688,167 +706,6 @@
 				]
 			},
 			{
-				"slug": "in-motion-v2",
-				"emoji": "🎬",
-				"name": "in motion",
-				"version": "v2",
-				"desc": "a tour through the world of motion design, with an emphasis on musicality and performance!",
-				"long-desc": "<p>motion design is a powerful, foundational feature of digital screens. it helps direct the viewer’s attention, present information sequentially, add personality or depth to otherwise static graphics, contextualize interactive elements, and so much more. in this studio elective, students will learn the fundamentals of motion design and explore a wide variety of video and animation techniques. we will look at a wide range of influences and styles ranging from stop motion animation, to film title sequences, to early-internet flash animations, to interface design, to contemporary practices for brand identities and social media.</p><p>instruction will focus on digital motion design using adobe after effects, with additional tutorials in premiere pro, audio production, and html/css for web-based animations. students will leave the course with a broad overview of the field of motion design and a deep understanding of rhythm, timing, sequence, narrative, and expression.</p>",
-				"tags": [
-					"risd",
-					"in-person",
-					"fall 2025",
-					"graph 2216"
-				],
-				"contents": [
-					{
-						"name": "course materials",
-						"contents": [
-							{
-								"name": "syllabus",
-								"emoji": "🎬",
-								"slug": "syllabus",
-								"desc": "an overview of the full course.",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?usp=sharing",
-								"newtab": false
-							},
-							{
-								"name": "schedule",
-								"emoji": "🗓️",
-								"slug": "schedule",
-								"desc": "agenda and homework for each week.",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.mluho8o35or9",
-								"newtab": false
-							},
-							{
-								"name": "tutorials",
-								"slug": "tutorials",
-								"emoji": "🎓",
-								"desc": "learn how to animate using after effects, as well as pick up a few other tricks!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.emgjdzymxxy9",
-								"newtab": false
-							},
-							{
-								"name": "inspiration",
-								"slug": "inspiration",
-								"emoji": "💡",
-								"desc": "links to wide range of animation references!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.hrf6t0o6whri",
-								"newtab": false
-							},
-							{
-								"name": "exercises",
-								"emoji": "🔥",
-								"slug": "exercises",
-								"desc": "quick, fun assignments that we’ll complete during class.",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.671g7iarmv4m",
-								"newtab": false
-							},
-							{
-								"name": "prepping your files for submission",
-								"emoji": "💾",
-								"slug": "prepping-your-files",
-								"desc": "tutorial for how to export, compress, and package your after effects projects!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.fi7ub1i3yddx",
-								"newtab": false
-							},
-							{
-								"name": "student work folder",
-								"emoji": "📂",
-								"slug": "student-work-folder",
-								"desc": "upload your finished projects here!",
-								"url": "https://drive.google.com/drive/folders/13riDfSeFVVSWdmTh4-0BGVr9PT4Jyc7z?usp=sharing",
-								"newtab": true
-							},
-							{
-								"name": "motion tools classic (ae plug-in)",
-								"emoji": "🔌",
-								"slug": "motion-tools-classic",
-								"desc": "a free plug-in that makes some things in after effects easier.",
-								"url": "https://motiondesign.school/products/motion-tools-classic/",
-								"newtab": true
-							}
-						]
-					},
-					{
-						"name": "projects",
-						"contents": [
-							{
-								"name": "p1: rehearsal",
-								"emoji": "✏️",
-								"slug": "p1-rehearsal",
-								"desc": "create a hand drawn, looping animation inspired by your favorite song (or a song you like)!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.17vw6k8ts8m2",
-								"newtab": false
-							},
-							{
-								"name": "p2: overture",
-								"emoji": "🎼",
-								"slug": "p2-overture",
-								"desc": "animate 15 motion studies, each inspired by a different musical concept!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.0",
-								"newtab": false
-							},
-							{
-								"name": "p3: intermission",
-								"emoji": "💥",
-								"slug": "p3-intermission",
-								"desc": "put together the ugliest, hardest to watch animation you can possibly conceive of!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.2a4yv1ahjuhy",
-								"newtab": false
-							},
-							{
-								"name": "p4: showstopper",
-								"emoji": "📣",
-								"slug": "p4-showstopper",
-								"desc": "tell us a story through kinetic typography!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.yp94ibjd3e90",
-								"newtab": false
-							},
-							{
-								"name": "p5: encore",
-								"emoji": "💻",
-								"slug": "p5-encore",
-								"desc": "apply motion graphics to a series of user experience scenarios!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.d2a9k0uik0ag",
-								"newtab": false
-							},
-							{
-								"name": "ps: dramaturgy",
-								"emoji": "🎭",
-								"slug": "ps-dramaturgy",
-								"desc": "research an assigned style of motion design and create a presentation for the class!",
-								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.4jpx0fd7l27q",
-								"newtab": false
-							}
-						]
-					},
-					{
-						"name": "lectures",
-						"contents": [
-							{
-								"name": "week 1",
-								"slug": "week-1",
-								"url": "https://embed.figma.com/slides/IyB8qiJCR4I13avaAvCeEK/In-motion-v2---Week-1?embed-host=share",
-								"newtab": false,
-								"tags": [
-									"9/9/25"
-								]
-							},
-							{
-								"name": "week 2",
-								"slug": "week-2",
-								"url": "https://embed.figma.com/slides/t4OINJm22XwULeN5DTjFrD/In-motion-v2---Week-2?embed-host=share",
-								"newtab": false,
-								"tags": [
-									"9/16/25"
-								]
-							}
-						]
-					}
-				]
-			},
-			{
 				"slug": "design-for-interaction-v1",
 				"emoji": "👆",
 				"name": "design for interaction",
@@ -1087,6 +944,167 @@
 								"slug": "component-catalog",
 								"url": "https://docs.google.com/document/d/1l2ErHgyUqn6qqaG--9EB_dhPN3FbDsw18rs-OFRBsmU/preview?tab=t.pfcoq7zhv7xs",
 								"newtab": false
+							}
+						]
+					}
+				]
+			},
+			{
+				"slug": "in-motion-v2",
+				"emoji": "🎬",
+				"name": "in motion",
+				"version": "v2",
+				"desc": "a tour through the world of motion design, with an emphasis on musicality and performance!",
+				"long-desc": "<p>motion design is a powerful, foundational feature of digital screens. it helps direct the viewer’s attention, present information sequentially, add personality or depth to otherwise static graphics, contextualize interactive elements, and so much more. in this studio elective, students will learn the fundamentals of motion design and explore a wide variety of video and animation techniques. we will look at a wide range of influences and styles ranging from stop motion animation, to film title sequences, to early-internet flash animations, to interface design, to contemporary practices for brand identities and social media.</p><p>instruction will focus on digital motion design using adobe after effects, with additional tutorials in premiere pro, audio production, and html/css for web-based animations. students will leave the course with a broad overview of the field of motion design and a deep understanding of rhythm, timing, sequence, narrative, and expression.</p>",
+				"tags": [
+					"risd",
+					"in-person",
+					"fall 2025",
+					"graph 2216"
+				],
+				"contents": [
+					{
+						"name": "course materials",
+						"contents": [
+							{
+								"name": "syllabus",
+								"emoji": "🎬",
+								"slug": "syllabus",
+								"desc": "an overview of the full course.",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "schedule",
+								"emoji": "🗓️",
+								"slug": "schedule",
+								"desc": "agenda and homework for each week.",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.mluho8o35or9",
+								"newtab": false
+							},
+							{
+								"name": "tutorials",
+								"slug": "tutorials",
+								"emoji": "🎓",
+								"desc": "learn how to animate using after effects, as well as pick up a few other tricks!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.emgjdzymxxy9",
+								"newtab": false
+							},
+							{
+								"name": "inspiration",
+								"slug": "inspiration",
+								"emoji": "💡",
+								"desc": "links to wide range of animation references!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.hrf6t0o6whri",
+								"newtab": false
+							},
+							{
+								"name": "exercises",
+								"emoji": "🔥",
+								"slug": "exercises",
+								"desc": "quick, fun assignments that we’ll complete during class.",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.671g7iarmv4m",
+								"newtab": false
+							},
+							{
+								"name": "prepping your files for submission",
+								"emoji": "💾",
+								"slug": "prepping-your-files",
+								"desc": "tutorial for how to export, compress, and package your after effects projects!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.fi7ub1i3yddx",
+								"newtab": false
+							},
+							{
+								"name": "student work folder",
+								"emoji": "📂",
+								"slug": "student-work-folder",
+								"desc": "upload your finished projects here!",
+								"url": "https://drive.google.com/drive/folders/13riDfSeFVVSWdmTh4-0BGVr9PT4Jyc7z?usp=sharing",
+								"newtab": true
+							},
+							{
+								"name": "motion tools classic (ae plug-in)",
+								"emoji": "🔌",
+								"slug": "motion-tools-classic",
+								"desc": "a free plug-in that makes some things in after effects easier.",
+								"url": "https://motiondesign.school/products/motion-tools-classic/",
+								"newtab": true
+							}
+						]
+					},
+					{
+						"name": "projects",
+						"contents": [
+							{
+								"name": "p1: rehearsal",
+								"emoji": "✏️",
+								"slug": "p1-rehearsal",
+								"desc": "create a hand drawn, looping animation inspired by your favorite song (or a song you like)!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.17vw6k8ts8m2",
+								"newtab": false
+							},
+							{
+								"name": "p2: overture",
+								"emoji": "🎼",
+								"slug": "p2-overture",
+								"desc": "animate 15 motion studies, each inspired by a different musical concept!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.0",
+								"newtab": false
+							},
+							{
+								"name": "p3: intermission",
+								"emoji": "💥",
+								"slug": "p3-intermission",
+								"desc": "put together the ugliest, hardest to watch animation you can possibly conceive of!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.2a4yv1ahjuhy",
+								"newtab": false
+							},
+							{
+								"name": "p4: showstopper",
+								"emoji": "📣",
+								"slug": "p4-showstopper",
+								"desc": "tell us a story through kinetic typography!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.yp94ibjd3e90",
+								"newtab": false
+							},
+							{
+								"name": "p5: encore",
+								"emoji": "💻",
+								"slug": "p5-encore",
+								"desc": "apply motion graphics to a series of user experience scenarios!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.d2a9k0uik0ag",
+								"newtab": false
+							},
+							{
+								"name": "ps: dramaturgy",
+								"emoji": "🎭",
+								"slug": "ps-dramaturgy",
+								"desc": "research an assigned style of motion design and create a presentation for the class!",
+								"url": "https://docs.google.com/document/d/1W5swm-KnY604VktVN7Hc8PepbAfC_LOodNme2FwkGXU/preview?tab=t.4jpx0fd7l27q",
+								"newtab": false
+							}
+						]
+					},
+					{
+						"name": "lectures",
+						"contents": [
+							{
+								"name": "week 1",
+								"slug": "week-1",
+								"url": "https://embed.figma.com/slides/IyB8qiJCR4I13avaAvCeEK/In-motion-v2---Week-1?embed-host=share",
+								"newtab": false,
+								"tags": [
+									"9/9/25"
+								]
+							},
+							{
+								"name": "week 2",
+								"slug": "week-2",
+								"url": "https://embed.figma.com/slides/t4OINJm22XwULeN5DTjFrD/In-motion-v2---Week-2?embed-host=share",
+								"newtab": false,
+								"tags": [
+									"9/16/25"
+								]
 							}
 						]
 					}
