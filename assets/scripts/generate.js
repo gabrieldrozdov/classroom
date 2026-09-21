@@ -229,6 +229,9 @@ function markdownToHTML(markdown) {
 	// inside a cell, a backslash standing on its own is a line break, so a cell can hold a list — or anything else written across lines — without leaving the row it belongs to. it has to stand alone to count, which keeps a backslash inside a path or an escape sequence out of it.
 	const cellBreak = /(?:^|\s)\\(?=\s|$)/g;
 
+	// stands in for a line break inside a cell until the cell is converted: a character nothing can type, so no markup rule reads it as anything
+	const cellLineBreak = '\u0002';
+
 	// split a table row into its cells. a cell written as "<" merges into the one to its left and "^" into the one above, so a merged area is drawn in the markdown as the shape it takes on the page.
 	function tableCells(row) {
 		return row.trim().replace(/^\||\|$/g, '').split('|').map(cell => {
@@ -253,6 +256,15 @@ function markdownToHTML(markdown) {
 			// a cell written across lines, or opening with a list marker, goes through the block converter instead of the inline one, so it can hold a list, a heading, or several paragraphs. a two-line break (" \\ \\ ") leaves a blank line between them, which is what separates one paragraph from the next. anything on a single line stays on the inline pass and comes out exactly as it always has.
 			let lines = text.split(cellBreak).map(part => part.trim());
 			let block = lines.length > 1 || /^(?:[-*+]\s|\d+\.\s)/.test(text);
+			// the block converter runs consecutive lines of plain text together into one paragraph, the way markdown always does — which swallowed a single break between two ordinary lines and only let it show when a list was involved. two plain lines side by side get a marker between them instead, turned into a <br> once the cell is converted. (a doubled backslash never gets this far: it isn't a break, and the inline pass turns it back into one backslash.)
+			let blockStart = /^(?:[-*+]\s|\d+\.\s|#{1,6}\s|>)/;
+			lines = lines.map((part, index) => {
+				let next = lines[index + 1];
+				if (part != '' && next != undefined && next != '' && !blockStart.test(part) && !blockStart.test(next)) {
+					return `${part}${cellLineBreak}`;
+				}
+				return part;
+			});
 			return { content: block ? lines.join('\n') : text.trim(), color: color, align: align, block: block };
 		});
 	}
@@ -338,7 +350,7 @@ function markdownToHTML(markdown) {
 				if (styles != '') {
 					attrs += ` style="${styles.trim()}"`;
 				}
-				cellsHTML += `<${tag}${attrs}>${cell.block ? markdownToHTML(cell.content) : inline(cell.content)}</${tag}>`;
+				cellsHTML += `<${tag}${attrs}>${(cell.block ? markdownToHTML(cell.content) : inline(cell.content)).replaceAll(cellLineBreak, '<br>')}</${tag}>`;
 			}
 			sectionHTML += `<tr>${cellsHTML}</tr>`;
 		}

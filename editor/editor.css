@@ -262,6 +262,36 @@ html, body {
 .editor-button:active {
 	opacity: .25;
 }
+/* a shortcode that doesn't match the search: still there, still pressable, just quieter */
+.editor-button[data-faded="1"] {
+	opacity: .25;
+}
+.editor-button[data-faded="1"]:hover {
+	opacity: 1;
+}
+/* the search runs the full width of the toolbar, above the first group */
+.editor-search {
+	grid-column: 1 / -1;
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
+	text-transform: none;
+	color: var(--off-white);
+	background-color: var(--dark-gray);
+	border: unset;
+	border-radius: 10px;
+	padding: 6px 10px;
+	margin-bottom: 5px;
+	width: 100%;
+}
+.editor-search::placeholder {
+	color: var(--gray);
+	opacity: .5;
+}
+.editor-search:focus {
+	outline: 1px solid var(--off-white);
+}
 
 /* ——————————— */
 /* CODEMIRROR */
@@ -962,12 +992,13 @@ html, body {
 	--primary: var(--red);
 }
 .editor-row:hover {
-	background-color: var(--off-black);
+	/* background-color: var(--off-black); */
 }
 /* the file that's open in the editor, so the sidebar says where you are */
 .editor-row[data-open="1"] {
 	/* background-color: var(--dark-gray); */
-	box-shadow: inset 0 0 0 1px var(--primary);
+	outline: 1px solid var(--primary);
+	outline-offset: 2px;
 }
 /* a material with active: false isn't built at all, so it reads as switched off rather than merely different */
 .editor-row[data-dim="1"] .editor-row-open {
@@ -978,6 +1009,7 @@ html, body {
 }
 /* the nesting is all that says what belongs to what, so the indents are the structure */
 .editor-row[data-kind="draft"],
+.editor-row[data-kind="recent"],
 .editor-row[data-kind="section"] {
 	padding-left: 20px;
 }
@@ -1027,6 +1059,10 @@ html, body {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+/* a course's version is a qualifier on its name, so it sits back from it */
+.editor-row-version {
+	opacity: .5;
+}
 .editor-row-open:hover .editor-row-name {
 	color: var(--primary);
 }
@@ -1051,6 +1087,7 @@ html, body {
 	position: absolute;
 	right: 5px;
 	top: 50%;
+	height: 100%;
 	transform: translateY(-50%);
 	padding-left: 20px;
 	background: linear-gradient(to right, transparent, var(--off-black) 20px);
@@ -1063,6 +1100,7 @@ html, body {
 .editor-row:hover .editor-row-actions,
 .editor-row:focus-within .editor-row-actions {
 	display: flex;
+	align-items: center;
 }
 /* a group heading's ➕ isn't sitting on top of anything, so it stays in the flow */
 .editor-sidebar-group .editor-row-actions {

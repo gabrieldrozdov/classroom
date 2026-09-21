@@ -68,11 +68,8 @@ const groups = [
 			{ label: 'italic', before: '*', placeholder: 'italic', after: '*' },
 			{ label: 'code', before: '`', placeholder: 'code', after: '`' },
 			{ label: 'link', before: '[', placeholder: 'label', after: '](https://)' },
-			{ label: '{c: color}', before: '{c:pink ', placeholder: 'colored text', after: '}' },
-			{ label: '{h: highlight}', before: '{h:yellow ', placeholder: 'highlighted text', after: '}' },
-			{ label: '{bg: cell}', before: '{bg:pink} ' },
-			{ label: '{center} cell', before: '{center} ' },
-			{ label: '\\ cell line', before: ' \\ ' },
+			{ label: '{c: color}', before: '{c:primary ', placeholder: 'colored text', after: '}' },
+			{ label: '{h: highlight}', before: '{h:primary ', placeholder: 'highlighted text', after: '}' },
 			{ label: '\\ escape', before: '\\', placeholder: '*' }
 		]
 	},
@@ -87,12 +84,9 @@ const groups = [
 			{ label: '1. list', block: true, before: '1. ', placeholder: 'First item', after: '\n2. Second item' },
 			{ label: '↳ sub item', block: true, before: '\t- ', placeholder: 'Sub item' },
 			{ label: '> quote', block: true, before: '> ', placeholder: 'Quoted text' },
-			{ label: 'table', block: true, before: '| ', placeholder: 'Column', after: ' | Column |\n| --- | --- |\n| Cell | Cell |\n| Cell | Cell |' },
-			{ label: 'table widths', block: true, before: '| ', placeholder: 'Wide', after: ' | Narrow | Narrow |\n| --- 2 | --- 1 | --- 1 |\n| Cell | Cell | Cell |' },
-			{ label: 'table spans', block: true, before: '| ', placeholder: 'Column', after: ' | Column | Column |\n| --- | --- | --- |\n| {bg:pink} Across three columns | < | < |\n| {bg:blue} Down two rows | Cell | Cell |\n| ^ | Cell | Cell |' },
 			{ label: 'code block', block: true, before: '```\n', placeholder: 'code here', after: '\n```' },
 			{ label: '--- divider', block: true, before: '---' },
-			{ label: '--- colored', block: true, before: '--- ', placeholder: 'pink', after: ' solid' }
+			{ label: '--- colored', block: true, before: '--- ', placeholder: 'primary', after: ' solid' }
 		]
 	},
 	{
@@ -110,16 +104,28 @@ const groups = [
 		items: [
 			{ label: '::: faq', block: true, before: '::: faq ', placeholder: 'A question?', after: '\n\nThe answer.\n\n:::' },
 			{ label: '::: columns', block: true, before: '::: columns\n\n', placeholder: 'Left column.', after: '\n\n+++\n\nRight column.\n\n:::' },
-			{ label: '::: bg', block: true, before: '::: bg ', placeholder: 'pink', after: '\n\nContent inside the band.\n\n:::' },
-			{ label: '::: calendar', block: true, before: '::: calendar\n\n[9/15/26]\n', placeholder: 'First day of class.', after: '\n\n[9/22/26 - 10/6/26 blue]\nProject one.\n\n:::' },
+			{ label: '::: bg', block: true, before: '::: bg ', placeholder: 'primary', after: '\n\nContent inside the band.\n\n:::' },
+			{ label: '::: calendar', block: true, before: '::: calendar\n\n[9/15/26]\n', placeholder: 'First day of class.', after: '\n\n[9/22/26 - 10/6/26 primary]\nProject one.\n\n:::' },
 			{ label: '::: files', block: true, before: '::: files ', placeholder: 'my-site', after: '\n\nindex.html\nstyle.css\nimages\n\tlogo.svg\n\n:::' },
 			{ label: '::: big', block: true, before: '::: big\n\n', placeholder: 'A big, centered line.', after: '\n\n:::' },
 			{ label: '::: notes', block: true, before: '::: notes\n\n', placeholder: 'Speaker notes, never shown on the page.', after: '\n\n:::' }
 		]
 	},
 	{
-		label: 'flow',
+		label: 'tables',
 		color: 'purple',
+		items: [
+			{ label: 'table', block: true, before: '| ', placeholder: 'Column', after: ' | Column |\n| --- | --- |\n| Cell | Cell |\n| Cell | Cell |' },
+			{ label: 'table widths', block: true, before: '| ', placeholder: 'Wide', after: ' | Narrow | Narrow |\n| --- 2 | --- 1 | --- 1 |\n| Cell | Cell | Cell |' },
+			{ label: 'table spans', block: true, before: '| ', placeholder: 'Column', after: ' | Column | Column |\n| --- | --- | --- |\n| {bg:primary} Across three columns | < | < |\n| {bg:primary} Down two rows | Cell | Cell |\n| ^ | Cell | Cell |' },
+			{ label: '{bg: cell}', before: '{bg:primary} ' },
+			{ label: '{center} cell', before: '{center} ' },
+			{ label: '\\ cell line', before: ' \\ ' }
+		]
+	},
+	{
+		label: 'flow',
+		color: 'red',
 		items: [
 			{ label: '[slide]', block: true, before: '[slide]' },
 			{ label: '[page]', block: true, before: '[page]' },
@@ -303,6 +309,39 @@ function insert(item) {
 // ——————————————————————————————
 
 let toolbar = document.getElementById('toolbar');
+
+// a filter across every shortcode. nothing is hidden or disabled by it — whatever doesn't match only fades, so the toolbar keeps its shape and a near miss is still one click away.
+// it's a bare input rather than anything wrapped, because the css colors the groups by counting spans and divs, and a wrapper would count as one.
+let search = document.createElement('input');
+search.type = 'search';
+search.className = 'editor-search';
+search.placeholder = 'search shortcodes';
+search.spellcheck = false;
+search.autocomplete = 'off';
+search.setAttribute('aria-label', 'Search shortcodes');
+toolbar.appendChild(search);
+
+function filterShortcodes() {
+	let term = search.value.trim().toLowerCase();
+	for (let button of toolbar.querySelectorAll('.editor-button')) {
+		// the group's name counts too, so "tables" lights up everything in the tables group
+		let match = term == '' || button.dataset.search.includes(term);
+		if (match) {
+			delete button.dataset.faded;
+		} else {
+			button.dataset.faded = 1;
+		}
+	}
+}
+search.addEventListener('input', filterShortcodes);
+search.addEventListener('keydown', (e) => {
+	if (e.key == 'Escape' && search.value != '') {
+		e.preventDefault();
+		search.value = '';
+		filterShortcodes();
+	}
+});
+
 for (let group of groups) {
 	let label = document.createElement('span');
 	label.className = 'editor-group-label';
@@ -317,6 +356,7 @@ for (let group of groups) {
 		button.className = 'editor-button';
 		button.type = 'button';
 		button.textContent = item.label;
+		button.dataset.search = `${group.label} ${item.label}`.toLowerCase();
 		button.addEventListener('click', () => insert(item));
 		el.appendChild(button);
 	}
@@ -744,6 +784,8 @@ divider.addEventListener('keydown', (e) => {
 let baseline = '';
 function markClean() {
 	baseline = text();
+	// "clean" is part of what a reload comes back to, so it's written down along with the text
+	saveDraft();
 }
 function isDirty() {
 	let value = text();
@@ -842,6 +884,8 @@ function setSource(url) {
 	if (typeof markOpenInSidebar == 'function') {
 		markOpenInSidebar(source);
 	}
+	// the text of a newly opened page is written down the moment it's set, which is before its name and path are — so without this, a reload straight after opening a page came back with that page's text under the previous file's name, or as untitled. it's written again here, now that all three agree.
+	saveDraft();
 }
 
 // the folder part of a path, trailing slash included
@@ -1030,6 +1074,9 @@ mediaInput.addEventListener('change', () => {
 			if (typeof receiveStatus == 'function') {
 				receiveStatus(result);
 			}
+			if (source && restoredClean && !openedFromLink && !isDirty()) {
+				openPage(source);
+			}
 			if (!result.writing) {
 				note('connected, but this isn’t the computer running the server ~ nothing here can change files', 'paused');
 			}
@@ -1108,11 +1155,16 @@ document.addEventListener('drop', (e) => {
 function saveDraft() {
 	try {
 		// the source goes with the draft so a reload comes back to the same file rather than quietly turning into a scratch page
-		localStorage.setItem(STORAGE, JSON.stringify({ name: filenameField.value, text: text(), source: source }));
+		localStorage.setItem(STORAGE, JSON.stringify({ name: filenameField.value, text: text(), source: source, clean: text() == baseline }));
 	} catch (error) {
 		// as above
 	}
 }
+// whether the page that came back from the last visit had no unsaved changes in it. if so, the copy on disk is the real one — it may have been edited in vs code since — and it's read again once the server answers.
+let restoredClean = false;
+// set when the page was opened by a ✍️ link, which decides what's open on its own
+let openedFromLink = false;
+
 function restoreDraft() {
 	try {
 		let saved = JSON.parse(localStorage.getItem(STORAGE));
@@ -1121,6 +1173,9 @@ function restoreDraft() {
 			if (saved.name) {
 				filenameField.value = saved.name;
 			}
+			// a page that came back unchanged is still unchanged, so opening something else doesn't stop to ask about it. (the untouched starter counts too.) it's settled before the source, since setting the source writes the draft down again and should write this down with it.
+			baseline = saved.clean ? saved.text : STARTER;
+			restoredClean = !!saved.clean;
 			// the buttons for it stay hidden until the check for the server comes back, so this is safe whether or not the server is up
 			setSource(typeof saved.source == 'string' ? saved.source : null);
 			return true;
@@ -1155,8 +1210,8 @@ Write markdown on the left and watch it build on the right. Every button above d
 `;
 if (!restoreDraft()) {
 	setText(STARTER);
+	baseline = STARTER;
 }
-baseline = STARTER;
 updateCounts();
 render();
 
@@ -1179,5 +1234,6 @@ render();
 		return;
 	}
 	// the ✍️ link only appears with the server running, so this is the file itself and opening it is the same as opening it from the sidebar
+	openedFromLink = true;
 	openPage(decodeURIComponent(src));
 })();

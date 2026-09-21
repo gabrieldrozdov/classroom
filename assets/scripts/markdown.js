@@ -680,3 +680,58 @@ function initEditButton() {
 		});
 }
 initEditButton();
+
+// clicking a picture on a markdown page shows it on its own: the whole screen, the whole picture, on off-black. it works the same in the reading view and on a slide, since the slides are made of the same markdown — and any click, or escape, puts the page back exactly as it was.
+function initImageViewer() {
+	let viewer = null;
+
+	function close() {
+		if (!viewer) {
+			return;
+		}
+		viewer.remove();
+		viewer = null;
+		delete document.body.dataset.viewing;
+	}
+
+	function open(img) {
+		close();
+		viewer = document.createElement('div');
+		viewer.className = 'markdown-image-viewer';
+		let copy = document.createElement('img');
+		copy.src = img.currentSrc || img.src;
+		copy.alt = img.alt || '';
+		viewer.appendChild(copy);
+		viewer.addEventListener('click', (e) => {
+			// the click that closes it is spent here, so it doesn't also land on whatever is underneath
+			e.stopPropagation();
+			close();
+		});
+		document.body.appendChild(viewer);
+		document.body.dataset.viewing = 1;
+	}
+
+	document.addEventListener('click', (e) => {
+		let img = e.target.closest && e.target.closest('.resource-preview-markdown img');
+		// a picture inside a link is the link's, and while drawing over a slide a click is a mark, not a request to look closer
+		if (!img || img.closest('a') || document.body.dataset.draw) {
+			return;
+		}
+		e.preventDefault();
+		e.stopPropagation();
+		open(img);
+	});
+
+	// caught before the presentation's own keys, so escape closes the picture rather than the presentation, and the arrows don't move the slides on underneath it
+	window.addEventListener('keydown', (e) => {
+		if (!viewer) {
+			return;
+		}
+		e.stopImmediatePropagation();
+		e.preventDefault();
+		if (e.key == 'Escape' || e.key == ' ' || e.key == 'Enter') {
+			close();
+		}
+	}, true);
+}
+initImageViewer();

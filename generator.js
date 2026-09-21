@@ -350,7 +350,7 @@ function generatePages() {
 								</h1>
 							</div>
 							<a href="/" class="menu-header-return">
-								<svg class="menu-header-return-text" viewBox="0 0 100 100"><defs><path id="menu-header-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-return-text">GD with GD Classroom</textPath></text></svg>
+								<svg class="menu-header-return-text" viewBox="0 0 100 100"><defs><path id="menu-header-return-text" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#menu-header-return-text">gd with gd clasroom</textPath></text></svg>
 								<div class="menu-header-return-icon">
 									<p>🍎</p>
 								</div>
@@ -512,11 +512,11 @@ function generatePages() {
 							<div class="resource-container" style="--primary: var(--${colors[resourceColorIndex]});" data-menu="0">
 								<nav class="resource-menu">
 									<div class="resource-menu-content">
-										<a href="/" class="resource-menu-home"><span class="resource-menu-home-emoji">🍎</span><span class="resource-menu-home-text"><span style="color: var(--pink);">G</span><span style="color: var(--green);">D</span> <span style="color: var(--blue);">w</span><span style="color: var(--yellow);">i</span><span style="color: var(--purple);">t</span><span style="color: var(--red);">h</span> <span style="color: var(--pink);">G</span><span style="color: var(--green);">D</span> Classroom</span></a>
+										<a href="/" class="resource-menu-home"><span class="resource-menu-home-emoji">🍎</span><span class="resource-menu-home-text"><span style="color: var(--pink);">g</span><span style="color: var(--green);">d</span> <span style="color: var(--blue);">w</span><span style="color: var(--yellow);">i</span><span style="color: var(--purple);">t</span><span style="color: var(--red);">h</span> <span style="color: var(--pink);">g</span><span style="color: var(--green);">d</span> classroom</span></a>
 										<header class="resource-menu-header">
 											<div class="resource-menu-header-label">
 												${course['emoji'] ? `<span class="resource-menu-header-label-emoji">${course['emoji']}</span>` : ''}
-												<span class="resource-menu-header-label-text">Current Course</span>
+												<span class="resource-menu-header-label-text">current course</span>
 											</div>
 											<p class="resource-menu-header-title">
 												<a href="../">

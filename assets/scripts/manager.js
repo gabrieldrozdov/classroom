@@ -217,7 +217,13 @@ function row(options) {
 		open.appendChild(el('span', 'editor-row-emoji', options.emoji));
 	}
 	let label = el('span', 'editor-row-label');
-	label.appendChild(el('span', 'editor-row-name', options.name));
+	let name = el('span', 'editor-row-name', options.name);
+	// a course's version reads as a qualifier on the name rather than part of it
+	if (options.version) {
+		name.appendChild(document.createTextNode(' '));
+		name.appendChild(el('span', 'editor-row-version', options.version));
+	}
+	label.appendChild(name);
 	if (options.meta) {
 		label.appendChild(el('span', 'editor-row-meta', options.meta));
 	}
@@ -267,7 +273,9 @@ function renderSidebar() {
 	}
 	sidebarList.replaceChildren();
 
-	// drafts first: they're the pages being written rather than the pages already published
+	renderRecent();
+
+	// drafts next: they're the pages being written rather than the pages already published
 	sidebarList.appendChild(groupHeading('📄', 'drafts', [{ emoji: '📄', label: 'New draft', run: newDraft }]));
 	if (drafts.length == 0) {
 		sidebarList.appendChild(el('p', 'editor-sidebar-empty', 'nothing in progress'));
@@ -306,6 +314,9 @@ function renderSidebar() {
 			renderCourse(address(g, c));
 		}
 	}
+
+	// every row was just rebuilt, so the one for the open file has to be found and marked again
+	markOpenInSidebar(source);
 }
 
 function groupHeading(emoji, text, actions) {
@@ -349,7 +360,8 @@ function renderCourse(at) {
 		at: at,
 		expanded: open,
 		emoji: course['emoji'] || '🎓',
-		name: `${course['name']}${course['version'] ? ` ${course['version']}` : ''}`,
+		name: course['name'],
+		version: course['version'] || '',
 		meta: `${sections.length} section${sections.length == 1 ? '' : 's'} ~ ${pages} resource${pages == 1 ? '' : 's'}`,
 		title: `/${course['slug']}/`,
 		press: () => {
@@ -362,6 +374,7 @@ function renderCourse(at) {
 		},
 		actions: [
 			{ emoji: '⚙️', label: `Settings for ${course['name']}`, run: () => courseForm(at) },
+			{ emoji: '🔗', label: `Open /${course['slug']}/`, run: () => visit(`/${course['slug']}/`) },
 			{ emoji: '📄', label: 'New section', run: () => newSection(at) },
 			...moveActions(at),
 			{ emoji: '🗑️', label: `Remove ${course['name']}`, danger: true, run: () => removeCourse(at) }
@@ -443,6 +456,8 @@ function renderResource(at) {
 		},
 		actions: [
 			{ emoji: '⚙️', label: `Settings for ${resource['name']}`, run: () => resourceForm(at) },
+			// a hidden resource isn't built at all, so there's no page to go to
+			resource['active'] == false ? null : { emoji: '🔗', label: `Open /${courseAt(at)['slug']}/${resource['slug']}/`, run: () => visit(`/${courseAt(at)['slug']}/${resource['slug']}/`) },
 			{ emoji: '👯', label: `Duplicate ${resource['name']}`, run: () => duplicateResource(at) },
 			...moveActions(at),
 			{ emoji: '🗑️', label: `Remove ${resource['name']}`, danger: true, run: () => removeResource(at) }
@@ -450,15 +465,80 @@ function renderResource(at) {
 	}));
 }
 
+// the last few files written, newest first — a shortcut to wherever they actually live, not a place of their own
+const RECENT_COUNT = 10;
+
+function renderRecent() {
+	let recent = Object.keys(files).sort((a, b) => files[b].modified - files[a].modified).slice(0, RECENT_COUNT);
+	if (recent.length == 0) {
+		return;
+	}
+	sidebarList.appendChild(groupHeading('🕑', 'recently edited', []));
+	for (let url of recent) {
+		let found = findResource(url);
+		let resource = found ? resourceAt(found) : null;
+		let course = found ? courseAt(found) : null;
+		// named the way the rest of the sidebar names it, with where it lives underneath: the course for a course page, the folder for anything else
+		let where = course ? `${course['name']}${course['version'] ? ` ${course['version']}` : ''}` : url.replace(/^\/assets\/markdown\//, '').replace(/[^/]+$/, '').replace(/\/$/, '');
+		sidebarList.appendChild(row({
+			kind: 'recent',
+			url: url,
+			emoji: resource ? resource['emoji'] || '' : '',
+			name: resource ? resource['name'] : url.split('/').pop(),
+			meta: `${where} ~ ${when(files[url].modified)}`,
+			title: url,
+			// a shortcut is used from where it sits, so the sidebar stays put: the file is marked as open, but its course isn't drawn open and nothing scrolls
+			press: async () => {
+				let previous = scrolledTo;
+				scrolledTo = url;
+				// if the open is called off, the file wasn't opened, and opening it later from anywhere else should still find it
+				if (!await openPage(url)) {
+					scrolledTo = previous;
+				}
+			}
+		}));
+	}
+}
+
+// the resource in the collection that a file belongs to, if any
+function findResource(url) {
+	if (!Array.isArray(collection)) {
+		return null;
+	}
+	for (let g = 0; g < collection.length; g++) {
+		let courses = collection[g]['contents'] || [];
+		for (let c = 0; c < courses.length; c++) {
+			let sections = courses[c]['contents'] || [];
+			for (let s = 0; s < sections.length; s++) {
+				let resources = sections[s]['contents'] || [];
+				for (let r = 0; r < resources.length; r++) {
+					if (resources[r]['url'] == url) {
+						return address(g, c, s, r);
+					}
+				}
+			}
+		}
+	}
+	return null;
+}
+
+// the real page, in a tab of its own so the editor stays where it was
+function visit(path) {
+	window.open(path, '_blank');
+}
+
+// the file last scrolled to, so the sidebar moves once when something is opened rather than every time it's redrawn
+let scrolledTo = null;
+
 // the row for the file that's open in the editor, so the sidebar says where you are
 function markOpenInSidebar(url) {
-	// the course a file belongs to opens itself, so the sidebar shows where in the site you are
-	if (url && loaded && Array.isArray(collection)) {
-		let slug = url.replace(/^\/assets\/markdown\//, '').split('/')[0];
-		if (slug && !expanded.has(slug) && allCourseSlugs(null).has(slug)) {
-			expanded.add(slug);
-			renderSidebar();
-		}
+	// the course a file belongs to opens itself, so the sidebar shows where in the site you are. drawing it open calls back in here, so this pass stops and lets that one finish the job.
+	// only for a file that's just been opened: a course folded shut by hand, or by collapse all, stays shut on every redraw after that
+	let found = url && loaded && url != scrolledTo ? findResource(url) : null;
+	if (found && !expanded.has(courseAt(found)['slug'])) {
+		expanded.add(courseAt(found)['slug']);
+		renderSidebar();
+		return;
 	}
 	for (let node of sidebarList.querySelectorAll('.editor-row[data-url]')) {
 		if (url && node.dataset.url == url) {
@@ -467,6 +547,22 @@ function markOpenInSidebar(url) {
 			delete node.dataset.open;
 		}
 	}
+	if (url && loaded && url != scrolledTo) {
+		scrolledTo = url;
+		centerRow(url);
+	}
+}
+
+// scroll the sidebar so the open file sits about halfway down it. the row in the course tree is the one that says where the file lives, so it's preferred over the same file's shortcut under recently edited.
+function centerRow(url) {
+	let rows = [...sidebarList.querySelectorAll('.editor-row[data-url]')].filter(node => node.dataset.url == url);
+	let target = rows.find(node => node.dataset.kind == 'resource') || rows.find(node => node.dataset.kind == 'draft') || rows[0];
+	if (!target) {
+		return;
+	}
+	let list = sidebarList.getBoundingClientRect();
+	let box = target.getBoundingClientRect();
+	sidebarList.scrollTo({ top: sidebarList.scrollTop + (box.top - list.top) - (list.height - box.height) / 2, behavior: 'smooth' });
 }
 
 // ——————————————————————————————
@@ -1067,6 +1163,14 @@ sidebarToggle.addEventListener('click', () => setSidebar(!sidebarOpen));
 document.getElementById('sidebar-close').addEventListener('click', () => setSidebar(false));
 document.getElementById('new-draft').addEventListener('click', newDraft);
 document.getElementById('new-course').addEventListener('click', () => courseForm(null));
+document.getElementById('expand-all').addEventListener('click', () => {
+	expanded = allCourseSlugs(null);
+	renderSidebar();
+});
+document.getElementById('collapse-all').addEventListener('click', () => {
+	expanded = new Set();
+	renderSidebar();
+});
 document.getElementById('reload').addEventListener('click', async () => {
 	working('reading collection.json…');
 	await refreshSidebar();
