@@ -195,6 +195,13 @@
 								"slug": "resources",
 								"url": "https://drive.google.com/drive/folders/1tRqnxs5RDCD6J5nCKta9lXxfPyNf09Bw?usp=sharing",
 								"newtab": true
+							},
+							{
+								"name": "figjam",
+								"emoji": "📌",
+								"slug": "figjam",
+								"url": "https://embed.figma.com/board/mZ17OgfT2z1DtKU1Z9s6fB/risd-f26---type-code?node-id=0-1&embed-host=share",
+								"newtab": false
 							}
 						]
 					},
