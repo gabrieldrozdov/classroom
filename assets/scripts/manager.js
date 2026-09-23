@@ -7,6 +7,9 @@ let collection = null;
 let files = {};
 let drafts = [];
 
+// drafts.json: the settings a draft takes with it into a course, and the whole of any draft that's an embed. see draftItems() for how the two lists meet.
+let draftEntries = [];
+
 // nothing is drawn until the first read comes back, so the sidebar doesn't flash an empty site on its way to the real one
 let loaded = false;
 
@@ -170,6 +173,7 @@ function receiveStatus(result) {
 	collection = result.collection;
 	files = result.files || {};
 	drafts = result.drafts || [];
+	draftEntries = Array.isArray(result.draftEntries) ? result.draftEntries : [];
 	if (result.message) {
 		note(result.message, 'paused');
 	}
@@ -199,8 +203,16 @@ function row(options) {
 		node.dataset.at = JSON.stringify(options.at);
 		node.draggable = true;
 	}
+	// a draft isn't anywhere in the collection yet, so it has no address — it's carried by where it sits in the drafts list instead, which only has to hold for the length of one drag
+	if (options.draft != undefined) {
+		node.dataset.draft = options.draft;
+		node.draggable = true;
+	}
 	if (options.url) {
 		node.dataset.url = options.url;
+	}
+	if (options.slug) {
+		node.dataset.slug = options.slug;
 	}
 	if (options.dim) {
 		node.dataset.dim = 1;
@@ -269,6 +281,7 @@ function renderSidebar() {
 	sidebarToggle.hidden = !connected;
 	applySidebar();
 	if (!connected || !loaded) {
+		updateOpenButtons();
 		return;
 	}
 	sidebarList.replaceChildren();
@@ -276,24 +289,21 @@ function renderSidebar() {
 	renderRecent();
 
 	// drafts next: they're the pages being written rather than the pages already published
-	sidebarList.appendChild(groupHeading('📄', 'drafts', [{ emoji: '📄', label: 'New draft', run: newDraft }]));
-	if (drafts.length == 0) {
-		sidebarList.appendChild(el('p', 'editor-sidebar-empty', 'nothing in progress'));
+	// the heading and the empty note are both somewhere a resource can be dropped to make it a draft again, along with the drafts themselves
+	let heading = groupHeading('📄', 'drafts', [
+		{ emoji: '📄', label: 'New document draft', run: newDraft },
+		{ emoji: '🔗', label: 'New embed draft', run: () => draftForm(null) }
+	]);
+	heading.dataset.drafts = 1;
+	sidebarList.appendChild(heading);
+	let items = draftItems();
+	if (items.length == 0) {
+		let empty = el('p', 'editor-sidebar-empty', 'nothing in progress');
+		empty.dataset.drafts = 1;
+		sidebarList.appendChild(empty);
 	}
-	for (let draft of drafts) {
-		sidebarList.appendChild(row({
-			kind: 'draft',
-			url: draft.url,
-			name: `${draft.name}.md`,
-			meta: when(draft.modified),
-			title: draft.url,
-			press: () => openPage(draft.url),
-			actions: [
-				{ emoji: '✏️', label: `Rename ${draft.name}.md`, run: () => renameDraft(draft) },
-				{ emoji: '👯', label: `Duplicate ${draft.name}.md`, run: () => duplicateDraft(draft) },
-				{ emoji: '🗑️', label: `Delete ${draft.name}.md`, danger: true, run: () => deleteDraft(draft) }
-			]
-		}));
+	for (let i = 0; i < items.length; i++) {
+		renderDraft(items[i], i);
 	}
 
 	if (!Array.isArray(collection)) {
@@ -316,7 +326,7 @@ function renderSidebar() {
 	}
 
 	// every row was just rebuilt, so the one for the open file has to be found and marked again
-	markOpenInSidebar(source);
+	markOpenInSidebar(openUrl());
 }
 
 function groupHeading(emoji, text, actions) {
@@ -364,6 +374,7 @@ function renderCourse(at) {
 		version: course['version'] || '',
 		meta: `${sections.length} section${sections.length == 1 ? '' : 's'} ~ ${pages} resource${pages == 1 ? '' : 's'}`,
 		title: `/${course['slug']}/`,
+		slug: course['slug'],
 		press: () => {
 			if (open) {
 				expanded.delete(course['slug']);
@@ -440,20 +451,14 @@ function renderResource(at) {
 	sidebarList.appendChild(row({
 		kind: 'resource',
 		at: at,
-		url: page ? resource['url'] : '',
+		// an embed carries its url too, so it can be marked as the one on screen when it's open in the preview
+		url: resource['url'] || '',
 		dim: resource['active'] == false,
 		emoji: resource['emoji'] || '',
 		name: resource['name'],
 		meta: meta,
 		title: resource['url'],
-		press: () => {
-			// an embed has nothing to edit here, so pressing it opens what it does have
-			if (page) {
-				openPage(resource['url']);
-			} else {
-				resourceForm(at);
-			}
-		},
+		press: () => openResource(at),
 		actions: [
 			{ emoji: '⚙️', label: `Settings for ${resource['name']}`, run: () => resourceForm(at) },
 			// a hidden resource isn't built at all, so there's no page to go to
@@ -464,6 +469,81 @@ function renderResource(at) {
 		]
 	}));
 }
+
+// a markdown page opens to be written. anything else has no markdown to write, so it opens in the preview instead, with the writing side put away until a page is opened again.
+function openResource(at) {
+	let resource = resourceAt(at);
+	if (isPage(resource)) {
+		return openPage(resource['url']);
+	}
+	openEmbed(resource);
+}
+
+// after the settings of the embed on screen are saved, the preview is brought in line with them (a new url, or newly opening in a new tab)
+function reshowEmbed(before, resource) {
+	if (viewing && viewing['url'] == before) {
+		openEmbed(resource);
+	}
+}
+
+// ——————————————————————————————
+// SETTINGS AND OPEN, UP TOP
+// ——————————————————————————————
+
+// ⚙️ and 🔗 in the header act on whatever's open — a course resource or a draft, a page or an embed. what that is gets worked out again every time rather than held on to, since the collection is reread after every change and an address from before could be pointing at something else by now.
+let settingsButton = document.getElementById('settings');
+let openButton = document.getElementById('open');
+
+function openTarget() {
+	let url = typeof openUrl == 'function' ? openUrl() : null;
+	if (!connected || !loaded || !url) {
+		return null;
+	}
+	let found = findResource(url);
+	if (found) {
+		let resource = resourceAt(found);
+		let page = `/${courseAt(found)['slug']}/${resource['slug']}/`;
+		return {
+			settings: () => resourceForm(found),
+			// a page opens where it's published, which a hidden one isn't; an embed opens what it embeds
+			open: isPage(resource) ? (resource['active'] == false ? null : page) : resource['url'],
+			name: resource['name']
+		};
+	}
+	let item = draftItems().find(item => item.resource['url'] == url);
+	if (item) {
+		return {
+			settings: () => draftForm(item),
+			// a markdown draft isn't published anywhere yet
+			open: item.file ? null : item.resource['url'],
+			name: draftName(item)
+		};
+	}
+	return null;
+}
+
+function updateOpenButtons() {
+	let target = openTarget();
+	settingsButton.hidden = !target;
+	openButton.hidden = !target || !target.open;
+	if (target) {
+		settingsButton.title = `Settings for ${target.name}`;
+		openButton.title = target.open || '';
+	}
+}
+
+settingsButton.addEventListener('click', () => {
+	let target = openTarget();
+	if (target) {
+		target.settings();
+	}
+});
+openButton.addEventListener('click', () => {
+	let target = openTarget();
+	if (target && target.open) {
+		visit(target.open);
+	}
+});
 
 // the last few files written, newest first — a shortcut to wherever they actually live, not a place of their own
 const RECENT_COUNT = 10;
@@ -551,6 +631,8 @@ function markOpenInSidebar(url) {
 		scrolledTo = url;
 		centerRow(url);
 	}
+	// this runs whenever what's open changes, which is exactly when these need looking at again
+	updateOpenButtons();
 }
 
 // scroll the sidebar so the open file sits about halfway down it. the row in the course tree is the one that says where the file lives, so it's preferred over the same file's shortcut under recently edited.
@@ -574,6 +656,10 @@ function centerRow(url) {
 let dragging = null;
 
 function canDrop(from, to) {
+	// a draft goes into a course by being dropped among a section's resources, or onto the section itself
+	if (from && from.draft != null) {
+		return !!to && (kindOf(to) == 'resource' || kindOf(to) == 'section');
+	}
 	if (!from || !to || kindOf(from) != kindOf(to)) {
 		return false;
 	}
@@ -587,24 +673,40 @@ function canDrop(from, to) {
 }
 
 function clearDropMarks() {
-	for (let node of sidebarList.querySelectorAll('.editor-row[data-drop]')) {
+	for (let node of sidebarList.querySelectorAll('[data-drop]')) {
 		delete node.dataset.drop;
 	}
 }
 
+// a course resource over the drafts — the heading, a draft, or the note that there aren't any — is on its way back to being a draft
+function draftsTarget(e) {
+	if (!dragging || dragging.draft != null || kindOf(dragging) != 'resource') {
+		return null;
+	}
+	return e.target.closest('.editor-row[data-draft], [data-drafts]');
+}
+
 sidebarList.addEventListener('dragstart', (e) => {
-	let node = e.target.closest('.editor-row[data-at]');
+	let node = e.target.closest('.editor-row[data-at], .editor-row[data-draft]');
 	if (!node) {
 		return;
 	}
-	dragging = JSON.parse(node.dataset.at);
+	dragging = node.dataset.at ? JSON.parse(node.dataset.at) : { draft: Number(node.dataset.draft) };
 	node.dataset.dragging = 1;
 	e.dataTransfer.effectAllowed = 'move';
 	// firefox won't start a drag without something on the transfer
-	e.dataTransfer.setData('text/plain', node.dataset.at);
+	e.dataTransfer.setData('text/plain', node.dataset.at || node.dataset.url || 'draft');
 });
 
 sidebarList.addEventListener('dragover', (e) => {
+	let drafting = draftsTarget(e);
+	if (drafting) {
+		e.preventDefault();
+		e.dataTransfer.dropEffect = 'move';
+		clearDropMarks();
+		drafting.dataset.drop = 'into';
+		return;
+	}
 	let node = e.target.closest('.editor-row[data-at]');
 	if (!node) {
 		return;
@@ -616,19 +718,31 @@ sidebarList.addEventListener('dragover', (e) => {
 	e.preventDefault();
 	e.dataTransfer.dropEffect = 'move';
 	clearDropMarks();
-	// above or below, by which half of the row the pointer is in
+	// above or below, by which half of the row the pointer is in. a draft over a section heading goes in at the top of that section, which is where the line under the heading already says it will.
 	let box = node.getBoundingClientRect();
-	node.dataset.drop = e.clientY < box.top + box.height / 2 ? 'before' : 'after';
+	if (dragging.draft != null && kindOf(over) == 'section') {
+		node.dataset.drop = 'after';
+	} else {
+		node.dataset.drop = e.clientY < box.top + box.height / 2 ? 'before' : 'after';
+	}
 });
 
 sidebarList.addEventListener('dragleave', (e) => {
-	let node = e.target.closest('.editor-row[data-drop]');
+	let node = e.target.closest('[data-drop]');
 	if (node && !node.contains(e.relatedTarget)) {
 		delete node.dataset.drop;
 	}
 });
 
 sidebarList.addEventListener('drop', (e) => {
+	let drafting = draftsTarget(e);
+	if (drafting) {
+		e.preventDefault();
+		clearDropMarks();
+		unplaceResource(dragging);
+		dragging = null;
+		return;
+	}
 	let node = e.target.closest('.editor-row[data-at]');
 	if (!node || !node.dataset.drop) {
 		return;
@@ -638,7 +752,11 @@ sidebarList.addEventListener('drop', (e) => {
 	let after = node.dataset.drop == 'after';
 	clearDropMarks();
 	if (canDrop(dragging, over)) {
-		dropOnto(dragging, over, after);
+		if (dragging.draft != null) {
+			placeDraft(dragging.draft, over, after);
+		} else {
+			dropOnto(dragging, over, after);
+		}
 	}
 	dragging = null;
 });
@@ -947,7 +1065,7 @@ function resourceForm(at) {
 		{
 			key: 'start', label: 'page file', type: 'select', value: 'new',
 			when: (v) => v['kind'] == 'page' && isNew,
-			options: [{ value: 'new', label: 'make a new page' }].concat(drafts.map(draft => ({ value: draft.url, label: `move in the draft ${draft.name}.md` }))),
+			options: [{ value: 'new', label: 'make a new page' }].concat(draftItems().filter(item => item.file).map(item => ({ value: item.file.url, label: `move in the draft ${item.resource['name'] || `${item.file.name}.md`}` }))),
 			hint: 'a draft picked here moves out of the drafts folder and into the course'
 		},
 		{
@@ -966,6 +1084,7 @@ function resourceForm(at) {
 		{ key: 'active', label: 'shown on the site', type: 'checkbox', value: resource['active'] != false }
 	];
 
+	let before = resource['url'];
 	// both url fields write the same key, so whichever one is on screen is the one being read
 	let values = showForm(isNew ? '📄 new resource' : `⚙️ ${resource['name']}`, fields, async () => {
 		let name = values['name'].trim();
@@ -990,6 +1109,12 @@ function resourceForm(at) {
 					// a draft becomes a course page by moving into the course's folder, so the drafts list stays what's actually unplaced
 					let moved = await fileAction('rename', values['start'], `/assets/markdown/${course['slug']}/${slug}.md`);
 					url = moved && moved.path;
+					if (url) {
+						followFile(values['start'], url);
+						// its settings in drafts.json go with it, since the ones typed here are the ones that count now
+						draftEntries = draftEntries.filter(entry => entry['url'] != values['start']);
+						await writeDrafts();
+					}
 				}
 				if (!url) {
 					return 'the page couldn’t be made';
@@ -1022,6 +1147,8 @@ function resourceForm(at) {
 		await saveCollection(isNew ? 'added resource' : 'saved resource');
 		if (isNew && isPage(resource)) {
 			openPage(resource['url']);
+		} else if (!isNew) {
+			reshowEmbed(before, resource);
 		}
 	});
 }
@@ -1096,7 +1223,249 @@ async function newDraft() {
 	openPage(path);
 }
 
-async function renameDraft(draft) {
+// every draft, whichever kind: each markdown file in the drafts folder, with its entry from drafts.json if it has one, and then each embed, which is only ever an entry. markdown first and newest first, since that's what's being written; embeds after, newest first too.
+function draftItems() {
+	let items = [];
+	for (let draft of drafts) {
+		let entry = draftEntries.find(entry => entry['url'] == draft.url) || null;
+		items.push({ resource: entry || { url: draft.url }, entry: entry, file: draft });
+	}
+	for (let entry of draftEntries) {
+		if (!isPage(entry)) {
+			items.push({ resource: entry, entry: entry, file: null });
+		}
+	}
+	return items;
+}
+
+// what a draft is called: the name from its settings if it has one, otherwise its file
+function draftName(item) {
+	return item.resource['name'] || (item.file ? `${item.file.name}.md` : 'untitled embed');
+}
+
+function renderDraft(item, index) {
+	let resource = item.resource;
+	let name = draftName(item);
+	let meta;
+	if (!item.file) {
+		meta = 'embed';
+	} else if (resource['name']) {
+		// once it has a name of its own, the file is worth seeing alongside it
+		meta = `${item.file.name}.md ~ ${when(item.file.modified)}`;
+	} else {
+		meta = when(item.file.modified);
+	}
+	if (resource['active'] == false) {
+		meta = `hidden ~ ${meta}`;
+	}
+	sidebarList.appendChild(row({
+		kind: 'draft',
+		draft: index,
+		url: resource['url'] || '',
+		dim: resource['active'] == false,
+		emoji: resource['emoji'] || '',
+		name: name,
+		meta: meta,
+		title: resource['url'] || name,
+		press: () => {
+			if (item.file) {
+				openPage(item.file.url);
+			} else {
+				openEmbed(resource);
+			}
+		},
+		actions: [
+			{ emoji: '⚙️', label: `Settings for ${name}`, run: () => draftForm(item) },
+			// an embed's name is in its settings; only a file has a filename to change
+			item.file ? { emoji: '✏️', label: `Rename ${item.file.name}.md`, run: () => renameDraft(item) } : null,
+			{ emoji: '👯', label: `Duplicate ${name}`, run: () => duplicateDraft(item) },
+			{ emoji: '🗑️', label: `Delete ${name}`, danger: true, run: () => deleteDraft(item) }
+		]
+	}));
+}
+
+// drafts.json goes back whole, the way collection.json does. writeDrafts is the write on its own, for when collection.json is about to be saved too and the sidebar will be reread after that anyway.
+async function writeDrafts() {
+	let result;
+	try {
+		result = await post('/_dev/drafts', { drafts: draftEntries });
+	} catch (error) {
+		lostServer();
+		return false;
+	}
+	if (!result.ok) {
+		note(result.message || 'couldn’t save drafts.json', 'paused');
+		return false;
+	}
+	return true;
+}
+
+async function saveDrafts(message) {
+	let ok = await writeDrafts();
+	if (ok && message) {
+		note(message);
+	}
+	await refreshSidebar();
+	return ok;
+}
+
+// the same settings a course resource has, less the ones that only mean something inside a course. a markdown draft's file is its own business (✏️ renames it), so the form is only ever asked for an embed's url.
+function draftForm(item) {
+	let isNew = !item;
+	let resource = isNew ? { name: '', emoji: '', slug: '', url: '', newtab: false } : item.resource;
+	let page = !isNew && !!item.file;
+	let before = resource['url'];
+
+	let fields = [
+		{ key: 'emoji', label: 'emoji', value: resource['emoji'] || '', spellcheck: false },
+		{ key: 'name', label: 'name', value: resource['name'] || (page ? item.file.name : '') },
+		{ key: 'slug', label: 'slug', value: resource['slug'] || '', spellcheck: false, hint: 'the address it gets under a course once it’s placed in one ~ left empty, it comes from the name' },
+		page ? null : { key: 'url', label: 'url', value: resource['url'] || '', spellcheck: false, hint: 'a google doc, a figma board, an are.na channel ~ whatever the page should show' },
+		page ? null : { key: 'newtab', label: 'open in a new tab instead of embedding', type: 'checkbox', value: !!resource['newtab'] },
+		{ key: 'desc', label: 'description', type: 'textarea', rows: 2, value: resource['desc'] || '' },
+		{ key: 'tags', label: 'tags', value: (resource['tags'] || []).join(', '), hint: 'comma separated' },
+		{ key: 'active', label: 'shown on the site', type: 'checkbox', value: resource['active'] != false, hint: 'once it’s placed in a course' }
+	].filter(field => field);
+
+	let values = showForm(isNew ? '🔗 new embed draft' : `⚙️ ${draftName(item)}`, fields, async () => {
+		let name = values['name'].trim();
+		if (name == '') {
+			return 'a draft needs a name';
+		}
+		let url = page ? item.file.url : (values['url'] || '').trim();
+		if (url == '') {
+			return 'an embed needs a url';
+		}
+		if (!page && url.toLowerCase().endsWith('.md')) {
+			return 'a markdown page is a 📄 draft rather than an embed';
+		}
+
+		// a markdown draft with no settings yet gets an entry now, pointing at its file
+		let entry = item && item.entry ? item.entry : {};
+		set(entry, 'name', name);
+		set(entry, 'emoji', values['emoji'].trim());
+		set(entry, 'slug', slugify(values['slug']));
+		set(entry, 'url', url);
+		if (page) {
+			delete entry['newtab'];
+		} else {
+			entry['newtab'] = !!values['newtab'];
+		}
+		set(entry, 'desc', values['desc'].trim());
+		set(entry, 'tags', readTags(values['tags']));
+		if (values['active']) {
+			delete entry['active'];
+		} else {
+			entry['active'] = false;
+		}
+		if (!draftEntries.includes(entry)) {
+			draftEntries.unshift(entry);
+		}
+
+		await saveDrafts(isNew ? 'added embed draft' : 'saved draft');
+		if (isNew) {
+			openEmbed(entry);
+		} else if (!page) {
+			reshowEmbed(before, entry);
+		}
+	});
+}
+
+// the open file, followed to wherever it was just moved, so the editor goes on saving to it there
+function followFile(from, to) {
+	if (source != from) {
+		return;
+	}
+	filenameField.value = to.split('/').pop().replace(/\.md$/i, '');
+	setSource(to);
+}
+
+// "slug", then "slug-2", until one is free across the whole course
+function freeSlug(course, slug) {
+	let taken = new Set();
+	for (let section of course['contents'] || []) {
+		for (let entry of section['contents'] || []) {
+			taken.add(entry['slug']);
+		}
+	}
+	let tried = slug;
+	let n = 2;
+	while (taken.has(tried)) {
+		tried = `${slug}-${n}`;
+		n++;
+	}
+	return tried;
+}
+
+// a draft dragged into a course stops being a draft: its settings become a resource there, and a markdown draft's file moves into the course's folder under the resource's slug, the same move the new-resource form makes
+async function placeDraft(index, to, after) {
+	let item = draftItems()[index];
+	if (!item) {
+		return;
+	}
+	let course = courseAt(to);
+	let section = sectionAt(to);
+	// dropped on a section heading it goes in at the top; dropped on a resource, above or below that one
+	let position = to.resource == null ? 0 : to.resource + (after ? 1 : 0);
+
+	let resource = JSON.parse(JSON.stringify(item.resource));
+	let name = resource['name'] || item.file.name;
+	let slug = freeSlug(course, slugify(resource['slug'] || name) || 'page');
+
+	if (item.file) {
+		working(`moving ${item.file.name}.md into ${course['slug']}/…`);
+		let moved = await fileAction('rename', item.file.url, `/assets/markdown/${course['slug']}/${slug}.md`);
+		if (!moved) {
+			return;
+		}
+		resource['url'] = moved.path;
+		followFile(item.file.url, moved.path);
+	}
+
+	set(resource, 'name', name);
+	set(resource, 'slug', slug);
+	// newtab is written either way in the collection, the way the resource form writes it
+	resource['newtab'] = isPage(resource) ? false : !!resource['newtab'];
+	section['contents'].splice(position, 0, resource);
+	expanded.add(course['slug']);
+
+	if (item.entry) {
+		draftEntries = draftEntries.filter(entry => entry !== item.entry);
+		await writeDrafts();
+	}
+	renderSidebar();
+	await saveCollection(`placed ${name} in ${course['name']}`);
+}
+
+// the way back: a resource dragged into the drafts comes out of its course and keeps everything it had there as its draft settings, so placing it again puts it back as it was. a page's file moves into the drafts folder with it.
+async function unplaceResource(at) {
+	let resource = resourceAt(at);
+	let entry = JSON.parse(JSON.stringify(resource));
+	if (isPage(resource)) {
+		// a draft is a file first, so a page that collection.json points at with nothing behind it has nothing to be a draft of
+		if (!files[resource['url']]) {
+			note(`${resource['name']} has no file to move into the drafts`, 'paused');
+			return;
+		}
+		working(`moving ${resource['url'].split('/').pop()} into the drafts…`);
+		let moved = await fileAction('rename', resource['url'], `${DRAFTS_FOLDER}/${resource['slug'] || slugify(resource['name']) || 'page'}.md`);
+		if (!moved) {
+			return;
+		}
+		entry['url'] = moved.path;
+		// newtab only means something for an embed
+		delete entry['newtab'];
+		followFile(resource['url'], moved.path);
+	}
+	draftEntries.unshift(entry);
+	await writeDrafts();
+	sectionAt(at)['contents'].splice(at.resource, 1);
+	renderSidebar();
+	await saveCollection(`moved ${resource['name']} to the drafts`);
+}
+
+async function renameDraft(item) {
+	let draft = item.file;
 	let asked = prompt(`Rename “${draft.name}.md” to:`, draft.name);
 	if (asked == null) {
 		return;
@@ -1110,34 +1479,128 @@ async function renameDraft(draft) {
 		return;
 	}
 	// the file being renamed might be the one open in the editor
-	if (source == draft.url) {
-		setSource(moved.path);
-		filenameField.value = moved.path.split('/').pop().replace(/\.md$/i, '');
+	followFile(draft.url, moved.path);
+	// and its settings point at it by path
+	if (item.entry) {
+		item.entry['url'] = moved.path;
+		await writeDrafts();
 	}
 	note(`renamed to ${moved.path.split('/').pop()}`);
 	await refreshSidebar();
 }
 
-async function duplicateDraft(draft) {
-	let made = await fileAction('duplicate', draft.url, `${DRAFTS_FOLDER}/${draft.name}-copy.md`);
-	if (made) {
-		note(`copied to ${made.path.split('/').pop()}`);
-		await refreshSidebar();
+async function duplicateDraft(item) {
+	let copy = item.entry ? JSON.parse(JSON.stringify(item.entry)) : null;
+	if (copy) {
+		copy['name'] = `${copy['name'] || draftName(item)} copy`;
+		// a slug is an address, and two drafts heading for the same one would only collide later
+		delete copy['slug'];
 	}
+	if (item.file) {
+		let made = await fileAction('duplicate', item.file.url, `${DRAFTS_FOLDER}/${item.file.name}-copy.md`);
+		if (!made) {
+			return;
+		}
+		if (copy) {
+			copy['url'] = made.path;
+		}
+		note(`copied to ${made.path.split('/').pop()}`);
+	} else {
+		note(`copied ${draftName(item)}`);
+	}
+	if (copy) {
+		draftEntries.splice(draftEntries.indexOf(item.entry) + 1, 0, copy);
+		await writeDrafts();
+	}
+	await refreshSidebar();
 }
 
-async function deleteDraft(draft) {
-	if (!confirm(`Delete “${draft.name}.md”? This can’t be undone.`)) {
+async function deleteDraft(item) {
+	let name = draftName(item);
+	if (!confirm(`Delete “${name}”? This can’t be undone.`)) {
 		return;
 	}
-	if (!await fileAction('delete', draft.url)) {
-		return;
+	if (item.file) {
+		if (!await fileAction('delete', item.file.url)) {
+			return;
+		}
+		if (source == item.file.url) {
+			setSource(null);
+		}
 	}
-	if (source == draft.url) {
-		setSource(null);
+	if (item.entry) {
+		draftEntries = draftEntries.filter(entry => entry !== item.entry);
+		await writeDrafts();
 	}
-	note(`deleted ${draft.name}.md`);
+	if (viewing && !item.file && viewing['url'] == item.resource['url']) {
+		backToWriting();
+	}
+	note(`deleted ${name}`);
 	await refreshSidebar();
+}
+
+// ——————————————————————————————
+// OPENED FROM THE SITE
+// ——————————————————————————————
+
+// the ✍️ tool on the site sends the address of the page it was pressed on. a resource page opens that resource; the home page and a course page aren't one thing to edit, so they ask for a pick instead — a course page with its course drawn open and scrolled to, since that's where the pick will be.
+function openFromSite(page) {
+	let parts = page.split('/').filter(part => part != '');
+	let found = null;
+	if (parts.length > 0 && Array.isArray(collection)) {
+		for (let g = 0; g < collection.length && !found; g++) {
+			let courses = collection[g]['contents'] || [];
+			for (let c = 0; c < courses.length; c++) {
+				if (courses[c]['slug'] == parts[0]) {
+					found = address(g, c);
+					break;
+				}
+			}
+		}
+	}
+
+	if (found && parts.length > 1) {
+		let sections = courseAt(found)['contents'] || [];
+		for (let s = 0; s < sections.length; s++) {
+			let resources = sections[s]['contents'] || [];
+			for (let r = 0; r < resources.length; r++) {
+				if (resources[r]['slug'] == parts[1]) {
+					openResource(address(found.group, found.course, s, r));
+					return;
+				}
+			}
+		}
+	}
+
+	// the pick happens in the sidebar, so it has to be open for it
+	setSidebar(true);
+	let course = found ? courseAt(found) : null;
+	if (course) {
+		expanded.add(course['slug']);
+		renderSidebar();
+		scrollToCourse(course['slug']);
+	}
+	showCover('pick', {
+		emoji: course ? course['emoji'] || '🎓' : '👈',
+		title: course ? `${course['name']}${course['version'] ? ` ${course['version']}` : ''}` : 'pick something to edit',
+		lines: [
+			course ? 'pick one of its resources in the sidebar to edit it' : 'pick a resource in the sidebar to edit it',
+			'a markdown page opens here to write ~ anything else opens in the preview'
+		]
+	});
+	// nothing's picked, so nothing's previewed
+	blankPreview();
+}
+
+// to the top of the list rather than the middle, so the course's resources are what fills the sidebar under it
+function scrollToCourse(slug) {
+	let target = [...sidebarList.querySelectorAll('.editor-row[data-kind="course"]')].find(node => node.dataset.slug == slug);
+	if (!target) {
+		return;
+	}
+	let list = sidebarList.getBoundingClientRect();
+	let box = target.getBoundingClientRect();
+	sidebarList.scrollTo({ top: sidebarList.scrollTop + (box.top - list.top) - 20, behavior: 'smooth' });
 }
 
 // ——————————————————————————————
@@ -1162,6 +1625,7 @@ function setSidebar(open) {
 sidebarToggle.addEventListener('click', () => setSidebar(!sidebarOpen));
 document.getElementById('sidebar-close').addEventListener('click', () => setSidebar(false));
 document.getElementById('new-draft').addEventListener('click', newDraft);
+document.getElementById('new-embed').addEventListener('click', () => draftForm(null));
 document.getElementById('new-course').addEventListener('click', () => courseForm(null));
 document.getElementById('expand-all').addEventListener('click', () => {
 	expanded = allCourseSlugs(null);
@@ -1171,8 +1635,24 @@ document.getElementById('collapse-all').addEventListener('click', () => {
 	expanded = new Set();
 	renderSidebar();
 });
-document.getElementById('reload').addEventListener('click', async () => {
-	working('reading collection.json…');
+// a full rebuild, for when files have changed outside the editor (collection.json by hand, a page in vs code) — and the sidebar reread afterwards, since that's the same news
+document.getElementById('reload').addEventListener('click', async (e) => {
+	let button = e.currentTarget;
+	button.disabled = true;
+	working('rebuilding the site…');
+	let result;
+	try {
+		result = await post('/_dev/build', {});
+	} catch (error) {
+		button.disabled = false;
+		lostServer();
+		return;
+	}
+	button.disabled = false;
 	await refreshSidebar();
-	clearNote();
+	if (result.ok) {
+		note(`site rebuilt in ${(result.ms / 1000).toFixed(1)}s`);
+	} else {
+		note(`the build failed ~ ${result.message}`, 'paused');
+	}
 });

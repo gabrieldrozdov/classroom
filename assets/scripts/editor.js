@@ -434,6 +434,17 @@ function updateCounts() {
 		showHoldStatus();
 		return;
 	}
+	// an embed has no text of its own to count, and the text under the cover isn't what's on screen, so the bar says what is — or, with nothing on screen, nothing
+	if (editorEl.dataset.cover) {
+		delete statusLabel.dataset.note;
+		statusLabel.replaceChildren();
+		if (viewing) {
+			let label = document.createElement('span');
+			label.textContent = viewing['url'];
+			statusLabel.appendChild(label);
+		}
+		return;
+	}
 	let selected = '';
 	for (let range of view.state.selection.ranges) {
 		if (!range.empty) {
@@ -603,12 +614,27 @@ function previewScroll() {
 	}
 }
 
+// every load of the preview goes into a new frame put in place of the old one, rather than into the same frame again. changing src or srcdoc on a frame that's already on the page is a navigation, and every navigation of a frame lands in the tab's history — so each rebuild and each embed opened was another step the back button had to take before it left the editor. a frame that loads as it's put on the page doesn't count as one.
+function loadFrame(attribute, value) {
+	let fresh = document.createElement('iframe');
+	fresh.id = frame.id;
+	fresh.className = frame.className;
+	fresh.title = frame.title;
+	fresh.setAttribute(attribute, value);
+	frame.replaceWith(fresh);
+	frame = fresh;
+}
+
 function render() {
+	// an embed (or nothing) is in the preview, and the text's own preview comes back when the cover goes
+	if (editorEl.dataset.cover) {
+		return;
+	}
 	let source = text();
 	// ids restart with each rebuild so they stay stable while typing, rather than climbing forever
 	ClassroomMarkdown.resetCalendarIndex();
 	ClassroomMarkdown.beginDocument(source);
-	frame.srcdoc = buildDocument(ClassroomMarkdown.markdownToHTML(source), previewScroll());
+	loadFrame('srcdoc', buildDocument(ClassroomMarkdown.markdownToHTML(source), previewScroll()));
 }
 
 // rebuilding on every keystroke would reload the stylesheet and the resource scripts each time, so typing settles first
@@ -700,6 +726,157 @@ function endPresentation() {
 		render();
 	}
 	updateCounts();
+}
+
+// ——————————————————————————————
+// COVER
+// ——————————————————————————————
+
+// what goes over the writing side when there's nothing there to write: an embed opened from the sidebar, which has no markdown behind it, or the ✍️ tool pressed on a page that isn't one resource (the home page, a course page), asking for a pick. either way the text that was open stays underneath, untouched, and comes back when the cover goes.
+let cover = document.getElementById('cover');
+let sourceHeader = document.querySelector('.editor-source-header');
+
+// the embed in the preview, if that's what's there
+let viewing = null;
+
+// the url of whatever is on screen, for the sidebar to mark and for ⚙️ and 🔗 to act on. while the pick prompt is up, nothing is.
+function openUrl() {
+	if (viewing) {
+		return viewing['url'];
+	}
+	return editorEl.dataset.cover ? null : source;
+}
+
+function showCover(kind, options) {
+	editorEl.dataset.cover = kind;
+	cover.hidden = false;
+	document.getElementById('cover-emoji').textContent = options.emoji || '';
+	document.getElementById('cover-title').textContent = options.title || '';
+
+	let lines = document.getElementById('cover-lines');
+	lines.replaceChildren();
+	for (let line of options.lines || []) {
+		let p = document.createElement('p');
+		p.className = 'editor-cover-line';
+		p.textContent = line;
+		lines.appendChild(p);
+	}
+
+	// out of reach while it's covered, keyboard included — except the sidebar, which is where the way out is, and what's open's own settings and address
+	for (let node of sourceHeader.children) {
+		node.inert = !['toggle-sidebar', 'settings', 'open'].includes(node.id);
+	}
+	view.contentDOM.blur();
+	updateCounts();
+	if (typeof markOpenInSidebar == 'function') {
+		markOpenInSidebar(openUrl());
+	}
+}
+
+// hands back whether anything was covered, since then the preview isn't the text's and has to be built again
+function closeCover() {
+	if (!editorEl.dataset.cover) {
+		return false;
+	}
+	viewing = null;
+	delete editorEl.dataset.cover;
+	cover.hidden = true;
+	for (let node of sourceHeader.children) {
+		node.inert = false;
+	}
+	if (typeof markOpenInSidebar == 'function') {
+		markOpenInSidebar(source);
+	}
+	updateCounts();
+	return true;
+}
+
+// back to the text that was open before, which was never touched
+function backToWriting() {
+	if (closeCover()) {
+		render();
+	}
+	view.focus();
+}
+
+// the preview with nothing in it, for while the pick prompt is up
+function blankPreview() {
+	clearTimeout(pending);
+	if (presenting) {
+		endPresentation();
+	}
+	loadFrame('srcdoc', '');
+}
+
+// an embed in the preview, as it'd be on its page: the url in a frame, or — for one that has to open in a new tab because the site it's on won't be framed — the same note the built page shows
+function openEmbed(resource) {
+	viewing = resource;
+	clearTimeout(pending);
+	// the presentation lives in the frame that's about to be replaced, so it's over either way
+	if (presenting) {
+		endPresentation();
+	}
+	if (resource['newtab']) {
+		loadFrame('srcdoc', newtabDocument(resource));
+	} else {
+		loadFrame('src', resource['url']);
+	}
+	showCover('embed', {
+		emoji: resource['emoji'] || '🔗',
+		title: resource['name'] || 'untitled embed',
+		lines: [
+			`${resource['newtab'] ? 'opens in a new tab' : 'an embed'} ~ there’s no markdown behind it to write, so the preview shows what the page shows`
+		]
+	});
+}
+
+function escapeHTML(value) {
+	return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// the built page's new-tab note in the preview's shell, with the same margins taken off as buildDocument takes off
+function newtabDocument(resource) {
+	let url = escapeHTML(resource['url']);
+	return `<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<style>
+		.resource-container {
+			grid-template-columns: minmax(0, 1fr);
+			padding: 0;
+		}
+		/* the built page keeps a 40px row at the top for the url bar, which isn't here, so the note gets the whole of it */
+		.resource-main {
+			margin: 0;
+			height: 100dvh;
+			grid-template-rows: minmax(0, 1fr);
+		}
+		.resource-preview {
+			border-radius: 0;
+		}
+		.resource-preview-newtab-container {
+			border-top: unset;
+		}
+	</style>
+</head>
+<body>
+	<div class="resource-container" style="--primary: var(--pink);" data-menu="0">
+		<main class="resource-main">
+			<div class="resource-preview">
+				<div class="resource-preview-newtab-container">
+					<div class="resource-preview-newtab">
+						<p>To view this resource, you’ll need to open it in a new tab.</p>
+						<a href="${url}" target="_blank">Open in new tab&nbsp;&nbsp;↗</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>`;
 }
 
 // ——————————————————————————————
@@ -882,7 +1059,7 @@ function setSource(url) {
 	sourceChip.hidden = !source;
 	updateSiteButtons();
 	if (typeof markOpenInSidebar == 'function') {
-		markOpenInSidebar(source);
+		markOpenInSidebar(openUrl());
 	}
 	// the text of a newly opened page is written down the moment it's set, which is before its name and path are — so without this, a reload straight after opening a page came back with that page's text under the previous file's name, or as untitled. it's written again here, now that all three agree.
 	saveDraft();
@@ -928,7 +1105,8 @@ async function post(endpoint, body) {
 // write the open text to disk, then wait for the rebuild so the note can say the site is current rather than only that the file is.
 // a page with nowhere to go yet becomes a draft, which is an ordinary file in the drafts folder rather than anything special.
 async function save() {
-	if (!connected) {
+	// with an embed on screen the text is covered over, and writing out something you can't see isn't a save anyone asked for
+	if (!connected || viewing) {
 		return;
 	}
 	// the name in the field is what gets written, so renaming it writes a new file in the same folder instead of quietly saving over the one that was opened
@@ -981,6 +1159,7 @@ async function openPage(url) {
 		return false;
 	}
 	filenameField.value = name.replace(/\.md$/i, '');
+	closeCover();
 	setSource(url);
 	markClean();
 	clearTimeout(pending);
@@ -994,6 +1173,10 @@ async function openPage(url) {
 async function uploadMedia(files) {
 	if (!connected) {
 		note('media uploads need the local server', 'paused');
+		return;
+	}
+	if (viewing) {
+		note('open a markdown page to put media on it', 'paused');
 		return;
 	}
 	if (!source) {
@@ -1077,6 +1260,11 @@ mediaInput.addEventListener('change', () => {
 			if (source && restoredClean && !openedFromLink && !isDirty()) {
 				openPage(source);
 			}
+			// the ✍️ tool's page, which could only be matched to a resource once the collection was here
+			if (requestedPage && typeof openFromSite == 'function') {
+				openFromSite(requestedPage);
+				requestedPage = null;
+			}
 			if (!result.writing) {
 				note('connected, but this isn’t the computer running the server ~ nothing here can change files', 'paused');
 			}
@@ -1099,6 +1287,7 @@ function load(file) {
 		}
 		setText(reader.result);
 		filenameField.value = file.name.replace(/\.(md|markdown|txt)$/i, '');
+		closeCover();
 		setSource(null);
 		markClean();
 		clearTimeout(pending);
@@ -1164,6 +1353,8 @@ function saveDraft() {
 let restoredClean = false;
 // set when the page was opened by a ✍️ link, which decides what's open on its own
 let openedFromLink = false;
+// the address of the site page the ✍️ tool was pressed on, held until the server answers with the collection that says what it is
+let requestedPage = null;
 
 function restoreDraft() {
 	try {
@@ -1219,14 +1410,25 @@ render();
 // OPENING A PAGE FROM THE SITE
 // ——————————————————————————————
 
-// the ✍️ button on a built markdown page links here with ?src= pointing at the markdown it was made from, so a page can be opened straight from where it's published.
+// the ✍️ tool in the menu of every page links here with ?page= set to that page's address, and which resource it is gets worked out once the collection is in (see openFromSite in manager.js). ?src= pointing straight at a markdown file still opens it, the way the old button on markdown pages did.
 (function () {
-	let src = new URLSearchParams(location.search).get('src');
-	if (!src) {
+	let params = new URLSearchParams(location.search);
+	let src = params.get('src');
+	let page = params.get('page');
+	if (!src && !page) {
 		return;
 	}
 	// the query goes as soon as it's read, so a reload doesn't ask to replace the work all over again
 	history.replaceState({}, '', location.pathname);
+
+	if (page) {
+		// only addresses on this site, the same as below
+		if (page.startsWith('/') && !page.startsWith('//')) {
+			openedFromLink = true;
+			requestedPage = page;
+		}
+		return;
+	}
 
 	// only paths within the site: anything else would be someone else's page pulled into the editor
 	if (!src.startsWith('/') || src.startsWith('//')) {

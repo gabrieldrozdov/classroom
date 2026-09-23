@@ -386,6 +386,7 @@ function generatePages() {
 					<script src="/assets/scripts/randomizer.js"></script>
 					<script src="/assets/scripts/pin.js"></script>
 					<script src="/assets/scripts/presentation.js"></script>
+					<script src="/assets/scripts/edit.js"></script>
 				</body>
 				</html>
 			`;
@@ -454,7 +455,7 @@ function generatePages() {
 									${markdownToHTML(markdownRaw)}
 								</article>
 							</div>
-							<div class="resource-preview-markdown-tools" data-src="${resource['url']}">
+							<div class="resource-preview-markdown-tools">
 								<button class="resource-menu-control resource-preview-markdown-tool" onclick="openPresentation();" aria-label="Present">
 									<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-present" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-present">present</textPath></text></svg>
 									<div class="resource-menu-control-icon"><p>📺</p></div>
@@ -608,6 +609,7 @@ function generatePages() {
 							<script src="/assets/scripts/pin.js"></script>
 							<script src="/assets/scripts/markdown.js"></script>
 							<script src="/assets/scripts/presentation.js"></script>
+							<script src="/assets/scripts/edit.js"></script>
 							<script src="/assets/scripts/resource.js"></script>
 						</body>
 						</html>
@@ -690,6 +692,7 @@ function generatePages() {
 			<script src="/assets/scripts/randomizer.js"></script>
 			<script src="/assets/scripts/pin.js"></script>
 			<script src="/assets/scripts/presentation.js"></script>
+			<script src="/assets/scripts/edit.js"></script>
 		</body>
 		</html>
 	`;

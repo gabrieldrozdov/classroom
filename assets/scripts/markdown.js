@@ -651,36 +651,6 @@ function initFileTrees() {
 }
 initFileTrees();
 
-// the ✍️ edit button, which is only there when the page is being served by `node dev.js`.
-// the editor can only save a page back with that server behind it, so on the published site — and under any other local server — the button would be a link to something that can't do what it says. it's added here rather than built into the page so the published html never carries it at all.
-function initEditButton() {
-	let tools = document.querySelector('.resource-preview-markdown-tools[data-src]');
-	if (!tools || !['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
-		return;
-	}
-	fetch('/_dev/status', { cache: 'no-store' })
-		.then(response => response.ok ? response.json() : Promise.reject())
-		.then((result) => {
-			// live server answers a 404 page rather than this, so a parse that gets this far is the right server
-			if (!result.ok || !result.writing) {
-				return;
-			}
-			let link = document.createElement('a');
-			link.className = 'resource-menu-control resource-preview-markdown-tool';
-			link.href = `/editor/?src=${encodeURIComponent(tools.dataset.src)}`;
-			link.setAttribute('aria-label', 'Edit this page');
-			link.innerHTML = `
-				<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-edit" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-edit">edit</textPath></text></svg>
-				<div class="resource-menu-control-icon"><p>✍️</p></div>
-			`;
-			tools.appendChild(link);
-		})
-		.catch(() => {
-			// no server, so no button — the ordinary case everywhere but this machine
-		});
-}
-initEditButton();
-
 // clicking a picture on a markdown page shows it on its own: the whole screen, the whole picture, on off-black. it works the same in the reading view and on a slide, since the slides are made of the same markdown — and any click, or escape, puts the page back exactly as it was.
 function initImageViewer() {
 	let viewer = null;

@@ -19,7 +19,8 @@
 				</header>
 				<div class="editor-sidebar-list" id="sidebar-list"></div>
 				<footer class="editor-sidebar-footer">
-					<button class="editor-file-button" id="new-draft"><span>📄</span> <span>draft</span></button>
+					<button class="editor-file-button" id="new-draft"><span>📄</span> <span>document</span></button>
+					<button class="editor-file-button" id="new-embed"><span>🔗</span> <span>embed</span></button>
 					<button class="editor-file-button" id="new-course"><span>🎓</span> <span>course</span></button>
 					<button class="editor-file-button" id="reload"><span>🔄</span> <span>reload</span></button>
 					<button class="editor-file-button" id="expand-all"><span>👇</span> <span>expand all</span></button>
@@ -30,6 +31,10 @@
 
 		<section class="editor-source">
 			<header class="editor-source-header">
+				<button class="editor-toggle editor-sidebar-toggle" id="toggle-sidebar" aria-pressed="false" hidden><span>🗂️</span> <span>all files</span></button>
+				<!-- for whatever resource or draft is open, filled in by manager.js -->
+				<button class="editor-file-button" id="settings" hidden><span>⚙️</span> <span>settings</span></button>
+				<button class="editor-file-button" id="open" hidden><span>🔗</span> <span>open</span></button>
 				<label class="editor-filename">
 					<input type="text" id="filename" value="untitled" spellcheck="false" autocomplete="off">
 					<span>.md</span>
@@ -41,13 +46,19 @@
 				<button class="editor-file-button" id="save" hidden><span>💾</span> <span>save</span></button>
 				<button class="editor-file-button" id="media" hidden><span>🖼️</span> <span>media</span></button>
 				<input type="file" id="media-file" accept="image/*,video/*,audio/*,.pdf" multiple hidden>
-				<button class="editor-toggle editor-sidebar-toggle" id="toggle-sidebar" aria-pressed="false" hidden><span>🗂️</span> <span>all files</span></button>
 				<button class="editor-toggle" id="toggle-toolbar" aria-expanded="true"><span>✍️</span> <span>shortcodes</span></button>
 				<button class="editor-toggle" id="toggle-spellcheck" aria-pressed="false"><span>🔠</span> <span>spellcheck</span></button>
 				<button class="editor-toggle" id="toggle-pause" aria-pressed="false"><span>⏸️</span> <span>pause</span></button>
 			</header>
 
 			<div class="editor-toolbar" id="toolbar"></div>
+
+			<!-- over the writing side when there's nothing to write there: an embed in the preview, or a prompt to pick a resource -->
+			<div class="editor-cover" id="cover" hidden>
+				<p class="editor-cover-emoji" id="cover-emoji"></p>
+				<h2 class="editor-cover-title" id="cover-title"></h2>
+				<div class="editor-cover-lines" id="cover-lines"></div>
+			</div>
 
 			<div class="editor-input" id="input"></div>
 

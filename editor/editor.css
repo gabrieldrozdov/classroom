@@ -835,6 +835,72 @@ html, body {
 
 /* stacked on narrow screens, with the divider turning horizontal to match */
 /* ——————————— */
+/* COVER */
+/* ——————————— */
+
+/* over the writing side when there's nothing there to write: an embed in the preview, or a prompt to pick something from the sidebar. the text is still underneath, so the shortcodes and the editor step out of the flow rather than being thrown away, and the footer stays to carry notes */
+.editor[data-cover] .editor-toolbar,
+.editor[data-cover] .editor-input {
+	display: none;
+}
+/* the header comes down to the sidebar and, for an embed, its settings and its address ~ the rest of it is about writing. the size slider goes the same way, leaving the footer to say what's on screen. */
+.editor[data-cover] .editor-source-header > :not(#toggle-sidebar):not(#settings):not(#open),
+.editor[data-cover] .editor-fontsize {
+	display: none;
+}
+/* present and print drive a markdown page, and neither an embed nor an empty preview is one */
+.editor[data-cover] .editor-tools {
+	display: none;
+}
+.editor-cover {
+	flex: 1;
+	min-height: 0;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 40px 20px;
+	text-align: center;
+}
+.editor-cover[hidden] {
+	display: none;
+}
+.editor-cover-emoji {
+	font-size: 16px;
+	line-height: 1em;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--pink);
+	color: var(--off-black);
+}
+.editor-cover-title {
+	font-size: 24px;
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.1em;
+	max-width: 24ch;
+}
+.editor-cover-lines {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	max-width: 44ch;
+}
+.editor-cover-line {
+	font-family: var(--mono);
+	font-size: 11px;
+	line-height: 1.5em;
+	color: var(--gray);
+}
+
+/* ——————————— */
 /* SIDEBAR */
 /* ——————————— */
 
@@ -1132,7 +1198,7 @@ html, body {
 	background-color: var(--red);
 }
 /* where a dragged row would land */
-.editor-row[data-drop]::after {
+.editor-row[data-drop]:not([data-drop="into"])::after {
 	content: '';
 	position: absolute;
 	left: 10px;
@@ -1146,6 +1212,15 @@ html, body {
 }
 .editor-row[data-drop="after"]::after {
 	bottom: -1px;
+}
+
+/* a resource dragged back into the drafts can land anywhere among them, since drafts keep their own order */
+.editor-row[data-drop="into"],
+.editor-sidebar-group[data-drop="into"],
+.editor-sidebar-empty[data-drop="into"] {
+	outline: 2px solid var(--blue);
+	outline-offset: 2px;
+	border-radius: 10px;
 }
 
 /* ——————————— */

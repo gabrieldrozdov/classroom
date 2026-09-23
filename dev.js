@@ -24,6 +24,9 @@ const MEDIA = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'svg', 'mp4', 'webm'
 // pages that aren't part of any course yet. they're ordinary files in the ordinary place, so a draft becomes a real page by being pointed at rather than by being moved.
 const DRAFTS = 'assets/markdown/drafts';
 
+// what a draft is besides its text: the name, emoji, slug and the rest it takes into a course when it's placed in one. an embed draft has no file at all, so for those this is the whole draft. it sits in the drafts folder rather than in collection.json, since the build reads every entry there and a draft is exactly what the build shouldn't see.
+const DRAFT_ENTRIES = `${DRAFTS}/drafts.json`;
+
 // collection.json is hand-edited as often as it's written from here, so it goes back tab-indented the way it already is. (a handful of resource tag arrays were written on one line by hand and come back expanded — a one-time tidy, not a change of meaning.)
 const COLLECTION = 'collection.json';
 
@@ -145,6 +148,16 @@ function drafts(files) {
 		.sort((a, b) => b.modified - a.modified);
 }
 
+// a missing drafts.json is the ordinary case until the first draft has settings, so it reads as no entries rather than as a problem
+function draftEntries() {
+	try {
+		let entries = JSON.parse(fs.readFileSync(path.join(ROOT, DRAFT_ENTRIES), 'utf8'));
+		return Array.isArray(entries) ? entries : [];
+	} catch (error) {
+		return [];
+	}
+}
+
 // ——————————————————————————————
 // REQUESTS
 // ——————————————————————————————
@@ -208,7 +221,13 @@ async function handleAPI(request, response, url) {
 		} catch (error) {
 			files = {};
 		}
-		sendJSON(response, 200, { ok: true, writing: local(request), collection: collection, files: files, drafts: drafts(files), message: message });
+		sendJSON(response, 200, { ok: true, writing: local(request), collection: collection, files: files, drafts: drafts(files), draftEntries: draftEntries(), message: message });
+		return;
+	}
+
+	// the site's own pages only need to know whether to show the ✍️ tool, which isn't worth sending the whole collection for on every page load
+	if (url.pathname == '/_dev/ping' && request.method == 'GET') {
+		sendJSON(response, 200, { ok: true, writing: local(request) });
 		return;
 	}
 
@@ -333,6 +352,32 @@ async function handleAPI(request, response, url) {
 		}
 		console.log(`   ${action == 'rename' ? '→' : '+'} ${sitePath(free)}`);
 		sendJSON(response, 200, { ok: true, path: sitePath(free) });
+		return;
+	}
+
+	// the whole of drafts.json at once, the same way collection.json goes. nothing is built from it, so there's no rebuild.
+	if (url.pathname == '/_dev/drafts' && request.method == 'POST') {
+		let body = await readBody(request, 1024 * 1024);
+		if (!Array.isArray(body['drafts'])) {
+			sendJSON(response, 400, { ok: false, message: 'those aren’t drafts' });
+			return;
+		}
+		// a markdown draft's entry only means something while its file is there, so one whose file has gone (deleted, or moved into a course) goes with it rather than lingering
+		let kept = body['drafts'].filter((entry) => {
+			if (!entry || typeof entry != 'object') {
+				return false;
+			}
+			if (typeof entry['url'] != 'string' || !entry['url'].toLowerCase().endsWith('.md')) {
+				return true;
+			}
+			let file = resolveWritable(entry['url'], ['md']);
+			return file != null && fs.existsSync(file);
+		});
+		let file = path.join(ROOT, DRAFT_ENTRIES);
+		fs.mkdirSync(path.dirname(file), { recursive: true });
+		fs.writeFileSync(file, `${JSON.stringify(kept, null, '\t')}\n`, 'utf8');
+		console.log(`   ✎ /${DRAFT_ENTRIES}`);
+		sendJSON(response, 200, { ok: true });
 		return;
 	}
 
