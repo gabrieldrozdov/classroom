@@ -1808,8 +1808,8 @@ h2 .resource-preview-markdown-heading-emoji {
 
 /* h3 */
 .resource-preview-markdown h3 {
-	font-variation-settings: "wght" 600, "SRFF" 0;
-	font-weight: 600;
+	font-variation-settings: "wght" 800, "SRFF" 0;
+	font-weight: 800;
 	font-size: 1.5em;
 	line-height: 1.1em;
 	letter-spacing: -0.02em;
@@ -1825,8 +1825,8 @@ h3 .resource-preview-markdown-heading-text {
 
 /* h4 */
 .resource-preview-markdown h4 {
-	font-variation-settings: "wght" 600, "SRFF" 0;
-	font-weight: 600;
+	font-variation-settings: "wght" 700, "SRFF" 0;
+	font-weight: 700;
 	font-size: 1em;
 	line-height: 1.1em;
 	margin-top: var(--unit-4x);

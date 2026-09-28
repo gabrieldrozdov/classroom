@@ -90,6 +90,27 @@
 						]
 					},
 					{
+						"name": "📊 unit 10: mapping & visualizing data",
+						"contents": [
+							{
+								"name": "unit 10 overview",
+								"emoji": "🔍",
+								"slug": "unit-10-overview",
+								"url": "https://docs.google.com/document/d/1xaSE0StMCdm8n1OuZhASOkRqMuu408lC5TWJG3S2Sxs/preview",
+								"newtab": false,
+								"active": false
+							},
+							{
+								"name": "kick-off slides",
+								"emoji": "📽️",
+								"slug": "unit-9-kickoff",
+								"url": "https://docs.google.com/presentation/d/1vTRNqTBQ-rlKyb4O3ombn6AxoknyNZ9bdaZz_qBNlYc/preview",
+								"newtab": false,
+								"active": false
+							}
+						]
+					},
+					{
 						"name": "🗓️ weekly agendas",
 						"contents": [
 							{
@@ -150,8 +171,7 @@
 								"newtab": false,
 								"tags": [
 									"unit 9"
-								],
-								"active": false
+								]
 							}
 						]
 					}
