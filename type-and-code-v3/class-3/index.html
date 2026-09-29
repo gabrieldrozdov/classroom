@@ -4,7 +4,7 @@
 						<head>
 							<meta charset="UTF-8">
 							<meta name="viewport" content="width=device-width, initial-scale=1.0">
-							<title>🔠 type + code, v3 | resources</title>
+							<title>🔠 type + code, v3 | class 3, sep. 29</title>
 							
 	<meta name="author" content="Gabriel Drozdov / GD with GD">
 	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
@@ -18,10 +18,37 @@
 
 							<link rel="stylesheet" href="/style.css">
 							
+							<style>
+								@media print {
+									/* no horizontal page margin so full-width sections can bleed to the page edges; text is inset via padding on the markdown container instead */
+									@page {
+										margin: 20mm 0;
+										@bottom-left {
+											content: "🔠 type + code, v3 | class 3, sep. 29";
+											font-family: "Limkin", sans-serif;
+											font-size: 9pt;
+											color: #3a3a3a;
+											padding-left: 16mm;
+										}
+										@bottom-right {
+											content: "page " counter(page) " of " counter(pages);
+											font-family: "Limkin", sans-serif;
+											font-size: 9pt;
+											color: #3a3a3a;
+											padding-right: 16mm;
+										}
+									}
+									/* page one runs to the paper edge so the rainbow strip above the title sits on it; every other page keeps a normal top margin, and this comes after the general @page rule on purpose because Chromium resolves the page context in document order, so declaring it first lets the 20mm below win and pushes the strip down the page */
+									@page :first {
+										margin-top: 0;
+									}
+								}
+							</style>
+						
 						</head>
 						<body>
 			
-							<div class="resource-container" style="--primary: var(--blue);" data-menu="0">
+							<div class="resource-container" style="--primary: var(--red);" data-menu="0">
 								<nav class="resource-menu">
 									<div class="resource-menu-content">
 										<a href="/" class="resource-menu-home"><span class="resource-menu-home-emoji">🍎</span><span class="resource-menu-home-text"><span style="color: var(--pink);">g</span><span style="color: var(--green);">d</span> <span style="color: var(--blue);">w</span><span style="color: var(--yellow);">i</span><span style="color: var(--purple);">t</span><span style="color: var(--red);">h</span> <span style="color: var(--pink);">g</span><span style="color: var(--green);">d</span> classroom</span></a>
@@ -149,24 +176,25 @@
 									</div>
 								</nav>
 
-								<main class="resource-main">
+								<main class="resource-main resource-main-markdown">
 									
-							<a class="resource-url" href="https://drive.google.com/drive/folders/1tRqnxs5RDCD6J5nCKta9lXxfPyNf09Bw?usp=sharing" target="_blank">
-								<div class="resource-url-label">Current URL</div>
-								<div class="resource-url-content">
-									<span class="resource-url-content-text">https://drive.google.com/drive/folders/1tRqnxs5RDCD6J5nCKta9lXxfPyNf09Bw?usp=sharing</span>
-									<span class="resource-url-content-arrow">↗</span>
-								</div>
-							</a>
-						
 
 									<div class="resource-preview">
 										
-							<div class="resource-preview-newtab-container">
-								<div class="resource-preview-newtab">
-									<p>To view this resource, you’ll need to open it in a new tab.</p>
-									<a href="https://drive.google.com/drive/folders/1tRqnxs5RDCD6J5nCKta9lXxfPyNf09Bw?usp=sharing" target="_blank">Open in new tab&nbsp;&nbsp;↗</a>
-								</div>
+							<div class="resource-preview-markdown-container">
+								<article class="resource-preview-markdown">
+									<h1 id="class-3-sep-29"><span class="resource-preview-markdown-heading-text">class 3, sep. 29</span> <span class="resource-preview-markdown-heading-emoji">🏃</span></h1><div class="resource-preview-markdown-slide-break"></div><h2 id="agenda"><span class="resource-preview-markdown-heading-text">agenda</span> <span class="resource-preview-markdown-heading-emoji">📜</span></h2><p>last week was a code week, now it’s a <strong>type</strong> week!</p><ol class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">1</span><div class="resource-preview-markdown-list-content">👾 share your ascii sites!</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">2</span><div class="resource-preview-markdown-list-content">🏃 variable pixel fonts</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">3</span><div class="resource-preview-markdown-list-content">⭕️ variable component fonts</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">4</span><div class="resource-preview-markdown-list-content">✍️ due next class</div></li></ol><div class="resource-preview-markdown-primary" data-primary="var(--pink)"></div><div class="resource-preview-markdown-slide-break"></div><div class="resource-preview-markdown-band" style="background-color: var(--primary); --band-color: var(--primary);"><div class="resource-preview-markdown-band-inner"><h2 id="share-your-ascii-sites"><span class="resource-preview-markdown-heading-text">share your ascii sites!</span> <span class="resource-preview-markdown-heading-emoji">👾</span></h2></div></div><div class="resource-preview-markdown-slide-break"></div><h3 id="heres-the-plan"><span class="resource-preview-markdown-heading-text">here’s the plan</span> <span class="resource-preview-markdown-heading-emoji">✅</span></h3><ol class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">1</span><div class="resource-preview-markdown-list-content">i’ll need a few volunteers to share their computers.</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">2</span><div class="resource-preview-markdown-list-content">line your computers up in row on the table.</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">3</span><div class="resource-preview-markdown-list-content">everyone navigate to the <a href="https://docs.google.com/spreadsheets/d/127GzjGfjwqNN2JUjk-aub4Wg3oAa-KU9oRx2C_subr8/edit?usp=sharing" target="_blank" rel="noopener"><span class="resource-preview-markdown-link-text">spreadsheet</span><span class="resource-preview-markdown-link-arrow">↗</span></a>.</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">4</span><div class="resource-preview-markdown-list-content">we’ll then go through the websites together.</div></li></ol><h3 id="is-this-a-crit"><span class="resource-preview-markdown-heading-text">is this a crit?</span> <span class="resource-preview-markdown-heading-emoji">🤔</span></h3><p>sort of? not really. this is more of a <strong>show and tell</strong>.</p><div class="resource-preview-markdown-columns"><div class="resource-preview-markdown-column"><h4 id="tell-us"><span class="resource-preview-markdown-heading-text">tell us:</span></h4><ul class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">→</span><div class="resource-preview-markdown-list-content">what did you make and why?</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">→</span><div class="resource-preview-markdown-list-content">how did you make it?</div></li></ul></div><div class="resource-preview-markdown-column"><h4 id="and-well-say"><span class="resource-preview-markdown-heading-text">and we’ll say:</span></h4><ul class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">→</span><div class="resource-preview-markdown-list-content">what do we find most exciting about it?</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">→</span><div class="resource-preview-markdown-list-content">what other possibilities can we imagine?</div></li></ul></div></div><div class="resource-preview-markdown-primary" data-primary="var(--green)"></div><div class="resource-preview-markdown-slide-break"></div><div class="resource-preview-markdown-band" style="background-color: var(--primary); --band-color: var(--primary);"><div class="resource-preview-markdown-band-inner"><h2 id="variable-pixel-fonts"><span class="resource-preview-markdown-heading-text">variable pixel fonts</span> <span class="resource-preview-markdown-heading-emoji">🏃</span></h2><p>let’s learn how to turn a static font into a <strong>variable font</strong>. we’ll do this by drawing pixel self-portraits and then bringing them to life.</p></div></div><h3 id="step-1"><span class="resource-preview-markdown-heading-text">step 1</span></h3><p>create a new pixel font. set up the pixel grid and draw a self-portrait in the uppercase letter A</p><h3 id="step-2"><span class="resource-preview-markdown-heading-text">step 2</span></h3><p>add <strong>two variable axes</strong> to your font:</p><ol class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">1</span><div class="resource-preview-markdown-list-content">Position <code>POSI</code></div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">2</span><div class="resource-preview-markdown-list-content">Shape <code>SHAP</code></div></li></ol><h3 id="step-3"><span class="resource-preview-markdown-heading-text">step 3</span></h3><p>duplicate your first font master to add <strong>two additional font masters</strong> to your font and assign the following names/values to each font master:</p><ol class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">1</span><div class="resource-preview-markdown-list-content">Normal, <code>POSI=0, SHAP=0</code></div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">2</span><div class="resource-preview-markdown-list-content">New Position, <code>POSI=100, SHAP=0</code></div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">3</span><div class="resource-preview-markdown-list-content">New Shape, <code>POSI=0, SHAP=100</code></div></li></ol><h3 id="step-4"><span class="resource-preview-markdown-heading-text">step 4</span></h3><p>set your pixel grid back to 1.</p><p>now, we edit each font master!</p><ol class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">1</span><div class="resource-preview-markdown-list-content">Normal → the default drawing</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">2</span><div class="resource-preview-markdown-list-content">New Position → change the pixel shape</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">3</span><div class="resource-preview-markdown-list-content">New Shape → move the pixels around</div></li></ol><h3 id="step-5"><span class="resource-preview-markdown-heading-text">step 5</span></h3><p>make one more font master by duplicating the <strong>New Position,<code>POSI=100, SHAP=0</code></strong> font master.</p><p>name this new font master <strong>New Shape and Position, <code>POSI=100, SHAP=100</code></strong></p><p>change the pixel shape in this font master to match the shape on the <strong>New Shape, <code>POSI=0, SHAP=100</code></strong> font master.</p><h3 id="step-6"><span class="resource-preview-markdown-heading-text">step 6</span></h3><p>export your font as a variable font file and test it at <a href="https://fontgauntlet.com/" target="_blank" rel="noopener"><span class="resource-preview-markdown-link-text">font gauntlet</span><span class="resource-preview-markdown-link-arrow">↗</span></a>!</p><p>in the end, we should have something like this:</p><div class="resource-preview-markdown-media"><img src="/assets/markdown/type-and-code-v3/media/variable-pixel.png" alt="variable pixel"></div><div class="resource-preview-markdown-slide-break"></div><div class="resource-preview-markdown-primary" data-primary="var(--blue)"></div><div class="resource-preview-markdown-slide-break"></div><div class="resource-preview-markdown-band" style="background-color: var(--primary); --band-color: var(--primary);"><div class="resource-preview-markdown-band-inner"><h2 id="variable-component-fonts"><span class="resource-preview-markdown-heading-text">variable component fonts</span> <span class="resource-preview-markdown-heading-emoji">⭕️</span></h2></div></div><div class="resource-preview-markdown-slide-break"></div><p>this is an exercise/tutorial. we’re going to learn how to make <strong>component fonts</strong> by working with each other.</p><ol class="resource-preview-markdown-list"><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">1</span><div class="resource-preview-markdown-list-content">we’ll design a few components.</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">2</span><div class="resource-preview-markdown-list-content">we’ll trade font files and draw illustrations in the ABCDE glyphs using the pre-made components.</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">3</span><div class="resource-preview-markdown-list-content">we’ll trade our fonts again and add a variable axis and modify the component shapes.</div></li><li class="resource-preview-markdown-list-item"><span class="resource-preview-markdown-list-marker">4</span><div class="resource-preview-markdown-list-content">we’ll keep trading our fonts, adding a new font master and a new component shape each time.</div></li></ol><div class="resource-preview-markdown-primary" data-primary="var(--yellow)"></div><div class="resource-preview-markdown-slide-break"></div><div class="resource-preview-markdown-band" style="background-color: var(--primary); --band-color: var(--primary);"><div class="resource-preview-markdown-band-inner"><h2 id="due-next-class"><span class="resource-preview-markdown-heading-text">due next class</span> <span class="resource-preview-markdown-heading-emoji">✍️</span></h2></div></div><div class="resource-preview-markdown-slide-break"></div><p>your fonts for p2! let’s look at the project description.</p>
+								</article>
+							</div>
+							<div class="resource-preview-markdown-tools">
+								<button class="resource-menu-control resource-preview-markdown-tool" onclick="openPresentation();" aria-label="Present">
+									<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-present" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-present">present</textPath></text></svg>
+									<div class="resource-menu-control-icon"><p>📺</p></div>
+								</button>
+								<button class="resource-menu-control resource-preview-markdown-tool" onclick="window.print();" aria-label="Print">
+									<svg class="resource-menu-control-text" viewBox="0 0 100 100"><defs><path id="resource-preview-tool-print" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path></defs><text><textPath xlink:href="#resource-preview-tool-print">print</textPath></text></svg>
+									<div class="resource-menu-control-icon"><p>🖨️</p></div>
+								</button>
 							</div>
 						
 									</div>
