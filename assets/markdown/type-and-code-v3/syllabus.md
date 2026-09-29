@@ -93,7 +93,7 @@ there are four units in this course, each with its own project.
 | project | name | output |
 | --- 1 | --- 2 | --- 5 |
 | {h:pink **p1**} | 🧶 **textile** | - pixel font \ - ascii art website |
-| {h:green **p2**} | 🤖 **automaton** | - variable dingbat pixel font \ - interactive and dynamic ascii art website |
+| {h:green **p2**} | 🎭 **performance** | - variable dingbat pixel font \ - interactive and dynamic ascii art website |
 | {h:blue **p3**} | 🗣️ **dialectic** | - remixed open source variable font \ - digital reading experience |
 | {h:yellow **p4**} | 🔬 **specimen** | - original variable font \ - web type specimen |
 
@@ -162,7 +162,7 @@ here is how your grade gets calculated for this course. for each project, i’ll
 | project | name | weight |
 | --- | --- | --- |
 | {h:pink **p1**} | 🧶 **textile** | `15%` |
-| {h:green **p2**} | 🤖 **automaton** | `15%` |
+| {h:green **p2**} | 🎭 **performance** | `15%` |
 | {h:blue **p3**} | 🗣️ **dialectic** | `20%` |
 | {h:yellow **p4**} | 🔬 **specimen** | `50%` |
 
