@@ -1925,8 +1925,8 @@ h3 .resource-preview-markdown-heading-text {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: var(--unit);
-	margin-bottom: var(--unit);
+	margin-top: var(--unit-2x);
+	margin-bottom: var(--unit-2x);
 	padding: 0 var(--unit-8x);
 }
 .resource-preview-markdown-list-item {
@@ -3370,6 +3370,20 @@ body[data-draw] .resource-preview-markdown img {
 /* a band, an image, or an embed alone on a slide runs to the card's edges and draws its own outline, so the card doesn't draw a second one around it */
 .presentation-slide > .resource-preview-markdown:not(:has(> :is(.resource-preview-markdown-band, .resource-preview-markdown-media, .resource-preview-markdown-embed):only-child)) {
 	outline: var(--unit) solid var(--off-black);
+}
+/* a bolt in each corner of the card, the way blocks are fastened on the variable fonts workshop site. they're four circles drawn on the card's spare ::after rather than four elements inside it: anything added in there would stop a lone image or band from being an :only-child, and stop a slide with nothing else on it from counting as empty. sitting on top, they hold down a lone image or band too. */
+.presentation-slide > .resource-preview-markdown::after {
+	--bolt: var(--unit-2x);
+	--bolt-circle: radial-gradient(circle closest-side, var(--off-black) calc(100% - 1px), transparent 100%);
+	content: "";
+	position: absolute;
+	inset: var(--unit);
+	z-index: 1;
+	pointer-events: none;
+	background-image: var(--bolt-circle), var(--bolt-circle), var(--bolt-circle), var(--bolt-circle);
+	background-size: var(--bolt) var(--bolt);
+	background-position: top left, top right, bottom left, bottom right;
+	background-repeat: no-repeat;
 }
 .presentation-slide img {
 	max-height: unset !important;

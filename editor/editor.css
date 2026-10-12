@@ -1070,7 +1070,8 @@ html, body {
 .editor-row[data-dim="1"] .editor-row-open {
 	opacity: .25;
 }
-.editor-row[data-dragging="1"] {
+.editor-row[data-dragging="1"],
+.editor-sidebar-group[data-dragging="1"] {
 	opacity: .25;
 }
 /* the nesting is all that says what belongs to what, so the indents are the structure */
@@ -1197,8 +1198,21 @@ html, body {
 .editor-row-action[data-danger="1"]:hover {
 	background-color: var(--red);
 }
+/* a group heading can be dragged and dropped on like a row, so it draws the same line */
+.editor-sidebar-group[data-at] {
+	position: relative;
+}
+/* and it carries a row's worth of tools, which only show when they're wanted, the way a row's do */
+.editor-sidebar-group[data-at] .editor-row-actions {
+	display: none;
+}
+.editor-sidebar-group[data-at]:hover .editor-row-actions,
+.editor-sidebar-group[data-at]:focus-within .editor-row-actions {
+	display: flex;
+}
 /* where a dragged row would land */
-.editor-row[data-drop]:not([data-drop="into"])::after {
+.editor-row[data-drop]:not([data-drop="into"])::after,
+.editor-sidebar-group[data-drop]:not([data-drop="into"])::after {
 	content: '';
 	position: absolute;
 	left: 10px;
@@ -1207,7 +1221,8 @@ html, body {
 	background-color: var(--blue);
 	border-radius: 2px;
 }
-.editor-row[data-drop="before"]::after {
+.editor-row[data-drop="before"]::after,
+.editor-sidebar-group[data-drop="before"]::after {
 	top: -1px;
 }
 .editor-row[data-drop="after"]::after {

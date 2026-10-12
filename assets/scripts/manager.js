@@ -95,7 +95,11 @@ function listFor(at) {
 	if (at.section != null) {
 		return courseAt(at)['contents'];
 	}
-	return groupAt(at)['contents'];
+	if (at.course != null) {
+		return groupAt(at)['contents'];
+	}
+	// a group's list is the collection itself
+	return collection;
 }
 
 function indexOf(at) {
@@ -105,7 +109,10 @@ function indexOf(at) {
 	if (at.section != null) {
 		return at.section;
 	}
-	return at.course;
+	if (at.course != null) {
+		return at.course;
+	}
+	return at.group;
 }
 
 // ——————————————————————————————
@@ -314,7 +321,17 @@ function renderSidebar() {
 	for (let g = 0; g < collection.length; g++) {
 		let group = collection[g];
 		let split = splitEmoji(group['name']);
-		sidebarList.appendChild(groupHeading(split.emoji, split.text, []));
+		let at = address(g);
+		// a group is a list of courses the way a section is a list of resources, so its heading carries the same tools a section row does
+		let heading = groupHeading(split.emoji, split.text, [
+			{ emoji: '⚙️', label: `Rename ${split.text}`, run: () => groupForm(g) },
+			{ emoji: '🎓', label: `New course in ${split.text}`, run: () => courseForm(null, g) },
+			...moveActions(at),
+			{ emoji: '🗑️', label: `Remove ${split.text}`, danger: true, run: () => removeGroup(g) }
+		].filter(action => action));
+		heading.dataset.at = JSON.stringify(at);
+		heading.draggable = true;
+		sidebarList.appendChild(heading);
 
 		let courses = group['contents'] || [];
 		if (courses.length == 0) {
@@ -343,6 +360,9 @@ function groupHeading(emoji, text, actions) {
 		button.type = 'button';
 		button.title = action.label;
 		button.setAttribute('aria-label', action.label);
+		if (action.danger) {
+			button.dataset.danger = 1;
+		}
 		button.addEventListener('click', action.run);
 		strip.appendChild(button);
 	}
@@ -651,25 +671,53 @@ function centerRow(url) {
 // DRAGGING
 // ——————————————————————————————
 
-// dragging moves something a long way in one go; the arrows on each row move it one place. a resource can cross into another section of the same course, and a course can cross into the other group — which is the other half of "now teaching" and "ancient history" being two lists rather than a setting.
-// resources don't cross between courses, because that would mean moving files between course folders as well, and a duplicate-and-remove says what's happening more plainly than a drag does.
+// dragging moves something a long way in one go; the arrows on each row move it one place. anything can be dragged among its own kind anywhere in the tree: a resource into another section or another course, a section into another course, a course into another group, a group up or down the list.
+// it can also be dropped onto whatever holds its kind, which is how something gets into a place with nothing in it yet to drop beside: a resource onto a section goes in at the top, a resource onto a course goes in at the top of its first section (so the course doesn't have to be drawn open first), a section onto a course goes in at the end, and a course onto a group heading goes in first.
+// crossing into another course takes a page's file along into that course's folder, the same move placing a draft makes, so a course's markdown stays in one place.
 let dragging = null;
 
+// everything with an address can be dragged and dropped onto, group headings included
+const TARGETS = '.editor-row[data-at], .editor-sidebar-group[data-at]';
+
+// what each kind can be dropped onto besides its own kind
+const HOLDERS = { resource: ['section', 'course'], section: ['course'], course: ['group'] };
+
+function hasSections(at) {
+	return (courseAt(at)['contents'] || []).length > 0;
+}
+
 function canDrop(from, to) {
-	// a draft goes into a course by being dropped among a section's resources, or onto the section itself
-	if (from && from.draft != null) {
-		return !!to && (kindOf(to) == 'resource' || kindOf(to) == 'section');
-	}
-	if (!from || !to || kindOf(from) != kindOf(to)) {
+	if (!from || !to) {
 		return false;
 	}
-	if (kindOf(from) == 'resource') {
-		return from.group == to.group && from.course == to.course;
+	// a draft is on its way to being a resource, so it goes wherever a resource can
+	let kind = from.draft != null ? 'resource' : kindOf(from);
+	if (kind == kindOf(to)) {
+		// a draft has nowhere to go but into a course
+		return from.draft == null || kind == 'resource';
 	}
-	if (kindOf(from) == 'section') {
-		return from.group == to.group && from.course == to.course;
+	if (!(HOLDERS[kind] || []).includes(kindOf(to))) {
+		return false;
 	}
-	return true;
+	// a resource dropped on a course goes into its first section, so there has to be one
+	return kind != 'resource' || kindOf(to) != 'course' || hasSections(to);
+}
+
+// how something lands on what it's over. among its own kind it goes above or below, by which half of the row the pointer is in — except a group, whose heading has its courses underneath it, so a line under the heading would be drawn above the courses it was meant to come after. a group always goes above the one it's dropped on, and any order can still be made that way.
+// onto a section it goes in at the top, which is where the line under the heading already says it will. onto anything else that holds it, it goes inside.
+function dropMode(e, node, over) {
+	let kind = dragging.draft != null ? 'resource' : kindOf(dragging);
+	if (kind == kindOf(over)) {
+		if (kind == 'group') {
+			return 'before';
+		}
+		let box = node.getBoundingClientRect();
+		return e.clientY < box.top + box.height / 2 ? 'before' : 'after';
+	}
+	if (kindOf(over) == 'section') {
+		return 'top';
+	}
+	return 'into';
 }
 
 function clearDropMarks() {
@@ -687,7 +735,7 @@ function draftsTarget(e) {
 }
 
 sidebarList.addEventListener('dragstart', (e) => {
-	let node = e.target.closest('.editor-row[data-at], .editor-row[data-draft]');
+	let node = e.target.closest(`${TARGETS}, .editor-row[data-draft]`);
 	if (!node) {
 		return;
 	}
@@ -707,8 +755,8 @@ sidebarList.addEventListener('dragover', (e) => {
 		drafting.dataset.drop = 'into';
 		return;
 	}
-	let node = e.target.closest('.editor-row[data-at]');
-	if (!node) {
+	let node = e.target.closest(TARGETS);
+	if (!node || !dragging) {
 		return;
 	}
 	let over = JSON.parse(node.dataset.at);
@@ -718,13 +766,9 @@ sidebarList.addEventListener('dragover', (e) => {
 	e.preventDefault();
 	e.dataTransfer.dropEffect = 'move';
 	clearDropMarks();
-	// above or below, by which half of the row the pointer is in. a draft over a section heading goes in at the top of that section, which is where the line under the heading already says it will.
-	let box = node.getBoundingClientRect();
-	if (dragging.draft != null && kindOf(over) == 'section') {
-		node.dataset.drop = 'after';
-	} else {
-		node.dataset.drop = e.clientY < box.top + box.height / 2 ? 'before' : 'after';
-	}
+	// the top of a section is drawn as a line under its heading
+	let mode = dropMode(e, node, over);
+	node.dataset.drop = mode == 'top' ? 'after' : mode;
 });
 
 sidebarList.addEventListener('dragleave', (e) => {
@@ -743,19 +787,21 @@ sidebarList.addEventListener('drop', (e) => {
 		dragging = null;
 		return;
 	}
-	let node = e.target.closest('.editor-row[data-at]');
+	let node = e.target.closest(TARGETS);
 	if (!node || !node.dataset.drop) {
 		return;
 	}
 	e.preventDefault();
 	let over = JSON.parse(node.dataset.at);
-	let after = node.dataset.drop == 'after';
+	let mode = dropMode(e, node, over);
 	clearDropMarks();
 	if (canDrop(dragging, over)) {
 		if (dragging.draft != null) {
-			placeDraft(dragging.draft, over, after);
+			// onto a course means the top of its first section
+			let to = kindOf(over) == 'course' ? address(over.group, over.course, 0) : over;
+			placeDraft(dragging.draft, to, mode == 'after');
 		} else {
-			dropOnto(dragging, over, after);
+			dropOnto(dragging, over, mode);
 		}
 	}
 	dragging = null;
@@ -763,7 +809,7 @@ sidebarList.addEventListener('drop', (e) => {
 
 sidebarList.addEventListener('dragend', () => {
 	clearDropMarks();
-	for (let node of sidebarList.querySelectorAll('.editor-row[data-dragging]')) {
+	for (let node of sidebarList.querySelectorAll('[data-dragging]')) {
 		delete node.dataset.dragging;
 	}
 	dragging = null;
@@ -781,18 +827,86 @@ function reorder(at, to) {
 	saveCollection('moved');
 }
 
-function dropOnto(from, to, after) {
+async function dropOnto(from, to, mode) {
 	let fromList = listFor(from);
-	let toList = listFor(to);
-	let index = indexOf(to) + (after ? 1 : 0);
-	let [item] = fromList.splice(indexOf(from), 1);
+	let item = fromList[indexOf(from)];
+
+	// where it lands: beside the thing it was dropped on, or inside it (see dropMode)
+	let toList;
+	let index;
+	if (mode == 'before' || mode == 'after') {
+		toList = listFor(to);
+		index = indexOf(to) + (mode == 'after' ? 1 : 0);
+	} else if (kindOf(from) == 'resource') {
+		// onto a section, or onto a course and so into its first section — at the top either way
+		toList = sectionAt(kindOf(to) == 'course' ? address(to.group, to.course, 0) : to)['contents'];
+		index = 0;
+	} else if (kindOf(from) == 'section') {
+		toList = courseAt(to)['contents'];
+		index = toList.length;
+	} else {
+		toList = groupAt(to)['contents'];
+		index = 0;
+	}
 	// taking it out of a list it shares with the target shifts everything after it up by one
 	if (fromList == toList && indexOf(from) < index) {
 		index--;
 	}
-	toList.splice(index, 0, item);
+
+	// a resource, or every resource in a section, going into another course takes its pages along to that course's folder
+	let crossing = (kindOf(from) == 'resource' || kindOf(from) == 'section') && (from.group != to.group || from.course != to.course);
+	let destination = crossing ? courseAt(to) : null;
+	let carried = true;
+	if (crossing) {
+		carried = await carryInto(kindOf(from) == 'resource' ? [item] : (item['contents'] || []), courseAt(from), destination);
+	}
+
+	// if a file couldn't be moved, the entry stays in its old course rather than pointing across at a folder that isn't its own. any files that did move are already pointed at where they went, so the collection is saved either way.
+	if (carried) {
+		fromList.splice(indexOf(from), 1);
+		toList.splice(index, 0, item);
+		if (crossing) {
+			expanded.add(destination['slug']);
+		}
+	}
 	renderSidebar();
-	saveCollection('moved');
+	await saveCollection(!carried ? 'moved some of the files, but not all of them' : crossing ? `moved to ${destination['name']}` : 'moved');
+}
+
+// pages arriving in another course. a slug the new course already has gets a number, the way a duplicate does. a file that lived in the old course's folder moves into the new one's (renamed to match, if its slug had to change); a file kept anywhere else was put there on purpose, so it stays. the media folder beside the pages stays where it is too — media is linked by its full path, so the pages that use it still find it.
+async function carryInto(resources, fromCourse, toCourse) {
+	let taken = new Set();
+	for (let section of toCourse['contents'] || []) {
+		for (let entry of section['contents'] || []) {
+			taken.add(entry['slug']);
+		}
+	}
+	let fromFolder = `/assets/markdown/${fromCourse['slug']}/`;
+	for (let resource of resources) {
+		let slug = resource['slug'];
+		let n = 2;
+		while (taken.has(slug)) {
+			slug = `${resource['slug']}-${n}`;
+			n++;
+		}
+		if (isPage(resource) && files[resource['url']] && resource['url'].startsWith(fromFolder)) {
+			let rest = resource['url'].slice(fromFolder.length);
+			if (slug != resource['slug']) {
+				rest = rest.replace(/[^/]+$/, `${slug}.md`);
+			}
+			working(`moving ${resource['url'].split('/').pop()} into ${toCourse['slug']}/…`);
+			let moved = await fileAction('rename', resource['url'], `/assets/markdown/${toCourse['slug']}/${rest}`);
+			if (!moved) {
+				return false;
+			}
+			// the file being moved might be the one open in the editor
+			followFile(resource['url'], moved.path);
+			resource['url'] = moved.path;
+		}
+		resource['slug'] = slug;
+		taken.add(slug);
+	}
+	return true;
 }
 
 // ——————————————————————————————
@@ -926,6 +1040,50 @@ function set(object, key, value) {
 }
 
 // ——————————————————————————————
+// GROUPS
+// ——————————————————————————————
+
+// the headings courses sit under on the home page. the build makes one for every entry at the top of collection.json, however many there are, so a group is only a name with its emoji at the front, the same as a section.
+function groupForm(index) {
+	let isNew = index == null;
+	let group = isNew ? { name: '', contents: [] } : collection[index];
+	let split = splitEmoji(group['name']);
+	let values = showForm(isNew ? '🗃️ new group' : `⚙️ ${split.text}`, [
+		{ key: 'emoji', label: 'emoji', value: split.emoji, spellcheck: false },
+		{ key: 'name', label: 'name', value: split.text, hint: 'a heading on the home page, with its courses underneath' }
+	], async () => {
+		let name = values['name'].trim();
+		if (name == '') {
+			return 'a group needs a name';
+		}
+		group['name'] = `${values['emoji'].trim() ? `${values['emoji'].trim()} ` : ''}${name}`;
+		// a new one goes at the bottom, where an empty heading on the home page is least in the way until it has courses in it
+		if (isNew) {
+			collection.push(group);
+		}
+		renderSidebar();
+		await saveCollection(isNew ? 'added group' : 'renamed group');
+	});
+}
+
+async function removeGroup(index) {
+	let group = collection[index];
+	let name = splitEmoji(group['name']).text;
+	// the server won't write an empty collection, and with no groups there'd be nowhere to put a course
+	if (collection.length == 1) {
+		note('the site needs at least one group', 'paused');
+		return;
+	}
+	let count = (group['contents'] || []).length;
+	if (!confirm(`Remove “${name}”${count > 0 ? ` and the ${count} course${count == 1 ? '' : 's'} in it` : ''}?${count > 0 ? '\n\nTo keep a course, drag it into another group first. Any markdown files stay where they are.' : ''}`)) {
+		return;
+	}
+	collection.splice(index, 1);
+	renderSidebar();
+	await saveCollection('removed group');
+}
+
+// ——————————————————————————————
 // COURSES
 // ——————————————————————————————
 
@@ -941,14 +1099,14 @@ function allCourseSlugs(except) {
 	return slugs;
 }
 
-function courseForm(at) {
+function courseForm(at, group) {
 	let course = at ? courseAt(at) : { slug: '', emoji: '', name: '', version: '', desc: '', 'long-desc': '', tags: [], contents: [] };
 	let values = showForm(at ? `⚙️ ${course['name']}` : '🎓 new course', [
 		{ key: 'emoji', label: 'emoji', value: course['emoji'] || '', spellcheck: false },
 		{ key: 'name', label: 'name', value: course['name'] || '' },
 		{ key: 'version', label: 'version', value: course['version'] || '', hint: 'shown after the name, like f26 or v3' },
 		{ key: 'slug', label: 'slug', value: course['slug'] || '', spellcheck: false, hint: 'the folder the course is built into ~ changing it moves the whole course to a new address' },
-		{ key: 'group', label: 'group', type: 'select', value: String(at ? at.group : 0), options: collection.map((group, index) => ({ value: String(index), label: group['name'] })) },
+		{ key: 'group', label: 'group', type: 'select', value: String(at ? at.group : group || 0), options: collection.map((group, index) => ({ value: String(index), label: group['name'] })) },
 		{ key: 'desc', label: 'short description', type: 'textarea', rows: 2, value: course['desc'] || '' },
 		{ key: 'long-desc', label: 'long description', type: 'textarea', rows: 6, value: course['long-desc'] || '', hint: 'html, shown on the course page' },
 		{ key: 'tags', label: 'tags', value: (course['tags'] || []).join(', '), hint: 'comma separated' }
@@ -981,7 +1139,7 @@ function courseForm(at) {
 			collection[group]['contents'].unshift(course);
 			expanded.add(slug);
 		} else if (group != at.group) {
-			// moving between "now teaching" and "ancient history" is the same move as dragging it there
+			// moving to another group is the same move as dragging it there
 			collection[at.group]['contents'].splice(at.course, 1);
 			collection[group]['contents'].unshift(course);
 		}
@@ -1627,6 +1785,7 @@ document.getElementById('sidebar-close').addEventListener('click', () => setSide
 document.getElementById('new-draft').addEventListener('click', newDraft);
 document.getElementById('new-embed').addEventListener('click', () => draftForm(null));
 document.getElementById('new-course').addEventListener('click', () => courseForm(null));
+document.getElementById('new-group').addEventListener('click', () => groupForm(null));
 document.getElementById('expand-all').addEventListener('click', () => {
 	expanded = allCourseSlugs(null);
 	renderSidebar();
