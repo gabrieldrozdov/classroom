@@ -97,16 +97,35 @@
 								"emoji": "🔍",
 								"slug": "unit-10-overview",
 								"url": "https://docs.google.com/document/d/1xaSE0StMCdm8n1OuZhASOkRqMuu408lC5TWJG3S2Sxs/preview",
-								"newtab": false,
-								"active": false
+								"newtab": false
+							},
+							{
+								"name": "teams and schedules",
+								"emoji": "👏",
+								"slug": "unit-10-teams-and-schedules",
+								"url": "https://docs.google.com/document/d/1sJpwG6oylQSl1hhmMJWPZNCywZ8V5IZ_0Gd3t1ldqC4/preview",
+								"newtab": false
 							},
 							{
 								"name": "kick-off slides",
 								"emoji": "📽️",
-								"slug": "unit-9-kickoff",
+								"slug": "unit-10-kickoff",
 								"url": "https://docs.google.com/presentation/d/1vTRNqTBQ-rlKyb4O3ombn6AxoknyNZ9bdaZz_qBNlYc/preview",
-								"newtab": false,
-								"active": false
+								"newtab": false
+							},
+							{
+								"name": "maps and mapping",
+								"emoji": "🗺️",
+								"slug": "unit-10-maps-and-mapping",
+								"url": "https://docs.google.com/presentation/d/1Szq45fYgh86ZsQtPV27jDHOFidzrUxozcHf6azescts/preview",
+								"newtab": false
+							},
+							{
+								"name": "ways of visualizing data",
+								"emoji": "🦺",
+								"slug": "unit-10-ways-of-visualizing-data",
+								"url": "https://docs.google.com/presentation/d/1Q6w9SN8NnX9ci5ltZEQ6jIyDzTfvtmnj_w1LZy3rW3o/preview",
+								"newtab": false
 							}
 						]
 					},
@@ -171,6 +190,16 @@
 								"newtab": false,
 								"tags": [
 									"unit 9"
+								]
+							},
+							{
+								"name": "day 10, oct. 14",
+								"emoji": "📊",
+								"slug": "10-14-26",
+								"url": "/assets/markdown/ds3-f26/10-14-26.md",
+								"newtab": false,
+								"tags": [
+									"unit 10"
 								]
 							}
 						]
