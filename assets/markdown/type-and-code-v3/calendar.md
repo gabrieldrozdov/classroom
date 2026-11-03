@@ -109,11 +109,4 @@
 
 ## 🔬 p4 ~ {c:primary specimen}
 
-| class | things due | agenda |
-| --- 1.5 | --- 3 | --- 3 |
-| **8** <br>nov. 10 | - three concepts for original variable font | - javascript tutorial, pt. 1 \ - small-group meetings to review font progress |
-| **9** <br>nov. 17 | - progress on original variable font | - javascript tutorial, pt. 2 \ - small-group meetings to review font progress |
-| **10** <br>nov. 24 | - completed original variable font \ - three concepts for digital type specimen | - javascript tutorial, pt. 3 \ - small-group meetings to review website progress |
-| **11** <br>dec. 1 | - draft of digital type specimen | - small-group meetings to review website progress |
-| **12** <br>dec. 8 | - progress on digital type specimen | - small-group meetings to review website progress  |
-| **final crit** <br>dec. 15 | - finished digital type specimen | - 🏆 crit p4 |
+see the project 4 description for a detailed timeline!

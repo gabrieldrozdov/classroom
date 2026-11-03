@@ -243,6 +243,27 @@
 								"slug": "resources",
 								"url": "https://drive.google.com/drive/folders/1tRqnxs5RDCD6J5nCKta9lXxfPyNf09Bw?usp=sharing",
 								"newtab": true
+							},
+							{
+								"name": "progress reports",
+								"emoji": "📺",
+								"slug": "progress-reports",
+								"url": "https://www.are.na/gabriel-drozdov/risd-f26-type-code",
+								"newtab": false
+							},
+							{
+								"name": "project submissions",
+								"emoji": "🔗",
+								"slug": "project-submissions",
+								"url": "https://docs.google.com/spreadsheets/d/127GzjGfjwqNN2JUjk-aub4Wg3oAa-KU9oRx2C_subr8/preview",
+								"newtab": false
+							},
+							{
+								"name": "project viewer",
+								"emoji": "🔗",
+								"slug": "project-viewer",
+								"url": "https://tc3.gdwithgd.com",
+								"newtab": false
 							}
 						]
 					},
@@ -275,8 +296,7 @@
 								"emoji": "🔬",
 								"slug": "p4",
 								"url": "/assets/markdown/type-and-code-v3/p4.md",
-								"newtab": false,
-								"active": false
+								"newtab": false
 							}
 						]
 					},
@@ -288,6 +308,13 @@
 								"emoji": "🏃",
 								"slug": "class-3",
 								"url": "/assets/markdown/type-and-code-v3/class-3.md",
+								"newtab": false
+							},
+							{
+								"name": "class 7, nov. 3",
+								"emoji": "🏁",
+								"slug": "class-7",
+								"url": "/assets/markdown/type-and-code-v3/class-7.md",
 								"newtab": false
 							}
 						]
@@ -1848,7 +1875,7 @@
 								"newtab": false
 							},
 							{
-								"name": "exercise c: variable mpreviewation",
+								"name": "exercise c: variable meditation",
 								"slug": "exercise-c",
 								"url": "https://docs.google.com/document/d/1r53pprvVMkmLCD6PBuBoJvNn1YQsLX9bCMbgi-_eZL8/preview?usp=sharing",
 								"newtab": false
