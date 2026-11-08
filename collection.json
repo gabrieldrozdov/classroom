@@ -130,6 +130,39 @@
 						]
 					},
 					{
+						"name": "⚖️ unit 11: designing with purpose",
+						"contents": [
+							{
+								"name": "unit 11 overview",
+								"emoji": "🔍",
+								"slug": "unit-11-overview",
+								"url": "https://docs.google.com/document/d/1ku4e1Ox2sNlJ4CnNGAuX5EeXXHeicAy6Rj6DhVQ9JCE/edit?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "kick-off slides",
+								"emoji": "🎥",
+								"slug": "unit-11-kick-off",
+								"url": "https://docs.google.com/presentation/d/1fOSlXiHAxKzjsgipnRYmWAlsQ0ajkSho8vXuhvLSfa4/preview",
+								"newtab": false
+							},
+							{
+								"name": "wikipedia rabbit holes",
+								"emoji": "🐇",
+								"slug": "unit-11-wikipedia-rabbit-holes",
+								"url": "https://embed.figma.com/board/YjZlCHznXmOG4fp4MrBXfv/FA_26-DS3-Unit-11--Design-Justice-Principles?node-id=0-1&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "research deck template",
+								"emoji": "🔬",
+								"slug": "unit-11-research-deck",
+								"url": "https://embed.figma.com/slides/j3jBz6pTZRHtEh9zvWgNf1/FA_26-DS3-Unit-11--Design-Justice-Principles?node-id=15-197&embed-host=share",
+								"newtab": false
+							}
+						]
+					},
+					{
 						"name": "🗓️ weekly agendas",
 						"contents": [
 							{
@@ -201,6 +234,13 @@
 								"tags": [
 									"unit 10"
 								]
+							},
+							{
+								"name": "day 16, nov. 9",
+								"emoji": "⚖️",
+								"slug": "11-9-26",
+								"url": "https://docs.google.com/presentation/d/1w0R_raYt96LftDu9AvlNmePBlzjWUuXHVH5ecW21lBg/preview",
+								"newtab": false
 							}
 						]
 					}
@@ -264,6 +304,13 @@
 								"slug": "project-viewer",
 								"url": "https://tc3.gdwithgd.com",
 								"newtab": false
+							},
+							{
+								"name": "javascript submissions",
+								"emoji": "🧑‍💻",
+								"slug": "javascript-submissions",
+								"url": "https://docs.google.com/forms/d/e/1FAIpQLSca6Z4x0GYDY-xQfUIUfPtFS0IA_D919mCKr-NRIBxCgeMGWw/viewform?usp=publish-editor",
+								"newtab": false
 							}
 						]
 					},
@@ -304,6 +351,13 @@
 						"name": "🗓️ weekly agendas",
 						"contents": [
 							{
+								"name": "class 2, sep. 22",
+								"emoji": "🧑‍💻",
+								"slug": "class-2",
+								"url": "https://demoland.gdwithgd.com/type-and-code/week-2/",
+								"newtab": false
+							},
+							{
 								"name": "class 3, sep. 29",
 								"emoji": "🏃",
 								"slug": "class-3",
@@ -311,10 +365,31 @@
 								"newtab": false
 							},
 							{
+								"name": "class 4, oct. 6",
+								"emoji": "🎨",
+								"slug": "class-4",
+								"url": "https://demoland.gdwithgd.com/type-and-code/fun-with-css/",
+								"newtab": false
+							},
+							{
+								"name": "class 6, oct. 20",
+								"emoji": "📐",
+								"slug": "class-6",
+								"url": "https://demoland.gdwithgd.com/type-and-code/advanced-css/",
+								"newtab": false
+							},
+							{
 								"name": "class 7, nov. 3",
 								"emoji": "🏁",
 								"slug": "class-7",
 								"url": "/assets/markdown/type-and-code-v3/class-7.md",
+								"newtab": false
+							},
+							{
+								"name": "class 8, nov. 10",
+								"emoji": "👾",
+								"slug": "class-8",
+								"url": "/assets/markdown/type-and-code-v3/class-8.md",
 								"newtab": false
 							}
 						]
