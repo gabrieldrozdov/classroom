@@ -147,10 +147,17 @@
 								"newtab": false
 							},
 							{
+								"name": "day 1 exercises",
+								"emoji": "🔥",
+								"slug": "unit-11-day-1-exercises",
+								"url": "https://docs.google.com/presentation/d/1w0R_raYt96LftDu9AvlNmePBlzjWUuXHVH5ecW21lBg/preview",
+								"newtab": false
+							},
+							{
 								"name": "wikipedia rabbit holes",
 								"emoji": "🐇",
 								"slug": "unit-11-wikipedia-rabbit-holes",
-								"url": "https://embed.figma.com/board/ALArDML8hhWLkCMSqEGD6k/wikipedia-rabbit-holes-?node-id=0-1&embed-host=share",
+								"url": "https://embed.figma.com/board/YjZlCHznXmOG4fp4MrBXfv/FA_26-DS3-Unit-11--Wikipedia-Rabbit-Holes?node-id=1-160&embed-host=share",
 								"newtab": false
 							},
 							{
