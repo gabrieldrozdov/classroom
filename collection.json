@@ -43,6 +43,53 @@
 						]
 					},
 					{
+						"name": "⚖️ unit 11: designing with purpose",
+						"contents": [
+							{
+								"name": "unit 11 overview",
+								"emoji": "🔍",
+								"slug": "unit-11-overview",
+								"url": "https://docs.google.com/document/d/1ku4e1Ox2sNlJ4CnNGAuX5EeXXHeicAy6Rj6DhVQ9JCE/edit?usp=sharing",
+								"newtab": false
+							},
+							{
+								"name": "kick-off slides",
+								"emoji": "🎥",
+								"slug": "unit-11-kick-off",
+								"url": "https://docs.google.com/presentation/d/1fOSlXiHAxKzjsgipnRYmWAlsQ0ajkSho8vXuhvLSfa4/preview",
+								"newtab": false
+							},
+							{
+								"name": "day 1 exercises",
+								"emoji": "🔥",
+								"slug": "unit-11-day-1-exercises",
+								"url": "https://docs.google.com/presentation/d/1w0R_raYt96LftDu9AvlNmePBlzjWUuXHVH5ecW21lBg/preview",
+								"newtab": false
+							},
+							{
+								"name": "wikipedia rabbit holes",
+								"emoji": "🐇",
+								"slug": "unit-11-wikipedia-rabbit-holes",
+								"url": "https://embed.figma.com/board/YjZlCHznXmOG4fp4MrBXfv/FA_26-DS3-Unit-11--Wikipedia-Rabbit-Holes?node-id=1-160&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "research deck template",
+								"emoji": "🔬",
+								"slug": "unit-11-research-deck",
+								"url": "https://embed.figma.com/slides/j3jBz6pTZRHtEh9zvWgNf1/FA_26-DS3-Unit-11--Design-Justice-Principles?node-id=15-197&embed-host=share",
+								"newtab": false
+							},
+							{
+								"name": "campaign pitch deck template",
+								"emoji": "📣",
+								"slug": "unit-11-campaign-pitch-template",
+								"url": "https://www.figma.com/slides/rTt7opXLnkaxJnKMg8WOHd",
+								"newtab": false
+							}
+						]
+					},
+					{
 						"name": "📦 unit 9: collections made public",
 						"contents": [
 							{
@@ -125,46 +172,6 @@
 								"emoji": "🦺",
 								"slug": "unit-10-ways-of-visualizing-data",
 								"url": "https://docs.google.com/presentation/d/1Q6w9SN8NnX9ci5ltZEQ6jIyDzTfvtmnj_w1LZy3rW3o/preview",
-								"newtab": false
-							}
-						]
-					},
-					{
-						"name": "⚖️ unit 11: designing with purpose",
-						"contents": [
-							{
-								"name": "unit 11 overview",
-								"emoji": "🔍",
-								"slug": "unit-11-overview",
-								"url": "https://docs.google.com/document/d/1ku4e1Ox2sNlJ4CnNGAuX5EeXXHeicAy6Rj6DhVQ9JCE/edit?usp=sharing",
-								"newtab": false
-							},
-							{
-								"name": "kick-off slides",
-								"emoji": "🎥",
-								"slug": "unit-11-kick-off",
-								"url": "https://docs.google.com/presentation/d/1fOSlXiHAxKzjsgipnRYmWAlsQ0ajkSho8vXuhvLSfa4/preview",
-								"newtab": false
-							},
-							{
-								"name": "day 1 exercises",
-								"emoji": "🔥",
-								"slug": "unit-11-day-1-exercises",
-								"url": "https://docs.google.com/presentation/d/1w0R_raYt96LftDu9AvlNmePBlzjWUuXHVH5ecW21lBg/preview",
-								"newtab": false
-							},
-							{
-								"name": "wikipedia rabbit holes",
-								"emoji": "🐇",
-								"slug": "unit-11-wikipedia-rabbit-holes",
-								"url": "https://embed.figma.com/board/YjZlCHznXmOG4fp4MrBXfv/FA_26-DS3-Unit-11--Wikipedia-Rabbit-Holes?node-id=1-160&embed-host=share",
-								"newtab": false
-							},
-							{
-								"name": "research deck template",
-								"emoji": "🔬",
-								"slug": "unit-11-research-deck",
-								"url": "https://embed.figma.com/slides/j3jBz6pTZRHtEh9zvWgNf1/FA_26-DS3-Unit-11--Design-Justice-Principles?node-id=15-197&embed-host=share",
 								"newtab": false
 							}
 						]

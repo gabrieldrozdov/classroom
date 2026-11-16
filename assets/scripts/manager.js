@@ -1212,6 +1212,11 @@ function resourceForm(at) {
 	let resource = isNew ? { name: '', emoji: '', slug: '', url: '', newtab: false } : resourceAt(at);
 	let page = isNew ? true : isPage(resource);
 
+	// where the page's file lives. an existing page keeps its own folder; anything new to being a page goes in the course's folder, beside the others.
+	let folder = !isNew && page ? folderOf(resource['url']) : `/assets/markdown/${course['slug']}/`;
+	let fileName = !isNew && page ? resource['url'].split('/').pop().replace(/\.md$/i, '') : '';
+	let fileMissing = !isNew && page && !files[resource['url']];
+
 	let fields = [
 		{ key: 'emoji', label: 'emoji', value: resource['emoji'] || '', spellcheck: false },
 		{ key: 'name', label: 'name', value: resource['name'] || '' },
@@ -1227,9 +1232,11 @@ function resourceForm(at) {
 			hint: 'a draft picked here moves out of the drafts folder and into the course'
 		},
 		{
-			key: 'url', label: 'file', value: resource['url'] || '', spellcheck: false,
-			when: (v) => v['kind'] == 'page' && !isNew,
-			hint: 'the markdown this page is built from'
+			key: 'file', label: 'file name', value: fileName, spellcheck: false,
+			when: (v) => v['kind'] == 'page',
+			hint: isNew || fileName == ''
+				? `.md in ${folder} ~ blank uses the slug. a file already there is used as it is; otherwise a new one is made`
+				: `.md in ${folder} ~ changing it renames the file${fileMissing ? '. there’s no file here yet, so saving makes one' : ''}`
 		},
 		{
 			key: 'url', label: 'url', value: resource['url'] || '', spellcheck: false,
@@ -1260,27 +1267,39 @@ function resourceForm(at) {
 
 		let url = (values['url'] || '').trim();
 		if (values['kind'] == 'page') {
-			if (isNew) {
-				if (values['start'] == 'new') {
-					url = await createPage(`/assets/markdown/${course['slug']}/${slug}.md`);
-				} else {
-					// a draft becomes a course page by moving into the course's folder, so the drafts list stays what's actually unplaced
-					let moved = await fileAction('rename', values['start'], `/assets/markdown/${course['slug']}/${slug}.md`);
-					url = moved && moved.path;
-					if (url) {
-						followFile(values['start'], url);
-						// its settings in drafts.json go with it, since the ones typed here are the ones that count now
-						draftEntries = draftEntries.filter(entry => entry['url'] != values['start']);
-						await writeDrafts();
-					}
+			let target = pageFile(values['file'], folder, slug);
+			if (isNew && values['start'] != 'new') {
+				// a draft becomes a course page by moving into the course's folder, so the drafts list stays what's actually unplaced
+				let moved = await fileAction('rename', values['start'], target);
+				url = moved && moved.path;
+				if (url) {
+					followFile(values['start'], url);
+					// its settings in drafts.json go with it, since the ones typed here are the ones that count now
+					draftEntries = draftEntries.filter(entry => entry['url'] != values['start']);
+					await writeDrafts();
 				}
-				if (!url) {
-					return 'the page couldn’t be made';
+			} else if (page && !isNew && target != before && files[before]) {
+				// a new name for a file that's there is a rename. the server would quietly number a name that's taken, which isn't the name that was typed, so that's refused here instead.
+				if (files[target]) {
+					return `there’s already a file at ${target}`;
 				}
-			} else if (!url.toLowerCase().endsWith('.md')) {
-				return 'a markdown page needs a .md file';
+				let moved = await fileAction('rename', before, target);
+				url = moved && moved.path;
+				if (url) {
+					followFile(before, url);
+				}
+			} else if (files[target]) {
+				// a file already sitting where this page points is a page someone wrote, so it's used rather than written over with the starter text
+				url = target;
+			} else {
+				// nothing there yet — a new resource, an embed turned into a page, or an entry whose file had gone missing — so it gets one to write in
+				url = await createPage(target);
 			}
-		} else if (url == '') {
+			if (!url) {
+				return 'the page couldn’t be made';
+			}
+		} else if (url == '' || (!isNew && page && url == before)) {
+			// switching a page to an embed leaves its .md path sitting in the url field, which isn't a url to embed
 			return 'an embed needs a url';
 		}
 
@@ -1309,6 +1328,15 @@ function resourceForm(at) {
 			reshowEmbed(before, resource);
 		}
 	});
+}
+
+// what the file name field means: a bare name lands in the folder given, a blank one takes the slug, and anything with a slash in it is taken as the whole path, for pointing a page somewhere else. the name is held to what a url can carry, the same as a slug.
+function pageFile(value, folder, slug) {
+	let given = (value || '').trim().replace(/\.md$/i, '');
+	if (given.includes('/')) {
+		return `/${given.replace(/^\/+/, '')}.md`;
+	}
+	return `${folder}${slugify(given) || slug}.md`;
 }
 
 async function duplicateResource(at) {
