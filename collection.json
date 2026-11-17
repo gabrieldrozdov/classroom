@@ -84,7 +84,7 @@
 								"name": "campaign pitch deck template",
 								"emoji": "📣",
 								"slug": "unit-11-campaign-pitch-template",
-								"url": "https://www.figma.com/slides/rTt7opXLnkaxJnKMg8WOHd",
+								"url": "https://embed.figma.com/slides/rTt7opXLnkaxJnKMg8WOHd/FA_26-DS3-Unit-11--Campaign-Pitch-Template?node-id=0-1&embed-host=share",
 								"newtab": false
 							}
 						]
@@ -324,6 +324,13 @@
 								"emoji": "🧑‍💻",
 								"slug": "javascript-submissions",
 								"url": "https://docs.google.com/forms/d/e/1FAIpQLSca6Z4x0GYDY-xQfUIUfPtFS0IA_D919mCKr-NRIBxCgeMGWw/viewform?usp=publish-editor",
+								"newtab": false
+							},
+							{
+								"name": "figjam",
+								"emoji": "🧑‍💻",
+								"slug": "figjam",
+								"url": "https://embed.figma.com/board/U5nQqqezK1B6ZC52CvjEYA/type-code-v3?node-id=0-1&embed-host=share",
 								"newtab": false
 							}
 						]
